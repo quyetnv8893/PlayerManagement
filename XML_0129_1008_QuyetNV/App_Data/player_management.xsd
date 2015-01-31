@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="playerManagement">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="club" minOccurs="1" maxOccurs="1" type="club_type"/>
+                <xs:element name="careers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="career" maxOccurs="unbounded" type="career_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="coaches">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="coach" maxOccurs="unbounded" type="coach_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="players">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="player" maxOccurs="unbounded" type="player_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="achievements">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="achievement" maxOccurs="unbounded"
+                                type="achievement_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="matches">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="match" maxOccurs="unbounded" type="match_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="leagues">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="league" maxOccurs="unbounded" type="league_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="players_achievements">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="player_achievement" maxOccurs="unbounded"
+                                type="player_achievement_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="players_matches">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="player_match" maxOccurs="unbounded"
+                                type="player_match_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+        <xs:key name="key-career">
+            <xs:selector xpath="careers/career"/>
+            <xs:field xpath="id"/>
+        </xs:key>
+        <xs:key name="key-club">
+            <xs:selector xpath="club"/>
+            <xs:field xpath="name"/>
+        </xs:key>
+        <xs:key name="key-coach">
+            <xs:selector xpath="coaches/coach"/>
+            <xs:field xpath="id"/>
+        </xs:key>
+        <xs:key name="key-player">
+            <xs:selector xpath="players/player"/>
+            <xs:field xpath="id"/>
+        </xs:key>
+        <xs:key name="key-achievement">
+            <xs:selector xpath="achievements/achievement"/>
+            <xs:field xpath="name"/>
+        </xs:key>
+        <xs:key name="key-match">
+            <xs:selector xpath="matches/match"/>
+            <xs:field xpath="id"/>
+        </xs:key>
+        <xs:key name="key-league">
+            <xs:selector xpath="leagues/league"/>
+            <xs:field xpath="name"/>
+        </xs:key>
+        <xs:keyref refer="key-club" name="key-player-club-ref">
+            <xs:selector xpath="players/player"/>
+            <xs:field xpath="clubName"/>
+        </xs:keyref>
+        <xs:keyref refer="key-player" name="key-career-player-ref">
+            <xs:selector xpath="careers/career"/>
+            <xs:field xpath="playerId"/>
+        </xs:keyref>
+        <xs:keyref refer="key-club" name="key-coach-club-ref">
+            <xs:selector xpath="coaches/coach"/>
+            <xs:field xpath="clubName"/>
+        </xs:keyref>
+        <xs:keyref refer="key-league" name="key-match-league-ref">
+            <xs:selector xpath="matches/match"/>
+            <xs:field xpath="leagueName"/>
+        </xs:keyref>
+        <xs:keyref refer="key-player" name="key-player_achievement-player-ref">
+            <xs:selector xpath="players_achievements/player_achievement"/>
+            <xs:field xpath="playerId"/>
+        </xs:keyref>
+        <xs:keyref refer="key-achievement" name="key-player_achievement-achievement-ref">
+            <xs:selector xpath="players_achievements/player_achievement"/>
+            <xs:field xpath="achievementName"/>
+        </xs:keyref>
+        <xs:keyref refer="key-player" name="key-player_match-player-ref">
+            <xs:selector xpath="players_matches/player_match"/>
+            <xs:field xpath="playerId"/>
+        </xs:keyref>
+        <xs:keyref refer="key-match" name="key-player_match-match-ref">
+            <xs:selector xpath="players_matches/player_match"/>
+            <xs:field xpath="matchId"/>
+        </xs:keyref>
+    </xs:element>
+    <xs:complexType name="career_type">
+        <xs:all>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="from" type="xs:date"/>
+            <xs:element name="to" type="xs:date" nillable="true"/>
+            <xs:element name="noOfGoals" type="xs:int"/>
+            <xs:element name="playerId" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="club_type">
+        <xs:all>
+            <xs:element name="name" type="xs:string"/>                            
+            <xs:element name="logoLink" type="xs:string"/>
+            <xs:element name="foundedDate" type="xs:date"/>
+            <xs:element name="stadium" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="coach_type">
+        <xs:all>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="dateOfBirth" type="xs:date"/>
+            <xs:element name="imageLink" type="xs:string"/>
+            <xs:element name="position" type="xs:string"/>
+            <xs:element name="clubName" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="player_type">
+        <xs:all>
+            <xs:element name="clubName" type="xs:string"/>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="number" type="xs:int"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="position" type="xs:string"/>
+            <xs:element name="dateOfBirth" type="xs:date"/>
+            <xs:element name="placeOfBirth" type="xs:string"/>
+            <xs:element name="weight" type="xs:double"/>
+            <xs:element name="height" type="xs:double"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="imageLink" type="xs:string"/>
+            <xs:element name="status" type="xs:boolean"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="achievement_type">
+        <xs:all>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="imageLink" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="match_type">
+        <xs:all>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="time" type="xs:dateTime"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="score" type="xs:string"/>
+            <xs:element name="leagueName" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="league_type">
+        <xs:all>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="logoLink" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="player_achievement_type">
+        <xs:all>
+            <xs:element name="number" type="xs:int"/>
+            <xs:element name="playerId" type="xs:string"/>
+            <xs:element name="achievementName" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="player_match_type">
+        <xs:all>
+            <xs:element name="noOfGoals" type="xs:int"/>
+            <xs:element name="noOfYellows" type="xs:int"/>
+            <xs:element name="noOfReds" type="xs:int"/>            
+            <xs:element name="playerId" type="xs:string"/>
+            <xs:element name="matchId" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+  <!--
+    <xs:simpleType name="position_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CB"/>
+            <xs:enumeration value="GK"/>
+            <xs:enumeration value="SW"/>
+            <xs:enumeration value="LB"/>
+            <xs:enumeration value="DM"/>
+            <xs:enumeration value="CM"/>
+            <xs:enumeration value="AM"/>
+            <xs:enumeration value="LW"/>
+            <xs:enumeration value="RW"/>
+            <xs:enumeration value="WF"/>
+            <xs:enumeration value="CF"/>
+            <xs:enumeration value="RB"/>
+        </xs:restriction>
+    </xs:simpleType>
+    -->
+</xs:schema>

@@ -1,0 +1,35 @@
+﻿@model PlayerManagement.Models.PlayerAchievement
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PlayerAchievement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.achievement.imageLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.achievement.imageLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.playerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
