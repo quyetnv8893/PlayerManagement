@@ -9,22 +9,22 @@
   <players>
     <!-- 1 -->
     <player>
-            <clubName>Real Madrid</clubName>
-            <id>01</id>
-            <number>1</number>
-            <name>CASILLAS
+      <clubName>Real Madrid</clubName>
+      <id>01</id>
+      <number>1</number>
+      <name>CASILLAS
                 IKER CASILLAS FERNÁNDEZ</name>
-            <position>Goalkeeper</position>
-            <dateOfBirth>1981-05-20</dateOfBirth>
-            <placeOfBirth>Móstoles (Madrid)</placeOfBirth>
-            <weight>84</weight>
-            <height>1.85</height>
-            <description> He has been a Madrid fan since he was a child and he fulfilled his dream of playing for the club at the age of 10. Form the very beginning, it was clear that he was a special goalkeeper with extremely fast reflexes, great strength in both legs and the gift of being almost unbeatable in one-on-one situations.        
+      <position>Goalkeeper</position>
+      <dateOfBirth>1981-05-20</dateOfBirth>
+      <placeOfBirth>Móstoles (Madrid)</placeOfBirth>
+      <weight>84</weight>
+      <height>1.85</height>
+      <description> He has been a Madrid fan since he was a child and he fulfilled his dream of playing for the club at the age of 10. Form the very beginning, it was clear that he was a special goalkeeper with extremely fast reflexes, great strength in both legs and the gift of being almost unbeatable in one-on-one situations.        
                 He has proved to be a born leader in all of the teams he has played for both at Real Madrid and for Spain. In his first Champions League Final, he performed brilliantly to help his team win their eighth European Cup. That same season, he played so well that he also won the Bravo Award for the best young player of the year.        
                 He has won everything there is to win, both for Real Madrid and for Spain. He was a key player in his country’s victories in the UEFA European Championship in 2008 and 2012 and was one of the Spanish heroes in the FIFA World Cup in South Africa in 2010. FIFA, UEFA, the fans…but, above all, his fantastic saves, honoured him
                 with the title of the world’s best goalkeeper for five years running.</description>
-            <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
-            <status>true</status>
+      <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
+      <status>true</status>
     </player>
     <!-- TODO: ADD MORE PLAYERS HERE -->
     <!-- 2 -->
@@ -436,7 +436,7 @@
   <coaches>
     <coach>
       <id>01</id>
-      <name>Carlo Ancelotti</name>
+      <name>CarloAncelotti</name>
       <dateOfBirth>1959-06-10</dateOfBirth>
       <imageLink>http://i.imgur.com/64MGQKn.jpg</imageLink>
       <position>Main Coach</position>
@@ -466,20 +466,12 @@
       <position>Head Fitness Coach</position>
       <clubName>Real Madrid</clubName>
     </coach>
-    <coach>
-      <id>05</id>
-      <name>Villiam Vecchi</name>
-      <dateOfBirth>1948-12-28</dateOfBirth>
-      <imageLink>http://i.imgur.com/64MGQKn.jpg</imageLink>
-      <position>Goalkeeper Coach</position>
-      <clubName>Real Madrid</clubName>
-    </coach>
   </coaches>
   <achievements>
     <achievement>
-        <name>European-Cup</name>
-        <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
-    </achievement>    
+      <name>European-Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
     <!-- TODO: ADD MORE ACHIEVEMENT HERE -->
   </achievements>
   <leagues>
@@ -490,12 +482,12 @@
     <!-- TODO: ADD MORE LEAGUES HERE ( IF AVAILABLE ) -->
   </leagues>
   <matches>
-     <match>
-          <id>20150118</id>
-          <time>2015-01-18T11:00:00</time>
-          <name>Getafe - Real Madrid</name>
-          <score>0-3</score>
-          <leagueName>LIGA BBVA</leagueName>
+    <match>
+      <id>20150118</id>
+      <time>2015-01-18T11:00:00</time>
+      <name>Getafe - Real Madrid</name>
+      <score>0-3</score>
+      <leagueName>LIGA BBVA</leagueName>
     </match>
     <!-- TODO: ADD MORE MATCH HERE -->
     <match>
@@ -519,7 +511,6 @@
       <score>1-1</score>
       <leagueName>YUT</leagueName>
     </match>
-  
   </matches>
   <careers>
     <career>

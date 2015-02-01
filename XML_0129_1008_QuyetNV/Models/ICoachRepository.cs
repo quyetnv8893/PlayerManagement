@@ -8,7 +8,7 @@ namespace PlayerManagement.Models
 {
     public interface ICoachRepository
     {
-        IEnumerable<Coach> GetCoachs();
+        IEnumerable<Coach> GetCoaches();
         Coach GetCoachByName(String name);
         void InsertCoach(Coach coach);
         void DeleteCoach(String name);

@@ -16,23 +16,23 @@ namespace PlayerManagement.Models
             allCoachs = new List<Coach>();
 
             coachData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var coachs = from coach in coachData.Descendants("coach")
+            var coaches = from coach in coachData.Descendants("coach")
                                select new Coach(coach.Element("name").Value, coach.Element("imageLink").Value, coach.Element("position").Value,
-                                   (DateTime)coach.Element("dateOfBirth"), coach.Element("clubname").Value);
+                                   (DateTime)coach.Element("dateOfBirth"), coach.Element("clubName").Value);
 
-            allCoachs.AddRange(coachs.ToList<Coach>());
+            allCoachs.AddRange(coaches.ToList<Coach>());
 
         }
 
 
-        public IEnumerable<Coach> GetCoachs()
+        public IEnumerable<Coach> GetCoaches()
         {
             return allCoachs;
         }
 
-        public Coach GetCoachByName(string id)
+        public Coach GetCoachByName(string name)
         {
-            return allCoachs.Find(item => item.name.Equals(id));
+            return allCoachs.Find(item => item.name.Equals(name));
         }
 
         public void InsertCoach(Coach coach)
@@ -40,7 +40,7 @@ namespace PlayerManagement.Models
             coach.name = (from a in coachData.Descendants("coach") orderby a.Element("name").Value 
                               descending select a.Element("name").Value).FirstOrDefault();
 
-            coachData.Descendants("coachs").FirstOrDefault().Add(new XElement("coach",
+            coachData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
                 new XElement("name", coach.name), new XElement("imageLink"), coach.imageLink), 
                 new XElement("position", coach.position), new XElement("dateOfBirth", coach.dateOfBirth),
                 new XElement("clubName", coach.clubName));
@@ -50,14 +50,14 @@ namespace PlayerManagement.Models
 
         public void DeleteCoach(string name)
         {
-            coachData.Descendants("coachs").Elements("coach").Where(i => i.Element("name").Value.Equals(name)).Remove();
+            coachData.Descendants("coaches").Elements("coach").Where(i => i.Element("name").Value.Equals(name)).Remove();
 
             coachData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
 
         public void EditCoach(Coach coach)
         {
-            XElement node = coachData.Descendants("coachs").Elements("coach").
+            XElement node = coachData.Descendants("coaches").Elements("coach").
                 Where(i => i.Element("name").Value.Equals(coach.name)).FirstOrDefault();
 
             node.SetElementValue("name", coach.name);

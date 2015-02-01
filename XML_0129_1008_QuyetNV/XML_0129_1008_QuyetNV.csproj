@@ -118,6 +118,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AchievementsController.cs" />
+    <Compile Include="Controllers\CoachesController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\PlayerAchievementsController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
@@ -126,7 +127,10 @@
     </Compile>
     <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\AchievementRepository.cs" />
+    <Compile Include="Models\Coach.cs" />
+    <Compile Include="Models\CoachRepository.cs" />
     <Compile Include="Models\IAchievementRepository.cs" />
+    <Compile Include="Models\ICoachRepository.cs" />
     <Compile Include="Models\IMatchRepository.cs" />
     <Compile Include="Models\IPlayerAchievementRepository.cs" />
     <Compile Include="Models\IPlayerRepository.cs" />
@@ -205,6 +209,11 @@
     <Content Include="Views\PlayerAchievements\Details.cshtml" />
     <Content Include="Views\PlayerAchievements\Edit.cshtml" />
     <Content Include="Views\PlayerAchievements\Index.cshtml" />
+    <Content Include="Views\Coaches\Create.cshtml" />
+    <Content Include="Views\Coaches\Delete.cshtml" />
+    <Content Include="Views\Coaches\Details.cshtml" />
+    <Content Include="Views\Coaches\Edit.cshtml" />
+    <Content Include="Views\Coaches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
