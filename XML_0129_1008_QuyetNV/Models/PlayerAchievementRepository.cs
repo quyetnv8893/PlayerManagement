@@ -24,9 +24,10 @@ namespace PlayerManagement.Models
 
         }
 
-        public IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String playerId)
+        public IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String id)
         {
-            return allPlayerAchievements.FindAll(item => item.playerId.Equals(playerId));
+            //var achievements = allPlayerAchievements.FindAll(item => item.playerId.Equals(id));            
+            return allPlayerAchievements.FindAll(item => item.playerId.Equals(id));
         }
 
         public PlayerAchievement GetPlayerAchievementByAchievementName(String playerId, String achievementName)
