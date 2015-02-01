@@ -62,6 +62,9 @@ namespace PlayerManagement.Models
 
             node.SetElementValue("name", coach.name);
             node.SetElementValue("imageLink", coach.imageLink);
+            node.SetElementValue("position", coach.position);
+            node.SetElementValue("dateOfBirth", coach.dateOfBirth);
+            node.SetElementValue("clubName", coach.clubName);
             coachData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
     }
