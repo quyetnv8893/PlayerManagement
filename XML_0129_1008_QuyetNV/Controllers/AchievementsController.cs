@@ -32,13 +32,13 @@ namespace AchievementManagement.Controllers
         }
 
         // GET: Achievements/Details/5
-        public ActionResult Details(string name)
+        public ActionResult Details(string id)
         {
-            if (name == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Achievement achievement = _repository.GetAchievementByName(name);
+            Achievement achievement = _repository.GetAchievementByName(id);
             if (achievement == null)
             {
                 return HttpNotFound();
@@ -69,13 +69,13 @@ namespace AchievementManagement.Controllers
         }
 
         // GET: Achievements/Edit/5
-        public ActionResult Edit(string name)
+        public ActionResult Edit(string id)
         {
-            if (name == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Achievement achievement = _repository.GetAchievementByName(name);
+            Achievement achievement = _repository.GetAchievementByName(id);
             if (achievement == null)
             {
                 return HttpNotFound();
