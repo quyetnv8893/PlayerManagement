@@ -14,6 +14,15 @@ namespace PlayerManagement.Controllers
     {
         private IClubRepository _repository;
 
+        public ClubsController()
+            : this(new ClubRepository())
+        {
+        }
+
+        public ClubsController(IClubRepository repository)
+        {
+            _repository = repository;
+        }
 
         // GET: Clubs
         public ActionResult Index()
@@ -47,7 +56,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "name,logo,foundationDate,stadium")] Club club)
+        public ActionResult Create([Bind(Include = "name,logoLink,foundedDate,stadium")] Club club)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +87,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "name,logo,foundationDate,stadium")] Club club)
+        public ActionResult Edit([Bind(Include = "name,logoLink,foundedDate,stadium")] Club club)
         {
             if (ModelState.IsValid)
             {

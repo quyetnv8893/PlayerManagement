@@ -11,23 +11,25 @@ namespace PlayerManagement.Models
         [Key]
         public String name { get; set; }
         [Required]
-        public String logo { get; set; }
+        public String logoLink { get; set; }
         [Required]
-        public DateTime foundationDate { get; set; }
+        public DateTime foundedDate { get; set; }
         [Required]
         public String stadium { get; set; }
 
         public Club()
         {
-            this.logo = null;
-            this.foundationDate = DateTime.Now;
+            this.name = name;
+            this.logoLink = null;
+            this.foundedDate = DateTime.Now;
             this.stadium = null;
         }
 
-        public Club(String name, String logo, DateTime foundationDate, String stadium)
+        public Club(String name, String logo, DateTime foundedDate, String stadium)
         {
-            this.logo = logo;
-            this.foundationDate = foundationDate;
+            this.name = name;
+            this.logoLink = logo;
+            this.foundedDate = foundedDate;
             this.stadium = stadium;
         }
     }

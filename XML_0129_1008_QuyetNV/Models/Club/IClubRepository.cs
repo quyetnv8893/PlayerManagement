@@ -9,9 +9,9 @@ namespace PlayerManagement.Models
     public interface IClubRepository
     {
         IEnumerable<Club> GetClubs();
-        Club GetClubByName(String name);
+        Club GetClubByName(String id);
         void InsertClub(Club club);
-        void DeleteClub(String name);
+        void DeleteClub(String id);
         void EditClub(Club club);
     }
 }
