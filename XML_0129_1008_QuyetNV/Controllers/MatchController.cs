@@ -9,7 +9,6 @@ namespace PlayerManagement.Controllers
 {
     public class MatchController : Controller
     {
-        // GET: Match
         private IMatchRepository _repository;
         public MatchController(): this(new MatchRepository())
         {

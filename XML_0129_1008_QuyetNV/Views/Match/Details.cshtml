@@ -1,5 +1,4 @@
 ﻿@model PlayerManagement.Models.Match
-
 <div>
     <h4>Match</h4>
     <hr />
@@ -34,6 +33,13 @@
 
         <dd>
             @Html.DisplayFor(model => model.leagueName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.league.logoLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.league.logoLink)
         </dd>
 
     </dl>
