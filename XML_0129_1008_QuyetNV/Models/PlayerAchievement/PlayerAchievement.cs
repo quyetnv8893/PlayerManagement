@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,16 +10,20 @@ namespace PlayerManagement.Models
     public class PlayerAchievement
     {
         [Key]
+        [ForeignKey("Player")]
         public String playerId { get; set; }
 
-        [Required]
+        [Key]
+        [ForeignKey("Achievement")]
         public String achievementName { get; set; }
 
         [Required]
         public int number { get; set; }
 
+        [Required]
         public virtual Player player { get; set; }
 
+        [Required]
         public virtual Achievement achievement { get; set; }
 
         public PlayerAchievement()
@@ -26,7 +31,6 @@ namespace PlayerManagement.Models
             this.playerId = null;
             this.achievementName = null;
             this.number = 0;
-
         }
 
         public PlayerAchievement(int number, String playerId, String achievementName)

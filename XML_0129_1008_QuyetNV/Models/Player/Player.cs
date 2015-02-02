@@ -11,6 +11,7 @@ namespace PlayerManagement.Models
         [Required]
         public String clubName { get; set; }
         [Required]
+        [Key]
         public String id { get; set; }
         [Required]
         public int number { get; set; }
