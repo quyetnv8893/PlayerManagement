@@ -118,6 +118,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AchievementsController.cs" />
+    <Compile Include="Controllers\LeagueController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\PlayerAchievementsController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
@@ -127,10 +128,12 @@
     <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\AchievementRepository.cs" />
     <Compile Include="Models\IAchievementRepository.cs" />
+    <Compile Include="Models\ILeagueRepository.cs" />
     <Compile Include="Models\IMatchRepository.cs" />
     <Compile Include="Models\IPlayerAchievementRepository.cs" />
     <Compile Include="Models\IPlayerRepository.cs" />
     <Compile Include="Models\League.cs" />
+    <Compile Include="Models\LeagueRepository.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Models\MatchRepository.cs" />
     <Compile Include="Models\Player.cs" />
@@ -205,6 +208,11 @@
     <Content Include="Views\PlayerAchievements\Details.cshtml" />
     <Content Include="Views\PlayerAchievements\Edit.cshtml" />
     <Content Include="Views\PlayerAchievements\Index.cshtml" />
+    <Content Include="Views\League\Index.cshtml" />
+    <Content Include="Views\League\Details.cshtml" />
+    <Content Include="Views\League\Create.cshtml" />
+    <Content Include="Views\League\Edit.cshtml" />
+    <Content Include="Views\League\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

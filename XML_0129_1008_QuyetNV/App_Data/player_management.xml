@@ -9,22 +9,22 @@
   <players>
     <!-- 1 -->
     <player>
-            <clubName>Real Madrid</clubName>
-            <id>01</id>
-            <number>1</number>
-            <name>CASILLAS
+      <clubName>Real Madrid</clubName>
+      <id>01</id>
+      <number>1</number>
+      <name>CASILLAS
                 IKER CASILLAS FERNÁNDEZ</name>
-            <position>Goalkeeper</position>
-            <dateOfBirth>1981-05-20</dateOfBirth>
-            <placeOfBirth>Móstoles (Madrid)</placeOfBirth>
-            <weight>84</weight>
-            <height>1.85</height>
-            <description> He has been a Madrid fan since he was a child and he fulfilled his dream of playing for the club at the age of 10. Form the very beginning, it was clear that he was a special goalkeeper with extremely fast reflexes, great strength in both legs and the gift of being almost unbeatable in one-on-one situations.        
+      <position>Goalkeeper</position>
+      <dateOfBirth>1981-05-20</dateOfBirth>
+      <placeOfBirth>Móstoles (Madrid)</placeOfBirth>
+      <weight>84</weight>
+      <height>1.85</height>
+      <description> He has been a Madrid fan since he was a child and he fulfilled his dream of playing for the club at the age of 10. Form the very beginning, it was clear that he was a special goalkeeper with extremely fast reflexes, great strength in both legs and the gift of being almost unbeatable in one-on-one situations.        
                 He has proved to be a born leader in all of the teams he has played for both at Real Madrid and for Spain. In his first Champions League Final, he performed brilliantly to help his team win their eighth European Cup. That same season, he played so well that he also won the Bravo Award for the best young player of the year.        
                 He has won everything there is to win, both for Real Madrid and for Spain. He was a key player in his country’s victories in the UEFA European Championship in 2008 and 2012 and was one of the Spanish heroes in the FIFA World Cup in South Africa in 2010. FIFA, UEFA, the fans…but, above all, his fantastic saves, honoured him
                 with the title of the world’s best goalkeeper for five years running.</description>
-            <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
-            <status>true</status>
+      <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
+      <status>true</status>
     </player>
     <!-- TODO: ADD MORE PLAYERS HERE -->
     <!-- 2 -->
@@ -477,49 +477,31 @@
   </coaches>
   <achievements>
     <achievement>
-        <name>European-Cup</name>
-        <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
-    </achievement>    
+      <name>European-Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
     <!-- TODO: ADD MORE ACHIEVEMENT HERE -->
   </achievements>
   <leagues>
     <league>
-      <name>LIGA BBVA</name>
-      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg</logoLink>
+      <name>LIGABBVA</name>
+      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg2</logoLink>
     </league>
     <!-- TODO: ADD MORE LEAGUES HERE ( IF AVAILABLE ) -->
+    <league>
+      <name>Vleague</name>
+      <logoLink>LogoLink</logoLink>
+    </league>
   </leagues>
   <matches>
-     <match>
-          <id>20150118</id>
-          <time>2015-01-18T11:00:00</time>
-          <name>Getafe - Real Madrid</name>
-          <score>0-3</score>
-          <leagueName>LIGA BBVA</leagueName>
+    <match>
+      <id>20150118</id>
+      <time>2015-01-18T11:00:00</time>
+      <name>Getafe - Real Madrid</name>
+      <score>0-3</score>
+      <leagueName>LIGABBVA</leagueName>
     </match>
     <!-- TODO: ADD MORE MATCH HERE -->
-    <match>
-      <id>1/30/2015</id>
-      <time>2015-01-31T00:00:00</time>
-      <name>Real - XXXX</name>
-      <score>10-0</score>
-      <leagueName>ABC</leagueName>
-    </match>
-    <match>
-      <id>1/30/2015 12:00:00 AM</id>
-      <time>2015-01-29T00:00:00</time>
-      <name>Real - YYYYYY</name>
-      <score>11 - 0</score>
-      <leagueName>XYZ</leagueName>
-    </match>
-    <match>
-      <id>19</id>
-      <time>2015-01-28T00:00:00</time>
-      <name>Real - ZY</name>
-      <score>1-1</score>
-      <leagueName>YUT</leagueName>
-    </match>
-  
   </matches>
   <careers>
     <career>
