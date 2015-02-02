@@ -9,11 +9,9 @@ namespace PlayerManagement.Models
 {
     public class PlayerAchievement
     {
-        [Key]
         [ForeignKey("Player")]
         public String playerId { get; set; }
-
-        [Key]
+        
         [ForeignKey("Achievement")]
         public String achievementName { get; set; }
 
