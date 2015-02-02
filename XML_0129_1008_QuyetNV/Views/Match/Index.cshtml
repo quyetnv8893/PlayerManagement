@@ -11,10 +11,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.League.LogoLink)
-        </th>
+    <tr>        
         <th>
             @Html.DisplayNameFor(model => model.Time)
         </th>
@@ -29,9 +26,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.League.LogoLink)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Time)
         </td>
