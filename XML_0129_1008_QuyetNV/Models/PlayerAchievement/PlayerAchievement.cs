@@ -9,33 +9,35 @@ namespace PlayerManagement.Models
 {
     public class PlayerAchievement
     {
+        [Key][Column(Order = 0)]
         [ForeignKey("Player")]
-        public String playerId { get; set; }
+        public String PlayerID { get; set; }
         
+        [Key][Column(Order = 1)]
         [ForeignKey("Achievement")]
-        public String achievementName { get; set; }
+        public String AchievementName { get; set; }
 
         [Required]
-        public int number { get; set; }
+        public int Number { get; set; }
 
         [Required]
-        public virtual Player player { get; set; }
+        public virtual Player Player { get; set; }
 
         [Required]
-        public virtual Achievement achievement { get; set; }
+        public virtual Achievement Achievement { get; set; }
 
         public PlayerAchievement()
         {
-            this.playerId = null;
-            this.achievementName = null;
-            this.number = 0;
+            this.PlayerID = null;
+            this.AchievementName = null;
+            this.Number = 0;
         }
 
         public PlayerAchievement(int number, String playerId, String achievementName)
         {
-            this.playerId = playerId;
-            this.achievementName = achievementName;
-            this.number = number;            
+            this.PlayerID = playerId;
+            this.AchievementName = achievementName;
+            this.Number = number;            
         }
     }
 }

@@ -8,57 +8,57 @@ namespace PlayerManagement.Models
 {
     public class AchievementRepository :IAchievementRepository
     {
-        private List<Achievement> allAchievements;
-        private XDocument achievementData;
+        private List<Achievement> _allAchievements;
+        private XDocument _achievementData;
 
         public AchievementRepository()
         {
-            allAchievements = new List<Achievement>();
+            _allAchievements = new List<Achievement>();
 
-            achievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var achievements = from achievement in achievementData.Descendants("achievement")
+            _achievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            var Achievements = from achievement in _achievementData.Descendants("achievement")
                                select new Achievement(achievement.Element("name").Value, achievement.Element("imageLink").Value);
 
-            allAchievements.AddRange(achievements.ToList<Achievement>());
+            _allAchievements.AddRange(Achievements.ToList<Achievement>());
 
         }
 
         public IEnumerable<Achievement> GetAchievements()
         {
-            return allAchievements;
+            return _allAchievements;
         }
 
         public Achievement GetAchievementByName(string name)
         {
-            return allAchievements.Find(item => item.name.Equals(name));
+            return _allAchievements.Find(item => item.Name.Equals(name));
         }
 
         public void InsertAchievement(Achievement achievement)
         {
             
-            achievementData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
-                new XElement("name", achievement.name), new XElement("imageLink", achievement.imageLink)));
+            _achievementData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
+                new XElement("name", achievement.Name), new XElement("imageLink", achievement.ImageLink)));
 
-            achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            _achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
 
         public void DeleteAchievement(string name)
         {
-            achievementData.Descendants("achievements").Elements("achievement")
+            _achievementData.Descendants("achievements").Elements("achievement")
                 .Where(i => i.Element("name").Value.Equals(name)).Remove();
 
-            achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            _achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
 
         public void EditAchievement(Achievement achievement)
         {
-            XElement node = achievementData.Descendants("achievements").Elements("achievement")
-                .Where(i => i.Element("name").Value.Equals(achievement.name)).FirstOrDefault();
+            XElement node = _achievementData.Descendants("achievements").Elements("achievement")
+                .Where(i => i.Element("name").Value.Equals(achievement.Name)).FirstOrDefault();
 
-            node.SetElementValue("name", achievement.name);
-            node.SetElementValue("imageLink", achievement.imageLink);
+            node.SetElementValue("name", achievement.Name);
+            node.SetElementValue("imageLink", achievement.ImageLink);
 
-            achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            _achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
     }
 }

@@ -101,14 +101,14 @@ namespace PlayerManagement.Controllers
         {
             try
             {
-                _repository.DeleteMatch(match.id);
+                _repository.DeleteMatch(match.ID);
                 return RedirectToAction("Index");
             }
             catch(Exception ex)
             {
                 //error msg for failed delete in XML file
                 ViewBag.ErrorMsg = "Error deleting record. " + ex.Message;
-                return View(_repository.GetMatchByID(match.id));
+                return View(_repository.GetMatchByID(match.ID));
             }
         }
     }

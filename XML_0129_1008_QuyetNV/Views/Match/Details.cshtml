@@ -1,50 +1,51 @@
 ﻿@model PlayerManagement.Models.Match
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
 <div>
     <h4>Match</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.time)
+            @Html.DisplayNameFor(model => model.League.LogoLink)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.time)
+            @Html.DisplayFor(model => model.League.LogoLink)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @Html.DisplayNameFor(model => model.Time)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.name)
+            @Html.DisplayFor(model => model.Time)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.score)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.score)
+            @Html.DisplayFor(model => model.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.leagueName)
+            @Html.DisplayNameFor(model => model.Score)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.leagueName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.league.logoLink)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.league.logoLink)
+            @Html.DisplayFor(model => model.Score)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

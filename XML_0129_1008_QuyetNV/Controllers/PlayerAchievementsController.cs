@@ -27,7 +27,7 @@ namespace PlayerManagement.Controllers
 
         // GET: PlayerAchievements
         public ActionResult Index(String id)
-        {
+        {           
             return View(_repository.GetPlayerAchievementsByPlayerID(id));
         }
 
@@ -68,7 +68,7 @@ namespace PlayerManagement.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.achievementName);
+            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.AchievementName);
             return View(playerAchievement);
         }
 
@@ -84,7 +84,7 @@ namespace PlayerManagement.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.achievementName);
+            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.AchievementName);
             return View(playerAchievement);
         }
 
@@ -100,7 +100,7 @@ namespace PlayerManagement.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.achievementName);
+            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.AchievementName);
             return View(playerAchievement);
         }
 

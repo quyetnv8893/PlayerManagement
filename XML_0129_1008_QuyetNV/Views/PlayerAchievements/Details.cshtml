@@ -12,24 +12,32 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.achievement.imageLink)
+            @Html.DisplayNameFor(model => model.Achievement.ImageLink)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.achievement.imageLink)
+            @Html.DisplayFor(model => model.Achievement.ImageLink)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.number)
+            @Html.DisplayNameFor(model => model.Player.ClubName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.number)
+            @Html.DisplayFor(model => model.Player.ClubName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.playerId }) |
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

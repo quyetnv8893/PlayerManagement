@@ -9,21 +9,21 @@ namespace PlayerManagement.Models
 {
     public class LeagueRepository : ILeagueRepository
     {
-        private List<League> allLeagues;
-        private XDocument leagueData;
-        private String xml_path = "~/App_Data/player_management.xml";
-        private String nodeName = "league";
+        private List<League> _allLeagues;
+        private XDocument _leagueData;
+        private String _xmlPath = "~/App_Data/player_management.xml";
+        private String _nodeName = "league";
 
         /// <summary>
         /// Constructor - get all leagues node from xml file
         /// </summary>
         public LeagueRepository()
         {
-            allLeagues = new List<League>();
-            leagueData = XDocument.Load(HttpContext.Current.Server.MapPath(xml_path));
-            var leagues = from League in leagueData.Descendants(nodeName)
+            _allLeagues = new List<League>();
+            _leagueData = XDocument.Load(HttpContext.Current.Server.MapPath(_xmlPath));
+            var leagues = from League in _leagueData.Descendants(_nodeName)
                           select new League(League.Element("name").Value, League.Element("logoLink").Value);
-            allLeagues.AddRange(leagues.ToList<League>());
+            _allLeagues.AddRange(leagues.ToList<League>());
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace PlayerManagement.Models
         /// <returns></returns>
         public IEnumerable<League> GetLeagues()
         {
-            return allLeagues;
+            return _allLeagues;
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace PlayerManagement.Models
         /// <returns></returns>
         public League GetLeagueByName(String name)
         {            
-            return allLeagues.Find(item => item.name.Equals(name));
+            return _allLeagues.Find(item => item.Name.Equals(name));
         }
         /// <summary>
         /// Insert new league to xml file
@@ -50,8 +50,8 @@ namespace PlayerManagement.Models
         /// <param name="league"></param>
         public void InsertLeague(League league)
         {
-            leagueData.Descendants("leagues").FirstOrDefault().Add(new XElement("league", new XElement("name", league.name), new XElement("logoLink", league.logoLink)));
-            leagueData.Save(HttpContext.Current.Server.MapPath(xml_path));
+            _leagueData.Descendants("leagues").FirstOrDefault().Add(new XElement("league", new XElement("name", league.Name), new XElement("logoLink", league.LogoLink)));
+            _leagueData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
         }
         /// <summary>
         /// Edit a league and save to xml file
@@ -59,10 +59,10 @@ namespace PlayerManagement.Models
         /// <param name="league"></param>
         public void EditLeague(League league)
         {
-            XElement node = leagueData.Descendants("leagues").Elements(nodeName).Where(item => item.Element("name").Value.Equals(league.name)).FirstOrDefault();
-            node.SetElementValue("name", league.name);
-            node.SetElementValue("logoLink", league.logoLink);
-            leagueData.Save(HttpContext.Current.Server.MapPath(xml_path));
+            XElement node = _leagueData.Descendants("leagues").Elements(_nodeName).Where(item => item.Element("name").Value.Equals(league.Name)).FirstOrDefault();
+            node.SetElementValue("name", league.Name);
+            node.SetElementValue("logoLink", league.LogoLink);
+            _leagueData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
         }
 
         /// <summary>
@@ -71,8 +71,8 @@ namespace PlayerManagement.Models
         /// <param name="name"></param>
         public void DeleteLeague(String name)
         {
-            leagueData.Descendants("leagues").Elements(nodeName).Where(item => item.Element("name").Value.Equals(name)).Remove();
-            leagueData.Save(HttpContext.Current.Server.MapPath(xml_path));
+            _leagueData.Descendants("leagues").Elements(_nodeName).Where(item => item.Element("name").Value.Equals(name)).Remove();
+            _leagueData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
         }
     }
 }

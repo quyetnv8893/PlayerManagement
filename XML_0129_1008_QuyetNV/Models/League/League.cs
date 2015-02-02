@@ -9,16 +9,16 @@ namespace PlayerManagement.Models
     public class League
     {     
         [Key]        
-        public String name { get; set; }
+        public String Name { get; set; }
         [Required]
-        public String logoLink { get; set; }
+        public String LogoLink { get; set; }
         public League() {
-            this.name = null;
-            this.logoLink = null;
+            this.Name = null;
+            this.LogoLink = null;
         }
         public League(String name, String logoLink){
-            this.name = name;
-            this.logoLink = logoLink;
+            this.Name = name;
+            this.LogoLink = logoLink;
         }
     }
 }

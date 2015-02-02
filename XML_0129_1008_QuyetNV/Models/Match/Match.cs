@@ -9,31 +9,31 @@ namespace PlayerManagement.Models
     public class Match
     {
         [Key]
-        public String id { get; set; }
+        public String ID { get; set; }
         [Required]
-        public DateTime time { get; set; }
+        public DateTime Time { get; set; }
         [Required]
-        public String name { get; set; }
+        public String Name { get; set; }
         [Required]
-        public String score { get; set; }
+        public String Score { get; set; }
         [Required]
-        public String leagueName { get; set; }
-        public virtual League league { get; set; }
+        public String LeagueName { get; set; }
+        public virtual League League { get; set; }
         public Match()
         {
-            this.id = null;
-            this.time = DateTime.Now;
-            this.name = null;
-            this.score = null;
-            this.leagueName = null;
+            this.ID = null;
+            this.Time = DateTime.Now;
+            this.Name = null;
+            this.Score = null;
+            this.LeagueName = null;
         }
         public Match(String id, DateTime time, String name, String score, String leagueName)
         {
-            this.id = id;
-            this.time = time;
-            this.name = name;
-            this.score = score;
-            this.leagueName = leagueName;
+            this.ID = id;
+            this.Time = time;
+            this.Name = name;
+            this.Score = score;
+            this.LeagueName = leagueName;
         }
 
   

@@ -109,13 +109,13 @@ namespace PlayerManagement.Controllers
             {
                 try
                 {
-                    _repository.DeleteLeague(league.name);
+                    _repository.DeleteLeague(league.Name);
                     return RedirectToAction("Index");
                 }
                 catch (Exception e)
                 {
                     ViewBag.ErrorMsg = "Error deleting record. " + e.Message;
-                    return View(_repository.GetLeagueByName(league.name));
+                    return View(_repository.GetLeagueByName(league.Name));
                 }
             }
             return View(league);

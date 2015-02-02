@@ -9,32 +9,32 @@ namespace PlayerManagement.Models
     public class Coach
     {
         [Key]
-        public String name { get; set; }
+        public String Name { get; set; }
         [Required]
-        public String imageLink { get; set; }
+        public String ImageLink { get; set; }
         [Required]
-        public String position { get; set; }
+        public String Position { get; set; }
         [Required]
-        public DateTime dateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         [Required]
-        public String clubName { get; set; }
+        public String ClubName { get; set; }
 
         public Coach()
         {
-            this.name = null;
-            this.imageLink = null;
-            this.position = null;
-            this.dateOfBirth = DateTime.Now;
-            this.clubName = null;
+            this.Name = null;
+            this.ImageLink = null;
+            this.Position = null;
+            this.DateOfBirth = DateTime.Now;
+            this.ClubName = null;
         }
 
         public Coach(String name, String imageLink, String position, DateTime dateOfBirth, String clubName)
         {
-            this.name = name;
-            this.imageLink = imageLink;
-            this.position = position;
-            this.dateOfBirth = dateOfBirth;
-            this.clubName = clubName;
+            this.Name = name;
+            this.ImageLink = imageLink;
+            this.Position = position;
+            this.DateOfBirth = dateOfBirth;
+            this.ClubName = clubName;
         }
     }
 

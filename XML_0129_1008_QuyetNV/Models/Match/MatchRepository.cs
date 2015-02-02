@@ -9,26 +9,26 @@ namespace PlayerManagement.Models
 {
     public class MatchRepository : IMatchRepository
     {
-        private List<Match> allMatches;
-        private List<League> allLeagues;
-        private XDocument MatchData;
-        private String xml_path = "~/App_Data/player_management.xml";
+        private List<Match> _allMatches;
+        private List<League> _allLeagues;
+        private XDocument _matchData;
+        private String _xmlPath = "~/App_Data/player_management.xml";
         
         /**
          * Contructor to get all matches from xml file and save them to allMatches List
          **/               
         public MatchRepository()
         {
-            allMatches = new List<Match>();
-            allLeagues = new List<League>();
-            MatchData = XDocument.Load(HttpContext.Current.Server.MapPath(xml_path));
-            var Matches = from Match in MatchData.Descendants("match")
+            _allMatches = new List<Match>();
+            _allLeagues = new List<League>();
+            _matchData = XDocument.Load(HttpContext.Current.Server.MapPath(_xmlPath));
+            var Matches = from Match in _matchData.Descendants("match")
                           select new Match(Match.Element("id").Value, (DateTime)Match.Element("time"), Match.Element("name").Value,
                               Match.Element("score").Value, Match.Element("leagueName").Value);
-            var leagues = from League in MatchData.Descendants("league")
+            var leagues = from League in _matchData.Descendants("league")
                           select new League(League.Element("name").Value, League.Element("logoLink").Value);
-            allLeagues.AddRange(leagues.ToList<League>());
-            allMatches.AddRange(Matches.ToList<Match>());
+            _allLeagues.AddRange(leagues.ToList<League>());
+            _allMatches.AddRange(Matches.ToList<Match>());
         }
 
 
@@ -37,7 +37,7 @@ namespace PlayerManagement.Models
          **/
         public IEnumerable<Match> GetMatches()
         {
-            return allMatches;
+            return _allMatches;
         }
 
         /**
@@ -45,8 +45,8 @@ namespace PlayerManagement.Models
          **/
         public Match GetMatchByID(String id)
         {
-            Match match = allMatches.Find(item => item.id.Equals(id));
-            match.league = allLeagues.Find(item => item.name.Equals(match.leagueName));
+            Match match = _allMatches.Find(item => item.ID.Equals(id));
+            match.League = _allLeagues.Find(item => item.Name.Equals(match.LeagueName));
             return match;
         }
 
@@ -57,7 +57,7 @@ namespace PlayerManagement.Models
         /// <returns></returns>
         public IEnumerable<Match> GetMatchesByLeagueName(String leagueName)
         {
-            return allMatches.FindAll(item => item.leagueName.Equals(leagueName));
+            return _allMatches.FindAll(item => item.LeagueName.Equals(leagueName));
         }
 
         /**
@@ -65,14 +65,14 @@ namespace PlayerManagement.Models
          **/
         public void InsertMatch(Match match)
         {
-            if (match.id == null)
+            if (match.ID == null)
             {
-                match.id = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
+                match.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
             }
-            MatchData.Descendants("matches").FirstOrDefault().Add(new XElement("match", new XElement("id", match.id),
-                new XElement("time", match.time), new XElement("name", match.name), new XElement("score", match.score),
-                new XElement("leagueName", match.leagueName)));
-            MatchData.Save(HttpContext.Current.Server.MapPath(xml_path));
+            _matchData.Descendants("matches").FirstOrDefault().Add(new XElement("match", new XElement("id", match.ID),
+                new XElement("time", match.Time), new XElement("name", match.Name), new XElement("score", match.Score),
+                new XElement("leagueName", match.LeagueName)));
+            _matchData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
         }
 
         /**
@@ -80,8 +80,8 @@ namespace PlayerManagement.Models
          **/
         public void DeleteMatch(String id)
         {
-            MatchData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(id)).Remove();
-            MatchData.Save(HttpContext.Current.Server.MapPath(xml_path));
+            _matchData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(id)).Remove();
+            _matchData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
         }
 
 
@@ -91,13 +91,13 @@ namespace PlayerManagement.Models
         public void EditMatch(Match Match)
         {
 
-            XElement node = MatchData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(Match.id)).FirstOrDefault();
-            node.SetElementValue("id", Match.id);
-            node.SetElementValue("time", Match.time);
-            node.SetElementValue("name", Match.name);
-            node.SetElementValue("score", Match.score);
-            node.SetElementValue("leagueName", Match.leagueName);
-            MatchData.Save(HttpContext.Current.Server.MapPath(xml_path));
+            XElement node = _matchData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(Match.ID)).FirstOrDefault();
+            node.SetElementValue("id", Match.ID);
+            node.SetElementValue("time", Match.Time);
+            node.SetElementValue("name", Match.Name);
+            node.SetElementValue("score", Match.Score);
+            node.SetElementValue("leagueName", Match.LeagueName);
+            _matchData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
         }
 
     }

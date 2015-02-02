@@ -13,10 +13,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.achievement.imageLink)
+            @Html.DisplayNameFor(model => model.Achievement.ImageLink)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.number)
+            @Html.DisplayNameFor(model => model.Player.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
         </th>
         <th></th>
     </tr>
@@ -24,15 +27,18 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.achievement.imageLink)
+            @Html.DisplayFor(modelItem => item.Achievement.ImageLink)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.number)
+            @Html.DisplayFor(modelItem => item.Player.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.playerId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.playerId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.playerId })
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

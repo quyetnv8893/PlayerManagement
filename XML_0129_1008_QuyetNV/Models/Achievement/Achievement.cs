@@ -9,23 +9,23 @@ namespace PlayerManagement.Models
     public class Achievement
     {
         [Key]
-        public String name { get; set; }
+        public String Name { get; set; }
 
         [Required]
-        public String imageLink { get; set; }
+        public String ImageLink { get; set; }
 
-        public virtual ICollection<PlayerAchievement> playerAchievements { get; set; }
+        public virtual ICollection<PlayerAchievement> PlayerAchievements { get; set; }
 
         public Achievement()
         {
-            this.name = null;
-            this.imageLink = null;
+            this.Name = null;
+            this.ImageLink = null;
         }
 
         public Achievement(String name, String imageLink)
         {
-            this.name = name;
-            this.imageLink = imageLink;
+            this.Name = name;
+            this.ImageLink = imageLink;
         }
     }
 }
