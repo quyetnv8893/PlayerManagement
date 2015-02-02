@@ -23,7 +23,6 @@ namespace PlayerManagement.Models
 
         }
 
-
         public IEnumerable<Achievement> GetAchievements()
         {
             return allAchievements;
@@ -36,8 +35,7 @@ namespace PlayerManagement.Models
 
         public void InsertAchievement(Achievement achievement)
         {
-            achievement.name = (from a in achievementData.Descendants("achievement") orderby a.Element("name").Value descending select a.Element("name").Value).FirstOrDefault();
-
+            
             achievementData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
                 new XElement("name", achievement.name), new XElement("imageLink"), achievement.imageLink));
 
@@ -46,17 +44,20 @@ namespace PlayerManagement.Models
 
         public void DeleteAchievement(string name)
         {
-            achievementData.Descendants("achievements").Elements("achievement").Where(i => i.Element("name").Value.Equals(name)).Remove();
+            achievementData.Descendants("achievements").Elements("achievement")
+                .Where(i => i.Element("name").Value.Equals(name)).Remove();
 
             achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
 
         public void EditAchievement(Achievement achievement)
         {
-            XElement node = achievementData.Descendants("achievements").Elements("achievement").Where(i => i.Element("name").Value.Equals(achievement.name)).FirstOrDefault();
+            XElement node = achievementData.Descendants("achievements").Elements("achievement")
+                .Where(i => i.Element("name").Value.Equals(achievement.name)).FirstOrDefault();
 
             node.SetElementValue("name", achievement.name);
             node.SetElementValue("imageLink", achievement.imageLink);
+
             achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
     }

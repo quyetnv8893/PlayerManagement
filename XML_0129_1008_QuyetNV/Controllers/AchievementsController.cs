@@ -57,7 +57,7 @@ namespace AchievementManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,clubName,number,name,position,dateOfBirth,placeOfBirth,weight,height,description,imageLink,status")] Achievement achievement)
+        public ActionResult Create([Bind(Include = "name, imageLink")] Achievement achievement)
         {
             if (ModelState.IsValid)
             {
@@ -92,9 +92,8 @@ namespace AchievementManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.EditAchievement(achievement);
-                //db.Entry(achievement).State = EntityState.Modified;
-                //db.SaveChanges();
+                _repository.EditAchievement(achievement);   
+                
                 return RedirectToAction("Index");
             }
             return View(achievement);
