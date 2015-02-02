@@ -37,7 +37,7 @@ namespace PlayerManagement.Models
         {
             
             achievementData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
-                new XElement("name", achievement.name), new XElement("imageLink"), achievement.imageLink));
+                new XElement("name", achievement.name), new XElement("imageLink", achievement.imageLink)));
 
             achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }

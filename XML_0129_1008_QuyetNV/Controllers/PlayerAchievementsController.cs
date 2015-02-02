@@ -72,7 +72,7 @@ namespace PlayerManagement.Controllers
             return View(playerAchievement);
         }
 
-        // GET: PlayerAchievements/Edit/5
+        // TODO: Edit code here
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -89,8 +89,7 @@ namespace PlayerManagement.Controllers
         }
 
         // POST: PlayerAchievements/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // TODO: Edit code here
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "playerId,achievementName,number")] PlayerAchievement playerAchievement)
