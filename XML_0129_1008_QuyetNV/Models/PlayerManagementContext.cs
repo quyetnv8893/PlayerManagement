@@ -32,6 +32,8 @@ namespace PlayerManagement.Models
         public System.Data.Entity.DbSet<PlayerManagement.Models.Club> Clubs { get; set; }
 
         public System.Data.Entity.DbSet<PlayerManagement.Models.Match> Matches { get; set; }
+
+        public System.Data.Entity.DbSet<PlayerManagement.Models.PlayerMatch.PlayerMatch> PlayerMatches { get; set; }
     
     }
 }

@@ -6,41 +6,45 @@
 }
 
 <h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>        
-        <th>
-            @Html.DisplayNameFor(model => model.Time)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Score)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Time)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Score)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+<div id="main" class="fixed-width">
+    <div class="player-pages">
+        <div class="top-bar">
+            <select class="selector">
+                <option value="1">Time</option>
+                <option value="2">Name</option>
+                <option value="3">Score</option>                
+            </select>
+            <form name="player-search" id="player-search">
+                <input type="text" name="search_text">
+                <input type="submit" name="submit-btn" class="button primary" value="Go">
+            </form>
+        </div>
+        <div class="info text-center">
+            <div class="list text-left">
+                <table class="career">
+                    <thead>
+                    <th>Time</th>
+                    <th>Name</th>                    
+                    <th>Score</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="odd">
+                                <td>
+                                    @String.Format("{0:d}",item.Time)                                   
+                                </td>
+                                <td>                                    
+                                    @Html.ActionLink(item.Name, "Details", new { id = item.ID })
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Score)
+                                </td>                                
+                            </tr>
+                        }                       
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+</div>

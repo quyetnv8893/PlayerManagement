@@ -17,7 +17,8 @@ namespace PlayerManagement.Models
         [Required]
         public String Score { get; set; }
         [Required]
-        public String LeagueName { get; set; }        
+        public String LeagueName { get; set; }
+        public virtual IEnumerable<PlayerMatch.PlayerMatch> PlayerMatches { get; set; }
         public Match()
         {
             this.ID = null;

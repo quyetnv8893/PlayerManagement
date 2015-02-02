@@ -4,30 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Real Madrid</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/main.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Real Madrid", "Index", "Players", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Players", "Index", "Players")</li>
-                    <li>@Html.ActionLink("Achievements", "Index", "Achievements")</li>
-                    <li>@Html.ActionLink("Match", "Index", "Match")</li>
-                    <li>@Html.ActionLink("Coach", "Index", "Coaches")</li>
-                    <li>@Html.ActionLink("Club", "Index", "Clubs")</li>
-                </ul>
-            </div>
-        </div>
+    <div id="header">
+        <ul id="navbar" class="uppercase fixed-with">
+            <a href="Clubs"><li>Club</li></a>
+            <a href="Players"><li>Players</li></a>
+            <a href="Match"><li>Matches</li></a>
+            <a href="Coaches"><li>Coaches</li></a>
+            <a href="League"><li>Leagues</li></a>
+        </ul>
     </div>
     <div class="container body-content">
         @RenderBody()

@@ -1,43 +1,55 @@
 ﻿@model PlayerManagement.Models.Match
 
-@{
-    ViewBag.Title = "Details";
+@{    
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Details</h2>
 
-<div>
-    <h4>Match</h4>
-    <hr />
-    <dl class="dl-horizontal">        
-        <dt>
-            @Html.DisplayNameFor(model => model.Time)
-        </dt>
+<div id="main" class="fixed-width">
+    <div class="player">
+        <div class="image">
+            <div class="viewer" style="border: none">
+                <p style="font-size: 89px;margin-bottom: 0px;">@Html.DisplayFor(model => model.Score)</p>                
+                <div class="leftscore">
+                    @foreach (var item in Model.PlayerMatches)
+                    {
+                        <p>[@Html.DisplayFor(modelItem => item.Player.Name)][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="info text-center">
+            <h3>Match's info</h3>
+            <div class="list text-left">
+                <p><label>Match Name : </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
+                <p><label>League : </label> <span>@Html.DisplayFor(model => model.LeagueName)</span></p>
+                <p><label>Date : </label> <span>@Html.DisplayFor(model => model.Time)</span></p>
+                <p><label>Yellow Card : </label> <span></span></p>
+                @foreach (var item in Model.PlayerMatches)
+                {
+                    if (item.NumberOfYellows > 0)
+                    {
+                        <p><label style="margin-left:15px">- @Html.DisplayFor(modelItem => item.Player.Name) , @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                    }
 
-        <dd>
-            @Html.DisplayFor(model => model.Time)
-        </dd>
+                }
+                <p><label>Red Card: </label> <span></span></p>
+                @foreach (var item in Model.PlayerMatches)
+                {
+                    if (item.NumberOfReds > 0)
+                    {
+                        <p><label style="margin-left:15px">- @Html.DisplayFor(modelItem => item.Player.Name) , @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
+                    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Score)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Score)
-        </dd>
-
-    </dl>
+                }
+                <p><label>League: </label> <span>@Html.DisplayFor(model => model.LeagueName)</span></p>
+            </div>
+            <div class="buttons text-center">
+                <a href="#">
+                    <div class="button primary">Back</div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
