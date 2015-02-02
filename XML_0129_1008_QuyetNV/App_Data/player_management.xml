@@ -436,8 +436,8 @@
   <coaches>
     <coach>
       <id>01</id>
-      <name>Carlo Ancelotti</name>
-      <dateOfBirth>1959-06-10</dateOfBirth>
+      <name>CarloAncelotti</name>
+      <dateOfBirth>1959-06-10T00:00:00</dateOfBirth>
       <imageLink>http://i.imgur.com/64MGQKn.jpg</imageLink>
       <position>Main Coach</position>
       <clubName>Real Madrid</clubName>
@@ -466,14 +466,6 @@
       <position>Head Fitness Coach</position>
       <clubName>Real Madrid</clubName>
     </coach>
-    <coach>
-      <id>05</id>
-      <name>Villiam Vecchi</name>
-      <dateOfBirth>1948-12-28</dateOfBirth>
-      <imageLink>http://i.imgur.com/64MGQKn.jpg</imageLink>
-      <position>Goalkeeper Coach</position>
-      <clubName>Real Madrid</clubName>
-    </coach>
   </coaches>
   <achievements>
     <achievement>
@@ -499,9 +491,31 @@
       <time>2015-01-18T11:00:00</time>
       <name>Getafe - Real Madrid</name>
       <score>0-3</score>
+      <leagueName>LIGA BBVA</leagueName>
+    </match>
+    <!-- TODO: ADD MORE MATCH HERE -->
+    <match>
+      <id>1/30/2015</id>
+      <time>2015-01-31T00:00:00</time>
+      <name>Real - XXXX</name>
+      <score>10-0</score>
+      <leagueName>ABC</leagueName>
+    </match>
+    <match>
+      <id>20150118</id>
+      <time>2015-01-18T11:00:00</time>
+      <name>Getafe - Real Madrid</name>
+      <score>0-3</score>
       <leagueName>LIGABBVA</leagueName>
     </match>
     <!-- TODO: ADD MORE MATCH HERE -->
+    <match>
+      <id>19</id>
+      <time>2015-01-28T00:00:00</time>
+      <name>Real - ZY</name>
+      <score>1-1</score>
+      <leagueName>YUT</leagueName>
+    </match>
   </matches>
   <careers>
     <career>

@@ -26,6 +26,10 @@ namespace PlayerManagement.Models
         public System.Data.Entity.DbSet<PlayerManagement.Models.PlayerAchievement> PlayerAchievements { get; set; }
 
         public System.Data.Entity.DbSet<PlayerManagement.Models.League> Leagues { get; set; }
+
+        public System.Data.Entity.DbSet<PlayerManagement.Models.Coach> Coaches { get; set; }
+
+        public System.Data.Entity.DbSet<PlayerManagement.Models.Club> Clubs { get; set; }
     
     }
 }
