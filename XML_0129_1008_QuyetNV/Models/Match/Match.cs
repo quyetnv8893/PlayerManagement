@@ -17,8 +17,7 @@ namespace PlayerManagement.Models
         [Required]
         public String Score { get; set; }
         [Required]
-        public String LeagueName { get; set; }
-        public virtual League League { get; set; }
+        public String LeagueName { get; set; }        
         public Match()
         {
             this.ID = null;

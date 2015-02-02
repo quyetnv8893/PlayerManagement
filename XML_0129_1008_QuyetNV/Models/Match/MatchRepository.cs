@@ -9,8 +9,7 @@ namespace PlayerManagement.Models
 {
     public class MatchRepository : IMatchRepository
     {
-        private List<Match> _allMatches;
-        private List<League> _allLeagues;
+        private List<Match> _allMatches;        
         private XDocument _matchData;
         private String _xmlPath = "~/App_Data/player_management.xml";
         
@@ -19,15 +18,11 @@ namespace PlayerManagement.Models
          **/               
         public MatchRepository()
         {
-            _allMatches = new List<Match>();
-            _allLeagues = new List<League>();
+            _allMatches = new List<Match>();            
             _matchData = XDocument.Load(HttpContext.Current.Server.MapPath(_xmlPath));
             var Matches = from Match in _matchData.Descendants("match")
                           select new Match(Match.Element("id").Value, (DateTime)Match.Element("time"), Match.Element("name").Value,
-                              Match.Element("score").Value, Match.Element("leagueName").Value);
-            var leagues = from League in _matchData.Descendants("league")
-                          select new League(League.Element("name").Value, League.Element("logoLink").Value);
-            _allLeagues.AddRange(leagues.ToList<League>());
+                              Match.Element("score").Value, Match.Element("leagueName").Value);            
             _allMatches.AddRange(Matches.ToList<Match>());
         }
 
@@ -45,8 +40,7 @@ namespace PlayerManagement.Models
          **/
         public Match GetMatchByID(String id)
         {
-            Match match = _allMatches.Find(item => item.ID.Equals(id));
-            match.League = _allLeagues.Find(item => item.Name.Equals(match.LeagueName));
+            Match match = _allMatches.Find(item => item.ID.Equals(id));            
             return match;
         }
 
