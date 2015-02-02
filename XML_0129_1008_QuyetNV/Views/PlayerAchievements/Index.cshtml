@@ -15,7 +15,6 @@
         <th>
             @Html.DisplayNameFor(model => model.achievement.imageLink)
         </th>
-
         <th>
             @Html.DisplayNameFor(model => model.number)
         </th>
@@ -25,9 +24,8 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.achievement)
+            @Html.DisplayFor(modelItem => item.achievement.imageLink)
         </td>
-                
         <td>
             @Html.DisplayFor(modelItem => item.number)
         </td>

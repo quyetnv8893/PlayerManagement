@@ -17,10 +17,8 @@ namespace PlayerManagement.Models
         [Required]
         public int number { get; set; }
 
-        [Required]
         public virtual Player player { get; set; }
 
-        [Required]
         public virtual Achievement achievement { get; set; }
 
         public PlayerAchievement()

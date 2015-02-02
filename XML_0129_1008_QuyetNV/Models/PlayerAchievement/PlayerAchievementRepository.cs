@@ -26,7 +26,6 @@ namespace PlayerManagement.Models
 
         public IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String id)
         {
-            //var achievements = allPlayerAchievements.FindAll(item => item.playerId.Equals(id));            
             return allPlayerAchievements.FindAll(item => item.playerId.Equals(id));
         }
 
