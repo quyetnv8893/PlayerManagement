@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace PlayerManagement.Models
 {
-    public class AchievementRepository :IAchievementRepository
+    public class AchievementRepository : IAchievementRepository
     {
         private List<Achievement> _allAchievements;
         private XDocument _achievementData;
@@ -17,7 +17,9 @@ namespace PlayerManagement.Models
 
             _achievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             var Achievements = from achievement in _achievementData.Descendants("achievement")
-                               select new Achievement(achievement.Element("name").Value, achievement.Element("imageLink").Value);
+                               select new Achievement(
+                                   achievement.Element("name").Value,
+                                   achievement.Element("imageLink").Value);
 
             _allAchievements.AddRange(Achievements.ToList<Achievement>());
 
@@ -35,9 +37,11 @@ namespace PlayerManagement.Models
 
         public void InsertAchievement(Achievement achievement)
         {
-            
+
             _achievementData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
-                new XElement("name", achievement.Name), new XElement("imageLink", achievement.ImageLink)));
+                new XElement("name", achievement.Name),
+                new XElement("imageLink", achievement.ImageLink)
+                ));
 
             _achievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }

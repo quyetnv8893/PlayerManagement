@@ -17,12 +17,12 @@ namespace PlayerManagement.Models
 
             _clubData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             var clubs = from club in _clubData.Descendants("club")
-                               select new Club(
-                                   club.Element("name").Value, 
-                                   club.Element("logoLink").Value,
-                                   (DateTime)club.Element("foundedDate"), 
-                                   club.Element("stadium").Value
-                                   );
+                        select new Club(
+                            club.Element("name").Value,
+                            club.Element("logoLink").Value,
+                            (DateTime)club.Element("foundedDate"),
+                            club.Element("stadium").Value
+                            );
 
             _allClubs.AddRange(clubs.ToList<Club>());
 
@@ -40,12 +40,12 @@ namespace PlayerManagement.Models
         }
 
         public void InsertClub(Club club)
-        {          
+        {
 
             _clubData.Descendants("playerManagement").FirstOrDefault().Add(new XElement("club",
-                new XElement("name", club.Name), 
-                new XElement("logoLink", club.LogoLink), 
-                new XElement("foundedDate", club.FoundedDate), 
+                new XElement("name", club.Name),
+                new XElement("logoLink", club.LogoLink),
+                new XElement("foundedDate", club.FoundedDate),
                 new XElement("stadium", club.Stadium)));
 
             _clubData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
@@ -67,7 +67,7 @@ namespace PlayerManagement.Models
             node.SetElementValue("logoLink", club.LogoLink);
             node.SetElementValue("foundedDate", club.FoundedDate);
             node.SetElementValue("stadium", club.Stadium);
-            
+
             _clubData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
     }

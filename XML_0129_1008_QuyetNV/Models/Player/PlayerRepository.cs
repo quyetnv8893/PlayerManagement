@@ -17,9 +17,19 @@ namespace PlayerManagement.Models
 
             _playerData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             var players = from player in _playerData.Descendants("player")
-                          select new Player(player.Element("clubName").Value, player.Element("id").Value, (int)player.Element("number"),
-                              player.Element("name").Value, player.Element("position").Value, (DateTime)player.Element("dateOfBirth"), player.Element("placeOfBirth").Value,
-                              (double)player.Element("weight"), (double)player.Element("height"), player.Element("description").Value, player.Element("imageLink").Value, (Boolean)player.Element("status"));
+                          select new Player(
+                              player.Element("clubName").Value, 
+                              player.Element("id").Value, 
+                              (int)player.Element("number"),
+                              player.Element("name").Value, 
+                              player.Element("position").Value, 
+                              (DateTime)player.Element("dateOfBirth"), 
+                              player.Element("placeOfBirth").Value,
+                              (double)player.Element("weight"), 
+                              (double)player.Element("height"), 
+                              player.Element("description").Value, 
+                              player.Element("imageLink").Value, 
+                              (Boolean)player.Element("status"));
 
             _allPlayers.AddRange(players.ToList<Player>());
 
@@ -40,9 +50,7 @@ namespace PlayerManagement.Models
         //Add new player
 
         public void InsertPlayer(Player player)
-        {
-            player.ID = (from p in _playerData.Descendants("player") orderby p.Element("id").Value descending select p.Element("id").Value).FirstOrDefault();
-
+        {           
             //Change later
             _playerData.Descendants("players").FirstOrDefault().Add(new XElement("player", 
                 new XElement("clubName", player.ClubName), 
@@ -56,7 +64,8 @@ namespace PlayerManagement.Models
                 new XElement("height", player.Height), 
                 new XElement("description", player.Description),
                 new XElement("imageLink", player.ImageLink), 
-                new XElement("status", player.Status)));
+                new XElement("status", player.Status)
+                ));
 
             _playerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
@@ -64,7 +73,8 @@ namespace PlayerManagement.Models
         // Delete Record
         public void DeletePlayer(String id)
         {
-            _playerData.Descendants("players").Elements("player").Where(i => i.Element("id").Value.Equals(id)).Remove();
+            _playerData.Descendants("players").Elements("player")
+                .Where(i => i.Element("id").Value.Equals(id)).Remove();
 
             _playerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
@@ -73,7 +83,8 @@ namespace PlayerManagement.Models
         public void EditPlayer(Player player)
         {
 
-            XElement node = _playerData.Descendants("players").Elements("player").Where(i => i.Element("id").Value.Equals(player.ID)).FirstOrDefault();
+            XElement node = _playerData.Descendants("players").Elements("player")
+                .Where(i => i.Element("id").Value.Equals(player.ID)).FirstOrDefault();
 
             node.SetElementValue("clubName", player.ClubName);
             node.SetElementValue("id", player.ID);

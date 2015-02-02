@@ -17,8 +17,12 @@ namespace PlayerManagement.Models
 
             _coachData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             var coaches = from coach in _coachData.Descendants("coach")
-                               select new Coach(coach.Element("name").Value, coach.Element("imageLink").Value, coach.Element("position").Value,
-                                   (DateTime)coach.Element("dateOfBirth"), coach.Element("clubName").Value);
+                          select new Coach(
+                              coach.Element("name").Value, 
+                              coach.Element("imageLink").Value, 
+                              coach.Element("position").Value,
+                              (DateTime)coach.Element("dateOfBirth"), 
+                              coach.Element("clubName").Value);
 
             _allCoachs.AddRange(coaches.ToList<Coach>());
 
@@ -37,12 +41,16 @@ namespace PlayerManagement.Models
 
         public void InsertCoach(Coach coach)
         {
-            coach.Name = (from a in _coachData.Descendants("coach") orderby a.Element("name").Value 
-                              descending select a.Element("name").Value).FirstOrDefault();
+            coach.Name = (from a in _coachData.Descendants("coach")
+                          orderby a.Element("name").Value
+                              descending
+                          select a.Element("name").Value).FirstOrDefault();
 
             _coachData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
-                new XElement("name", coach.Name), new XElement("imageLink"), coach.ImageLink), 
-                new XElement("position", coach.Position), new XElement("dateOfBirth", coach.DateOfBirth),
+                new XElement("name", coach.Name), 
+                new XElement("imageLink"), coach.ImageLink),
+                new XElement("position", coach.Position), 
+                new XElement("dateOfBirth", coach.DateOfBirth),
                 new XElement("clubName", coach.ClubName));
 
             _coachData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
@@ -50,7 +58,8 @@ namespace PlayerManagement.Models
 
         public void DeleteCoach(string name)
         {
-            _coachData.Descendants("coaches").Elements("coach").Where(i => i.Element("name").Value.Equals(name)).Remove();
+            _coachData.Descendants("coaches").Elements("coach")
+                .Where(i => i.Element("name").Value.Equals(name)).Remove();
 
             _coachData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
