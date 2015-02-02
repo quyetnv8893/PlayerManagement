@@ -19,6 +19,8 @@ namespace PlayerManagement.Models
         [Required]
         public String position { get; set; }
         [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime dateOfBirth { get; set; }
         [Required]
         public string placeOfBirth { get; set; }
