@@ -17,7 +17,9 @@ namespace PlayerManagement.Models
 
             playerAchievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             var playerAchievements = from playerAchievement in playerAchievementData.Descendants("player_achievement")
-                                     select new PlayerAchievement((int)playerAchievement.Element("number"), playerAchievement.Element("playerId").Value,
+                                     select new PlayerAchievement(
+                                         (int)playerAchievement.Element("number"), 
+                                         playerAchievement.Element("playerId").Value,
                                          playerAchievement.Element("achievementName").Value);
 
             allPlayerAchievements.AddRange(playerAchievements.ToList<PlayerAchievement>());
@@ -39,10 +41,10 @@ namespace PlayerManagement.Models
         public void InsertPlayerAchievement(PlayerAchievement playerAchievement)
         {
 
-
             playerAchievementData.Descendants("player_achievement").FirstOrDefault().Add(new XElement("player_achievement",
-                new XElement("number", playerAchievement.number), new XElement("playerID"), playerAchievement.playerId),
-                new XElement("achievementName"), playerAchievement.achievementName);
+                new XElement("number", playerAchievement.number), 
+                new XElement("playerID", playerAchievement.playerId),
+                new XElement("achievementName", playerAchievement.achievementName)));
 
             playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
@@ -52,7 +54,8 @@ namespace PlayerManagement.Models
         {
             playerAchievementData.Descendants("players_achievements").Elements("player_achievement").
                 Where(i => i.Element("playerID").Value.Equals(playerID)).
-                Where(i => i.Element("achievementName").Value.Equals(achievementName)).Remove();
+                Where(i => i.Element("achievementName").Value.Equals(achievementName)).
+                Remove();
 
             playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
 

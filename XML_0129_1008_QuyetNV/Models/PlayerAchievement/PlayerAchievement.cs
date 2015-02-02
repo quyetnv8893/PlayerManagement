@@ -33,7 +33,7 @@ namespace PlayerManagement.Models
         {
             this.playerId = playerId;
             this.achievementName = achievementName;
-            this.number = number;
+            this.number = number;            
         }
     }
 }
