@@ -93,9 +93,7 @@ namespace PlayerManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.EditPlayer(player);
-                //db.Entry(player).State = EntityState.Modified;
-                //db.SaveChanges();
+                _repository.EditPlayer(player);                
                 return RedirectToAction("Index");
             }
             return View(player);

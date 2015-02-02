@@ -44,11 +44,19 @@ namespace PlayerManagement.Models
             player.id = (from p in playerData.Descendants("player") orderby p.Element("id").Value descending select p.Element("id").Value).FirstOrDefault();
 
             //Change later
-            playerData.Descendants("players").FirstOrDefault().Add(new XElement("player", new XElement("clubName", player.clubName), new XElement("id", player.id),
-                new XElement("number", player.number), new XElement("name", player.name), new XElement("position", player.position),
-                new XElement("dateOfBirth", player.dateOfBirth.Date), new XElement("placeOfBirth", player.placeOfBirth),
-                new XElement("weight", player.weight), new XElement("height", player.height), new XElement("description", player.description),
-                new XElement("imageLink", player.imageLink), new XElement("status", player.status)));
+            playerData.Descendants("players").FirstOrDefault().Add(new XElement("player", 
+                new XElement("clubName", player.clubName), 
+                new XElement("id", player.id),
+                new XElement("number", player.number), 
+                new XElement("name", player.name), 
+                new XElement("position", player.position),
+                new XElement("dateOfBirth", player.dateOfBirth.Date), 
+                new XElement("placeOfBirth", player.placeOfBirth),
+                new XElement("weight", player.weight), 
+                new XElement("height", player.height), 
+                new XElement("description", player.description),
+                new XElement("imageLink", player.imageLink), 
+                new XElement("status", player.status)));
 
             playerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
@@ -69,6 +77,7 @@ namespace PlayerManagement.Models
 
             node.SetElementValue("clubName", player.clubName);
             node.SetElementValue("id", player.id);
+            node.SetElementValue("name", player.name);
             node.SetElementValue("number", player.number);
             node.SetElementValue("position", player.position);
             node.SetElementValue("dateOfBirth", player.dateOfBirth.Date);
