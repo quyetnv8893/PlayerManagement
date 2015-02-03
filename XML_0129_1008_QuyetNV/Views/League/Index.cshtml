@@ -4,31 +4,34 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Leagues</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+</head>
 
-<h2>Index</h2>
+<div id="main" class="fixed-width">
+    <div class="player">
+        <div class="coachmgr info text-center">
+            <div class="list text-left achivement">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <div class="image"><img class="viewer" src=@Html.DisplayFor(modelItem=>item.LogoLink) /></div>
+                            <div class="detail">
+                                <div>
+                                    <p style="display:inline">@Html.DisplayFor(modelitem => item.Name)</p>
+                                    <p style="display:inline">@Html.ActionLink("All Matches", "GoToMatches", new { id = item.Name })</p>
+                                </div>
+                            </div>
+                        </li>
+                    }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.LogoLink)
-        </th>
-        <th></th>
-    </tr>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.LogoLink)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Name }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Name })
-        </td>
-    </tr>
-}
-
-</table>

@@ -10,9 +10,10 @@ namespace PlayerManagement.Controllers
 {
     public class LeagueController : Controller
     {
-        private ILeagueRepository _repository;        
+        private ILeagueRepository _repository;
 
-        public LeagueController(): this(new LeagueRepository())
+        public LeagueController()
+            : this(new LeagueRepository())
         {
         }
 
@@ -31,7 +32,7 @@ namespace PlayerManagement.Controllers
 
         public ActionResult Details(String id)
         {
-            String name = id;            
+            String name = id;
             League league = _repository.GetLeagueByName(name);
             if (league == null)
             {
@@ -57,7 +58,7 @@ namespace PlayerManagement.Controllers
                 }
                 catch (Exception e)
                 {
-                    ModelState.AddModelError("","Error insert new league: " + e.Message);
+                    ModelState.AddModelError("", "Error insert new league: " + e.Message);
                 }
             }
             return View(league);
@@ -67,7 +68,8 @@ namespace PlayerManagement.Controllers
         {
             String name = id;
             League league = _repository.GetLeagueByName(name);
-            if (league==null){
+            if (league == null)
+            {
                 return RedirectToAction("Index");
             }
             return View(league);
@@ -119,6 +121,11 @@ namespace PlayerManagement.Controllers
                 }
             }
             return View(league);
+        }
+
+        public ActionResult GoToMatches(String id)
+        {
+            return RedirectToAction("ViewByLeagueName", "Match", new { id = id });
         }
     }
 }
