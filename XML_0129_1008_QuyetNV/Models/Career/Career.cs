@@ -15,6 +15,8 @@ namespace PlayerManagement.Models
         public DateTime From { get; set; }       
 
         public DateTime? To { get; set; }
+
+        public String ClubName { get; set; }
         public int? NumberOfGoals { get; set; }
 
         [ForeignKey("Player")]
@@ -27,15 +29,17 @@ namespace PlayerManagement.Models
             this.ID = null;
             this.From = DateTime.Now;
             this.To = DateTime.Now;
+            this.ClubName = null;
             this.NumberOfGoals = 0;
             this.PlayerID = null;
         }
 
-        public Career(String id, DateTime from, DateTime to, int numberOfGoals, String playerID)
+        public Career(String id, DateTime from, DateTime to, String clubName, int numberOfGoals, String playerID)
         {
             this.ID = id;
             this.From = from;
             this.To = to;
+            this.ClubName = clubName;
             this.NumberOfGoals = numberOfGoals;
             this.PlayerID = playerID;
         }

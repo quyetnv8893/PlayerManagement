@@ -15,21 +15,20 @@ namespace PlayerManagement.Controllers
         private PlayerManagementContext db = new PlayerManagementContext();
         private ICareerRepository _repository;
 
+        public CareersController(ICareerRepository repository)
+        {
+            _repository = repository;
+        }
+        
+     
         public CareersController()
             : this(new CareerRepository())
         {
         }
 
-        public CareersController(ICareerRepository repository)
-        {
-            _repository = repository;
-        }
-
         // GET: Careers
         public ActionResult Index(String id)
-        {
-            
-            //var careers = db.Careers.Include(c => c.Player);
+        {            
             return View(_repository.GetCareersByPlayerID(id));
         }
 

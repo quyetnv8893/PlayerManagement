@@ -131,6 +131,7 @@
             <xs:element name="id" type="xs:string"/>
             <xs:element name="from" type="xs:date"/>
             <xs:element name="to" type="xs:date" nillable="true"/>
+            <xs:element name="clubName" type="xs:string"/>
             <xs:element name="noOfGoals" type="xs:int"/>
             <xs:element name="playerId" type="xs:string"/>
         </xs:all>

@@ -26,6 +26,7 @@ namespace PlayerManagement.Models
                                   career.Element("id").Value,
                                   (DateTime)career.Element("from"),
                                   (DateTime)career.Element("to"), // TODO: Handle null value of To
+                                  career.Element("clubName").Value,
                                   (int)career.Element("noOfGoals"),
                                   career.Element("playerId").Value
                                   );
@@ -61,6 +62,7 @@ namespace PlayerManagement.Models
                 new XElement("id", career.ID),
                 new XElement("from", career.From),
                 new XElement("to", career.To),
+                new XElement("clubName", career.ClubName),
                 new XElement("noOfGoals", career.NumberOfGoals),
                 new XElement("playerId", career.PlayerID)
                 ));
@@ -83,6 +85,7 @@ namespace PlayerManagement.Models
             node.SetElementValue("id", career.ID);
             node.SetElementValue("from", career.From);
             node.SetElementValue("to", career.To);
+            node.SetElementValue("clubName", career.ClubName);
             node.SetElementValue("noOfGoals", career.NumberOfGoals);
             node.SetElementValue("playerId", career.PlayerID);
 
