@@ -69,7 +69,10 @@ namespace PlayerManagement.Models
             {
                 item.Player = _allPlayers.Find(i => i.ID.Equals(item.PlayerId));
             }
-            match.PlayerMatches = temp;
+            if (temp != null && match != null)
+            {
+                match.PlayerMatches = temp;
+            }
             return match;
         }
 
