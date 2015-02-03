@@ -14,8 +14,8 @@ namespace PlayerManagement.Models
         [Required]
         public DateTime From { get; set; }       
 
-        public Nullable<DateTime> To { get; set; }
-        public Nullable<int> NumberOfGoals { get; set; }
+        public DateTime? To { get; set; }
+        public int? NumberOfGoals { get; set; }
 
         [ForeignKey("Player")]
         public String PlayerID { get; set; }

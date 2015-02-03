@@ -26,10 +26,11 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Careers
-        public ActionResult Index()
+        public ActionResult Index(String id)
         {
-            var careers = db.Careers.Include(c => c.Player);
-            return View(careers.ToList());
+            
+            //var careers = db.Careers.Include(c => c.Player);
+            return View(_repository.GetCareersByPlayerID(id));
         }
 
         // GET: Careers/Details/5

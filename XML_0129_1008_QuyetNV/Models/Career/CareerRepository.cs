@@ -16,14 +16,25 @@ namespace PlayerManagement.Models
             _allCareers = new List<Career>();
 
             _careerData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var careers = from career in _careerData.Descendants("career")
-                        select new Career(
-                            career.Element("id").Value,
-                            (DateTime) DateTime.Parse(career.Element("from").Value),
-                            (DateTime) DateTime.Parse(career.Element("to").Value),
-                            (int) career.Element("noOfGoals"),
-                            career.Element("playerId").Value
-                            );
+            IEnumerable<Career> careers = null;
+            
+ 
+
+            try {
+                careers = from career in _careerData.Descendants("career")
+                              select new Career(
+                                  career.Element("id").Value,
+                                  (DateTime)career.Element("from"),
+                                  (DateTime)career.Element("to"), // TODO: Handle null value of To
+                                  (int)career.Element("noOfGoals"),
+                                  career.Element("playerId").Value
+                                  );
+            }
+            catch (FormatException e)
+            {
+                
+            }
+            
 
             _allCareers.AddRange(careers.ToList<Career>());
 

@@ -30,7 +30,7 @@ namespace PlayerManagement.Controllers
         }
 
 
-        // GET: PlayerAchievements
+        // View player's career by ID
         public ActionResult Index(String id)
         {            
             var playerAchievements = _repository.GetPlayerAchievementsByPlayerID(id)
