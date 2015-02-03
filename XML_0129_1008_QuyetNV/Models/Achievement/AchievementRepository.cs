@@ -30,6 +30,16 @@ namespace PlayerManagement.Models
             return _allAchievements;
         }
 
+        public IEnumerable<String> GetAchievementNames() { 
+            List<String> achievementNames = new List<String>();
+            foreach (var a in _allAchievements)
+	        {
+                achievementNames.Add(a.Name);
+	        }
+
+            return achievementNames;
+        }
+
         public Achievement GetAchievementByName(string name)
         {
             return _allAchievements.Find(item => item.Name.Equals(name));

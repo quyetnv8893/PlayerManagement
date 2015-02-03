@@ -9,6 +9,7 @@ namespace PlayerManagement.Models
     public interface IAchievementRepository
     {
         IEnumerable<Achievement> GetAchievements();
+        IEnumerable<String> GetAchievementNames();
         Achievement GetAchievementByName(String name);
         void InsertAchievement(Achievement achievement);
         void DeleteAchievement(String name);

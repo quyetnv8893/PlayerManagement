@@ -14,21 +14,32 @@ namespace PlayerManagement.Controllers
     {
         private PlayerManagementContext db = new PlayerManagementContext();
         private IPlayerAchievementRepository _repository;
+        private IAchievementRepository _achievementRepository = new AchievementRepository();
+        private IPlayerRepository _playerRepository = new PlayerRepository();
 
-        public PlayerAchievementsController()
-            : this(new PlayerAchievementRepository())
-        {
-        }
 
         public PlayerAchievementsController(IPlayerAchievementRepository repository)
         {
             _repository = repository;
         }
+        
+     
+        public PlayerAchievementsController()
+            : this(new PlayerAchievementRepository())
+        {
+        }
+
 
         // GET: PlayerAchievements
         public ActionResult Index(String id)
-        {           
-            return View(_repository.GetPlayerAchievementsByPlayerID(id));
+        {            
+            var playerAchievements = _repository.GetPlayerAchievementsByPlayerID(id)
+                .Where(achievement => achievement.PlayerID.Equals(id));
+            foreach (var achievement in playerAchievements)
+            {
+                achievement.Achievement = _achievementRepository.GetAchievementByName(achievement.AchievementName);
+            }
+            return View(playerAchievements.ToList());
         }
 
         // GET: PlayerAchievements/Details/5
@@ -49,8 +60,9 @@ namespace PlayerManagement.Controllers
         // GET: PlayerAchievements/Create
         public ActionResult Create()
         {
-            ViewBag.playerId = new SelectList(db.Players, "id", "name");
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "name");
+
+            ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name");
+            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
             return View();
         }
 
@@ -59,20 +71,23 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "playerId,achievementName,number")] PlayerAchievement playerAchievement)
+        public ActionResult Create([Bind(Include = "PlayerID,AchievementName,Number")] PlayerAchievement playerAchievement)
         {
             if (ModelState.IsValid)
             {
-                db.PlayerAchievements.Add(playerAchievement);
-                db.SaveChanges();
+                String a = playerAchievement.PlayerID;
+                String b = playerAchievement.AchievementName;
+                int c = playerAchievement.Number;
+                _repository.InsertPlayerAchievement(playerAchievement);              
                 return RedirectToAction("Index");
             }
 
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.AchievementName);
+            ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name", playerAchievement.AchievementName);
+            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 
-        // TODO: Edit code here
+        // GET: PlayerAchievements/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -84,15 +99,17 @@ namespace PlayerManagement.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.AchievementName);
+            ViewBag.AchievementName = new SelectList(db.Achievements, "Name", "ImageLink", playerAchievement.AchievementName);
+            ViewBag.PlayerID = new SelectList(db.Players, "ID", "ClubName", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 
         // POST: PlayerAchievements/Edit/5
-        // TODO: Edit code here
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "playerId,achievementName,number")] PlayerAchievement playerAchievement)
+        public ActionResult Edit([Bind(Include = "PlayerID,AchievementName,Number")] PlayerAchievement playerAchievement)
         {
             if (ModelState.IsValid)
             {
@@ -100,7 +117,8 @@ namespace PlayerManagement.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.achievementName = new SelectList(db.Achievements, "name", "imageLink", playerAchievement.AchievementName);
+            ViewBag.AchievementName = new SelectList(db.Achievements, "Name", "ImageLink", playerAchievement.AchievementName);
+            ViewBag.PlayerID = new SelectList(db.Players, "ID", "ClubName", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 

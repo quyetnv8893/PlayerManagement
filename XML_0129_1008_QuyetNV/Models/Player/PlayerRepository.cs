@@ -42,6 +42,17 @@ namespace PlayerManagement.Models
             return _allPlayers;
         }
 
+        public IEnumerable<String> GetPlayerNames()
+        {
+            List<String> playerNames = new List<String>();
+            foreach (var player in _allPlayers)
+            {
+                playerNames.Add(player.Name);
+            }
+
+            return playerNames;
+        }
+
         public Player GetPlayerByID(String id)
         {
             return _allPlayers.Find(item => item.ID.Equals(id));
