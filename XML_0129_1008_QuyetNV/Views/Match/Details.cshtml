@@ -1,20 +1,18 @@
 ﻿@model PlayerManagement.Models.Match
 
-@{    
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Details</h2>
 
 <div id="main" class="fixed-width">
     <div class="player">
         <div class="image">
             <div class="viewer" style="border: none">
-                <p style="font-size: 89px;margin-bottom: 0px;">@Html.DisplayFor(model => model.Score)</p>                
+                <p style="font-size: 89px;margin-bottom: 0px;">@Html.DisplayFor(model => model.Score)</p>
                 <div class="leftscore">
                     @foreach (var item in Model.PlayerMatches)
                     {
-                        <p>[@Html.DisplayFor(modelItem => item.Player.Name)][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
+                        <p>[@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId })][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
                     }
                 </div>
             </div>
@@ -23,14 +21,14 @@
             <h3>Match's info</h3>
             <div class="list text-left">
                 <p><label>Match Name : </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
-                <p><label>League : </label> <span>@Html.DisplayFor(model => model.LeagueName)</span></p>
+                <p><label>League : </label> <span>@Html.ActionLink(Model.LeagueName, "GoToLeagueDetails", new { id = Model.LeagueName })</span></p>
                 <p><label>Date : </label> <span>@Html.DisplayFor(model => model.Time)</span></p>
                 <p><label>Yellow Card : </label> <span></span></p>
                 @foreach (var item in Model.PlayerMatches)
                 {
                     if (item.NumberOfYellows > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.DisplayFor(modelItem => item.Player.Name) , @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }) , @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
                     }
 
                 }
@@ -39,14 +37,13 @@
                 {
                     if (item.NumberOfReds > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.DisplayFor(modelItem => item.Player.Name) , @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
+                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }) , @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
                     }
 
                 }
-                <p><label>League: </label> <span>@Html.DisplayFor(model => model.LeagueName)</span></p>
             </div>
             <div class="buttons text-center">
-                <a href="#">
+                <a href="Match">
                     <div class="button primary">Back</div>
                 </a>
             </div>

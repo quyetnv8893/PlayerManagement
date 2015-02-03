@@ -10,7 +10,8 @@ namespace PlayerManagement.Controllers
     public class MatchController : Controller
     {
         private IMatchRepository _repository;
-        public MatchController(): this(new MatchRepository())
+        public MatchController()
+            : this(new MatchRepository())
         {
         }
 
@@ -50,7 +51,7 @@ namespace PlayerManagement.Controllers
                     _repository.InsertMatch(match);
                     return RedirectToAction("Index");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     //error msg for failed insert in XML file
                     ModelState.AddModelError("", "Error creating record. " + ex.Message);
@@ -67,7 +68,7 @@ namespace PlayerManagement.Controllers
                 return RedirectToAction("Index");
             return View(match);
         }
-       
+
         [HttpPost]
         public ActionResult Edit(Match match)
         {
@@ -86,7 +87,7 @@ namespace PlayerManagement.Controllers
             }
 
             return View(match);
-            }
+        }
 
         public ActionResult Delete(String id)
         {
@@ -94,7 +95,7 @@ namespace PlayerManagement.Controllers
             if (match == null)
                 return RedirectToAction("Index");
             return View(match);
-        }       
+        }
 
         [HttpPost]
         public ActionResult Delete(Match match)
@@ -104,12 +105,22 @@ namespace PlayerManagement.Controllers
                 _repository.DeleteMatch(match.ID);
                 return RedirectToAction("Index");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //error msg for failed delete in XML file
                 ViewBag.ErrorMsg = "Error deleting record. " + ex.Message;
                 return View(_repository.GetMatchByID(match.ID));
             }
+        }
+
+        public ActionResult GoToLeagueDetails(String id)
+        {
+            return RedirectToAction("Details", "League", new { id = id });
+        }
+
+        public ActionResult GoToPlayerDetails(String id)
+        {
+            return RedirectToAction("Details", "Players", new { id = id });
         }
     }
 }
