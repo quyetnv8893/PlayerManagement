@@ -27,8 +27,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Achievement.ImageLink)
-        </td>
+            <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="thumbnail"/>                 
         <td>
             @Html.DisplayFor(modelItem => item.Achievement.Name)
         </td>

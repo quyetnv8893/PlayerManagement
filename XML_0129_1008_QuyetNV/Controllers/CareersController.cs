@@ -13,6 +13,17 @@ namespace PlayerManagement.Controllers
     public class CareersController : Controller
     {
         private PlayerManagementContext db = new PlayerManagementContext();
+        private ICareerRepository _repository;
+
+        public CareersController()
+            : this(new CareerRepository())
+        {
+        }
+
+        public CareersController(ICareerRepository repository)
+        {
+            _repository = repository;
+        }
 
         // GET: Careers
         public ActionResult Index()

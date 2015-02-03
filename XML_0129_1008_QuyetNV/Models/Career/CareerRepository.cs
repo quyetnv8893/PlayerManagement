@@ -19,10 +19,10 @@ namespace PlayerManagement.Models
             var careers = from career in _careerData.Descendants("career")
                         select new Career(
                             career.Element("id").Value,
-                            (DateTime) career.Element("from"),
-                            (DateTime) career.Element("to"),
+                            (DateTime) DateTime.Parse(career.Element("from").Value),
+                            (DateTime) DateTime.Parse(career.Element("to").Value),
                             (int) career.Element("noOfGoals"),
-                            career.Element("playerID").Value
+                            career.Element("playerId").Value
                             );
 
             _allCareers.AddRange(careers.ToList<Career>());
