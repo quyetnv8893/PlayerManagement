@@ -21,7 +21,7 @@
             <h3>Match's info</h3>
             <div class="list text-left">
                 <p><label>Match Name : </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
-                <p><label>League : </label> <span>@Html.ActionLink(Model.LeagueName, "GoToLeagueDetails", new { id = Model.LeagueName })</span></p>
+                <p><label>League : </label> <span>@Html.ActionLink(Model.LeagueName, "ViewByLeagueName", new { id = Model.LeagueName })</span></p>
                 <p><label>Date : </label> <span>@Html.DisplayFor(model => model.Time)</span></p>
                 <p><label>Yellow Card : </label> <span></span></p>
                 @foreach (var item in Model.PlayerMatches)

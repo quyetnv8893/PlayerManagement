@@ -1,16 +1,19 @@
 ﻿@model IEnumerable<PlayerManagement.Models.Match>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "View By League Name";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!--<div class="viewer" style="background-color:#076192;margin: auto;max-width:960px;border-radius:10px;color:white">All Matches in @(ViewContext.RouteData.Values["id"])</div>-->
+<h2>All Matches in @(ViewContext.RouteData.Values["id"])</h2>
 <div id="main" class="fixed-width">
     <div class="player-pages">
-        <!--<div class="top-bar">
+        <!--
+        <div class="top-bar">
             <select class="selector">
                 <option value="1">Time</option>
                 <option value="2">Name</option>
-                <option value="3">Score</option>                
+                <option value="3">Score</option>
             </select>
             <form name="player-search" id="player-search">
                 <input type="text" name="search_text">
@@ -23,7 +26,7 @@
                 <table class="career">
                     <thead>
                     <th>Time</th>
-                    <th>Name</th>                    
+                    <th>Name</th>
                     <th>Score</th>
                     </thead>
                     <tbody>
@@ -31,19 +34,19 @@
                         {
                             <tr class="odd">
                                 <td>
-                                    @String.Format("{0:d}",item.Time)                                   
+                                    @String.Format("{0:d}", item.Time)
                                 </td>
-                                <td>                                    
+                                <td>
                                     @Html.ActionLink(item.Name, "Details", new { id = item.ID })
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Score)
-                                </td>                                
+                                </td>
                             </tr>
-                        }                       
+                        }
                     </tbody>
                 </table>
-            </div>            
+            </div>
         </div>
     </div>
 </div>

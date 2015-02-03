@@ -26,6 +26,11 @@ namespace PlayerManagement.Controllers
             return View(_repository.GetMatches());
         }
 
+        public ActionResult ViewByLeagueName(String id)
+        {
+            return View(_repository.GetMatchesByLeagueName(id));
+        }
+
 
         public ActionResult Details(String id)
         {
