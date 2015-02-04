@@ -38,6 +38,7 @@ namespace PlayerManagement.Controllers
             foreach (var achievement in playerAchievements)
             {
                 achievement.Achievement = _achievementRepository.GetAchievementByName(achievement.AchievementName);
+                achievement.Player = _playerRepository.GetPlayerByID(achievement.PlayerID);
             }
             return View(playerAchievements.ToList());
         }

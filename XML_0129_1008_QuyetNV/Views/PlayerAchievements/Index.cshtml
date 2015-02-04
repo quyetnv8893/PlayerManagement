@@ -5,15 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+@{String playerName = Model.ToList().FirstOrDefault().Player.Name;
+  String playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
+}
 <div id="main" class="fixed-width">
     <div class="player">
         <div class="image">
+            <img class="viewer" style="background-image : url(@playerImage)"/>
             
-            <div class="viewer" style='background-image: url(images/playerImg.jpg)'></div>
         </div>
         <div class="info text-center">
-            <h3>[Name] Achivement</h3>
+            
+                        
+            <h3>@playerName</h3>
             <div class="list text-left achivement">
                 <ul>
                     @foreach (var item in Model) {
