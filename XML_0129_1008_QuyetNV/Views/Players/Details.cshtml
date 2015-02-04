@@ -5,13 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
-
 <div>    
     <div id="main" class="fixed-width">
         <div class="player">
             <div class="image">
-                <img src="@Html.DisplayFor(model => model.ImageLink)">
+                <img src="@Html.DisplayFor(model => model.ImageLink)" style="
+                                                max-width:400px;
+                                                max-height:800px;
+                                                width: auto;
+                                                height: auto;" >
             </div>
             <div class="info text-center">
                 <h3>Player's info</h3>
@@ -26,14 +28,17 @@
                     <p><label>Description: </label> <span>@Html.DisplayFor(model => model.Description)</span></p>
                 </div>
                 <div class="buttons text-center">
-                    <a href="#">
-                        <div class="button primary">Carrer</div>
-                    </a>
-                    <a href="#">
-                        <div class="button primary">Archive</div>
-                    </a>
                     <div class="button primary">
-                        @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches", new { id = Model.ID, name = Model.Name}, null)
+                        @Html.ActionLink("Achievements", "Index", "PlayerAchievements", new { id = Model.ID }, null)
+                    </div>
+                    
+                    <div class="button primary">
+                        @Html.ActionLink("Careers", "Index", "Careers", new { id = Model.ID }, null)
+                    </div>
+
+                    <div class="button primary">
+                        @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches", 
+                        new { id = Model.ID, name = Model.Name}, null)
                     </div>                   
                 </div>
             </div>

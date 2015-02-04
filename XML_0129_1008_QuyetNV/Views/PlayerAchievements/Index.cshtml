@@ -5,41 +5,40 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Achievement.ImageLink)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Achievement.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Number)
-        </th>
-        <th></th>
-    </tr>
+<div id="main" class="fixed-width">
+    <div class="player">
+        <div class="image">
+            
+            <div class="viewer" style='background-image: url(images/playerImg.jpg)'></div>
+        </div>
+        <div class="info text-center">
+            <h3>[Name] Achivement</h3>
+            <div class="list text-left achivement">
+                <ul>
+                    @foreach (var item in Model) {
+                    <li>
+                        <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="image" />                        
+                        <div class="detail">
+                            <p>@Html.DisplayFor(modelItem => item.Achievement.Name)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Number)</p>
+                        </div>
+                    </li>
+                    }
+                </ul>
+            </div>
+            <div class="buttons text-center">
+                <a href="#">
+                    <div class="button primary">Back</div>
+                </a>
+                <a href="#">
+                    <div class="button primary">Information</div>
+                </a>
+                <a href="#">
+                    <div class="button primary">Next</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="thumbnail"/>                 
-        <td>
-            @Html.DisplayFor(modelItem => item.Achievement.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Number)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
-</table>
