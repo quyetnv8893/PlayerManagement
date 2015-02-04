@@ -14,6 +14,7 @@ namespace PlayerManagement.Controllers
     {
         private PlayerManagementContext db = new PlayerManagementContext();
         private ICareerRepository _repository;
+        private IPlayerRepository _playerRepository = new PlayerRepository();
 
         public CareersController(ICareerRepository repository)
         {
@@ -28,8 +29,13 @@ namespace PlayerManagement.Controllers
 
         // GET: Careers
         public ActionResult Index(String id)
-        {            
-            return View(_repository.GetCareersByPlayerID(id));
+        {
+            var careers = _repository.GetCareersByPlayerID(id);
+            foreach (var career in careers)
+            {
+                career.Player = _playerRepository.GetPlayerByID(career.PlayerID);
+            }            
+            return View(careers.ToList());
         }
 
         // GET: Careers/Details/5
