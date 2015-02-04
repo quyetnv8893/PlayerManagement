@@ -5,48 +5,45 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ClubName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.From)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.To)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumberOfGoals)
-        </th>
-        <th></th>
-    </tr>
+<div id="main" class="fixed-width">
+    <div class="player">
+        <div class="image">
+            <div class="viewer" style='background-image: url(images/playerImg.jpg)'></div>
+        </div>
+        <div class="info text-center">
+            <h3>[Name] Carrer</h3>
+            <div class="list text-left">
+                <table class="career">
+                    <thead>
+                        <th>Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Goal</th>
+                        <th>Club</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="odd">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ClubName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.From)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.To)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NumberOfGoals)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClubName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.From)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.To)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberOfGoals)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
