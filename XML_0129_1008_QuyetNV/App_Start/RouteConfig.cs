@@ -25,10 +25,6 @@ namespace PlayerManagement
                 defaults: new { controller = "Players", action = "Index", id = UrlParameter.Optional }
             );
 
-
-
-
-
         }
     }
 }
