@@ -7,104 +7,33 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>Player</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ClubName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ClubName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Position)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Position)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaceOfBirth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PlaceOfBirth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Height)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Height)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageLink)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ImageLink)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dd>
-            @Html.ActionLink("View achievements", "Index", "PlayerAchievements", new { id = Model.ID}, null)
-        </dd>
-
-    </dl>
+<div>    
+    <div id="main" class="fixed-width">
+        <div class="player">
+            <div class="image">
+                <img src="@Html.DisplayFor(model => model.ImageLink)">
+            </div>
+            <div class="info text-center">
+                <h3>Player's info</h3>
+                <div class="list text-left">
+                    <p><label>Name: </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
+                    <p><label>No. </label> <span>@Html.DisplayFor(model => model.Number)</span></p>
+                    <p><label>Pos.</label> <span>@Html.DisplayFor(model => model.Position)</span></p>
+                    <p><label>DoB. </label> <span>@Html.DisplayFor(model => model.DateOfBirth)</span></p>
+                    <p><label>Height: </label> <span>@Html.DisplayFor(model => model.Height)</span></p>
+                    <p><label>Weight: </label> <span>@Html.DisplayFor(model => model.Weight)</span></p>
+                    <p><label>Place of birth: </label> <span>@Html.DisplayFor(model => model.PlaceOfBirth)</span></p>
+                    <p><label>Description: </label> <span>@Html.DisplayFor(model => model.Description)</span></p>
+                </div>
+                <div class="buttons text-center">
+                    <a href="#">
+                        <div class="button primary">Carrer</div>
+                    </a>
+                    <a href="#">
+                        <div class="button primary">Archive</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
