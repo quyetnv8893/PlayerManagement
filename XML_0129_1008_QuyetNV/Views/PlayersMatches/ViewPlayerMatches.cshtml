@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PlayerManagement.Models.PlayerMatch.PlayerMatch>
+
+@{
+    ViewBag.Title = "View By Matches Player";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--<div class="viewer" style="background-color:#076192;margin: auto;max-width:960px;border-radius:10px;color:white">All Matches in @(ViewContext.RouteData.Values["id"])</div>-->
+<!--<h2>All Matches of @(ViewContext.RouteData.Values["name"])</h2>-->
+<div id="main" class="fixed-width">
+    <div class="player-pages">
+        <!--
+        <div class="top-bar">
+            <select class="selector">
+                <option value="1">Time</option>
+                <option value="2">Name</option>
+                <option value="3">Score</option>
+            </select>
+            <form name="player-search" id="player-search">
+                <input type="text" name="search_text">
+                <input type="submit" name="submit-btn" class="button primary" value="Go">
+            </form>
+        </div>
+            -->
+        <div class="info text-center">
+            <div class="list text-left">
+                <table class="career">
+                    <thead>
+                    <th>Name</th>
+                    <th>Result</th>
+                    <th>Goals</th>
+                    <th>Yellows</th>
+                    <th>Reds</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="odd">                                
+                                <td>
+                                    @Html.DisplayFor(modeItem => item.Match.Name);
+                                    
+                                </td>
+                                <td>
+                                    aaaa
+                                </td>
+                                <td>
+                                    aaaa
+                                </td>
+                                <td>
+                                    aaaa
+                                </td>
+                                <td>
+                                    aaaa
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,13 +12,7 @@ namespace PlayerManagement
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                name: "Player Match",
-                url: "{controller}/{action}/{id}/{name}",
-                defaults: new { controller = "PlayersMatches", action = "ViewPlayerMatches", 
-                    id = UrlParameter.Optional, name = UrlParameter.Optional });
-
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

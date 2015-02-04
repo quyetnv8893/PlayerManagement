@@ -11,8 +11,8 @@
                 <p style="font-size: 89px;margin-bottom: 0px;">@Html.DisplayFor(model => model.Score)</p>
                 <div class="leftscore">
                     @foreach (var item in Model.PlayerMatches)
-                    {
-                        <p>[@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId })][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
+                    {                        
+                        <p>[@Html.ActionLink(item.Player.Name,"GotoPlayerDetails", new { id = item.PlayerId })][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
                     }
                 </div>
             </div>

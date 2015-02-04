@@ -1,4 +1,5 @@
-﻿using PlayerManagement.Models.PlayerMatch;
+﻿using PlayerManagement.Models;
+using PlayerManagement.Models.PlayerMatch;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace PlayerManagement.Controllers
     public class PlayersMatchesController : Controller
     {
         private IPlayerMatchRepository _repository;
+        private IMatchRepository _matchRepository = new MatchRepository();
+        private IPlayerRepository _playerRepository = new PlayerRepository();
         public PlayersMatchesController(): this(new PlayerMatchRepository())
         {
         }
@@ -110,6 +113,17 @@ namespace PlayerManagement.Controllers
                 ViewBag.ErrorMsg = "Error deleting record. " + ex.Message;
                 return View(playermatch);
             }
-        }       
+        }
+
+        public ActionResult ViewPlayerMatches(String id)
+        {
+            IEnumerable<PlayerMatch> playerMatches = _repository.GetPlayerMatchesByPlayerId(id);
+            foreach (var playerMatch in playerMatches)
+            {
+                playerMatch.Match = _matchRepository.GetMatchByID(playerMatch.MatchId);
+                playerMatch.Player = _playerRepository.GetPlayerByID(playerMatch.PlayerId);
+            }
+            return View(playerMatches);
+        }
     }
 }
