@@ -8,7 +8,7 @@ namespace PlayerManagement.Models.PlayerMatch
 {
     public class PlayerMatchRepository : IPlayerMatchRepository
     {
-        private List<PlayerMatch> allPlayerMatches;
+        private List<PlayerMatch> allPlayerMatches;        
         private XDocument XmlData;
         private String xml_path = "~/App_Data/player_management.xml";
 

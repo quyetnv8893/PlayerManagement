@@ -1,4 +1,5 @@
 ﻿using PlayerManagement.Models;
+using PlayerManagement.Models.PlayerMatch;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace PlayerManagement.Controllers
     public class MatchController : Controller
     {
         private IMatchRepository _repository;
+        private IPlayerRepository _playerRepository = new PlayerRepository();
+        private IPlayerMatchRepository _playerMatchRepository = new PlayerMatchRepository();
         public MatchController()
             : this(new MatchRepository())
         {
@@ -37,6 +40,15 @@ namespace PlayerManagement.Controllers
             Match match = _repository.GetMatchByID(id);
             if (match == null)
                 return RedirectToAction("Index");
+            IEnumerable<PlayerMatch> temp = _playerMatchRepository.GetPlayerMatchesByMatchId(id);
+            foreach (var item in temp)
+            {
+                item.Player = _playerRepository.GetPlayerByID(item.PlayerId);
+            }
+            if (temp != null && match != null)
+            {
+                match.PlayerMatches = temp;
+            } 
             return View(match);
         }
 

@@ -10,8 +10,8 @@ namespace PlayerManagement.Models
     public class MatchRepository : IMatchRepository
     {
         private List<Match> _allMatches;
-        private List<Player> _allPlayers;
-        private List<PlayerMatch.PlayerMatch> _allPlayerMatches;
+        //private List<Player> _allPlayers;
+        //private List<PlayerMatch.PlayerMatch> _allPlayerMatches;
         private XDocument _xmlData;
         private String _xmlPath = "~/App_Data/player_management.xml";
 
@@ -21,14 +21,14 @@ namespace PlayerManagement.Models
         public MatchRepository()
         {
             _allMatches = new List<Match>();
-            _allPlayers = new List<Player>();
-            _allPlayerMatches = new List<PlayerMatch.PlayerMatch>();
+          //  _allPlayers = new List<Player>();
+            //_allPlayerMatches = new List<PlayerMatch.PlayerMatch>();
             _xmlData = XDocument.Load(HttpContext.Current.Server.MapPath(_xmlPath));
             var Matches = from Match in _xmlData.Descendants("match")
                           select new Match(Match.Element("id").Value, (DateTime)Match.Element("time"), Match.Element("name").Value,
                               Match.Element("score").Value, Match.Element("leagueName").Value);
             _allMatches.AddRange(Matches.ToList<Match>());
-            var PlayerMatches = from PlayerMatch in _xmlData.Descendants("player_match")
+            /*var PlayerMatches = from PlayerMatch in _xmlData.Descendants("player_match")
                                 select new PlayerMatch.PlayerMatch(PlayerMatch.Element("playerId").Value, PlayerMatch.Element("matchId").Value, (int)PlayerMatch.Element("noOfGoals"),
                                     (int)PlayerMatch.Element("noOfYellows"), (int)PlayerMatch.Element("noOfReds"));
             _allPlayerMatches.AddRange(PlayerMatches.ToList<PlayerMatch.PlayerMatch>());
@@ -46,7 +46,7 @@ namespace PlayerManagement.Models
                               player.Element("description").Value,
                               player.Element("imageLink").Value,
                               (Boolean)player.Element("status"));
-            _allPlayers.AddRange(players.ToList<Player>());
+            _allPlayers.AddRange(players.ToList<Player>()); */
         }
 
 
@@ -64,7 +64,7 @@ namespace PlayerManagement.Models
         public Match GetMatchByID(String id)
         {
             Match match = _allMatches.Find(item => item.ID.Equals(id));
-            IEnumerable<PlayerMatch.PlayerMatch> temp = _allPlayerMatches.FindAll(item => item.MatchId.Equals(id));
+           /* IEnumerable<PlayerMatch.PlayerMatch> temp = _allPlayerMatches.FindAll(item => item.MatchId.Equals(id));
             foreach (var item in temp)
             {
                 item.Player = _allPlayers.Find(i => i.ID.Equals(item.PlayerId));
@@ -72,7 +72,7 @@ namespace PlayerManagement.Models
             if (temp != null && match != null)
             {
                 match.PlayerMatches = temp;
-            }
+            } */
             return match;
         }
 

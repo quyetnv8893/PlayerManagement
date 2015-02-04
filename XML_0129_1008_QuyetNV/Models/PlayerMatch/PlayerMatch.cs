@@ -20,6 +20,7 @@ namespace PlayerManagement.Models.PlayerMatch
         [Required]
         public int NumberOfReds { get; set; }
         public virtual Player Player { get; set; }
+        public virtual Match Match { get; set; }
         public PlayerMatch() { }
         public PlayerMatch(String PlayerId, String MatchId, int NumberOfGoals, int NumberOfYellows, int NumberOfReds)
         {

@@ -31,15 +31,14 @@
                     <div class="button primary">
                         @Html.ActionLink("Achievements", "Index", "PlayerAchievements", new { id = Model.ID }, null)
                     </div>
-                    
+
                     <div class="button primary">
                         @Html.ActionLink("Careers", "Index", "Careers", new { id = Model.ID }, null)
                     </div>
-
                     <div class="button primary">
-                        @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches", 
-                        new { id = Model.ID, name = Model.Name}, null)
-                    </div>                   
+                        @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches",
+                        new { id = Model.ID}, null)
+                    </div>
                 </div>
             </div>
         </div>
