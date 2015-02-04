@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!--<div class="viewer" style="background-color:#076192;margin: auto;max-width:960px;border-radius:10px;color:white">All Matches in @(ViewContext.RouteData.Values["id"])</div>-->
-<!--<h2>All Matches of @(ViewContext.RouteData.Values["name"])</h2>-->
+<h2>All Matches of @String.Format(Model.FirstOrDefault().Player.Name)</h2>
 <div id="main" class="fixed-width">
     <div class="player-pages">
         <!--
@@ -36,20 +36,19 @@
                         {
                             <tr class="odd">                                
                                 <td>
-                                    @Html.DisplayFor(modeItem => item.Match.Name);
-                                    
+                                    @Html.ActionLink(item.Match.Name, "Details", "Match", new { id = item.MatchId },null)                                                                        
                                 </td>
                                 <td>
-                                    aaaa
+                                    @Html.DisplayFor(modelItem => item.Match.Score)
                                 </td>
                                 <td>
-                                    aaaa
+                                    @Html.DisplayFor(modelItem => item.NumberOfGoals)
                                 </td>
                                 <td>
-                                    aaaa
+                                    @Html.DisplayFor(modelItem => item.NumberOfYellows)
                                 </td>
                                 <td>
-                                    aaaa
+                                    @Html.DisplayFor(modelItem => item.NumberOfReds)
                                 </td>
                             </tr>
                         }
