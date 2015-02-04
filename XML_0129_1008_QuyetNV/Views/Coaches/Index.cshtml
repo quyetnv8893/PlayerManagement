@@ -5,48 +5,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageLink)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Position)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ClubName)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageLink)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Position)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateOfBirth)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClubName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Name }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Name })
-        </td>
-    </tr>
-}
+<div id="main" class="fixed-width">
+    <div class="player">
 
-</table>
+        <div class="coachmgr info text-center">
+            <div class="list text-left achivement">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <img src="@Html.DisplayFor(modelItem => item.ImageLink) " class=" image" />
+                            <div class="detail">
+                                <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                                <p>@Html.DisplayNameFor(model => model.DateOfBirth)</p>
+                                <p>@Html.DisplayFor(modelItem => item.Position)</p>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

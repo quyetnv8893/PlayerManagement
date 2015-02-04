@@ -6,19 +6,20 @@
 }
 
 
-@foreach (var item in Model) {
-<div class="content">
-    <div class="content_center">
-        <img class="club-logo" src="@Html.DisplayFor(modelItem => item.LogoLink)" style="max-height: 300px; max-width:300px;width:auto;height:auto">
-        <img class="club-info" src="images/tablecontent.png">
+@foreach (var item in Model)
+{
+    <div class="content">
+        <div class="content_center">
+            <img class="club-logo" src="@Html.DisplayFor(modelItem => item.LogoLink)" style="max-height: 300px; max-width:300px;width:auto;height:auto">
+            <img class="club-info" src="images/tablecontent.png">
 
-
-        <td>
-            @Html.DisplayFor(modelItem => item.FoundedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Stadium)
-</div>
-</div>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoundedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stadium)
+            </td>
+        </div>
+    </div>
 }
-	
+
