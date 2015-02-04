@@ -37,6 +37,19 @@ namespace PlayerManagement.Models
         public String ImageLink { get; set; }
         [Required]
         public Boolean Status { get; set; }
+        
+        public int Age
+        {
+            get
+            {
+                DateTime now = DateTime.Today;
+                int age = now.Year - DateOfBirth.Year;
+                if (DateOfBirth > now.AddYears(-age)) age--; ;
+                return age;
+            }
+
+        }
+
 
         public virtual ICollection<PlayerAchievement> PlayerAchievements { get; set; }
 
