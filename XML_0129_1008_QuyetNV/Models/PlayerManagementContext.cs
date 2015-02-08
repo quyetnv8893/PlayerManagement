@@ -36,6 +36,8 @@ namespace PlayerManagement.Models
         public System.Data.Entity.DbSet<PlayerManagement.Models.PlayerMatch.PlayerMatch> PlayerMatches { get; set; }
 
         public System.Data.Entity.DbSet<PlayerManagement.Models.Career> Careers { get; set; }
+
+        public System.Data.Entity.DbSet<PlayerManagement.Models.Authentication> Authentications { get; set; }
     
     }
 }

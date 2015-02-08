@@ -9,7 +9,9 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="button primary" style="margin-left: 90%%;">Login</div>
+    <div class="button primary" style="margin-left: 90%%;">
+    @Html.ActionLink("Login", "Login", "Authentications")
+    </div>
     <div id="header">
         <ul id="navbar" class="uppercase fixed-with">
             <a href="~/Clubs"><li>Club</li></a>
