@@ -8,7 +8,7 @@
 
 
 <div id="main" class="fixed-width">
-    <div class="player">
+    <div class="coach">
 
         <div class="coachmgr info text-center">
             <div class="list text-left achivement">
@@ -19,7 +19,7 @@
                             <img src="@Html.DisplayFor(modelItem => item.ImageLink) " class=" image" />
                             <div class="detail">
                                 <p>@Html.DisplayFor(modelItem => item.Name)</p>
-                                <p>@Html.DisplayNameFor(model => model.DateOfBirth)</p>
+                                <p>@Html.DisplayFor(modelItem => item.DateOfBirth)</p>
                                 <p>@Html.DisplayFor(modelItem => item.Position)</p>
                             </div>
                         </li>

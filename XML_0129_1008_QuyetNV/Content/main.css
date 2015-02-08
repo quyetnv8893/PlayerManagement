@@ -21,6 +21,21 @@ body {
 	width: 150px;
 	height: 70px;
 }
+
+.content-center {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.club-logo {
+	display: inline-block;
+	width: 30%;
+	height: 30%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
 .home-page {
 	background: rgba(49, 100, 130, 0.92);
 	border-radius: 10px;
@@ -30,19 +45,7 @@ body {
 	width: 30%%;
 	height: 400px;
 	display: inline-block;
-}
-.content_center {
-	width: 80%;
-	margin-left: 15%;
-}
-
-.club-logo {
-	display: inline-block;
-	width: 30%;
-	height: 473px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	overflow-y: scroll;
 }
 
 .club-info {
@@ -55,7 +58,7 @@ body {
 body {
 	min-width: 100vh;
 	min-height: 100vh;
-	background-image: url('../images/background.png');
+	background-image: url('../images/bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -151,6 +154,123 @@ ul#navbar li:hover {
 	background-color: #244e67;
 }
 
+/* Coach */
+.coach {
+	height: 500px;
+	position: relative;
+	z-index: 2;
+}
+
+.coach>div {
+	height: 100%;
+	width: 100%;
+	vertical-align: top;
+	display: inline-block;
+	color: #FFF;
+}
+
+.coach .image {
+	text-align: right;
+	padding: 20px;
+}
+
+.coach .image .viewer {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: calc(100% -     20px);
+	width: 100%;
+	box-sizing: border-box;
+	border: 5px solid #FFF;
+	margin: 5px;
+}
+
+.coach .info {
+	background: rgba(49, 100, 130, 0.92);
+	border-radius: 10px;
+	margin: 10px;
+	position: relative;
+}
+
+.coach .info .list {
+	padding: 20px;
+}
+
+.coach .info .buttons {
+	position: absolute;
+	bottom: 0;
+	padding: 10px 20px;
+	left: 0;
+	width: 100%;
+}
+/* Career */
+.coach .info .career {
+	width: 100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+.coach .info .career thead {
+	margin: 10px 0;
+	background: #076192;
+}
+
+.coach .info .career thead th {
+	font-weight: 300 !important;
+	padding: 4px 7px;
+	width: 20%;
+}
+
+.coach .info .career tbody tr {
+	background: #19506e;
+}
+
+.coach .info .career tbody tr.odd {
+	background: #477994;
+}
+
+.coach .info .career tbody tr td {
+	padding: 4px 7px;
+	width: auto;
+}
+/* Achivement */
+.coach .info .achivement ul {
+	list-style: none;
+	padding: 0;
+	height: 350px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.coach .info .achivement ul li {
+	margin: 10px 0;
+	overflow: hidden;
+}
+
+.coach .info .achivement ul li .image {
+	display: inline-block;
+	float: left;
+	padding: 0;
+	width: 120px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	background: #265771;
+	border-radius: 10px;
+}
+
+.coach .info .achivement ul li .detail {
+	display: inline-block;
+	width: calc(100% -     140px);
+	float: left;
+	vertical-align: middle;
+	padding: 5px 7px;
+	height: calc(100px -     10px);
+	overflow: hidden;
+}
+
+/* Player */
+
 .player {
 	height: 500px;
 	position: relative;
@@ -159,7 +279,7 @@ ul#navbar li:hover {
 
 .player>div {
 	height: 100%;
-	width: calc(50% -   80px);
+	width: calc(50% -     80px);
 	vertical-align: top;
 	display: inline-block;
 	color: #FFF;
@@ -174,7 +294,7 @@ ul#navbar li:hover {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: calc(100% -   20px);
+	height: calc(100% -     20px);
 	width: 100%;
 	box-sizing: border-box;
 	border: 5px solid #FFF;
@@ -257,11 +377,11 @@ ul#navbar li:hover {
 
 .player .info .achivement ul li .detail {
 	display: inline-block;
-	width: calc(100% -   140px);
+	width: calc(100% -     140px);
 	float: left;
 	vertical-align: middle;
 	padding: 5px 7px;
-	height: calc(100px -   10px);
+	height: calc(100px -     10px);
 	overflow: hidden;
 }
 /* Player pages */
@@ -280,19 +400,19 @@ ul#navbar li:hover {
 }
 
 .player-pages .top-bar>.selector {
-	width: calc(30% -   20px);
+	width: calc(30% -     20px);
 	margin: 0 10px;
 	display: inline-block;
 }
 
 .player-pages .top-bar>#player-search {
-	width: calc(70% -   30px);
+	width: calc(70% -     30px);
 	margin: 0 10px;
 	display: inline-block;
 }
 
 .player-pages .top-bar>#player-search input[type="text"] {
-	width: calc(100% -   100px);
+	width: calc(100% -     100px);
 	height: 30px;
 	background: #244e67;
 	border: none;
@@ -427,11 +547,11 @@ ul#navbar li:hover {
 
 .league .content ul li .detail {
 	display: inline-block;
-	width: calc(100% -   180px);
+	width: calc(100% -     180px);
 	float: left;
 	vertical-align: middle;
 	padding: 5px 7px;
-	height: calc(100px -   10px);
+	height: calc(100px -     10px);
 	overflow: hidden;
 }
 /* coach page */
@@ -473,11 +593,11 @@ ul#navbar li:hover {
 
 .coach .content ul li .detail {
 	display: inline-block;
-	width: calc(100% -   180px);
+	width: calc(100% -     180px);
 	float: left;
 	vertical-align: middle;
 	padding: 5px 7px;
-	height: calc(100px -   10px);
+	height: calc(100px -     10px);
 	overflow: hidden;
 }
 
@@ -506,13 +626,13 @@ ul#navbar li:hover {
 }
 
 .addnew-page .top-bar>.selector {
-	width: calc(30% -   20px);
+	width: calc(30% -     20px);
 	margin: 0 10px;
 	display: inline-block;
 }
 
 .addnew-page .top-bar>#player-search {
-	width: calc(70% -   30px);
+	width: calc(70% -     30px);
 	margin: 0 10px;
 	display: inline-block;
 }
@@ -540,7 +660,7 @@ ul#navbar li:hover {
 
 .home>div {
 	height: 100%;
-	width: calc(50% -   80px);
+	width: calc(50% -     80px);
 	vertical-align: top;
 	display: inline-block;
 	color: #FFF;
@@ -555,7 +675,7 @@ ul#navbar li:hover {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	height: calc(100% -   20px);
+	height: calc(100% -     20px);
 	width: 100%;
 	box-sizing: border-box;
 	margin: 5px;

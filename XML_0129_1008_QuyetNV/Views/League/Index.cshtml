@@ -12,7 +12,7 @@
 </head>
 
 <div id="main" class="fixed-width">
-    <div class="player">
+    <div class="coach">
         <div class="coachmgr info text-center">
             <div class="list text-left achivement">
                 <ul>
@@ -22,8 +22,7 @@
                             <div class="image"><img class="viewer" src=@Html.DisplayFor(modelItem=>item.LogoLink) /></div>
                             <div class="detail">
                                 <div>
-                                    <p style="display:inline">@Html.DisplayFor(modelitem => item.Name)</p>
-                                    <p style="display:inline">@Html.ActionLink("All Matches", "GoToMatches", new { id = item.Name })</p>
+                                    <p style="text-decoration-color:white">@Html.ActionLink(item.Name, "GoToMatches", new { id = item.Name, style = "color:white" })</p>                                    
                                 </div>
                             </div>
                         </li>
