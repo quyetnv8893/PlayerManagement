@@ -25,7 +25,7 @@
                     <p><label>Height: </label> <span>@Html.DisplayFor(model => model.Height)</span></p>
                     <p><label>Weight: </label> <span>@Html.DisplayFor(model => model.Weight)</span></p>
                     <p><label>Place of birth: </label> <span>@Html.DisplayFor(model => model.PlaceOfBirth)</span></p>
-                    <p><label>Description: </label> <span>@Html.DisplayFor(model => model.Description)</span></p>
+                    <p><label>Description: </label> <div style="overflow-y:scroll; height:100px">@Html.DisplayFor(model => model.Description)</div></p>
                 </div>
                 <div class="buttons text-center">
                     <div class="button primary">

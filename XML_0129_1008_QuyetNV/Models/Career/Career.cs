@@ -12,7 +12,7 @@ namespace PlayerManagement.Models
         [Key]
         public String ID { get; set; }
         [Required]
-        public DateTime From { get; set; }       
+        public DateTime From { get; set; }
 
         public DateTime? To { get; set; }
 
@@ -34,11 +34,17 @@ namespace PlayerManagement.Models
             this.PlayerID = null;
         }
 
-        public Career(String id, DateTime from, DateTime to, String clubName, int numberOfGoals, String playerID)
+        public Career(String id, DateTime from, DateTime? to, String clubName, int numberOfGoals, String playerID)
         {
             this.ID = id;
             this.From = from;
-            this.To = to;
+            if (to.HasValue)
+            {
+                this.To = to;
+            }
+            else {
+                this.To = DateTime.Now; 
+            }
             this.ClubName = clubName;
             this.NumberOfGoals = numberOfGoals;
             this.PlayerID = playerID;

@@ -1,694 +1,700 @@
 body {
-	min-width: 100vh;
-	min-height: 100vh;
-	background-image: url('../images/bg.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	font-family: Arial, sans-serif;
-	text-align: center;
-	position: relative;
+    min-width: 100vh;
+    min-height: 100vh;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
 }
-
+.score-table {
+    background-color: rgb(3, 65, 100);
+    width: 50%;
+    /* align-content: center; */
+    margin-left: auto;
+    border-radius: 5px;
+}
 .logo {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	background: url('../images/real-logo.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	width: 150px;
-	height: 70px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url('../images/real-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 150px;
+    height: 70px;
 }
 
 .content-center {
-	width: 80%;
-	margin-left: 10%;
+    width: 100%;
+    margin-left: 10%;
 }
 
 .club-logo {
-	display: inline-block;
-	width: 30%;
-	height: 30%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .home-page {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px;
-	padding: 10px;
-	position: relative;
-	width: 30%%;
-	height: 400px;
-	display: inline-block;
-	overflow-y: scroll;
+    background: rgba(49, 100, 130, 0.92);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    width: 40%%;
+    height: 400px;
+    display: inline-block;
 }
 
 .club-info {
-	margin-left: 15px;
-	display: inline-block;
-	width: 542px;
-	height: 371px;
+    margin-left: 15px;
+    display: inline-block;
+    width: 542px;
+    height: 371px;
 }
 
 body {
-	min-width: 100vh;
-	min-height: 100vh;
-	background-image: url('../images/bg.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	font-family: Arial, sans-serif;
-	text-align: center;
-	position: relative;
+    min-width: 100vh;
+    min-height: 100vh;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
 }
 
 .logo {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	background: url('../images/real-logo.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	width: 150px;
-	height: 70px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url('../images/real-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 150px;
+    height: 70px;
 }
 
 .uppercase {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .fixed-width {
-	max-width: 960px;
-	margin: 0 auto;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .button {
-	display: inline-block;
-	padding: 7px 15px;
-	margin: 3px 5px;
-	cursor: pointer;
-	border-radius: 10px;
+    display: inline-block;
+    padding: 7px 15px;
+    margin: 3px 5px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.button.primary {
-	background: rgba(49, 100, 130, 0.92);
-	color: #FFF;
-	border: 1px solid #244e67;
-}
+    .button.primary {
+        background: rgba(49, 100, 130, 0.92);
+        color: #FFF;
+        border: 1px solid #244e67;
+    }
 
-.button.primary:hover {
-	background: #244e67;
-}
+        .button.primary:hover {
+            background: #244e67;
+        }
 
 .text-center {
-	text-align: center;
+    text-align: center;
 }
 
 .text-left {
-	text-align: left;
+    text-align: left;
 }
 
-a,a:hover,a:active,a:focus {
-	text-decoration: none;
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
 }
 
-.two-col div:first-child,.two-col div:last-child {
-	width: 49%;
-	display: inline-block;
+.two-col div:first-child, .two-col div:last-child {
+    width: 49%;
+    display: inline-block;
 }
 
 #header {
-	margin-top: 60px;
-	margin-bottom: 20px;
-	text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 ul#navbar {
-	padding: 0;
-	list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
-ul#navbar li {
-	display: inline-block;
-	padding: 7px 30px;
-	margin: 0 5px;
-	background: rgba(49, 100, 130, 0.92);
-	vertical-align: middle;
-	color: #FFF;
-	border-radius: 5px;
-	-webkit-transition: 300ms;
-	-moz-transition: 300ms;
-	-ms-transition: 300ms;
-	-o-transition: 300ms;
-	transition: 300ms;
-}
+    ul#navbar li {
+        display: inline-block;
+        padding: 7px 30px;
+        margin: 0 5px;
+        background: rgba(49, 100, 130, 0.92);
+        vertical-align: middle;
+        color: #FFF;
+        border-radius: 5px;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
+        -ms-transition: 300ms;
+        -o-transition: 300ms;
+        transition: 300ms;
+    }
 
-ul#navbar li:hover {
-	color: #FFF;
-	background-color: #244e67;
-}
+        ul#navbar li:hover {
+            color: #FFF;
+            background-color: #244e67;
+        }
 
 /* Coach */
 .coach {
-	height: 500px;
-	position: relative;
-	z-index: 2;
+    height: 500px;
+    position: relative;
+    z-index: 2;
 }
 
-.coach>div {
-	height: 100%;
-	width: 100%;
-	vertical-align: top;
-	display: inline-block;
-	color: #FFF;
-}
+    .coach > div {
+        height: 100%;
+        width: 100%;
+        vertical-align: top;
+        display: inline-block;
+        color: #FFF;
+    }
 
-.coach .image {
-	text-align: right;
-	padding: 20px;
-}
+    .coach .image {
+        text-align: right;
+        padding: 20px;
+    }
 
-.coach .image .viewer {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: calc(100% -     20px);
-	width: 100%;
-	box-sizing: border-box;
-	border: 5px solid #FFF;
-	margin: 5px;
-}
+        .coach .image .viewer {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: calc(100% - 20px);
+            width: 100%;
+            box-sizing: border-box;
+            border: 5px solid #FFF;
+            margin: 5px;
+        }
 
-.coach .info {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px;
-	position: relative;
-}
+    .coach .info {
+        background: rgba(49, 100, 130, 0.92);
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+    }
 
-.coach .info .list {
-	padding: 20px;
-}
+        .coach .info .list {
+            padding: 20px;
+        }
 
-.coach .info .buttons {
-	position: absolute;
-	bottom: 0;
-	padding: 10px 20px;
-	left: 0;
-	width: 100%;
-}
-/* Career */
-.coach .info .career {
-	width: 100%;
-	margin: 0 auto;
-	border-collapse: collapse;
-}
+        .coach .info .buttons {
+            position: absolute;
+            bottom: 0;
+            padding: 10px 20px;
+            left: 0;
+            width: 100%;
+        }
+        /* Career */
+        .coach .info .career {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
 
-.coach .info .career thead {
-	margin: 10px 0;
-	background: #076192;
-}
+            .coach .info .career thead {
+                margin: 10px 0;
+                background: #076192;
+            }
 
-.coach .info .career thead th {
-	font-weight: 300 !important;
-	padding: 4px 7px;
-	width: 20%;
-}
+                .coach .info .career thead th {
+                    font-weight: 300 !important;
+                    padding: 4px 7px;
+                    width: 20%;
+                }
 
-.coach .info .career tbody tr {
-	background: #19506e;
-}
+            .coach .info .career tbody tr {
+                background: #19506e;
+            }
 
-.coach .info .career tbody tr.odd {
-	background: #477994;
-}
+                .coach .info .career tbody tr.odd {
+                    background: #477994;
+                }
 
-.coach .info .career tbody tr td {
-	padding: 4px 7px;
-	width: auto;
-}
-/* Achivement */
-.coach .info .achivement ul {
-	list-style: none;
-	padding: 0;
-	height: 350px;
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
+                .coach .info .career tbody tr td {
+                    padding: 4px 7px;
+                    width: auto;
+                }
+        /* Achivement */
+        .coach .info .achivement ul {
+            list-style: none;
+            padding: 0;
+            height: 350px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
 
-.coach .info .achivement ul li {
-	margin: 10px 0;
-	overflow: hidden;
-}
+            .coach .info .achivement ul li {
+                margin: 10px 0;
+                overflow: hidden;
+            }
 
-.coach .info .achivement ul li .image {
-	display: inline-block;
-	float: left;
-	padding: 0;
-	width: 120px;
-	height: 100px;
-	text-align: center;
-	vertical-align: middle;
-	background: #265771;
-	border-radius: 10px;
-}
+                .coach .info .achivement ul li .image {
+                    display: inline-block;
+                    float: left;
+                    padding: 0;
+                    width: 120px;
+                    height: 100px;
+                    text-align: center;
+                    vertical-align: middle;
+                    background: #265771;
+                    border-radius: 10px;
+                }
 
-.coach .info .achivement ul li .detail {
-	display: inline-block;
-	width: calc(100% -     140px);
-	float: left;
-	vertical-align: middle;
-	padding: 5px 7px;
-	height: calc(100px -     10px);
-	overflow: hidden;
-}
+                .coach .info .achivement ul li .detail {
+                    display: inline-block;
+                    width: calc(100% - 140px);
+                    float: left;
+                    vertical-align: middle;
+                    padding: 5px 7px;
+                    height: calc(100px - 10px);
+                    overflow: hidden;
+                }
 
 /* Player */
 
 .player {
-	height: 500px;
-	position: relative;
-	z-index: 2;
+    height: 500px;
+    position: relative;
+    z-index: 2;
 }
 
-.player>div {
-	height: 100%;
-	width: calc(50% -     80px);
-	vertical-align: top;
-	display: inline-block;
-	color: #FFF;
-}
+    .player > div {
+        height: 100%;
+        width: calc(50% - 80px);
+        vertical-align: top;
+        display: inline-block;
+        color: #FFF;
+    }
 
-.player .image {
-	text-align: right;
-	padding: 20px;
-}
+    .player .image {
+        text-align: right;
+        padding: 20px;
+    }
 
-.player .image .viewer {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: calc(100% -     20px);
-	width: 100%;
-	box-sizing: border-box;
-	border: 5px solid #FFF;
-	margin: 5px;
-}
+        .player .image .viewer {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: calc(100% - 20px);
+            width: 100%;
+            box-sizing: border-box;
+            border: 5px solid #FFF;
+            margin: 5px;
+        }
 
-.player .info {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px;
-	position: relative;
-}
+    .player .info {
+        background: rgba(49, 100, 130, 0.92);
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+    }
 
-.player .info .list {
-	padding: 20px;
-}
+        .player .info .list {
+            padding: 20px;
+        }
 
-.player .info .buttons {
-	position: absolute;
-	bottom: 0;
-	padding: 10px 20px;
-	left: 0;
-	width: 100%;
-}
-/* Career */
-.player .info .career {
-	width: 100%;
-	margin: 0 auto;
-	border-collapse: collapse;
-}
+        .player .info .buttons {
+            position: absolute;
+            bottom: 0;
+            padding: 10px 20px;
+            left: 0;
+            width: 100%;
+        }
+        /* Career */
+        .player .info .career {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
 
-.player .info .career thead {
-	margin: 10px 0;
-	background: #076192;
-}
+            .player .info .career thead {
+                margin: 10px 0;
+                background: #076192;
+            }
 
-.player .info .career thead th {
-	font-weight: 300 !important;
-	padding: 4px 7px;
-	width: 20%;
-}
+                .player .info .career thead th {
+                    font-weight: 300 !important;
+                    padding: 4px 7px;
+                    width: 20%;
+                }
 
-.player .info .career tbody tr {
-	background: #19506e;
-}
+            .player .info .career tbody tr {
+                background: #19506e;
+            }
 
-.player .info .career tbody tr.odd {
-	background: #477994;
-}
+                .player .info .career tbody tr.odd {
+                    background: #477994;
+                }
 
-.player .info .career tbody tr td {
-	padding: 4px 7px;
-	width: auto;
-}
-/* Achivement */
-.player .info .achivement ul {
-	list-style: none;
-	padding: 0;
-	height: 350px;
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
+                .player .info .career tbody tr td {
+                    padding: 4px 7px;
+                    width: auto;
+                }
+        /* Achivement */
+        .player .info .achivement ul {
+            list-style: none;
+            padding: 0;
+            height: 350px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
 
-.player .info .achivement ul li {
-	margin: 10px 0;
-	overflow: hidden;
-}
+            .player .info .achivement ul li {
+                margin: 10px 0;
+                overflow: hidden;
+            }
 
-.player .info .achivement ul li .image {
-	display: inline-block;
-	float: left;
-	padding: 0;
-	width: 120px;
-	height: 100px;
-	text-align: center;
-	vertical-align: middle;
-	background: #265771;
-	border-radius: 10px;
-}
+                .player .info .achivement ul li .image {
+                    display: inline-block;
+                    float: left;
+                    padding: 0;
+                    width: 120px;
+                    height: 100px;
+                    text-align: center;
+                    vertical-align: middle;
+                    background: #265771;
+                    border-radius: 10px;
+                }
 
-.player .info .achivement ul li .detail {
-	display: inline-block;
-	width: calc(100% -     140px);
-	float: left;
-	vertical-align: middle;
-	padding: 5px 7px;
-	height: calc(100px -     10px);
-	overflow: hidden;
-}
+                .player .info .achivement ul li .detail {
+                    display: inline-block;
+                    width: calc(100% - 140px);
+                    float: left;
+                    vertical-align: middle;
+                    padding: 5px 7px;
+                    height: calc(100px - 10px);
+                    overflow: hidden;
+                }
 /* Player pages */
 .player-pages {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px;
-	padding: 10px;
-	position: relative;
-	width: 100%;
-	height: 500px;
+    background: rgba(49, 100, 130, 0.92);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    height: 500px;
 }
 
-.player-pages .top-bar {
-	width: 100%;
-}
+    .player-pages .top-bar {
+        width: 100%;
+    }
 
-.player-pages .top-bar>.selector {
-	width: calc(30% -     20px);
-	margin: 0 10px;
-	display: inline-block;
-}
+        .player-pages .top-bar > .selector {
+            width: calc(30% - 20px);
+            margin: 0 10px;
+            display: inline-block;
+        }
 
-.player-pages .top-bar>#player-search {
-	width: calc(70% -     30px);
-	margin: 0 10px;
-	display: inline-block;
-}
+        .player-pages .top-bar > #player-search {
+            width: calc(70% - 30px);
+            margin: 0 10px;
+            display: inline-block;
+        }
 
-.player-pages .top-bar>#player-search input[type="text"] {
-	width: calc(100% -     100px);
-	height: 30px;
-	background: #244e67;
-	border: none;
-	color: #fff;
-	border-radius: 7px;
-}
+            .player-pages .top-bar > #player-search input[type="text"] {
+                width: calc(100% - 100px);
+                height: 30px;
+                background: #244e67;
+                border: none;
+                color: #fff;
+                border-radius: 7px;
+            }
 
-.player-pages .top-bar>#player-search input[type="submit"] {
-	
-}
+            .player-pages .top-bar > #player-search input[type="submit"] {
+            }
 
-.player-pages .info .list {
-	height: 370px;
-	margin-top: 35px;
-	padding: 10px;
-	overflow-y: scroll;
-}
+    .player-pages .info .list {
+        height: 370px;
+        margin-top: 35px;
+        padding: 10px;
+        overflow-y: scroll;
+    }
 
-.player-pages .info table {
-	width: 100%;
-	margin: 0 auto;
-	border-collapse: collapse;
-	color: #fff;
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
+    .player-pages .info table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        color: #fff;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 
-.player-pages .info table thead {
-	margin: 10px 0;
-	background: #076192;
-}
+        .player-pages .info table thead {
+            margin: 10px 0;
+            background: #076192;
+        }
 
-.player-pages .info table thead th {
-	font-weight: 300 !important;
-	padding: 4px 7px;
-	width: 20%;
-}
+            .player-pages .info table thead th {
+                font-weight: 300 !important;
+                padding: 4px 7px;
+                width: 20%;
+            }
 
-.player-pages .info table tbody tr {
-	background: #19506e;
-}
+        .player-pages .info table tbody tr {
+            background: #19506e;
+        }
 
-.player-pages .info table tbody tr.odd {
-	background: #477994;
-}
+            .player-pages .info table tbody tr.odd {
+                background: #477994;
+            }
 
-.player-pages .info table tbody tr td {
-	padding: 4px 7px;
-	width: auto;
-}
+            .player-pages .info table tbody tr td {
+                padding: 4px 7px;
+                width: auto;
+            }
 /* Match view page */
 .player .match-result {
-	
 }
 
-.player .match-result .result {
-	font-size: 130px;
-	margin-bottom: 0;
-}
+    .player .match-result .result {
+        font-size: 130px;
+        margin-bottom: 0;
+    }
 
-.player .match-result .result-text {
-	font-size: 30px;
-	margin: 10px 0;
-}
+    .player .match-result .result-text {
+        font-size: 30px;
+        margin: 10px 0;
+    }
 /* Login page */
 #login {
-	height: 200px;
-	width: 400px;
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 20px;
-	padding: 30px;
-	margin: 100px auto;
-	font-size: 22px;
+    height: 200px;
+    width: 400px;
+    background: rgba(49, 100, 130, 0.92);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 100px auto;
+    font-size: 22px;
 }
 
-#login input[type="text"],#login input[type="password"] {
-	height: 30px;
-	background: #1b78b2;
-	border: none;
-	color: #fff;
-	border-radius: 7px;
-	width: 80%;
-	padding: 3px 20px;
-}
+    #login input[type="text"], #login input[type="password"] {
+        height: 30px;
+        background: #1b78b2;
+        border: none;
+        color: #fff;
+        border-radius: 7px;
+        width: 80%;
+        padding: 3px 20px;
+    }
 
-#login input[type="submit"] {
-	height: 30px;
-	background: none;
-	border: none;
-	color: #fff;
-	border-radius: 7px;
-	width: 80%;
-	padding: 3px 20px;
-	cursor: pointer;
-}
+    #login input[type="submit"] {
+        height: 30px;
+        background: none;
+        border: none;
+        color: #fff;
+        border-radius: 7px;
+        width: 80%;
+        padding: 3px 20px;
+        cursor: pointer;
+    }
 /* league page */
 .league {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px auto;
-	padding: 20px;
-	color: #fff;
-	position: relative;
-	width: 600px;
+    background: rgba(49, 100, 130, 0.92);
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    width: 600px;
 }
 
-.league .content ul {
-	list-style: none;
-	padding: 0;
-	height: 350px;
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
+    .league .content ul {
+        list-style: none;
+        padding: 0;
+        height: 350px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 
-.league .content ul li {
-	margin: 10px 0;
-	overflow: hidden;
-}
+        .league .content ul li {
+            margin: 10px 0;
+            overflow: hidden;
+        }
 
-.league .content ul li .image {
-	display: inline-block;
-	float: left;
-	padding: 0;
-	width: 120px;
-	height: 100px;
-	text-align: center;
-	vertical-align: middle;
-	background: #265771;
-	border-radius: 10px;
-	margin: 0 20px;
-}
+            .league .content ul li .image {
+                display: inline-block;
+                float: left;
+                padding: 0;
+                width: 120px;
+                height: 100px;
+                text-align: center;
+                vertical-align: middle;
+                background: #265771;
+                border-radius: 10px;
+                margin: 0 20px;
+            }
 
-.league .content ul li .detail {
-	display: inline-block;
-	width: calc(100% -     180px);
-	float: left;
-	vertical-align: middle;
-	padding: 5px 7px;
-	height: calc(100px -     10px);
-	overflow: hidden;
-}
+            .league .content ul li .detail {
+                display: inline-block;
+                width: calc(100% - 180px);
+                float: left;
+                vertical-align: middle;
+                padding: 5px 7px;
+                height: calc(100px - 10px);
+                overflow: hidden;
+            }
 /* coach page */
 .coach {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px auto;
-	padding: 20px;
-	color: #fff;
-	position: relative;
-	width: 600px;
+    background: rgba(49, 100, 130, 0.92);
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    width: 600px;
 }
 
-.coach .content ul {
-	list-style: none;
-	padding: 0;
-	height: 350px;
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
+    .coach .content ul {
+        list-style: none;
+        padding: 0;
+        height: 350px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 
-.coach .content ul li {
-	margin: 10px 0;
-	overflow: hidden;
-}
+        .coach .content ul li {
+            margin: 10px 0;
+            overflow: hidden;
+        }
 
-.coach .content ul li .image {
-	display: inline-block;
-	float: left;
-	padding: 0;
-	width: 120px;
-	height: 100px;
-	text-align: center;
-	vertical-align: middle;
-	background: #265771;
-	border-radius: 10px;
-	margin: 0 20px;
-}
+            .coach .content ul li .image {
+                display: inline-block;
+                float: left;
+                padding: 0;
+                width: 120px;
+                height: 100px;
+                text-align: center;
+                vertical-align: middle;
+                background: #265771;
+                border-radius: 10px;
+                margin: 0 20px;
+            }
 
-.coach .content ul li .detail {
-	display: inline-block;
-	width: calc(100% -     180px);
-	float: left;
-	vertical-align: middle;
-	padding: 5px 7px;
-	height: calc(100px -     10px);
-	overflow: hidden;
-}
+            .coach .content ul li .detail {
+                display: inline-block;
+                width: calc(100% - 180px);
+                float: left;
+                vertical-align: middle;
+                padding: 5px 7px;
+                height: calc(100px - 10px);
+                overflow: hidden;
+            }
 
-.coach .content ul li .detail>div {
-	margin: 7px 0;
-}
+                .coach .content ul li .detail > div {
+                    margin: 7px 0;
+                }
 /* Added new */
 .addnew-page {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px auto;
-	padding: 50px;
-	position: relative;
-	width: 80%;
-	height: 500px;
+    background: rgba(49, 100, 130, 0.92);
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 50px;
+    position: relative;
+    width: 80%;
+    height: 500px;
 }
 
-.addnew-page .info {
-	margin: 50px 20px;
-	text-align: left;
-	color: #fff;
-}
+    .addnew-page .info {
+        margin: 50px 20px;
+        text-align: left;
+        color: #fff;
+    }
 
-.addnew-page .top-bar {
-	width: 100%;
-}
+    .addnew-page .top-bar {
+        width: 100%;
+    }
 
-.addnew-page .top-bar>.selector {
-	width: calc(30% -     20px);
-	margin: 0 10px;
-	display: inline-block;
-}
+        .addnew-page .top-bar > .selector {
+            width: calc(30% - 20px);
+            margin: 0 10px;
+            display: inline-block;
+        }
 
-.addnew-page .top-bar>#player-search {
-	width: calc(70% -     30px);
-	margin: 0 10px;
-	display: inline-block;
-}
+        .addnew-page .top-bar > #player-search {
+            width: calc(70% - 30px);
+            margin: 0 10px;
+            display: inline-block;
+        }
 
-.addnew-page #add-achivement-form label {
-	width: 40%;
-	display: inline-block;
-	margin-bottom: 30px;
-}
+    .addnew-page #add-achivement-form label {
+        width: 40%;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
 
-.addnew-page #add-achivement-form input[type="text"] {
-	height: 30px;
-	width: 40%;
-	background: #244e67;
-	border: none;
-	color: #fff;
-	border-radius: 7px;
-}
+    .addnew-page #add-achivement-form input[type="text"] {
+        height: 30px;
+        width: 40%;
+        background: #244e67;
+        border: none;
+        color: #fff;
+        border-radius: 7px;
+    }
 /* Home page */
 .home {
-	height: 300px;
-	position: relative;
-	z-index: 2;
+    height: 300px;
+    position: relative;
+    z-index: 2;
 }
 
-.home>div {
-	height: 100%;
-	width: calc(50% -     80px);
-	vertical-align: top;
-	display: inline-block;
-	color: #FFF;
+    .home > div {
+        height: 100%;
+        width: calc(50% - 80px);
+        vertical-align: top;
+        display: inline-block;
+        color: #FFF;
+    }
+
+    .home .image {
+        text-align: right;
+        padding: 20px;
+    }
+
+        .home .image .viewer {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: calc(100% - 20px);
+            width: 100%;
+            box-sizing: border-box;
+            margin: 5px;
+        }
+
+    .home .info {
+        background: rgba(49, 100, 130, 0.92);
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+    }
+
+        .home .info .list {
+            padding: 20px;
+        }
+
 }
 
-.home .image {
-	text-align: right;
-	padding: 20px;
-}
 
-.home .image .viewer {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: calc(100% -     20px);
-	width: 100%;
-	box-sizing: border-box;
-	margin: 5px;
-}
-
-.home .info {
-	background: rgba(49, 100, 130, 0.92);
-	border-radius: 10px;
-	margin: 10px;
-	position: relative;
-}
-
-.home .info .list {
-	padding: 20px;
-}
-}
