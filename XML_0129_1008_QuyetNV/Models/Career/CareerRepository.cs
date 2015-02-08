@@ -25,13 +25,18 @@ namespace PlayerManagement.Models
                 careers = from career in _careerData.Descendants("career")
                               select new Career(
                                   career.Element("id").Value,
-                                  XmlConvert.ToDateTime(career.Element("from").Value),
-                                  XmlConvert.ToDateTime(career.Element("to").Value),
+                                  XmlConvert.ToDateTime(career.Element("from").Value, XmlDateTimeSerializationMode.Local),
+                                  XmlConvert.ToDateTime(career.Element("to").Value, XmlDateTimeSerializationMode.Local),
                                   career.Element("clubName").Value,
                                   (int)career.Element("noOfGoals"),
                                   career.Element("playerId").Value
                                   );
+                Career testcareer = careers.FirstOrDefault();
+
+               
             }
+
+            
             catch (FormatException e)
             {
                 Console.WriteLine(e.Message);

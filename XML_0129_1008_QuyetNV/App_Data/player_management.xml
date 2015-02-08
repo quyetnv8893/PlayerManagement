@@ -1,447 +1,510 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<playerManagement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://thangpq.fall.vn player_management.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<playerManagement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://thangpq.fall.vn player_management.xsd">
   <club>
     <name>Real Madrid</name>
     <foundedDate>1902-06-03</foundedDate>
-    <logoLink>http://img1.wikia.nocookie.net/__cb20120629123703/uncyclopedia/images/b/bf/Real_Madrid_logo.png</logoLink>
+    <logoLink>http://i.imgur.com/wlzJ0eT.png</logoLink>
     <stadium>Santiago Bernabeu</stadium>
   </club>
+
   <players>
     <!-- 1 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>01</id>
       <number>1</number>
-      <name>CASILLAS
-                IKER CASILLAS FERNÁNDEZ</name>
+      <name>IKER CASILLAS</name>
       <position>Goalkeeper</position>
       <dateOfBirth>1981-05-20</dateOfBirth>
       <placeOfBirth>Móstoles (Madrid)</placeOfBirth>
       <weight>84</weight>
       <height>1.85</height>
-      <description> He has been a Madrid fan since he was a child and he fulfilled his dream of playing for the club at the age of 10. Form the very beginning, it was clear that he was a special goalkeeper with extremely fast reflexes, great strength in both legs and the gift of being almost unbeatable in one-on-one situations.        
-                He has proved to be a born leader in all of the teams he has played for both at Real Madrid and for Spain. In his first Champions League Final, he performed brilliantly to help his team win their eighth European Cup. That same season, he played so well that he also won the Bravo Award for the best young player of the year.        
-                He has won everything there is to win, both for Real Madrid and for Spain. He was a key player in his country’s victories in the UEFA European Championship in 2008 and 2012 and was one of the Spanish heroes in the FIFA World Cup in South Africa in 2010. FIFA, UEFA, the fans…but, above all, his fantastic saves, honoured him
-                with the title of the world’s best goalkeeper for five years running.</description>
+      <description>
+        He has been a Madrid fan since he was a child and he fulfilled his dream
+        of playing for the club at the age of 10. Form the very beginning, it was clear that
+        he was a special goalkeeper with extremely fast reflexes, great strength in both
+        legs and the gift of being almost unbeatable in one-on-one situations. He has proved
+        to be a born leader in all of the teams he has played for both at Real Madrid and
+        for Spain. In his first Champions League Final, he performed brilliantly to help his
+        team win their eighth European Cup. That same season, he played so well that he also
+        won the Bravo Award for the best young player of the year. He has won everything
+        there is to win, both for Real Madrid and for Spain. He was a key player in his
+        country’s victories in the UEFA European Championship in 2008 and 2012 and was one
+        of the Spanish heroes in the FIFA World Cup in South Africa in 2010. FIFA, UEFA, the
+        fans…but, above all, his fantastic saves, honoured him with the title of the world’s
+        best goalkeeper for five years running.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
     <!-- TODO: ADD MORE PLAYERS HERE -->
+
     <!-- 2 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>02</id>
       <number>13</number>
-      <name>KEYLOR NAVAS
-                KEYLOR NAVAS</name>
+      <name>NAVAS</name>
       <position>Goalkeeper</position>
       <dateOfBirth>1986-12-15</dateOfBirth>
       <placeOfBirth>San Isidro (Costa Rica)</placeOfBirth>
       <weight>78</weight>
       <height>1.85</height>
-      <description> He is quick, has great reflexes, always positions himself well and is one of the best in one-to-ones; 
-                Keylor Navas has everything it takes to be an exceptional keeper. 
-                He demonstrated it in Brazil, where he only let in two goals in five matches and took Costa Rica 
-                to the quarter-finals for the first time in their history.</description>
+      <description>
+        He is quick, has great reflexes, always positions himself well and is one
+        of the best in one-to-ones; Keylor Navas has everything it takes to be an
+        exceptional keeper. He demonstrated it in Brazil, where he only let in two goals in
+        five matches and took Costa Rica to the quarter-finals for the first time in their
+        history.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 3 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>03</id>
       <number>25</number>
-      <name>PACHECO
-                FERNANDO PACHECO FLORES</name>
+      <name>PACHECO</name>
       <position>Goalkeeper</position>
       <dateOfBirth>1992-05-18</dateOfBirth>
       <placeOfBirth>Badajoz</placeOfBirth>
       <weight>81</weight>
       <height>1.86</height>
-      <description> An experienced, quietly effective goalkeeper whose excellent reflexes see him shine in one-on-one situations. 
-                He made his competitive debut for the first team in a 5-1 win over Ponferradina in the Copa del Rey.</description>
+      <description>
+        An experienced, quietly effective goalkeeper whose excellent reflexes see
+        him shine in one-on-one situations. He made his competitive debut for the first team
+        in a 5-1 win over Ponferradina in the Copa del Rey.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 4 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>04</id>
-      <number>25</number>
-      <name>SERGIO RAMOS
-                SERGIO RAMOS GARCÍA</name>
+      <number>4</number>
+      <name>SERGIO RAMOS</name>
       <position>Defender</position>
       <dateOfBirth>1986-03-30</dateOfBirth>
       <placeOfBirth>Camas (Sevilla, Spain)</placeOfBirth>
       <weight>75</weight>
       <height>1.83</height>
-      <description> His courage and strength made him the revelation of La Liga in the 2004/2005 season. 
-                He was then playing for Sevilla, where he had started his career at the youth academy. 
-                His qualities did not go unnoticed by Real Madrid who signed him that summer.</description>
+      <description>
+        His courage and strength made him the revelation of La Liga in the
+        2004/2005 season. He was then playing for Sevilla, where he had started his career
+        at the youth academy. His qualities did not go unnoticed by Real Madrid who signed
+        him that summer.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 5 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>05</id>
       <number>3</number>
-      <name>PEPE
-                KÉPLER LAVERAN LIMA FERREIRA</name>
+      <name>PEPE</name>
       <position>Defender</position>
       <dateOfBirth>1983-02-26</dateOfBirth>
       <placeOfBirth>Maceió (Brazil)</placeOfBirth>
       <weight>81</weight>
       <height>1.88</height>
-      <description>Pepe is technically impeccable, tactically perfect, has a great sense of positioning, speed, 
-                strength and intelligence. 
-                He is very strong in the air and is also elegant when playing the ball out of defence. 
-                Since he arrived at the club, Pepe has been a vital presence at the heart of the Real Madrid defence.</description>
+      <description>
+        Pepe is technically impeccable, tactically perfect, has a great sense of
+        positioning, speed, strength and intelligence. He is very strong in the air and is
+        also elegant when playing the ball out of defence. Since he arrived at the club,
+        Pepe has been a vital presence at the heart of the Real Madrid
+        defence.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 6 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>06</id>
       <number>2</number>
-      <name>VARANE
-                RAPHAËL VARANE</name>
+      <name>VARANE</name>
       <position>Defender</position>
       <dateOfBirth>1993-04-25</dateOfBirth>
       <placeOfBirth>Lille (France)</placeOfBirth>
       <weight>78</weight>
       <height>1.91</height>
-      <description>Varane began his football career at the age of just seven. 
-                He showed the first signs of his talent at the Football Training Centre in Liévin (France) 
-                and began to develop his outstanding feature as a player, his elegance on the ball. 
-                He began to star for the youth teams of Racing Club de Lens and at the age of 17 
-                he made his debut for them in Ligue 1, 
-                going on to become one of the stars of the 2010-11 season.</description>
+      <description>
+        Varane began his football career at the age of just seven. He showed the
+        first signs of his talent at the Football Training Centre in Liévin (France) and
+        began to develop his outstanding feature as a player, his elegance on the ball. He
+        began to star for the youth teams of Racing Club de Lens and at the age of 17 he
+        made his debut for them in Ligue 1, going on to become one of the stars of the
+        2010-11 season.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 7 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>07</id>
       <number>17</number>
-      <name>ARBELOA
-                ÁLVARO ARBELOA COCA</name>
+      <name>ARBELOA</name>
       <position>Defender</position>
       <dateOfBirth>1983-01-17</dateOfBirth>
       <placeOfBirth>Salamanca</placeOfBirth>
       <weight>79</weight>
       <height>1.84</height>
-      <description>Álvaro Arbeloa is a versatile player who is a born leader inside and outside the dressing-room. 
-                These are the qualities that made him stand out in the Real Madrid youth team. 
-                In 2005 he captained Real Madrid Castilla and was one of the key players in their promotion 
-                to the Spanish Second Division, 
-                a promotion which had taken 14 years to achieve.</description>
+      <description>
+        Álvaro Arbeloa is a versatile player who is a born leader inside and
+        outside the dressing-room. These are the qualities that made him stand out in the
+        Real Madrid youth team. In 2005 he captained Real Madrid Castilla and was one of the
+        key players in their promotion to the Spanish Second Division, a promotion which had
+        taken 14 years to achieve.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 8 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>08</id>
       <number>15</number>
-      <name>CARVAJAL
-                DANIEL CARVAJAL RAMOS</name>
+      <name>CARVAJAL</name>
       <position>Defender</position>
       <dateOfBirth>1992-01-11</dateOfBirth>
       <placeOfBirth>Leganés (Madrid)</placeOfBirth>
       <weight>73</weight>
       <height>1.73</height>
-      <description>Local full-back Dani Carvajal started his career at the Real Madrid youth academy 
-                and is particularly noted for his speed and the composure he displays in his position. 
-                He has been a regular at all level of Spanish international youth football 
-                and has earned a European Championship medal at Under -19 and Under-21 level.</description>
+      <description>
+        Local full-back Dani Carvajal started his career at the Real Madrid youth
+        academy and is particularly noted for his speed and the composure he displays in his
+        position. He has been a regular at all level of Spanish international youth football
+        and has earned a European Championship medal at Under -19 and Under-21
+        level.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 9 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>09</id>
       <number>5</number>
-      <name>COENTRÃO
-                FÁBIO A. SILVA COENTRÃO</name>
+      <name>COENTRÃO</name>
       <position>Defender</position>
       <dateOfBirth>1988-03-11</dateOfBirth>
       <placeOfBirth>Vila do Conde (Portugal)</placeOfBirth>
       <weight>70</weight>
       <height>1.79</height>
-      <description>Speed, swerves and versatility are the main features of Fábio Coentrão. 
-                He is a player who can offer a lot to the team both in attack and in defence 
-                and has plenty of experience of football at the highest level. 
-                His defensive ability helped Real Madrid to win La Liga and the Spanish Super Cup in 2012.</description>
+      <description>
+        Speed, swerves and versatility are the main features of Fábio Coentrão. He
+        is a player who can offer a lot to the team both in attack and in defence and has
+        plenty of experience of football at the highest level. His defensive ability helped
+        Real Madrid to win La Liga and the Spanish Super Cup in 2012.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 10 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>10</id>
       <number>12</number>
-      <name>MARCELO
-                MARCELO VIEIRA DA SILVA</name>
+      <name>MARCELO</name>
       <position>Defender</position>
       <dateOfBirth>1988-05-12</dateOfBirth>
       <placeOfBirth>Río de Janeiro (Brazil)</placeOfBirth>
       <weight>75</weight>
       <height>1.74</height>
-      <description>Marcelo started playing five-a-side football at the age of 9 and by 13 he was at Fluminense. 
-                    He comes from quite a poor family and almost had to leave the football academy 
-                    because he couldn’t afford to pay for the bus to take him to training. 
-                    Nevertheless, his determination and his ability made him fight for what he loved and he was best at: football.</description>
+      <description>
+        Marcelo started playing five-a-side football at the age of 9 and by 13 he
+        was at Fluminense. He comes from quite a poor family and almost had to leave the
+        football academy because he couldn’t afford to pay for the bus to take him to
+        training. Nevertheless, his determination and his ability made him fight for what he
+        loved and he was best at: football.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 11 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>11</id>
       <number>18</number>
-      <name>NACHO
-                JOSÉ I. FERNÁNDEZ IGLESIAS</name>
+      <name>NACHO</name>
       <position>Defender</position>
       <dateOfBirth>1990-01-18</dateOfBirth>
       <placeOfBirth>Madrid</placeOfBirth>
       <weight>75</weight>
       <height>1.79</height>
-      <description>Nacho is a homegrown player who perfectly embodies the values of Real Madrid. 
-                He has been at the club for over a decade having arrived in 2001 as a youth team player. 
-                He has gradually risen through the ranks to the first team. 
-                Just one month after winning the UEFA Under-21 Championship, 
-                he also earned his first full cap in Geneva (Switzerland) against Chile.</description>
+      <description>
+        Nacho is a homegrown player who perfectly embodies the values of Real
+        Madrid. He has been at the club for over a decade having arrived in 2001 as a youth
+        team player. He has gradually risen through the ranks to the first team. Just one
+        month after winning the UEFA Under-21 Championship, he also earned his first full
+        cap in Geneva (Switzerland) against Chile.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 12 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>12</id>
       <number>6</number>
-      <name>KHEDIRA
-                SAMI KHEDIRA</name>
+      <name>KHEDIRA</name>
       <position>Midfielder</position>
       <dateOfBirth>1987-04-04</dateOfBirth>
       <placeOfBirth>Stuttgart (Germany)</placeOfBirth>
       <weight>85</weight>
       <height>1.89</height>
-      <description>A top quality footballer who always makes a contribution to the team, 
-                Khedira is a dynamic midfielder who covers all of the pitch, 
-                wins the ball back in the middle and joins the attack. 
-                He is very powerful in the air thanks to his height (1.89 metres) 
-                and has a powerful shot from medium range.</description>
+      <description>
+        A top quality footballer who always makes a contribution to the team,
+        Khedira is a dynamic midfielder who covers all of the pitch, wins the ball back in
+        the middle and joins the attack. He is very powerful in the air thanks to his height
+        (1.89 metres) and has a powerful shot from medium range.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 13 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>13</id>
       <number>8</number>
-      <name>KROOS
-                TONI KROOS</name>
+      <name>KROOS</name>
       <position>Midfielder</position>
       <dateOfBirth>1990-01-04</dateOfBirth>
       <placeOfBirth>Greifswald (Germany)</placeOfBirth>
       <weight>78</weight>
       <height>1.82</height>
-      <description>Toni Kroos has winning genes, 
-                having won the World Cup in the same season that he also won the Club World Cup, 
-                the UEFA Supercup, the Bundesliga and the German Cup. 
-                He comes to Madrid having played over 200 games for Bayern Munich 
-                and has more than 50 caps for Germany.</description>
+      <description>
+        Toni Kroos has winning genes, having won the World Cup in the same season
+        that he also won the Club World Cup, the UEFA Supercup, the Bundesliga and the
+        German Cup. He comes to Madrid having played over 200 games for Bayern Munich and
+        has more than 50 caps for Germany.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 14 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>14</id>
       <number>24</number>
-      <name>ILLARRA
-                ASIER ILLARRAMENDI ANDONEGI</name>
+      <name>ILLARRA</name>
       <position>Midfielder</position>
       <dateOfBirth>1990-08-03</dateOfBirth>
       <placeOfBirth>Motrico (Guipúzcoa)</placeOfBirth>
       <weight>76</weight>
       <height>1.79</height>
-      <description>Asier arrived at Real Madrid thanks to his great performances for Real Sociedad 
-                in qualifying for the Champions League. 
-                His leadership skills in midfield helped the Basque team to have one of the best ever seasons.</description>
+      <description>
+        Asier arrived at Real Madrid thanks to his great performances for Real
+        Sociedad in qualifying for the Champions League. His leadership skills in midfield
+        helped the Basque team to have one of the best ever seasons.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 15 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>15</id>
       <number>23</number>
-      <name>ISCO
-                FRANCISCO ROMÁN ALARCÓN</name>
+      <name>ISCO</name>
       <position>Midfielder</position>
       <dateOfBirth>1992-04-21</dateOfBirth>
       <placeOfBirth>Benalmádena (Málaga, Spain)</placeOfBirth>
       <weight>74</weight>
       <height>1.76</height>
-      <description>Skill, pace and imagination are some of the qualities that make Isco a top quality midfielder. 
-                His precise passing and his dribbling thrilled La Liga and now belong to the Bernabéu.</description>
+      <description>
+        Skill, pace and imagination are some of the qualities that make Isco a top
+        quality midfielder. His precise passing and his dribbling thrilled La Liga and now
+        belong to the Bernabéu.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 16 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>16</id>
       <number>10</number>
-      <name>JAMES RODRÍGUEZ
-                JAMES RODRÍGUEZ</name>
+      <name>JAMES RODRÍGUEZ</name>
       <position>Midfielder</position>
       <dateOfBirth>1991-07-12</dateOfBirth>
       <placeOfBirth>Cucuta (Colombia)</placeOfBirth>
       <weight>75</weight>
       <height>1.80</height>
-      <description>Goals, assists, dribbling, pace, talent and versatility. 
-                James Rodríguez possesses all these qualities. 
-                The Brazil World Cup’s Golden Boot winner is a spectacular player. 
-                He is young but has a wealth of experience from spells in the Argentinian, Portuguese and French leagues.</description>
+      <description>
+        Goals, assists, dribbling, pace, talent and versatility. James Rodríguez
+        possesses all these qualities. The Brazil World Cup’s Golden Boot winner is a
+        spectacular player. He is young but has a wealth of experience from spells in the
+        Argentinian, Portuguese and French leagues.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 17 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>17</id>
       <number>11</number>
-      <name>BALE
-                GARETH BALE</name>
+      <name>BALE</name>
       <position>Midfielder</position>
       <dateOfBirth>1989-07-16</dateOfBirth>
       <placeOfBirth>Cardiff (Wales)</placeOfBirth>
       <weight>74</weight>
       <height>1.83</height>
-      <description>When speed and skill come together, the result is called Gareth Bale. 
-                Gareth is a very complete midfielder and has a lethal weapon in his left foot. 
-                He is the first Welshman to play for Real Madrid 
-                who he joined after being named the PFA Player’s Player of the Year 
-                in the Premier League in two of the last three years (2010-11 and 2012-13), 
-                and left a lasting influence at Tottenham Hotspur.</description>
+      <description>
+        When speed and skill come together, the result is called Gareth Bale.
+        Gareth is a very complete midfielder and has a lethal weapon in his left foot. He is
+        the first Welshman to play for Real Madrid who he joined after being named the PFA
+        Player’s Player of the Year in the Premier League in two of the last three years
+        (2010-11 and 2012-13), and left a lasting influence at Tottenham
+        Hotspur.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 18 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>18</id>
       <number>19</number>
-      <name>MODRIC
-                LUKA MODRIC</name>
+      <name>MODRIC</name>
       <position>Midfielder</position>
       <dateOfBirth>1985-09-09</dateOfBirth>
       <placeOfBirth>Zadar (Croatia)</placeOfBirth>
       <weight>65</weight>
       <height>1.74</height>
-      <description>Skill and organizational ability at the service of the Whites’ midfield. 
-                After starring in three different countries (Bosnia, Croatia and England) and in the European Championship, 
-                Luka Modric signed for Real Madrid in August 2012, 
-                thus reaching the peak of his football career.</description>
+      <description>
+        Skill and organizational ability at the service of the Whites’ midfield.
+        After starring in three different countries (Bosnia, Croatia and England) and in the
+        European Championship, Luka Modric signed for Real Madrid in August 2012, thus
+        reaching the peak of his football career.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 19 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>19</id>
       <number>7</number>
-      <name>RONALDO
-                CRISTIANO RONALDO DOS SANTOSS</name>
+      <name>RONALDO</name>
       <position>Forward</position>
       <dateOfBirth>1985-02-05</dateOfBirth>
       <placeOfBirth>Funchal (Portugal)</placeOfBirth>
       <weight>80</weight>
       <height>1.85</height>
-      <description>Cristiano Ronaldo is a player who is destined to make history. 
-                Thanks to his immense natural talent, the Portuguese forward is a commanding leader 
-                for Real Madrid and his national team. Since he arrived at the Bernabéu from Manchester United, 
-                his goalscoring figures have just kept on improving to the delight of Madrid fans. 
-                He is now firmly established as one of the leading goalscorers in the history of the club 
-                and he wants to further improve the already illustrious lists of honours won by the greatest club 
-                of the 20th Century.</description>
+      <description>
+        Cristiano Ronaldo is a player who is destined to make history. Thanks to
+        his immense natural talent, the Portuguese forward is a commanding leader for Real
+        Madrid and his national team. Since he arrived at the Bernabéu from Manchester
+        United, his goalscoring figures have just kept on improving to the delight of Madrid
+        fans. He is now firmly established as one of the leading goalscorers in the history
+        of the club and he wants to further improve the already illustrious lists of honours
+        won by the greatest club of the 20th Century.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 20 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>20</id>
       <number>9</number>
-      <name>BENZEMA
-                KARIM BENZEMA</name>
+      <name>BENZEMA</name>
       <position>Forward</position>
       <dateOfBirth>1987-12-19</dateOfBirth>
       <placeOfBirth>Lyon (France)</placeOfBirth>
       <weight>79</weight>
       <height>1.87</height>
-      <description>A precocious talent and widely considered to be one of best all-round forwards in the world, 
-                Benzema can make his own chances, finish clinically in the area and make assists for his teammates. 
-                He always places his talents at the service of the team.</description>
+      <description>
+        A precocious talent and widely considered to be one of best all-round
+        forwards in the world, Benzema can make his own chances, finish clinically in the
+        area and make assists for his teammates. He always places his talents at the service
+        of the team.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 21 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>21</id>
       <number>20</number>
-      <name>JESÉ
-                JESÉ RODRÍGUEZ RUIZ</name>
+      <name>JESÉ</name>
       <position>Forward</position>
       <dateOfBirth>1993-02-26</dateOfBirth>
       <placeOfBirth>Las Palmas de Gran Canaria (Spain)</placeOfBirth>
       <weight>71</weight>
       <height>1.78</height>
-      <description>Jesé arrived at the Real Madrid youth academy at the age of 14 
-                and is currently one of the greatest talents in Spanish football. He is from Gran Canaria 
-                and always wanted to play for the Whites. 
-                Six years after his arrival, he is now a member of the first team 
-                and is starting to show that he is a top class footballer. 
-                Speed, creativity, power and intensity are the main features of this rough diamond.</description>
+      <description>
+        Jesé arrived at the Real Madrid youth academy at the age of 14 and is
+        currently one of the greatest talents in Spanish football. He is from Gran Canaria
+        and always wanted to play for the Whites. Six years after his arrival, he is now a
+        member of the first team and is starting to show that he is a top class footballer.
+        Speed, creativity, power and intensity are the main features of this rough
+        diamond.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
     <!-- 22 -->
     <player>
       <clubName>Real Madrid</clubName>
       <id>22</id>
       <number>14</number>
-      <name>CHICHARITO
-                JAVIER HERNÁNDEZ</name>
+      <name>CHICHARITO</name>
       <position>Forward</position>
       <dateOfBirth>1988-06-01</dateOfBirth>
       <placeOfBirth>Guadalajara (Mexico)</placeOfBirth>
       <weight>71</weight>
       <height>1.75</height>
-      <description>A pacey and very skilful forward, particularly in the area. 
-                In addition to having a great shot with both feet, he is also outstanding in the air. 
-                Despite his youth, Chicharito is already the star of his national side, 
-                where he has an excellent scoring average.</description>
+      <description>
+        A pacey and very skilful forward, particularly in the area. In addition to
+        having a great shot with both feet, he is also outstanding in the air. Despite his
+        youth, Chicharito is already the star of his national side, where he has an
+        excellent scoring average.
+      </description>
       <imageLink>http://i.imgur.com/rkJ35oM.png</imageLink>
       <status>true</status>
     </player>
+
   </players>
+
   <coaches>
     <coach>
       <id>01</id>
-      <name>CarloAncelotti</name>
-      <dateOfBirth>1959-06-10T00:00:00</dateOfBirth>
+      <name>Carlo Ancelotti</name>
+      <dateOfBirth>1959-06-10</dateOfBirth>
       <imageLink>http://i.imgur.com/64MGQKn.jpg</imageLink>
       <position>Main Coach</position>
       <clubName>Real Madrid</clubName>
     </coach>
+
     <coach>
       <id>02</id>
       <name>Fernando Hierro</name>
@@ -450,6 +513,7 @@
       <position>Assistant Coach</position>
       <clubName>Real Madrid</clubName>
     </coach>
+
     <coach>
       <id>03</id>
       <name>Paul Clement</name>
@@ -458,6 +522,7 @@
       <position>Assistant Coach</position>
       <clubName>Real Madrid</clubName>
     </coach>
+
     <coach>
       <id>04</id>
       <name>Giovanni Mauri</name>
@@ -466,25 +531,292 @@
       <position>Head Fitness Coach</position>
       <clubName>Real Madrid</clubName>
     </coach>
+
+    <coach>
+      <id>05</id>
+      <name>Villiam Vecchi</name>
+      <dateOfBirth>1948-12-28</dateOfBirth>
+      <imageLink>http://i.imgur.com/64MGQKn.jpg</imageLink>
+      <position>Goalkeeper Coach</position>
+      <clubName>Real Madrid</clubName>
+    </coach>
   </coaches>
+
   <achievements>
+    <!-- TODO: ADD MORE ACHIEVEMENT HERE -->
     <achievement>
-      <name>European-Cup</name>
+      <name>Apertura League in Argentina</name>
       <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
     </achievement>
-    <!-- TODO: ADD MORE ACHIEVEMENT HERE -->
+    <achievement>
+      <name>Ballon d'Or</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Best player at the U-17 World Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Best player of Ligue 1</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Bravo Trophy</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Brazilian League</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Bronze Medal Olympic Games Beijing</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Bundesliga</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Club World Cup Golden Ball</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Club World Cup Silver Ball</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Community Shield</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>CONCACAF Champions Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>CONCACAF Copa de Oro</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Confederations Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Copa del Rey</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Costa Rican League</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Costa Rican Summer Championship</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Costa Rican Winter Championship</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Coupe of France</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Croatian cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Croatian league titles</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Croatian Super Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Cup of Portugal</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Europa League</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>European Championship</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>European Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>European Super Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>FA Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>FIFA Club World Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Fifa World Player</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>FIFA/FIFPRO World</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>FIFPro World Player of the Year</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Football League Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>France SuperCup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>German Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>German Super Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Golden Boot</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>InterContinental Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>League Cup Portugal</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Liga</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Ligue 1</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Mexican Torneo Apertura </name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Olympic Silver Medal</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Pichichi Trophy</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Portugal Liga</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Premier League</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Spanish Super Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>SuperCup Cândido de Oliveira</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Top scorer of Ligue 1</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Uefa Best Player</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Under-16 European Championship</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Under-19 European Championship</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Under-20 World Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Under-21 European Championship</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>World Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>World Cup Golden Boot</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>World's Top Goalscorer (IFFHS)</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>FIFA Best Goalkeeper of the Year</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+
+    <achievement>
+      <name>IFFHS best Goalkeeper of the Year</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Meridian Cup</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+    <achievement>
+      <name>Zamora Trophy</name>
+      <imageLink>http://upload.wikimedia.org/wikipedia/tr/1/10/UEFA_Champions_League_Cup.jpeg</imageLink>
+    </achievement>
+
   </achievements>
+
   <leagues>
     <league>
-      <name>LIGABBVA</name>
-      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg2</logoLink>
+      <name>LIGA BBVA</name>
+      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg</logoLink>
     </league>
+    
     <!-- TODO: ADD MORE LEAGUES HERE ( IF AVAILABLE ) -->
     <league>
-      <name>Vleague</name>
-      <logoLink>LogoLink</logoLink>
+      <name>UEFA SUPER CUP</name>
+      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg</logoLink>
+    </league>
+    <league>
+      <name>SPANISH SUPER CUP</name>
+      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg</logoLink>
+    </league>
+    <league>
+      <name>CHAMPIONS LEAGUE</name>
+      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg</logoLink>
+    </league>
+    <league>
+      <name>COPA DEL REY</name>
+      <logoLink>http://samoalounge.com/wp-content/uploads/2014/11/Logo-Liga-BBVA.jpg</logoLink>
     </league>
   </leagues>
+
   <matches>
     <match>
       <id>20150118</id>
@@ -495,38 +827,277 @@
     </match>
     <!-- TODO: ADD MORE MATCH HERE -->
     <match>
-      <id>1/30/2015</id>
-      <time>2015-01-31T00:00:00</time>
-      <name>Real - XXXX</name>
-      <score>10-0</score>
-      <leagueName>ABC</leagueName>
+      <id>20140812</id>
+      <time>2014-08-12T18:45:00</time>
+      <name>Real Madrid - Seville</name>
+      <score>2-0</score>
+      <leagueName>UEFA SUPER CUP</leagueName>
     </match>
     <match>
-      <id>20150118</id>
-      <time>2015-01-18T11:00:00</time>
-      <name>Getafe - Real Madrid</name>
-      <score>0-3</score>
-      <leagueName>LIGABBVA</leagueName>
-    </match>
-    <!-- TODO: ADD MORE MATCH HERE -->
-    <match>
-      <id>19</id>
-      <time>2015-01-28T00:00:00</time>
-      <name>Real - ZY</name>
+      <id>20140819</id>
+      <time>2014-08-19T21:00:00</time>
+      <name>Real Madrid - Atl Madrid</name>
       <score>1-1</score>
-      <leagueName>YUT</leagueName>
+      <leagueName>SPANISH SUPER CUP</leagueName>
     </match>
+    <match>
+      <id>20140822</id>
+      <time>2014-08-22T20:30:00</time>
+      <name>Atl Madrid - Real Madrid</name>
+      <score>1-0</score>
+      <leagueName>SPANISH SUPER CUP</leagueName>
+    </match>
+    <match>
+      <id>20140825</id>
+      <time>2014-08-31T19:00:00</time>
+      <name>Real Madrid - Cordoba</name>
+      <score>2-0</score>
+      <leagueName>LIGA BBVA</leagueName>
+    </match>
+    <match>
+      <id>20140831</id>
+      <time>2014-09-16T18:45:00</time>
+      <name>Sociedad -  Real Madrid</name>
+      <score>4-2</score>
+      <leagueName>LIGA BBVA</leagueName>
+    </match>
+    <match>
+      <id>20140916</id>
+      <time>2014-09-16T18:45:00</time>
+      <name>Real Madrid - Basel</name>
+      <score>5-1</score>
+      <leagueName>CHAMPIONS LEAGUE</leagueName>
+    </match>
+    <match>
+      <id>20141022</id>
+      <time>2014-10-22T18:45:00</time>
+      <name>Liverpool - Real Madrid</name>
+      <score>0-3</score>
+      <leagueName>CHAMPIONS LEAGUE</leagueName>
+    </match>
+    <match>
+      <id>20141029</id>
+      <time>2014-10-29T19:00:00</time>
+      <name>Cornella - Real Madrid</name>
+      <score>1-4</score>
+      <leagueName>COPA DEL REY</leagueName>
+    </match>
+    <match>
+      <id>20141202</id>
+      <time>2014-12-02T19:00:00</time>
+      <name>Real Madrid - Cornella</name>
+      <score>5-0</score>
+      <leagueName>COPA DEL REY</leagueName>
+    </match>
+
   </matches>
+
   <careers>
     <career>
       <id>casillas01</id>
       <from>1999-08-01</from>
-      <to xsi:nil="true" />
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
       <!-- xsi:nil = "true" means NULL -->
       <noOfGoals>0</noOfGoals>
       <playerId>01</playerId>
     </career>
+
+    <career>
+      <id>varane01</id>
+      <from>2011-08-01</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>5</noOfGoals>
+      <playerId>06</playerId>
+    </career>
+    <career>
+      <id>varane02</id>
+      <from>2010-08-01</from>
+      <to>2011-08-01</to>
+      <clubName>Lens</clubName>
+      <noOfGoals>2</noOfGoals>
+      <playerId>06</playerId>
+    </career>
+    <career>
+      <id>pepe01</id>
+      <from>2007-11-06</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>10</noOfGoals>
+      <playerId>05</playerId>
+    </career>
+    <career>
+      <id>sergioramos01</id>
+      <from>2005-09-01</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>34</noOfGoals>
+      <playerId>04</playerId>
+    </career>
+    <career>
+      <id>sergioramos02</id>
+      <from>2004-02-01</from>
+      <to>2005-09-01</to>
+      <clubName>Seville</clubName>
+      <noOfGoals>2</noOfGoals>
+      <playerId>04</playerId>
+    </career>
+    <career>
+      <id>coentrão01</id>
+      <from>2011-07-14</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>1</noOfGoals>
+      <playerId>09</playerId>
+    </career>
+    <career>
+      <id>coentrão02</id>
+      <from>2009-07-01</from>
+      <to>2011-07-14</to>
+      <clubName>Benfica</clubName>
+      <noOfGoals>2</noOfGoals>
+      <playerId>09</playerId>
+    </career>
+    <career>
+      <id>khedira01</id>
+      <from>2010-08-01</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>8</noOfGoals>
+      <playerId>12</playerId>
+    </career>
+    <career>
+      <id>khedira02</id>
+      <from>2006-08-01</from>
+      <to>2010-08-01</to>
+      <clubName>Stuttgart</clubName>
+      <noOfGoals>14</noOfGoals>
+      <playerId>12</playerId>
+    </career>
+    <career>
+      <id>ronaldo01</id>
+      <from>2009-07-01</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>247</noOfGoals>
+      <playerId>19</playerId>
+    </career>
+    <career>
+      <id>ronaldo02</id>
+      <from>2003-08-12</from>
+      <to>2009-07-01</to>
+      <clubName>Man Utd</clubName>
+      <noOfGoals>100</noOfGoals>
+      <playerId>19</playerId>
+    </career>
+    <career>
+      <id>ronaldo03</id>
+      <from>2001-08-01</from>
+      <to>2003-08-12</to>
+      <clubName>Sporting Lisbon</clubName>
+      <noOfGoals>3</noOfGoals>
+      <playerId>19</playerId>
+    </career>
+    <career>
+      <id>kroos01</id>
+      <from>2014-07-17</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>1</noOfGoals>
+      <playerId>13</playerId>
+    </career>
+    <career>
+      <id>kroos02</id>
+      <from>2010-08-01</from>
+      <to>2014-07-17</to>
+      <clubName>B Munich</clubName>
+      <noOfGoals>19</noOfGoals>
+      <playerId>13</playerId>
+    </career>
+    <career>
+      <id>kroos03</id>
+      <from>2009-01-01</from>
+      <to>2010-05-31</to>
+      <clubName>B Leverkusen</clubName>
+      <noOfGoals>0</noOfGoals>
+      <playerId>13</playerId>
+    </career>
+    <career>
+      <id>kroos04</id>
+      <from>2007-07-01</from>
+      <to>2008-12-31</to>
+      <clubName>B Munich</clubName>
+      <noOfGoals>0</noOfGoals>
+      <playerId>13</playerId>
+    </career>
+    <career>
+      <id>benzema01</id>
+      <from>2009-07-10</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>119</noOfGoals>
+      <playerId>20</playerId>
+    </career>
+    <career>
+      <id>benzema02</id>
+      <from>2005-02-01</from>
+      <to>2009-07-10</to>
+      <clubName>Lyon</clubName>
+      <noOfGoals>66</noOfGoals>
+      <playerId>20</playerId>
+    </career>
+    <career>
+      <id>jamesrodríguez01</id>
+      <from>2014-07-22</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>12</noOfGoals>
+      <playerId>16</playerId>
+    </career>
+    <career>
+      <id>jamesrodríguez02</id>
+      <from>2013-05-24</from>
+      <to>2014-07-22</to>
+      <clubName>Monaco</clubName>
+      <noOfGoals>9</noOfGoals>
+      <playerId>16</playerId>
+    </career>
+    <career>
+      <id>jamesrodríguez03</id>
+      <from>2010-08-01</from>
+      <to>2013-05-24</to>
+      <clubName>Porto</clubName>
+      <noOfGoals>38</noOfGoals>
+      <playerId>16</playerId>
+    </career>
+    <career>
+      <id>bale01</id>
+      <from>2013-09-01</from>
+      <to>2015-01-01</to>
+      <clubName>Real Madrid</clubName>
+      <noOfGoals>36</noOfGoals>
+      <playerId>17</playerId>
+    </career>
+    <career>
+      <id>bale02</id>
+      <from>2007-05-25</from>
+      <to>2013-09-01</to>
+      <clubName>Tottenham</clubName>
+      <noOfGoals>55</noOfGoals>
+      <playerId>17</playerId>
+    </career>
+    <career>
+      <id>bale03</id>
+      <from>2005-07-01</from>
+      <to>2007-05-25</to>
+      <clubName>Southamptom</clubName>
+      <noOfGoals>5</noOfGoals>
+      <playerId>17</playerId>
+    </career>
+
   </careers>
+
   <players_matches>
     <player_match>
       <noOfGoals>0</noOfGoals>
@@ -536,13 +1107,1269 @@
       <matchId>20150118</matchId>
     </player_match>
     <!-- TODO: ADD MORE PLAYER_MATCH HERE -->
+
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>05</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>04</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>09</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>08</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>13</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>2</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>19</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>17</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>14</playerId>
+      <matchId>20140812</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>05</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>04</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>08</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>22</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>19</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>17</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20140819</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>06</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>04</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>09</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>08</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>13</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>22</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>1</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>17</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>19</playerId>
+      <matchId>20140822</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>05</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>04</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>07</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>13</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>19</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>17</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>08</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>12</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20140825</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>05</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>04</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>08</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>13</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>17</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>07</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>12</playerId>
+      <matchId>20140831</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>05</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>04</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>11</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>13</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>19</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>17</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>06</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>14</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>22</playerId>
+      <matchId>20140916</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>01</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>06</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>05</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>07</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>13</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>18</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>19</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>2</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>11</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>12</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>14</playerId>
+      <matchId>20141022</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>02</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>2</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>06</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>08</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>07</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>11</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>12</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>14</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>20</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>22</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>10</playerId>
+      <matchId>20141029</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>03</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>06</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>09</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>07</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>11</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>12</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>2</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>16</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>15</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>1</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>14</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>0</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>22</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+    <player_match>
+      <noOfGoals>1</noOfGoals>
+      <noOfYellows>0</noOfYellows>
+      <noOfReds>0</noOfReds>
+      <playerId>21</playerId>
+      <matchId>20141202</matchId>
+    </player_match>
+
+
   </players_matches>
+
   <players_achievements>
+    <!-- TODO: ADD MORE PLAYER_ACHIEVEMENT HERE -->
     <player_achievement>
       <number>3</number>
       <playerId>01</playerId>
-      <achievementName>European-Cup</achievementName>
+      <achievementName>European Cup</achievementName>
     </player_achievement>
-    <!-- TODO: ADD MORE PLAYER_ACHIEVEMENT HERE -->
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>01</playerId>
+      <achievementName>InterContinental Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>01</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>5</number>
+      <playerId>01</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>01</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>4</number>
+      <playerId>01</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>01</playerId>
+      <achievementName>European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>Under-20 World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>Under-16 European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>Meridian Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>5</number>
+      <playerId>01</playerId>
+      <achievementName>IFFHS best Goalkeeper of the Year</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>FIFA Best Goalkeeper of the Year</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>5</number>
+      <playerId>01</playerId>
+      <achievementName>FIFA/FIFPRO World</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>Zamora Trophy</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>01</playerId>
+      <achievementName>Bravo Trophy</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>02</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>02</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>02</playerId>
+      <achievementName>CONCACAF Champions Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>02</playerId>
+      <achievementName>Costa Rican Winter Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>02</playerId>
+      <achievementName>Costa Rican Summer Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>02</playerId>
+      <achievementName>Costa Rican League</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>03</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>04</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>04</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>04</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>3</number>
+      <playerId>04</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>04</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>04</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>04</playerId>
+      <achievementName>World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>04</playerId>
+      <achievementName>European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>04</playerId>
+      <achievementName>Under-19 European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>04</playerId>
+      <achievementName>Club World Cup Golden Ball</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>4</number>
+      <playerId>04</playerId>
+      <achievementName>FIFA/FIFPRO World</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>05</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>05</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>05</playerId>
+      <achievementName>InterContinental Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>05</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>05</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>05</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>05</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>05</playerId>
+      <achievementName>Portugal Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>05</playerId>
+      <achievementName>Cup of Portugal</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>05</playerId>
+      <achievementName>SuperCup Cândido de Oliveira</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>06</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>06</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>06</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>06</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>06</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>06</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>07</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>07</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>07</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>07</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>07</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>07</playerId>
+      <achievementName>World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>07</playerId>
+      <achievementName>European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>08</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>08</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>08</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>08</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>08</playerId>
+      <achievementName>Under-19 European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>08</playerId>
+      <achievementName>Under-21 European Championship</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>09</playerId>
+      <achievementName>Portugal Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>09</playerId>
+      <achievementName>League Cup Portugal</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>10</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>10</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>10</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>3</number>
+      <playerId>10</playerId>
+      <achievementName>Liga</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>10</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>2</number>
+      <playerId>10</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>10</playerId>
+      <achievementName>Olympic Silver Medal</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>10</playerId>
+      <achievementName>Bronze Medal Olympic Games Beijing</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>10</playerId>
+      <achievementName>Confederations Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>11</playerId>
+      <achievementName>European Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>11</playerId>
+      <achievementName>FIFA Club World Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>11</playerId>
+      <achievementName>European Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>11</playerId>
+      <achievementName>Copa del Rey</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>11</playerId>
+      <achievementName>Spanish Super Cup</achievementName>
+    </player_achievement>
+    <player_achievement>
+      <number>1</number>
+      <playerId>11</playerId>
+      <achievementName>Under-21 European Championship</achievementName>
+    </player_achievement>
+
+
   </players_achievements>
+
 </playerManagement>

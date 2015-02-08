@@ -118,17 +118,23 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AchievementsController.cs" />
+    <Compile Include="Controllers\AuthenticationsController.cs" />
+    <Compile Include="Controllers\CareersController.cs" />
     <Compile Include="Controllers\ClubsController.cs" />
     <Compile Include="Controllers\CoachesController.cs" />
     <Compile Include="Controllers\LeagueController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\PlayerAchievementsController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
+    <Compile Include="Controllers\PlayersMatchesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Achievement\Achievement.cs" />
     <Compile Include="Models\Achievement\AchievementRepository.cs" />
+    <Compile Include="Models\Authentication.cs" />
+    <Compile Include="Models\Career\Career.cs" />
+    <Compile Include="Models\Career\CareerRepository.cs" />
     <Compile Include="Models\Club\Club.cs" />
     <Compile Include="Models\Club\ClubRepository.cs" />
     <Compile Include="Models\Coach\Coach.cs" />
@@ -136,10 +142,14 @@
     <Compile Include="Models\Achievement\IAchievementRepository.cs" />
     <Compile Include="Models\Club\IClubRepository.cs" />
     <Compile Include="Models\Coach\ICoachRepository.cs" />
+    <Compile Include="Models\Career\ICareerRepository.cs" />
     <Compile Include="Models\League\ILeagueRepository.cs" />
     <Compile Include="Models\League\LeagueRepository.cs" />
     <Compile Include="Models\Match\IMatchRepository.cs" />
     <Compile Include="Models\PlayerAchievement\IPlayerAchievementRepository.cs" />
+    <Compile Include="Models\PlayerMatch\IPlayerMatchRepository.cs" />
+    <Compile Include="Models\PlayerMatch\PlayerMatch.cs" />
+    <Compile Include="Models\PlayerMatch\PlayerMatchRepository.cs" />
     <Compile Include="Models\Player\IPlayerRepository.cs" />
     <Compile Include="Models\League\League.cs" />
     <Compile Include="Models\Match\Match.cs" />
@@ -152,9 +162,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\player_management.xml" />
+    <Content Include="App_Data\player_management.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -192,30 +205,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Match\Index.cshtml" />
-    <Content Include="Views\Match\Edit.cshtml" />
-    <Content Include="Views\Match\Details.cshtml" />
-    <Content Include="Views\Match\Create.cshtml" />
-    <Content Include="Views\Match\Delete.cshtml" />
-    <Content Include="Views\Players\Create.cshtml" />
-    <Content Include="Views\Players\Delete.cshtml" />
-    <Content Include="Views\Players\Details.cshtml" />
-    <Content Include="Views\Players\Edit.cshtml" />
-    <Content Include="Views\Players\Index.cshtml" />
     <Content Include="Views\Achievements\Create.cshtml" />
     <Content Include="Views\Achievements\Delete.cshtml" />
     <Content Include="Views\Achievements\Details.cshtml" />
     <Content Include="Views\Achievements\Edit.cshtml" />
     <Content Include="Views\Achievements\Index.cshtml" />
-    <Content Include="Views\PlayerAchievements\Create.cshtml" />
-    <Content Include="Views\PlayerAchievements\Delete.cshtml" />
-    <Content Include="Views\PlayerAchievements\Details.cshtml" />
-    <Content Include="Views\PlayerAchievements\Edit.cshtml" />
-    <Content Include="Views\PlayerAchievements\Index.cshtml" />
     <Content Include="Views\Coaches\Create.cshtml" />
     <Content Include="Views\Coaches\Delete.cshtml" />
     <Content Include="Views\Coaches\Details.cshtml" />
@@ -226,11 +221,39 @@
     <Content Include="Views\Clubs\Details.cshtml" />
     <Content Include="Views\Clubs\Edit.cshtml" />
     <Content Include="Views\Clubs\Index.cshtml" />
-    <Content Include="Views\League\Create.cshtml" />
-    <Content Include="Views\League\Delete.cshtml" />
-    <Content Include="Views\League\Details.cshtml" />
-    <Content Include="Views\League\Edit.cshtml" />
     <Content Include="Views\League\Index.cshtml" />
+    <Content Include="Views\League\Details.cshtml" />
+    <Content Include="Views\League\Create.cshtml" />
+    <Content Include="Views\League\Edit.cshtml" />
+    <Content Include="Views\League\Delete.cshtml" />
+    <Content Include="Views\Match\Index.cshtml" />
+    <Content Include="Views\Match\Details.cshtml" />
+    <Content Include="Views\Match\Create.cshtml" />
+    <Content Include="Views\Match\Edit.cshtml" />
+    <Content Include="Views\Match\Delete.cshtml" />
+    <Content Include="Views\PlayerAchievements\Index.cshtml" />
+    <Content Include="Views\PlayerAchievements\Details.cshtml" />
+    <Content Include="Views\PlayerAchievements\Create.cshtml" />
+    <Content Include="Views\PlayerAchievements\Edit.cshtml" />
+    <Content Include="Views\PlayerAchievements\Delete.cshtml" />
+    <Content Include="Views\Players\Index.cshtml" />
+    <Content Include="Views\Players\Details.cshtml" />
+    <Content Include="Views\Players\Create.cshtml" />
+    <Content Include="Views\Players\Edit.cshtml" />
+    <Content Include="Views\Players\Delete.cshtml" />
+    <Content Include="Views\Careers\Create.cshtml" />
+    <Content Include="Views\Careers\Delete.cshtml" />
+    <Content Include="Views\Careers\Details.cshtml" />
+    <Content Include="Views\Careers\Edit.cshtml" />
+    <Content Include="Views\Careers\Index.cshtml" />
+    <Content Include="Views\PlayersMatches\Index.cshtml" />
+    <Content Include="Views\PlayersMatches\ViewPlayerMatches.cshtml" />
+    <Content Include="Views\Authentications\Create.cshtml" />
+    <Content Include="Views\Authentications\Delete.cshtml" />
+    <Content Include="Views\Authentications\Details.cshtml" />
+    <Content Include="Views\Authentications\Edit.cshtml" />
+    <Content Include="Views\Authentications\Index.cshtml" />
+    <Content Include="Views\Authentications\Login.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
