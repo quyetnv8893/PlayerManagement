@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace PlayerManagement.Models
@@ -17,15 +18,15 @@ namespace PlayerManagement.Models
 
             _careerData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             IEnumerable<Career> careers = null;
-            
- 
 
+
+            
             try {
                 careers = from career in _careerData.Descendants("career")
                               select new Career(
                                   career.Element("id").Value,
-                                  (DateTime)career.Element("from"),
-                                  (DateTime)career.Element("to"), // TODO: Handle null value of To
+                                  XmlConvert.ToDateTime(career.Element("from").Value),
+                                  XmlConvert.ToDateTime(career.Element("to").Value),
                                   career.Element("clubName").Value,
                                   (int)career.Element("noOfGoals"),
                                   career.Element("playerId").Value
@@ -33,7 +34,7 @@ namespace PlayerManagement.Models
             }
             catch (FormatException e)
             {
-                
+                Console.WriteLine(e.Message);
             }
             
 
