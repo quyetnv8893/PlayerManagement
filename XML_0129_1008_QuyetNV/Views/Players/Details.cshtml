@@ -29,15 +29,15 @@
                 </div>
                 <div class="buttons text-center">
                     <div class="button primary">
-                        @Html.ActionLink("Achievements", "Index", "PlayerAchievements", new { id = Model.ID }, null)
+                        @Html.ActionLink("Achievements", "Index", "PlayerAchievements", new { id = Model.ID }, new { @class = "action-link" })
                     </div>
 
                     <div class="button primary">
-                        @Html.ActionLink("Careers", "Index", "Careers", new { id = Model.ID }, null)
+                        @Html.ActionLink("Careers", "Index", "Careers", new { id = Model.ID }, new { @class = "action-link" })
                     </div>
                     <div class="button primary">
                         @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches",
-                        new { id = Model.ID}, null)
+                                 new { id = Model.ID }, new { @class = "action-link" })
                     </div>
                 </div>
             </div>

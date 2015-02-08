@@ -15,7 +15,7 @@
                         {
                             if (item.NumberOfGoals > 0)
                             {
-                                <p>[@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId })][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
+                                <p>[@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }, new { @class = "action-link" })][@Html.DisplayFor(modelItem => item.NumberOfGoals)]</p>
                             }
                         }
                     </div>
@@ -26,14 +26,14 @@
             <h3>Match's info</h3>
             <div class="list text-left">
                 <p><label>Match Name : </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
-                <p><label>League : </label> <span>@Html.ActionLink(Model.LeagueName, "ViewByLeagueName", new { id = Model.LeagueName })</span></p>
+                <p><label>League : </label> <span>@Html.ActionLink(Model.LeagueName, "ViewByLeagueName", new { id = Model.LeagueName }, new { @class = "action-link" })</span></p>
                 <p><label>Date : </label> <span>@Html.DisplayFor(model => model.Time)</span></p>
                 <p><label>Yellow Card : </label> <span></span></p>
                 @foreach (var item in Model.PlayerMatches)
                 {
                     if (item.NumberOfYellows > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }) , @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }, new { @class = "action-link" }) , @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
                     }
 
                 }
@@ -42,7 +42,7 @@
                 {
                     if (item.NumberOfReds > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }) , @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
+                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }, new { @class = "action-link" }) , @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
                     }
 
                 }

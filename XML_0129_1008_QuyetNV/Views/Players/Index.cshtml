@@ -30,7 +30,7 @@
                     {
                         <tr>
                             <td>
-                                @Html.ActionLink("" + @Html.DisplayFor(modelItem => item.Name) + "", "Details", new { id = item.ID })
+                                @Html.ActionLink("" + @Html.DisplayFor(modelItem => item.Name) + "", "Details", new { id = item.ID }, new { @class = "action-link" })
                                 
                             </td>
                             <td>

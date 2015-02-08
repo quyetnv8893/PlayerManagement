@@ -36,7 +36,7 @@
                         {
                             <tr class="odd">                                
                                 <td>
-                                    @Html.ActionLink(item.Match.Name, "Details", "Match", new { id = item.MatchId },null)                                                                        
+                                    @Html.ActionLink(item.Match.Name, "Details", "Match", new { id = item.MatchId }, new { @class = "action-link" })                                                                        
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Match.Score)

@@ -22,7 +22,7 @@
                             <div class="image"><img class="viewer" src=@Html.DisplayFor(modelItem=>item.LogoLink) /></div>
                             <div class="detail">
                                 <div>
-                                    <p style="text-decoration-color:white">@Html.ActionLink(item.Name, "GoToMatches", new { id = item.Name, style = "color:white" })</p>                                    
+                                    <p style="text-decoration-color:white">@Html.ActionLink(item.Name, "GoToMatches", new { id = item.Name, style = "color:white" }, new { @class = "action-link" })</p>                                    
                                 </div>
                             </div>
                         </li>

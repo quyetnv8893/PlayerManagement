@@ -9,6 +9,11 @@ body {
     text-align: center;
     position: relative;
 }
+
+a.action-link {
+    color: #30e515;
+}
+
 .score-table {
     background-color: rgb(3, 65, 100);
     width: 50%;
@@ -16,6 +21,7 @@ body {
     margin-left: auto;
     border-radius: 5px;
 }
+
 .logo {
     position: absolute;
     bottom: 10px;
@@ -654,6 +660,8 @@ ul#navbar {
         color: #fff;
         border-radius: 7px;
     }
+
+
 /* Home page */
 .home {
     height: 300px;
@@ -694,7 +702,3 @@ ul#navbar {
         .home .info .list {
             padding: 20px;
         }
-
-}
-
-

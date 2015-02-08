@@ -34,7 +34,7 @@
                                     @String.Format("{0:d}",item.Time)                                   
                                 </td>
                                 <td>                                    
-                                    @Html.ActionLink(item.Name, "Details", new { id = item.ID })
+                                    @Html.ActionLink(item.Name, "Details", new { id = item.ID }, new { @class = "action-link" })
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Score)
