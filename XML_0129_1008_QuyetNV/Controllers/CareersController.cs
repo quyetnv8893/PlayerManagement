@@ -56,7 +56,7 @@ namespace PlayerManagement.Controllers
         // GET: Careers/Create
         public ActionResult Create()
         {
-            ViewBag.PlayerID = new SelectList(db.Players, "ID", "ClubName");
+            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
             return View();
         }
 
