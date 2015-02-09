@@ -5,42 +5,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>    
-    <div id="main" class="fixed-width">
-        <div class="player">
-            <div class="image">
-                <img src="@Html.DisplayFor(model => model.ImageLink)" style="
+
+<div id="main" class="fixed-width player container">
+    
+    <div class="image">
+        <img src="@Html.DisplayFor(model => model.ImageLink)" style="
                                                 max-width:400px;
                                                 max-height:800px;
                                                 width: auto;
-                                                height: auto;" >
-            </div>
-            <div class="info text-center">
-                <h3>Player's info</h3>
-                <div class="list text-left">
-                    <p><label>Name: </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
-                    <p><label>No. </label> <span>@Html.DisplayFor(model => model.Number)</span></p>
-                    <p><label>Pos.</label> <span>@Html.DisplayFor(model => model.Position)</span></p>
-                    <p><label>DoB. </label> <span>@Html.DisplayFor(model => model.DateOfBirth)</span></p>
-                    <p><label>Height: </label> <span>@Html.DisplayFor(model => model.Height)</span></p>
-                    <p><label>Weight: </label> <span>@Html.DisplayFor(model => model.Weight)</span></p>
-                    <p><label>Place of birth: </label> <span>@Html.DisplayFor(model => model.PlaceOfBirth)</span></p>
-                    <p><label>Description: </label> <div style="overflow-y:scroll; height:100px">@Html.DisplayFor(model => model.Description)</div></p>
-                </div>
-                <div class="buttons text-center">
-                    <div class="button primary">
-                        @Html.ActionLink("Achievements", "Index", "PlayerAchievements", new { id = Model.ID }, new { @class = "action-link" })
-                    </div>
-
-                    <div class="button primary">
-                        @Html.ActionLink("Careers", "Index", "Careers", new { id = Model.ID }, new { @class = "action-link" })
-                    </div>
-                    <div class="button primary">
-                        @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches",
-                                 new { id = Model.ID }, new { @class = "action-link" })
-                    </div>
-                </div>
-            </div>
-        </div>
+                                                height: auto;">
     </div>
+    <div class="info text-center">
+        <h3>Player's info</h3>
+        <div class="list text-left">
+            <p><label>Name: </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
+            <p><label>No. </label> <span>@Html.DisplayFor(model => model.Number)</span></p>
+            <p><label>Pos.</label> <span>@Html.DisplayFor(model => model.Position)</span></p>
+            <p><label>DoB. </label> <span>@Html.DisplayFor(model => model.DateOfBirth)</span></p>
+            <p><label>Height: </label> <span>@Html.DisplayFor(model => model.Height)</span></p>
+            <p><label>Weight: </label> <span>@Html.DisplayFor(model => model.Weight)</span></p>
+            <p><label>Place of birth: </label> <span>@Html.DisplayFor(model => model.PlaceOfBirth)</span></p>
+            <p><label>Description: </label> <div style="overflow-y:scroll; height:100px">@Html.DisplayFor(model => model.Description)</div></p>
+        </div>
+
+        <div class="buttons text-center">
+            <div class="button primary">
+                @Html.ActionLink("Achievements", "Index", "PlayerAchievements", new { id = Model.ID }, new { @class = "action-link" })
+            </div>
+
+            <div class="button primary">
+                @Html.ActionLink("Careers", "Index", "Careers", new { id = Model.ID }, new { @class = "action-link" })
+            </div>
+            <div class="button primary">
+                @Html.ActionLink("Matches", "ViewPlayerMatches", "PlayersMatches",
+                                 new { id = Model.ID }, new { @class = "action-link" })
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
+
