@@ -16,10 +16,11 @@ a.action-link {
 
 .score-table {
     background-color: rgb(3, 65, 100);
-    width: 50%;
+    /*width: 50%; */
     /* align-content: center; */
     margin-left: auto;
     border-radius: 5px;
+    text-align: center;
 }
 
 .logo {
@@ -135,7 +136,7 @@ a, a:hover, a:active, a:focus {
 }
 
 #header {
-    margin-top: 60px;
+    margin-top: 0px;
     margin-bottom: 20px;
     text-align: center;
 }

@@ -123,6 +123,11 @@ namespace AchievementManagement.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult ErrorHandler(string message)
+        {
+            return View("Shared/Error");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -5,8 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@{  String playerName = Model.ToList().FirstOrDefault().Player.Name;
-   String playerImage = Model.ToList().FirstOrDefault().Player.ImageLink; }
+@{ String playerName = null;
+ String playerImage = null;
+ try
+ {
+     playerName = Model.ToList().FirstOrDefault().Player.Name;
+     playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
+ }
+ catch (NullReferenceException)
+ {
+     
+     //return View("Shared/Error");
+ }
+
+}
 <div id="main" class="fixed-width">
     <div class="player">
         <div class="image">
@@ -17,11 +29,11 @@
             <div class="list text-left">
                 <table class="career">
                     <thead>
-                        <th>Name</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Goal</th>
-                        <th>Club</th>
+                    <th>Name</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Goal</th>
+                    <th>Club</th>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
