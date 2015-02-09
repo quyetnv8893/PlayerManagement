@@ -11,7 +11,7 @@
             <div class="list text-left">
                 <table class="player-pages">
                     <tr>
-                        <th>                            
+                        <th>
                             @Html.DisplayNameFor(model => model.Name)
                         </th>
                         <th>
@@ -31,7 +31,7 @@
                         <tr>
                             <td>
                                 @Html.ActionLink("" + @Html.DisplayFor(modelItem => item.Name) + "", "Details", new { id = item.ID }, new { @class = "action-link" })
-                                
+
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Number)
@@ -39,18 +39,25 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.Position)
                             </td>
-                            <td>                                
-                               @Html.DisplayFor(modelItem => item.Age)
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Age)
                             </td>
-                            
+
                         </tr>
                     }
 
                 </table>
+
+            </div>
+            <div class="buttons text-center">
+                <div class="button primary">
+                    @Html.ActionLink("Add new player", "Create", "Players", null, new { @style="color:white"})
+                </div>
             </div>
         </div>
 
     </div>
+
 </div>
 
 
