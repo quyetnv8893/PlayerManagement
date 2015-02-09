@@ -13,6 +13,7 @@ namespace PlayerManagement.Controllers
         private IMatchRepository _repository;
         private IPlayerRepository _playerRepository = new PlayerRepository();
         private IPlayerMatchRepository _playerMatchRepository = new PlayerMatchRepository();
+        private ILeagueRepository _leagueRepository = new LeagueRepository();
         public MatchController()
             : this(new MatchRepository())
         {
@@ -55,6 +56,7 @@ namespace PlayerManagement.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.LeagueName = new SelectList(_leagueRepository.GetLeagues(), "Name", "Name");
             return View();
         }
 
@@ -81,6 +83,7 @@ namespace PlayerManagement.Controllers
         public ActionResult Edit(String id)
         {
             Match match = _repository.GetMatchByID(id);
+            ViewBag.LeagueName = new SelectList(_leagueRepository.GetLeagues(), "Name", "Name");
             if (match == null)
                 return RedirectToAction("Index");
             return View(match);
@@ -109,6 +112,7 @@ namespace PlayerManagement.Controllers
         public ActionResult Delete(String id)
         {
             Match match = _repository.GetMatchByID(id);
+            ViewBag.LeagueName = new SelectList(_leagueRepository.GetLeagues(), "Name", "Name");
             if (match == null)
                 return RedirectToAction("Index");
             return View(match);

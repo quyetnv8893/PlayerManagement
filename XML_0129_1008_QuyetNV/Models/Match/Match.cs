@@ -19,6 +19,7 @@ namespace PlayerManagement.Models
         [Required]
         public String LeagueName { get; set; }
         public virtual IEnumerable<PlayerMatch.PlayerMatch> PlayerMatches { get; set; }
+        public virtual League League { get; set; }
         public Match()
         {
             this.ID = null;
