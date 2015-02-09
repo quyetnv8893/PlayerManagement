@@ -39,6 +39,11 @@ String playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
                                  new { id = item.PlayerID, name = item.AchievementName }, new { @style = "color:white" })
                                         </div>
 
+                                        <div class="button primary">
+                                            @Html.ActionLink("Delete", "Delete", "PlayerAchievements",
+                                 new { id = item.PlayerID, name = item.AchievementName }, new { @style = "color:white" })
+                                        </div>
+
                                     </div >
                                 </div>
                             </div>

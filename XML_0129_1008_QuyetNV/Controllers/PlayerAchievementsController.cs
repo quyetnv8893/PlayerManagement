@@ -123,13 +123,13 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(String id, String name)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlayerAchievement playerAchievement = db.PlayerAchievements.Find(id);
+            PlayerAchievement playerAchievement = _repository.GetPlayerAchievement(id, name);
             if (playerAchievement == null)
             {
                 return HttpNotFound();

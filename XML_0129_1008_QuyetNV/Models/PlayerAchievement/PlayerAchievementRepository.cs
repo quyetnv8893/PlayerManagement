@@ -10,6 +10,8 @@ namespace PlayerManagement.Models
     {
         public List<PlayerAchievement> _allPlayerAchievements;
         private XDocument _playerAchievementData;
+        private IAchievementRepository _achievementRepository;
+        private IPlayerRepository _playerRepository;
 
         public PlayerAchievementRepository()
         {
@@ -33,9 +35,15 @@ namespace PlayerManagement.Models
 
         public PlayerAchievement GetPlayerAchievement(String playerId, String achievementName)
         {
-
-            return _allPlayerAchievements.Find(item => (item.AchievementName.Equals(achievementName)) &&
+            var playerAchievement = _allPlayerAchievements.Find(item => (item.AchievementName.Equals(achievementName)) &&
                                                         (item.PlayerID.Equals(playerId)));
+            _achievementRepository = new AchievementRepository();
+            playerAchievement.Achievement = _achievementRepository.GetAchievementByName(achievementName);
+
+            _playerRepository = new PlayerRepository();
+            playerAchievement.Player = _playerRepository.GetPlayerByID(playerId);
+
+            return playerAchievement;
         }
 
         public void InsertPlayerAchievement(PlayerAchievement playerAchievement)
