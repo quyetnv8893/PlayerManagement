@@ -85,12 +85,12 @@ namespace PlayerManagement.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Career career = db.Careers.Find(id);
+            Career career = _repository.GetCareerByID(id);
             if (career == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.PlayerID = new SelectList(db.Players, "ID", "ClubName", career.PlayerID);
+            ViewBag.PlayerID = new SelectList(_repository.GetCareers(), "ID", "ClubName", career.PlayerID);
             return View(career);
         }
 
@@ -118,7 +118,7 @@ namespace PlayerManagement.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Career career = db.Careers.Find(id);
+            Career career = _repository.GetCareerByID(id);
             if (career == null)
             {
                 return HttpNotFound();
