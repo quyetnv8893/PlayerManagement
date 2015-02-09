@@ -31,11 +31,11 @@ namespace PlayerManagement.Models
             return _allPlayerAchievements.FindAll(item => item.PlayerID.Equals(id));
         }
 
-        public PlayerAchievement GetPlayerAchievementByAchievementName(String playerId, String achievementName)
+        public PlayerAchievement GetPlayerAchievement(String playerId, String achievementName)
         {
 
             return _allPlayerAchievements.Find(item => (item.AchievementName.Equals(achievementName)) &&
-                                                        (item.AchievementName.Equals(playerId)));
+                                                        (item.PlayerID.Equals(playerId)));
         }
 
         public void InsertPlayerAchievement(PlayerAchievement playerAchievement)

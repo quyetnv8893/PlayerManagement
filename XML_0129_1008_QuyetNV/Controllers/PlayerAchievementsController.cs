@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PlayerManagement.Models;
+using System.Collections;
 
 namespace PlayerManagement.Controllers
 {
@@ -59,10 +60,11 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Create
-        public ActionResult Create()
+        public ActionResult Create(String id)
         {
 
             ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name");
+            //Cast Player object to SelectList
             ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
             return View();
         }
@@ -75,10 +77,7 @@ namespace PlayerManagement.Controllers
         public ActionResult Create([Bind(Include = "PlayerID,AchievementName,Number")] PlayerAchievement playerAchievement)
         {
             if (ModelState.IsValid)
-            {
-                String a = playerAchievement.PlayerID;
-                String b = playerAchievement.AchievementName;
-                int c = playerAchievement.Number;
+            {               
                 _repository.InsertPlayerAchievement(playerAchievement);              
                 return RedirectToAction("Index");
             }
@@ -89,19 +88,19 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(String id, String name)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlayerAchievement playerAchievement = db.PlayerAchievements.Find(id);
+            PlayerAchievement playerAchievement = _repository.GetPlayerAchievement(id, name);
             if (playerAchievement == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AchievementName = new SelectList(db.Achievements, "Name", "ImageLink", playerAchievement.AchievementName);
-            ViewBag.PlayerID = new SelectList(db.Players, "ID", "ClubName", playerAchievement.PlayerID);
+            ViewBag.AchievementName = new SelectList(_repository.GetPlayerAchievementsByPlayerID(id), "Name", "ImageLink", playerAchievement.AchievementName);
+            ViewBag.PlayerID = new SelectList(_repository.GetPlayerAchievement(id,name).PlayerID, "ID", "ClubName", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 

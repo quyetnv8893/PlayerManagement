@@ -6,32 +6,54 @@
 }
 
 @{String playerName = Model.ToList().FirstOrDefault().Player.Name;
-  String playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
+String playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
 }
 <div id="main" class="fixed-width">
     <div class="player">
         <div class="image">
-            <img class="viewer" style="background-image : url(@playerImage)"/>
-            
+            <img class="viewer" style="background-image : url(@playerImage)" />
+
         </div>
-        <div class="info text-center">
-            
-                        
+        <div class="info text-center" style="width: calc(50% - 80px);">
+
+
             <h3>@playerName</h3>
             <div class="list text-left achivement">
                 <ul>
-                    @foreach (var item in Model) {
-                    <li>
-                        <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="image" />                        
-                        <div class="detail">
-                            <p>@Html.DisplayFor(modelItem => item.Achievement.Name)</p>
-                            <p>@Html.DisplayFor(modelItem => item.Number)</p>
-                        </div>
-                    </li>
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="image" />
+                                    </div>
+                                    <div class="col detail">
+                                        <p>@Html.DisplayFor(modelItem => item.Achievement.Name)</p>
+                                        <p>@Html.DisplayFor(modelItem => item.Number)</p>
+                                    </div>
+                                    <div class="col button text-center">
+
+                                        <div class="button primary">
+                                            @Html.ActionLink("Edit", "Edit", "PlayerAchievements",
+                                 new { id = item.PlayerID, name = item.AchievementName }, new { @style = "color:white" })
+                                        </div>
+
+                                    </div >
+                                </div>
+                            </div>
+
+                        </li>
                     }
                 </ul>
-            </div>            
+            </div>
+            <div class="button text-center">
+                <div class="button primary">
+                    @Html.ActionLink("Add new Achievement", "Create", "PlayerAchievements",
+                                 new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
-

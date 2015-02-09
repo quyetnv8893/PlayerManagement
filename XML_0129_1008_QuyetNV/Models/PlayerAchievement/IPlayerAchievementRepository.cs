@@ -9,7 +9,7 @@ namespace PlayerManagement.Models
     public interface IPlayerAchievementRepository
     {
         IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String playerID);
-        PlayerAchievement GetPlayerAchievementByAchievementName(String playerID, String achievementName);
+        PlayerAchievement GetPlayerAchievement(String playerID, String achievementName);
         void InsertPlayerAchievement(PlayerAchievement playerAchievement);
         void DeletePlayerAchievement(String playerID, String achievementName);
         void EditPlayerAchievement(PlayerAchievement playerAchievement);        
