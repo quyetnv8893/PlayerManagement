@@ -34,7 +34,7 @@
                     <th>To</th>
                     <th>Goal</th>
                     <th>Club</th>
-                    <th></th>
+                    <!--<th></th>-->
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
@@ -55,6 +55,7 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.ClubName)
                                 </td>
+                                <!--
                                 <td>
 
                                     @Html.ActionLink("Edit", "Edit", "Careers", new { id = item.ID }, new { @class = "action-link" }) |
@@ -62,19 +63,21 @@
 
 
                                 </td>
-
+                                    -->
                             </tr>
 
                         }
                     </tbody>
                 </table>
             </div>
+            <!--
             <div class="button text-center">
                 <div class="button primary">
                     @Html.ActionLink("Add new Career", "Create", "Careers",
                                  null, new { @style = "color:white" })
                 </div>
             </div>
+                -->
         </div>
     </div>
 </div>
