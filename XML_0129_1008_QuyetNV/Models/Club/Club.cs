@@ -10,10 +10,15 @@ namespace PlayerManagement.Models
     {
         [Key]
         public String Name { get; set; }
+
         [Required]
+        [Display(Name = "Logo")]
         public String LogoLink { get; set; }
+
         [Required]
+        [Display(Name = "Founded Date")]
         public DateTime FoundedDate { get; set; }
+        
         [Required]
         public String Stadium { get; set; }
 

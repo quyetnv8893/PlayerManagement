@@ -9,8 +9,10 @@ namespace PlayerManagement.Models
     public class Authentication
     {
         [Key]
+        [Display(Name = "Username")]
         public String Username { get; set; }
         [Required]
+        [Display(Name = "Password")]
         public String MD5Password { get; set; }
 
         public Authentication()

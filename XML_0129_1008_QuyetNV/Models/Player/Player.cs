@@ -12,6 +12,7 @@ namespace PlayerManagement.Models
         public String ID { get; set; }
 
         [Required]
+        [Display(Name = "Club")]
         public String ClubName { get; set; }        
         
         [Required]
@@ -24,8 +25,10 @@ namespace PlayerManagement.Models
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Date of Birth")]
         public DateTime DateOfBirth { get; set; }
         [Required]
+        [Display(Name = "Place of Birth")]
         public string PlaceOfBirth { get; set; }
         [Required]
         public double Weight { get; set; }
@@ -34,6 +37,7 @@ namespace PlayerManagement.Models
         [Required]
         public String Description { get; set; }
         [Required]
+        [Display(Name = "Image")]
         public String ImageLink { get; set; }
         [Required]
         public Boolean Status { get; set; }

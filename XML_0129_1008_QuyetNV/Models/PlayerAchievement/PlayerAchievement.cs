@@ -11,10 +11,12 @@ namespace PlayerManagement.Models
     {
         [Key][Column(Order = 0)]
         [ForeignKey("Player")]
+        [Display(Name = "Player ID")]
         public String PlayerID { get; set; }
         
         [Key][Column(Order = 1)]
         [ForeignKey("Achievement")]
+        [Display(Name = "Achievement Name")]
         public String AchievementName { get; set; }
 
         [Required]

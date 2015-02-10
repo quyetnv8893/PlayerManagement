@@ -11,12 +11,19 @@ namespace PlayerManagement.Models
         [Key]
         public String Name { get; set; }
         [Required]
+
+        [Display(Name = "Image")]
         public String ImageLink { get; set; }
+
         [Required]
         public String Position { get; set; }
+
         [Required]
+        [Display(Name = "Date Of Birth")]
         public DateTime DateOfBirth { get; set; }
+
         [Required]
+        [Display(Name = "Club")]
         public String ClubName { get; set; }
 
         public Coach()

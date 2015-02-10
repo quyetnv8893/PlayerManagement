@@ -12,6 +12,7 @@ namespace PlayerManagement.Models
         public String Name { get; set; }
 
         [Required]
+        [Display(Name = "Image")]
         public String ImageLink { get; set; }
 
         public virtual ICollection<PlayerAchievement> PlayerAchievements { get; set; }

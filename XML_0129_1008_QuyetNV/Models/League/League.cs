@@ -11,6 +11,7 @@ namespace PlayerManagement.Models
         [Key]        
         public String Name { get; set; }
         [Required]
+        [Display(Name = "Logo")]
         public String LogoLink { get; set; }
         public League() {
             this.Name = null;

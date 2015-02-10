@@ -44,7 +44,7 @@ namespace PlayerManagement.Controllers
             IEnumerable<PlayerMatch> temp = _playerMatchRepository.GetPlayerMatchesByMatchId(id);
             foreach (var item in temp)
             {
-                item.Player = _playerRepository.GetPlayerByID(item.PlayerId);
+                item.Player = _playerRepository.GetPlayerByID(item.PlayerID);
             }
             if (temp != null && match != null)
             {

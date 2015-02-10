@@ -18,7 +18,12 @@ namespace PlayerManagement.Models
         [DataType(DataType.Date)]
         public DateTime? To { get; set; }
 
+        [Required]
+        [Display(Name = "Club")]
         public String ClubName { get; set; }
+
+        [Display(Name = "Number of Goals")]
+        [Required]
         public int? NumberOfGoals { get; set; }
 
         [ForeignKey("Player")]

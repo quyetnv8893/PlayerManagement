@@ -44,7 +44,7 @@ namespace PlayerManagement.Models.PlayerMatch
 
         public PlayerMatch GetPlayerMatchByPlayerIdAndMatchId(String playerId, String matchId)
         {
-            return allPlayerMatches.Find(item => (item.PlayerId.Equals(playerId) && item.MatchId.Equals(matchId)));
+            return allPlayerMatches.Find(item => (item.PlayerID.Equals(playerId) && item.MatchID.Equals(matchId)));
         }
         
         /// <summary>
@@ -54,7 +54,7 @@ namespace PlayerManagement.Models.PlayerMatch
         /// <returns></returns> 
         public IEnumerable<PlayerMatch> GetPlayerMatchesByPlayerId(String playerId)
         {
-            return allPlayerMatches.FindAll(item => item.PlayerId.Equals(playerId));
+            return allPlayerMatches.FindAll(item => item.PlayerID.Equals(playerId));
         }
 
 
@@ -65,7 +65,7 @@ namespace PlayerManagement.Models.PlayerMatch
         /// <returns></returns> 
         public IEnumerable<PlayerMatch> GetPlayerMatchesByMatchId(String matchId)
         {
-            return allPlayerMatches.FindAll(item => item.MatchId.Equals(matchId));
+            return allPlayerMatches.FindAll(item => item.MatchID.Equals(matchId));
         }
 
         /// <summary>
@@ -74,8 +74,8 @@ namespace PlayerManagement.Models.PlayerMatch
         /// <param name="playermatch"></param>
         public void InsertPlayerMatch(PlayerMatch playermatch)
         {
-            XmlData.Descendants("players_matches").FirstOrDefault().Add(new XElement("player_match", new XElement("playerId", playermatch.PlayerId),
-                new XElement("matchId", playermatch.MatchId), new XElement("noOfGoals", playermatch.NumberOfGoals), new XElement("noOfReds", playermatch.NumberOfReds),
+            XmlData.Descendants("players_matches").FirstOrDefault().Add(new XElement("player_match", new XElement("playerId", playermatch.PlayerID),
+                new XElement("matchId", playermatch.MatchID), new XElement("noOfGoals", playermatch.NumberOfGoals), new XElement("noOfReds", playermatch.NumberOfReds),
                 new XElement("noOfYellows", playermatch.NumberOfYellows)));
             XmlData.Save(HttpContext.Current.Server.MapPath(xml_path));
         }
@@ -86,7 +86,7 @@ namespace PlayerManagement.Models.PlayerMatch
         /// <param name="playerMatch"></param>
         public void DeletePlayerMatch(PlayerMatch playerMatch)
         {
-            XmlData.Descendants("players_matches").Elements("player_match").Where(item => (item.Element("playerId").Value.Equals(playerMatch.PlayerId) && item.Element("matchId").Value.Equals(playerMatch.MatchId))).Remove();
+            XmlData.Descendants("players_matches").Elements("player_match").Where(item => (item.Element("playerId").Value.Equals(playerMatch.PlayerID) && item.Element("matchId").Value.Equals(playerMatch.MatchID))).Remove();
             XmlData.Save(HttpContext.Current.Server.MapPath(xml_path));
         }
 
@@ -97,7 +97,7 @@ namespace PlayerManagement.Models.PlayerMatch
         /// <param name="PlayerMatch"></param>
         public void EditPlayerMatch(PlayerMatch playerMatch)
         {
-            XElement node = XmlData.Descendants("players_matches").Elements("player_match").Where(item => (item.Element("playerId").Value.Equals(playerMatch.PlayerId) && item.Element("matchId").Value.Equals(playerMatch.MatchId))).FirstOrDefault();
+            XElement node = XmlData.Descendants("players_matches").Elements("player_match").Where(item => (item.Element("playerId").Value.Equals(playerMatch.PlayerID) && item.Element("matchId").Value.Equals(playerMatch.MatchID))).FirstOrDefault();
             node.SetElementValue("noOfGoals", playerMatch.NumberOfGoals);
             node.SetElementValue("noOfReds", playerMatch.NumberOfReds);
             node.SetElementValue("noOfYellows", playerMatch.NumberOfYellows);

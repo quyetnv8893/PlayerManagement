@@ -120,8 +120,8 @@ namespace PlayerManagement.Controllers
             IEnumerable<PlayerMatch> playerMatches = _repository.GetPlayerMatchesByPlayerId(id);
             foreach (var playerMatch in playerMatches)
             {
-                playerMatch.Match = _matchRepository.GetMatchByID(playerMatch.MatchId);
-                playerMatch.Player = _playerRepository.GetPlayerByID(playerMatch.PlayerId);
+                playerMatch.Match = _matchRepository.GetMatchByID(playerMatch.MatchID);
+                playerMatch.Player = _playerRepository.GetPlayerByID(playerMatch.PlayerID);
             }
             return View(playerMatches);
         }

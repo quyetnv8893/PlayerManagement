@@ -17,6 +17,7 @@ namespace PlayerManagement.Models
         [Required]
         public String Score { get; set; }
         [Required]
+        [Display(Name = "League")]
         public String LeagueName { get; set; }
         public virtual IEnumerable<PlayerMatch.PlayerMatch> PlayerMatches { get; set; }
         public virtual League League { get; set; }
