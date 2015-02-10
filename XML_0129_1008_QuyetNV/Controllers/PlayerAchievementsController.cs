@@ -88,19 +88,19 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Edit/5
-        public ActionResult Edit(String id, String name)
+        public ActionResult Edit(String playerID, String achievementName)
         {
-            if (id == null)
+            if (playerID == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlayerAchievement playerAchievement = _repository.GetPlayerAchievement(id, name);
+            PlayerAchievement playerAchievement = _repository.GetPlayerAchievement(playerID, achievementName);
             if (playerAchievement == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AchievementName = new SelectList(_repository.GetPlayerAchievementsByPlayerID(id), "Name", "ImageLink", playerAchievement.AchievementName);
-            ViewBag.PlayerID = new SelectList(_repository.GetPlayerAchievement(id,name).PlayerID, "ID", "ClubName", playerAchievement.PlayerID);
+            ViewBag.AchievementName = new SelectList(_repository.GetPlayerAchievementsByPlayerID(playerID), "Name", "ImageLink", playerAchievement.AchievementName);
+            ViewBag.PlayerID = new SelectList(_repository.GetPlayerAchievement(playerID,achievementName).PlayerID, "ID", "ClubName", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 
@@ -123,13 +123,13 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Delete/5
-        public ActionResult Delete(String id, String name)
+        public ActionResult Delete(String playerID, String achievementName)
         {
-            if (id == null)
+            if (playerID == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlayerAchievement playerAchievement = _repository.GetPlayerAchievement(id, name);
+            PlayerAchievement playerAchievement = _repository.GetPlayerAchievement(playerID, achievementName);
             if (playerAchievement == null)
             {
                 return HttpNotFound();

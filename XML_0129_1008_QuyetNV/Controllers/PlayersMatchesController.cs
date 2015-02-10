@@ -29,9 +29,9 @@ namespace PlayerManagement.Controllers
         }
 
 
-        public ActionResult Details(String id1,String id2)
+        public ActionResult Details(String playerID,String matchID)
         {
-            PlayerMatch playermatch = _repository.GetPlayerMatchByPlayerIdAndMatchId(id1,id2);
+            PlayerMatch playermatch = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID,matchID);
             if (playermatch == null)
                 return RedirectToAction("Index");
             return View(playermatch);
@@ -65,9 +65,9 @@ namespace PlayerManagement.Controllers
             return View(playermatch);
         }
 
-        public ActionResult Edit(String id1, String id2)
+        public ActionResult Edit(String playerID, String matchID)
         {
-            PlayerMatch match = _repository.GetPlayerMatchByPlayerIdAndMatchId(id1, id2);
+            PlayerMatch match = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID, matchID);
             if (match == null)
                 return RedirectToAction("Index");
             return View(match);
@@ -93,9 +93,9 @@ namespace PlayerManagement.Controllers
             return View(playermatch);
             }
 
-        public ActionResult Delete(String id1, String id2)
+        public ActionResult Delete(String playerID, String matchID)
         {
-            PlayerMatch match = _repository.GetPlayerMatchByPlayerIdAndMatchId(id1, id2);
+            PlayerMatch match = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID, matchID);
             if (match == null)
                 return RedirectToAction("Index");
             return View(match);
