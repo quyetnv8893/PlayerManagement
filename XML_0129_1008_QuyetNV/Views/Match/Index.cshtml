@@ -25,7 +25,6 @@
                     <th>Time</th>
                     <th>Name</th>                    
                     <th>Score</th>
-                    <th></th>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
@@ -40,10 +39,7 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Score)
                                 </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", "Match", new { id = item.ID }, new {@class ="action-link" })
-                                    @Html.ActionLink("Delete", "Delete", "Match", new { id = item.ID }, new { @class = "action-link" })
-                                </td>                                
+                                                              
                             </tr>
                         }                       
                     </tbody>

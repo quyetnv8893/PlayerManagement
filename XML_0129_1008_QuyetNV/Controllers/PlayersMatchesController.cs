@@ -40,6 +40,8 @@ namespace PlayerManagement.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.MatchID = new SelectList(_matchRepository.GetMatches(), "ID", "Name");
+            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
             return View();
         }
 

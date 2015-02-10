@@ -15,7 +15,7 @@
                         {
                             if (item.NumberOfGoals > 0)
                             {
-                                <p>@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }, new { @class = "action-link" })  -  @Html.DisplayFor(modelItem => item.NumberOfGoals)</p>
+                                <p>@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" })  -  @Html.DisplayFor(modelItem => item.NumberOfGoals)</p>
                             }
                         }
                     </div>
@@ -33,7 +33,7 @@
                 {
                     if (item.NumberOfYellows > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
                     }
 
                 }
@@ -42,7 +42,7 @@
                 {
                     if (item.NumberOfReds > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerId }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
+                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
                     }
 
                 }
@@ -54,6 +54,13 @@
                 </a>
             </div>
                 -->
+            <div class="button text-center">
+                @Html.ActionLink("Edit", "Edit", "Match", new { id = Model.ID }, new { @class = "button primary action-link" })
+            </div>
+            <div class="button text-center">
+                @Html.ActionLink("Delete", "Delete", "Match", new { id = Model.ID }, new { @class = "button primary action-link" })
+            </div>
         </div>
+        
     </div>
 </div>
