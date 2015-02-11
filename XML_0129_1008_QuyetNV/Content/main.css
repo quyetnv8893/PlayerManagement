@@ -1,7 +1,7 @@
 body {
     min-width: 100vh;
     min-height: 100vh;
-    background-image: url('../img/background.png');
+    background-image: url('../images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -70,7 +70,7 @@ a.action-link {
 body {
     min-width: 100vh;
     min-height: 100vh;
-    background-image: url('../img/background.png');
+    background-image: url('../images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
