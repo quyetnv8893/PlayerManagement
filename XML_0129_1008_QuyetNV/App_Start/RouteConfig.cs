@@ -16,7 +16,7 @@ namespace PlayerManagement
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Players", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Clubs", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
                 name: "PlayerAchievement",
