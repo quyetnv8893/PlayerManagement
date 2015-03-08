@@ -41,7 +41,6 @@ playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
                                         <p>@Html.DisplayFor(modelItem => item.Achievement.Name)</p>
                                         <p>@Html.DisplayFor(modelItem => item.Number)</p>
                                     </div>
-                                    <!--
                                     <div class="col button text-center">
 
                                         <div class="button primary">
@@ -55,7 +54,6 @@ playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
                                         </div>
 
                                     </div >
-                                        -->
                                 </div>
                             </div>
 
@@ -63,14 +61,12 @@ playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
                     }
                 </ul>
             </div>
-            <!--
             <div class="button text-center">
                 <div class="button primary">
                     @Html.ActionLink("Add new Achievement", "Create", "PlayerAchievements",
                                  new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
                 </div>
             </div>
-                -->
         </div>
 
     </div>

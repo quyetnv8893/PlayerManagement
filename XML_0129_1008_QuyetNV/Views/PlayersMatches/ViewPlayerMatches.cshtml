@@ -30,7 +30,7 @@
                     <th>Goals</th>
                     <th>Yellows</th>
                     <th>Reds</th>
-                    <!--<th></th>-->
+                    <th></th>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
@@ -51,23 +51,20 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.NumberOfReds)
                                 </td>
-                                <!--
                                 <td>
                                     @Html.ActionLink("Edit", "Edit", "PlayersMatches", new { playerID = item.PlayerID, matchID = item.MatchID }, new { @class = "action-link" })
                                     @Html.ActionLink("Delete", "Delete", "PlayersMatches", new { playerID = item.PlayerID, matchID = item.MatchID }, new { @class = "action-link" })
 
                                 </td>
-                                    -->
                             </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <!--
             <div class="button text-center">
                 @Html.ActionLink("Add new Player's match", "Create", "PlayersMatches", null, new { @class = "button primary action-link" })
             </div>
-                -->
+
         </div>
     </div>
 </div>
