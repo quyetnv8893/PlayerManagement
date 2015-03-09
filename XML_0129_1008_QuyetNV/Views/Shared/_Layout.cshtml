@@ -14,7 +14,8 @@
     <div class="button primary" style="margin-left: 90%%;">
         @if (Request.IsAuthenticated)
         {
-            @Html.ActionLink("Logout", "Login", "Accounts", null, new { @style = "color:white" })
+            <strong>@Html.Encode(User.Identity.Name)</strong>
+            @Html.ActionLink("Logout", "Logout", "Accounts", null, new { @style = "color:white" })
         }
         else
         {

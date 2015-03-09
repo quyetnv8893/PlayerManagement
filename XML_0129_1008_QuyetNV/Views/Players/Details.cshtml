@@ -42,11 +42,14 @@ margin-right: 100px;">
                                  new { id = Model.ID }, new { @class = "action-link" })
             </div>
 
+            @if (Request.IsAuthenticated)
+            {
             <div class="button primary">
                 @Html.ActionLink("Delete", "Delete", "Players",
                                  new { id = Model.ID }, new { @class = "action-link" })
             </div>
-
+            }
+            else { }
             <div class="button primary">
                 @Html.ActionLink("Edit", "Edit", "Players",
                                  new { id = Model.ID }, new { @class = "action-link" })
