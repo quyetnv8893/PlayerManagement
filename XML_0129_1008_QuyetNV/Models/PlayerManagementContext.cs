@@ -37,7 +37,7 @@ namespace PlayerManagement.Models
 
         public System.Data.Entity.DbSet<PlayerManagement.Models.Career> Careers { get; set; }
 
-        public System.Data.Entity.DbSet<PlayerManagement.Models.Authentication> Authentications { get; set; }
+        public System.Data.Entity.DbSet<PlayerManagement.Models.Account> Authentications { get; set; }
     
     }
 }

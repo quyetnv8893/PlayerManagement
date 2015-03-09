@@ -48,6 +48,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Players/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -56,6 +57,7 @@ namespace PlayerManagement.Controllers
         // POST: Players/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,clubName,number,name,position,dateOfBirth,placeOfBirth,weight,height,description,imageLink,status")] Player player)

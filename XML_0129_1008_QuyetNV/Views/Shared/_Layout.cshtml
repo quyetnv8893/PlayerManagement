@@ -12,7 +12,15 @@
 </head>
 <body>
     <div class="button primary" style="margin-left: 90%%;">
-    @Html.ActionLink("Login", "Login", "Authentications", null, new { @style="color:white" })
+        @if (Request.IsAuthenticated)
+        {
+            @Html.ActionLink("Logout", "Login", "Accounts", null, new { @style = "color:white" })
+        }
+        else
+        {
+            @Html.ActionLink("Login", "Login", "Accounts", null, new { @style = "color:white" })
+        }
+    
     </div>
     <div id="header">
         <ul id="navbar" class="uppercase fixed-with">
