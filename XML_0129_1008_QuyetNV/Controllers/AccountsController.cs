@@ -29,22 +29,7 @@ namespace PlayerManagement.Controllers
             if (ModelState.IsValid)
             {
                 if (isValid(account.Username, account.MD5Password))
-                {
-                    string userData = "ApplicationSpecific data for this user.";
-
-                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1,
-                      account.Username,
-                      DateTime.Now,
-                      DateTime.Now.AddMinutes(30),
-                      isPersistent,
-                      userData,
-                      FormsAuthentication.FormsCookiePath);
-
-                    // Encrypt the ticket.
-                    string encTicket = FormsAuthentication.Encrypt(ticket);
-
-                    // Create the cookie.                  
-                    Response.Cookies.Add(new HttpCookie(FormsAuthentication.FormsCookieName, encTicket));
+                {                    
                     FormsAuthentication.SetAuthCookie(account.Username, false);
                     return RedirectToAction("Index", "Players");
                 }
