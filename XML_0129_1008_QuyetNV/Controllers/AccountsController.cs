@@ -9,7 +9,6 @@ using System.Web.Mvc;
 using PlayerManagement.Models;
 using System.Web.Security;
 using System.Threading.Tasks;
-using Microsoft.Owin.Security;
 
 namespace PlayerManagement.Controllers
 {
@@ -56,11 +55,7 @@ namespace PlayerManagement.Controllers
             }
             return View(account);
         }
-
-        private async Task SignInAsync(Account account, bool isPersistent)
-        {            
-            
-        }
+   
 
         public ActionResult Logout()
         {

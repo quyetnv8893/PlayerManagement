@@ -117,18 +117,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\AchievementsController.cs" />
+    <Compile Include="Controllers\CareersController.cs" />
     <Compile Include="Controllers\ClubsController.cs" />
     <Compile Include="Controllers\CoachesController.cs" />
     <Compile Include="Controllers\LeagueController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\PlayerAchievementsController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
+    <Compile Include="Controllers\PlayersMatchesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\Account.cs" />
+    <Compile Include="Models\Account\IAccountRepository.cs" />
     <Compile Include="Models\Achievement\Achievement.cs" />
     <Compile Include="Models\Achievement\AchievementRepository.cs" />
+    <Compile Include="Models\Career\Career.cs" />
+    <Compile Include="Models\Career\CareerRepository.cs" />
+    <Compile Include="Models\Career\ICareerRepository.cs" />
     <Compile Include="Models\Club\Club.cs" />
     <Compile Include="Models\Club\ClubRepository.cs" />
     <Compile Include="Models\Coach\Coach.cs" />
@@ -140,6 +148,9 @@
     <Compile Include="Models\League\LeagueRepository.cs" />
     <Compile Include="Models\Match\IMatchRepository.cs" />
     <Compile Include="Models\PlayerAchievement\IPlayerAchievementRepository.cs" />
+    <Compile Include="Models\PlayerMatch\IPlayerMatchRepository.cs" />
+    <Compile Include="Models\PlayerMatch\PlayerMatch.cs" />
+    <Compile Include="Models\PlayerMatch\PlayerMatchRepository.cs" />
     <Compile Include="Models\Player\IPlayerRepository.cs" />
     <Compile Include="Models\League\League.cs" />
     <Compile Include="Models\Match\Match.cs" />
@@ -231,6 +242,19 @@
     <Content Include="Views\League\Details.cshtml" />
     <Content Include="Views\League\Edit.cshtml" />
     <Content Include="Views\League\Index.cshtml" />
+    <Content Include="Views\Accounts\Create.cshtml" />
+    <Content Include="Views\Accounts\Delete.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Careers\Create.cshtml" />
+    <Content Include="Views\Careers\Delete.cshtml" />
+    <Content Include="Views\Careers\Details.cshtml" />
+    <Content Include="Views\Careers\Edit.cshtml" />
+    <Content Include="Views\Careers\Index.cshtml" />
+    <Content Include="Views\PlayersMatches\Create.cshtml" />
+    <Content Include="Views\PlayersMatches\Delete.cshtml" />
+    <Content Include="Views\PlayersMatches\Edit.cshtml" />
+    <Content Include="Views\PlayersMatches\Index.cshtml" />
+    <Content Include="Views\PlayersMatches\ViewPlayerMatches.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
