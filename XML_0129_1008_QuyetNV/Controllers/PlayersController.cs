@@ -72,6 +72,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Players/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -91,6 +92,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "id,clubName,number,name,position,dateOfBirth,placeOfBirth,weight,height,description,imageLink,status")] Player player)
         {
             if (ModelState.IsValid)
