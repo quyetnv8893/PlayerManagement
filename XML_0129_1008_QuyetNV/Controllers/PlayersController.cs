@@ -64,11 +64,8 @@ namespace PlayerManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                DateTime originTime = DateTime.Parse("1970-01-01");
-                TimeSpan span = DateTime.Now - originTime;
-                int ms = (int)span.TotalMilliseconds;
-                player.ID = ms.ToString();
 
+                player.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
                 _repository.InsertPlayer(player);
                 return RedirectToAction("Index");
             }

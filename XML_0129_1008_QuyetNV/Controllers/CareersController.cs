@@ -38,21 +38,6 @@ namespace PlayerManagement.Controllers
             return View(careers.ToList());
         }
 
-        // GET: Careers/Details/5
-        //public ActionResult Details(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Career career = _repository.GetCareersByPlayerID()
-        //    if (career == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(career);
-        //}
-
         // GET: Careers/Create
         [Authorize]
         public ActionResult Create(String id)
@@ -73,11 +58,7 @@ namespace PlayerManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-                DateTime originTime = DateTime.Parse("1970-01-01");
-                TimeSpan span = DateTime.Now - originTime;
-                int ms = (int)span.TotalMilliseconds;
-                career.ID = ms.ToString();
+                career.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
 
                 _repository.InsertCareer(career);
                 return RedirectToAction("Index", "Careers", new { id = career.PlayerID});
