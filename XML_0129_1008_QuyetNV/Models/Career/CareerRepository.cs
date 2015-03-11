@@ -66,7 +66,7 @@ namespace PlayerManagement.Models
 
         public void DeleteCareer(string id)
         {
-            _careerData.Elements("career").Where(i => i.Element("id").Value.Equals(id)).Remove();
+            _careerData.Descendants("careers").Elements("career").Where(i => i.Element("id").Value.Equals(id)).Remove();
             _careerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
 
         }

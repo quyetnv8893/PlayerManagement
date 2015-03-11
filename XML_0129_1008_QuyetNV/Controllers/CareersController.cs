@@ -143,9 +143,11 @@ namespace PlayerManagement.Controllers
         [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
+            Career career = _repository.GetCareerByID(id);
+            var playerID = career.PlayerID;
             _repository.DeleteCareer(id);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Careers", new { id = playerID });
         }
 
     }
