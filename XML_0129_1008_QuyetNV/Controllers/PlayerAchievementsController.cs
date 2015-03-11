@@ -13,7 +13,6 @@ namespace PlayerManagement.Controllers
 {
     public class PlayerAchievementsController : Controller
     {
-        private PlayerManagementContext db = new PlayerManagementContext();
         private IPlayerAchievementRepository _repository;
         private IAchievementRepository _achievementRepository = new AchievementRepository();
         private IPlayerRepository _playerRepository = new PlayerRepository();
@@ -44,30 +43,15 @@ namespace PlayerManagement.Controllers
             return View(playerAchievements.ToList());
         }
 
-        // GET: PlayerAchievements/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            PlayerAchievement playerAchievement = db.PlayerAchievements.Find(id);
-            if (playerAchievement == null)
-            {
-                return HttpNotFound();
-            }
-            return View(playerAchievement);
-        }
-
         // GET: PlayerAchievements/Create
         [Authorize]
         public ActionResult Create(String id)
         {
-
+            PlayerAchievement playerArchivement = new PlayerAchievement();
+            playerArchivement.PlayerID = id;
             ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name");
-            //Cast Player object to SelectList
-            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
-            return View();
+          
+            return View(playerArchivement);
         }
 
         // POST: PlayerAchievements/Create
@@ -76,16 +60,20 @@ namespace PlayerManagement.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create([Bind(Include = "PlayerID,AchievementName,Number")] PlayerAchievement playerAchievement)
+        public ActionResult Create(String PlayerID, String AchievementName, int Number)
         {
+            PlayerAchievement playerAchievement = null;
             if (ModelState.IsValid)
-            {               
-                _repository.InsertPlayerAchievement(playerAchievement);              
-                return RedirectToAction("Index");
+            {
+                playerAchievement = new PlayerAchievement(Number, PlayerID, AchievementName);
+                _repository.InsertPlayerAchievement(playerAchievement);
+                return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
             }
-
+            var errors = ModelState
+                .Where(x => x.Value.Errors.Count > 0)
+                .Select(x => new { x.Key, x.Value.Errors })
+                .ToArray();
             ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name", playerAchievement.AchievementName);
-            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 
@@ -103,7 +91,6 @@ namespace PlayerManagement.Controllers
                 return HttpNotFound();
             }
             ViewBag.AchievementName = new SelectList(_repository.GetPlayerAchievementsByPlayerID(playerID), "Name", "ImageLink", playerAchievement.AchievementName);
-            ViewBag.PlayerID = new SelectList(_repository.GetPlayerAchievement(playerID,achievementName).PlayerID, "ID", "ClubName", playerAchievement.PlayerID);
             return View(playerAchievement);
         }
 
@@ -117,12 +104,10 @@ namespace PlayerManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(playerAchievement).State = EntityState.Modified;
-                db.SaveChanges();
+                _repository.EditPlayerAchievement(playerAchievement);
                 return RedirectToAction("Index");
             }
-            ViewBag.AchievementName = new SelectList(db.Achievements, "Name", "ImageLink", playerAchievement.AchievementName);
-            ViewBag.PlayerID = new SelectList(db.Players, "ID", "ClubName", playerAchievement.PlayerID);
+            ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "ImageLink", playerAchievement.AchievementName);       
             return View(playerAchievement);
         }
 
@@ -146,21 +131,11 @@ namespace PlayerManagement.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(string playerID, string achievementName)
         {
-            PlayerAchievement playerAchievement = db.PlayerAchievements.Find(id);
-            db.PlayerAchievements.Remove(playerAchievement);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            _repository.DeletePlayerAchievement(playerID, achievementName);
+            return RedirectToAction("Index", "PlayerAchievements", new { id = playerID });
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
     }
 }
