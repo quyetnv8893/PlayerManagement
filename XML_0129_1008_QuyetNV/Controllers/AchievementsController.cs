@@ -45,7 +45,7 @@ namespace AchievementManagement.Controllers
             }
             return View(achievement);
         }
-
+        [Authorize]
         // GET: Achievements/Create
         public ActionResult Create()
         {
@@ -57,6 +57,7 @@ namespace AchievementManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "name, imageLink")] Achievement achievement)
         {
             if (ModelState.IsValid)
@@ -69,6 +70,7 @@ namespace AchievementManagement.Controllers
         }
 
         // GET: Achievements/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -88,6 +90,7 @@ namespace AchievementManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "name, imageLink")] Achievement achievement)
         {
             if (ModelState.IsValid)
@@ -100,6 +103,7 @@ namespace AchievementManagement.Controllers
         }
 
         // GET: Achievements/Delete/5
+        [Authorize]
         public ActionResult Delete(string name)
         {
             if (name == null)
@@ -117,6 +121,7 @@ namespace AchievementManagement.Controllers
         // POST: Achievements/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             _repository.DeleteAchievement(id);

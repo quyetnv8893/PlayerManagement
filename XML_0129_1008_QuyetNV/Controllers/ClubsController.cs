@@ -46,6 +46,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Clubs/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -56,6 +57,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "name,logoLink,foundedDate,stadium")] Club club)
         {
             if (ModelState.IsValid)
@@ -68,6 +70,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Clubs/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -87,6 +90,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "name,logoLink,foundedDate,stadium")] Club club)
         {
             if (ModelState.IsValid)
@@ -98,6 +102,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Clubs/Delete/5
+        [Authorize]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -115,6 +120,7 @@ namespace PlayerManagement.Controllers
         // POST: Clubs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             Club club = _repository.GetClubByName(id);

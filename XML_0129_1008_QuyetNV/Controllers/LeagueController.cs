@@ -40,13 +40,14 @@ namespace PlayerManagement.Controllers
             }
             return View(league);
         }
-
+        [Authorize]
         public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(League league)
         {
             if (ModelState.IsValid)
@@ -63,7 +64,7 @@ namespace PlayerManagement.Controllers
             }
             return View(league);
         }
-
+        [Authorize]
         public ActionResult Edit(String id)
         {
             String name = id;
@@ -76,6 +77,7 @@ namespace PlayerManagement.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(League league)
         {
             if (ModelState.IsValid)
@@ -92,7 +94,7 @@ namespace PlayerManagement.Controllers
             }
             return View(league);
         }
-
+        [Authorize]
         public ActionResult Delete(String id)
         {
             String name = id;
@@ -105,6 +107,7 @@ namespace PlayerManagement.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(League league)
         {
             if (ModelState.IsValid)

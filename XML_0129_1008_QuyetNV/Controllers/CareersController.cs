@@ -54,6 +54,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Careers/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
@@ -65,6 +66,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "ID,From,To,NumberOfGoals,PlayerID")] Career career)
         {
             if (ModelState.IsValid)
@@ -79,6 +81,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Careers/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -99,6 +102,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,From,To,NumberOfGoals,PlayerID")] Career career)
         {
             if (ModelState.IsValid)
@@ -112,6 +116,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Careers/Delete/5
+        [Authorize]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -129,6 +134,7 @@ namespace PlayerManagement.Controllers
         // POST: Careers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             Career career = db.Careers.Find(id);

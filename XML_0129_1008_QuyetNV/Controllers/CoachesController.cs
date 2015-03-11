@@ -47,6 +47,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Coaches/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -57,6 +58,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "name, imageLink, position, dateOfBirth, clubName")] Coach coach)
         {
             if (ModelState.IsValid)
@@ -69,6 +71,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Coaches/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -88,6 +91,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "name, imageLink, position, dateOfBirth, clubName")] Coach coach)
         {
             if (ModelState.IsValid)
@@ -101,6 +105,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Coaches/Delete/5
+        [Authorize]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -118,6 +123,7 @@ namespace PlayerManagement.Controllers
         // POST: Coaches/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             _repository.DeleteCoach(id);

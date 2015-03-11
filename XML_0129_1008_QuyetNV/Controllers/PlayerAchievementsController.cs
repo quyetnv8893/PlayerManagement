@@ -60,6 +60,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Create
+        [Authorize]
         public ActionResult Create(String id)
         {
 
@@ -74,6 +75,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "PlayerID,AchievementName,Number")] PlayerAchievement playerAchievement)
         {
             if (ModelState.IsValid)
@@ -88,6 +90,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Edit/5
+        [Authorize]
         public ActionResult Edit(String playerID, String achievementName)
         {
             if (playerID == null)
@@ -109,6 +112,7 @@ namespace PlayerManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "PlayerID,AchievementName,Number")] PlayerAchievement playerAchievement)
         {
             if (ModelState.IsValid)
@@ -123,6 +127,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: PlayerAchievements/Delete/5
+        [Authorize]
         public ActionResult Delete(String playerID, String achievementName)
         {
             if (playerID == null)
@@ -140,6 +145,7 @@ namespace PlayerManagement.Controllers
         // POST: PlayerAchievements/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             PlayerAchievement playerAchievement = db.PlayerAchievements.Find(id);

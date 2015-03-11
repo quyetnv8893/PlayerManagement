@@ -104,6 +104,7 @@ namespace PlayerManagement.Controllers
         }
 
         // GET: Players/Delete/5
+        [Authorize]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -121,6 +122,7 @@ namespace PlayerManagement.Controllers
         // POST: Players/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(string id)
         {
             _repository.DeletePlayer(id);

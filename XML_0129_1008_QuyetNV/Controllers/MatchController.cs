@@ -53,7 +53,7 @@ namespace PlayerManagement.Controllers
             return View(match);
         }
 
-
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.LeagueName = new SelectList(_leagueRepository.GetLeagues(), "Name", "Name");
@@ -61,6 +61,7 @@ namespace PlayerManagement.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(Match match)
         {
             if (ModelState.IsValid)
@@ -79,7 +80,7 @@ namespace PlayerManagement.Controllers
 
             return View(match);
         }
-
+        [Authorize]
         public ActionResult Edit(String id)
         {
             Match match = _repository.GetMatchByID(id);
@@ -90,6 +91,7 @@ namespace PlayerManagement.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(Match match)
         {
             if (ModelState.IsValid)
@@ -108,7 +110,7 @@ namespace PlayerManagement.Controllers
 
             return View(match);
         }
-
+        [Authorize]
         public ActionResult Delete(String id)
         {
             Match match = _repository.GetMatchByID(id);
@@ -119,6 +121,7 @@ namespace PlayerManagement.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(Match match)
         {
             try

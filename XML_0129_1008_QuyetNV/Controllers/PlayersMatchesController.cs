@@ -37,7 +37,7 @@ namespace PlayerManagement.Controllers
             return View(playermatch);
         }
 
-
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.MatchID = new SelectList(_matchRepository.GetMatches(), "ID", "Name");
@@ -46,6 +46,7 @@ namespace PlayerManagement.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(PlayerMatch playermatch)
         {
             if (ModelState.IsValid)
@@ -64,7 +65,7 @@ namespace PlayerManagement.Controllers
 
             return View(playermatch);
         }
-
+        [Authorize]
         public ActionResult Edit(String playerID, String matchID)
         {
             PlayerMatch match = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID, matchID);
@@ -74,6 +75,7 @@ namespace PlayerManagement.Controllers
         }
        
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(PlayerMatch playermatch)
         {
             if (ModelState.IsValid)
@@ -92,7 +94,7 @@ namespace PlayerManagement.Controllers
 
             return View(playermatch);
             }
-
+        [Authorize]
         public ActionResult Delete(String playerID, String matchID)
         {
             PlayerMatch match = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID, matchID);
@@ -102,6 +104,7 @@ namespace PlayerManagement.Controllers
         }       
 
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(PlayerMatch playermatch)
         {
             try

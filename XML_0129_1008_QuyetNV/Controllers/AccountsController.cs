@@ -41,7 +41,7 @@ namespace PlayerManagement.Controllers
             return View(account);
         }
    
-
+        [Authorize]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
