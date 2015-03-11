@@ -105,7 +105,7 @@ namespace PlayerManagement.Controllers
             if (ModelState.IsValid)
             {
                 _repository.EditPlayerAchievement(playerAchievement);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
             }
             ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "ImageLink", playerAchievement.AchievementName);       
             return View(playerAchievement);
