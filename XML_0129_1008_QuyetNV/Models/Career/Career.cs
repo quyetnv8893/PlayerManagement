@@ -29,7 +29,7 @@ namespace PlayerManagement.Models
         [ForeignKey("Player")]
         public String PlayerID { get; set; }
 
-        public virtual Player Player { get; set; }
+        public Player Player { get; set; }
 
         public Career()
         {

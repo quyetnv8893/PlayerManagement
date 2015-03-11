@@ -8,17 +8,19 @@ namespace PlayerManagement.Models
 {
     public class Player
     {
-        [Key]
+        [Key]        
         public String ID { get; set; }
 
         [Required]
         [Display(Name = "Club")]
         public String ClubName { get; set; }        
         
-        [Required]
+        [Required]        
         public int Number { get; set; }
+
         [Required]
         public String Name { get; set; }
+
         [Required]
         public String Position { get; set; }
 
@@ -27,18 +29,24 @@ namespace PlayerManagement.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date of Birth")]
         public DateTime DateOfBirth { get; set; }
+
         [Required]
         [Display(Name = "Place of Birth")]
         public string PlaceOfBirth { get; set; }
+
         [Required]
         public double Weight { get; set; }
+        
         [Required]
         public double Height { get; set; }
+        
         [Required]
         public String Description { get; set; }
+        
         [Required]
         [Display(Name = "Image")]
         public String ImageLink { get; set; }
+        
         [Required]
         public Boolean Status { get; set; }
         
@@ -56,6 +64,7 @@ namespace PlayerManagement.Models
 
 
         public virtual ICollection<PlayerAchievement> PlayerAchievements { get; set; }
+        public virtual ICollection<Career> Careers { get; set; }
 
         public Player(String clubName, String id, int number, String name, String position,
             DateTime dateOfBirth, String placeOfBirth, double weight, double height, String description, String imageLink,

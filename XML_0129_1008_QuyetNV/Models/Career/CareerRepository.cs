@@ -11,33 +11,23 @@ namespace PlayerManagement.Models
     {
         private List<Career> _allCareers;
         private XDocument _careerData;
-
+        private IPlayerRepository _playerRepository = new PlayerRepository();
         public CareerRepository()
         {
             _allCareers = new List<Career>();
 
             _careerData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            IEnumerable<Career> careers = null;
-
-
-            
-            try {
-                careers = from career in _careerData.Descendants("career")
-                              select new Career(
-                                  career.Element("id").Value,
-                                  XmlConvert.ToDateTime(career.Element("from").Value, XmlDateTimeSerializationMode.Local),
-                                  XmlConvert.ToDateTime(career.Element("to").Value, XmlDateTimeSerializationMode.Local),                                  
-                                  career.Element("clubName").Value,
-                                  (int)career.Element("noOfGoals"),
-                                  career.Element("playerId").Value
-                                  );
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            
-
+            IEnumerable<Career> careers = from career in _careerData.Descendants("career")
+                      select new Career(
+                          career.Element("id").Value,
+                          //XmlConvert.ToDateTime(career.Element("from").Value, XmlDateTimeSerializationMode.Local),
+                          //XmlConvert.ToDateTime(career.Element("to").Value, XmlDateTimeSerializationMode.Local),
+                          (DateTime)career.Element("from"),
+                          (DateTime)career.Element("to"),
+                          career.Element("clubName").Value,
+                          (int)career.Element("noOfGoals"),
+                          career.Element("playerId").Value
+                          );           
             _allCareers.AddRange(careers.ToList<Career>());
 
         }
@@ -48,13 +38,16 @@ namespace PlayerManagement.Models
         }
 
         public IEnumerable<Career> GetCareersByPlayerID(string playerID)
-        {
+        {            
             return _allCareers.FindAll(career => career.PlayerID.Equals(playerID));
+            
         }
 
         public Career GetCareerByID(String id)
         {
-            return _allCareers.Find(career => career.ID.Equals(id));
+            Career career = _allCareers.Find(c => c.ID.Equals(id));
+            career.Player = _playerRepository.GetPlayerByID(career.PlayerID);
+            return career;
         }
 
         public void InsertCareer(Career career)
@@ -80,16 +73,20 @@ namespace PlayerManagement.Models
 
         public void EditCareer(Career career)
         {
-            XElement node = _careerData.Elements("career").
-                Where(i => i.Element("id").Value.Equals(career.ID)).FirstOrDefault();
+            if (_careerData != null)
+            {
+                XElement node = _careerData.Descendants("careers").Elements("career")
+                .Where(i => i.Element("id").Value.Equals(career.ID)).FirstOrDefault();
 
-            node.SetElementValue("id", career.ID);
-            node.SetElementValue("from", career.From);
-            node.SetElementValue("to", career.To);
-            node.SetElementValue("clubName", career.ClubName);
-            node.SetElementValue("noOfGoals", career.NumberOfGoals);
-            node.SetElementValue("playerId", career.PlayerID);
+                node.SetElementValue("id", career.ID);
+                node.SetElementValue("from", career.From);
+                node.SetElementValue("to", career.To);
+                node.SetElementValue("clubName", career.ClubName);
+                node.SetElementValue("noOfGoals", career.NumberOfGoals);
+                node.SetElementValue("playerId", career.PlayerID);
 
+            }
+            
             _careerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
     }
