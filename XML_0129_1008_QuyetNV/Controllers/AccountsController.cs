@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using PlayerManagement.Models;
 using System.Web.Security;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace PlayerManagement.Controllers
 {
@@ -25,7 +27,7 @@ namespace PlayerManagement.Controllers
         [HttpPost]
         public ActionResult Login([Bind(Include = "Username,MD5Password")] Account account)
         {
-            bool isPersistent = true;
+            
             if (ModelState.IsValid)
             {
                 if (isValid(account.Username, account.MD5Password))
@@ -54,13 +56,29 @@ namespace PlayerManagement.Controllers
             var dbAccount = accounts.FirstOrDefault(account => account.Username.Equals(username));
             if (dbAccount != null)
             {
-                if (dbAccount.MD5Password.Equals(password))
+                if (dbAccount.MD5Password.Equals(CalculateMD5Hash(password)))
                 {
                     isValid = true;
                 }
             }
 
             return isValid;
+        }
+
+        public string CalculateMD5Hash(string input)
+        {
+            // step 1, calculate MD5 hash from input
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+            // step 2, convert byte array to hex string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("x2"));
+            }
+            return sb.ToString();
         }
 
         // GET: Authentications/Details/5
