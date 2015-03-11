@@ -55,29 +55,32 @@ namespace PlayerManagement.Controllers
 
         // GET: Careers/Create
         [Authorize]
-        public ActionResult Create()
+        public ActionResult Create(String id)
         {
-            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
-            return View();
+            Career career = new Career();
+            career.PlayerID = id;
+            //ViewBag.PlayerID = id;
+            return View(career);
         }
-
+      
         // POST: Careers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create([Bind(Include = "ID,From,To,NumberOfGoals,PlayerID")] Career career)
+        public ActionResult Create([Bind(Include = "ID,From,To,NumberOfGoals,ClubName,PlayerID")] Career career)
         {
             if (ModelState.IsValid)
             {
+                
                 DateTime originTime = DateTime.Parse("1970-01-01");
                 TimeSpan span = DateTime.Now - originTime;
                 int ms = (int)span.TotalMilliseconds;
                 career.ID = ms.ToString();
 
                 _repository.InsertCareer(career);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Careers", new { id = career.PlayerID});
             }
 
             ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
