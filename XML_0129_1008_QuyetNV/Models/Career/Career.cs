@@ -11,6 +11,7 @@ namespace PlayerManagement.Models
     {
         [Key]
         public String ID { get; set; }
+
         [Required]
         [DataType(DataType.Date)]
         public DateTime From { get; set; }
@@ -20,10 +21,13 @@ namespace PlayerManagement.Models
 
         [Required]
         [Display(Name = "Club")]
+        [DataType(DataType.Text)]
         public String ClubName { get; set; }
 
         [Display(Name = "Number of Goals")]
         [Required]
+        [Range(0, 999, ErrorMessage = "Can only be between 0 .. 999")]
+        [StringLength(3, ErrorMessage = "Max 3 digits")]
         public int? NumberOfGoals { get; set; }
 
         [ForeignKey("Player")]
