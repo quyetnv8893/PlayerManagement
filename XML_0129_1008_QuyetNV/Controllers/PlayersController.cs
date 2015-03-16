@@ -66,6 +66,7 @@ namespace PlayerManagement.Controllers
             {
 
                 player.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
+                player.ClubName = "Real Madrid";
                 _repository.InsertPlayer(player);
                 return RedirectToAction("Index");
             }
