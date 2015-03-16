@@ -56,7 +56,7 @@ namespace PlayerManagement.Controllers
                 return View(playerAchievements);
             }
 
-            
+
         }
 
         // GET: PlayerAchievements/Create
@@ -70,9 +70,6 @@ namespace PlayerManagement.Controllers
             return View(playerArchivement);
         }
 
-        // POST: PlayerAchievements/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
@@ -84,19 +81,25 @@ namespace PlayerManagement.Controllers
                 playerAchievement = new PlayerAchievement(number, playerID, achievementName);
 
                 PlayerAchievement storedAchievement = _repository.GetPlayerAchievement(playerAchievement.PlayerID, playerAchievement.AchievementName);
+                //if this achievement already exist, plus this number with existing achievement number
                 if (storedAchievement != null)
                 {
                     playerAchievement.Number = number + storedAchievement.Number;
                     Edit(playerAchievement);
+                    return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
+
                 }
-                
-                _repository.InsertPlayerAchievement(playerAchievement);
-                return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
+                else
+                {
+                    _repository.InsertPlayerAchievement(playerAchievement);
+                    return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
+                }
             }
             var errors = ModelState
                 .Where(x => x.Value.Errors.Count > 0)
                 .Select(x => new { x.Key, x.Value.Errors })
                 .ToArray();
+
             ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name", playerAchievement.AchievementName);
             return View(playerAchievement);
         }
