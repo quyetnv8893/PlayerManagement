@@ -51,11 +51,14 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.NumberOfReds)
                                 </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", "PlayersMatches", new { playerID = item.PlayerID, matchID = item.MatchID }, new { @class = "action-link" })
-                                    @Html.ActionLink("Delete", "Delete", "PlayersMatches", new { playerID = item.PlayerID, matchID = item.MatchID }, new { @class = "action-link" })
+                                @if (Request.IsAuthenticated)
+                                {
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", "PlayersMatches", new { playerID = item.PlayerID, matchID = item.MatchID }, new { @class = "action-link" })
+                                        @Html.ActionLink("Delete", "Delete", "PlayersMatches", new { playerID = item.PlayerID, matchID = item.MatchID }, new { @class = "action-link" })
 
-                                </td>
+                                    </td>
+                                }
                             </tr>
                         }
                     </tbody>

@@ -24,23 +24,26 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberOfGoals)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberOfYellows)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberOfReds)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfGoals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfYellows)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfReds)
+            </td>
+
+            <td>
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @if (Request.IsAuthenticated) {
+                    @Html.ActionLink("Edit ", "Edit", new { /* id=item.PrimaryKey */ })
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
+                }
+            </td>
+        </tr>
 }
 
 </table>

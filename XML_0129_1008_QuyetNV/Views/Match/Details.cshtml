@@ -47,20 +47,16 @@
 
                 }
             </div>
-            <!--
-            <div class="buttons text-center">
-                <a href="Match">
-                    <div class="button primary">Back</div>
-                </a>
-            </div>
-                -->
-            <div class="button text-center">
-                @Html.ActionLink("Edit", "Edit", "Match", new { id = Model.ID }, new { @class = "button primary action-link" })
-            </div>
-            <div class="button text-center">
-                @Html.ActionLink("Delete", "Delete", "Match", new { id = Model.ID }, new { @class = "button primary action-link" })
-            </div>
+            @if (Request.IsAuthenticated)
+            {
+                <div class="button text-center">
+                    @Html.ActionLink("Edit", "Edit", "Match", new { id = Model.ID }, new { @class = "button primary action-link" })
+                </div>
+                <div class="button text-center">
+                    @Html.ActionLink("Delete", "Delete", "Match", new { id = Model.ID }, new { @class = "button primary action-link" })
+                </div>
+            }
         </div>
-        
+
     </div>
 </div>

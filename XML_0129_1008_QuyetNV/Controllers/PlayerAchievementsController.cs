@@ -32,13 +32,21 @@ namespace PlayerManagement.Controllers
 
         // View player's career by ID
         public ActionResult Index(String id)
-        {            
-            var playerAchievements = _repository.GetPlayerAchievementsByPlayerID(id)
-                .Where(achievement => achievement.PlayerID.Equals(id));
-            foreach (var achievement in playerAchievements)
+        {
+            IEnumerable<PlayerAchievement> playerAchievements = null;
+            try
             {
-                achievement.Achievement = _achievementRepository.GetAchievementByName(achievement.AchievementName);
-                achievement.Player = _playerRepository.GetPlayerByID(achievement.PlayerID);
+                playerAchievements = _repository.GetPlayerAchievementsByPlayerID(id)
+                    .Where(achievement => achievement.PlayerID.Equals(id));
+                foreach (var achievement in playerAchievements)
+                {
+                    achievement.Achievement = _achievementRepository.GetAchievementByName(achievement.AchievementName);
+                    achievement.Player = _playerRepository.GetPlayerByID(achievement.PlayerID);
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                RedirectToAction("Index", "Players");
             }
             return View(playerAchievements.ToList());
         }

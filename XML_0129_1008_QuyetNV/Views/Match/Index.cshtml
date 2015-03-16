@@ -10,7 +10,7 @@
             <select class="selector">
                 <option value="1">Time</option>
                 <option value="2">Name</option>
-                <option value="3">Score</option>                
+                <option value="3">Score</option>
             </select>
             <form name="player-search" id="player-search">
                 <input type="text" name="search_text">
@@ -23,7 +23,7 @@
                 <table class="career">
                     <thead>
                     <th>Time</th>
-                    <th>Name</th>                    
+                    <th>Name</th>
                     <th>Score</th>
                     </thead>
                     <tbody>
@@ -31,25 +31,29 @@
                         {
                             <tr class="odd">
                                 <td>
-                                    @String.Format("{0:d}",item.Time)                                   
+                                    @String.Format("{0:d}", item.Time)
                                 </td>
-                                <td>                                    
+                                <td>
                                     @Html.ActionLink(item.Name, "Details", new { id = item.ID }, new { @class = "action-link" })
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Score)
                                 </td>
-                                                              
+
                             </tr>
-                        }                       
+                        }
                     </tbody>
                 </table>
-            </div>            
-        </div>
-        <div class="button text-center">
-            <div class="button primary">
-                @Html.ActionLink("Add new match", "Create", "Match", null, new { @style="color:white" })
             </div>
         </div>
+        @if (Request.IsAuthenticated)
+        {
+            <div class="button text-center">
+                <div class="button primary">
+                    @Html.ActionLink("Add new match", "Create", "Match", null, new { @style = "color:white" })
+                </div>
+            </div>
+        }
+
     </div>
 </div>

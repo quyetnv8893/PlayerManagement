@@ -57,8 +57,11 @@
                                 </td>
                                 <td>
 
-                                    @Html.ActionLink("Edit", "Edit", "Careers", new { id = item.ID }, new { @class = "action-link" }) |
-                                    @Html.ActionLink("Delete", "Delete", "Careers", new { id = item.ID }, new { @class = "action-link" })
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        @Html.ActionLink("Edit ", "Edit", "Careers", new { id = item.ID }, new { @class = "action-link" })
+                                        @Html.ActionLink("Delete", "Delete", "Careers", new { id = item.ID }, new { @class = "action-link" })
+                                    }
 
 
                                 </td>
@@ -69,14 +72,22 @@
                     </tbody>
                 </table>
             </div>
-            
-            <div class="button text-center">
-                <div class="button primary">
-                    @Html.ActionLink("Add new Career", "Create", "Careers",
-                                 new { id = Model.ToList().FirstOrDefault().PlayerID}, new { @style = "color:white" })
-                </div>
-            </div>
-            
+            @if (Request.IsAuthenticated)
+            {
+                try
+                {
+                    <div class="button text-center">
+                        <div class="button primary">
+                            @Html.ActionLink("Add new Career", "Create", "Careers",
+                                 new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
+                        </div>
+                    </div>
+                }
+                catch (NullReferenceException e)
+                {
+                    
+                }
+            }
         </div>
     </div>
 </div>

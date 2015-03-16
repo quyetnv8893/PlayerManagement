@@ -9,23 +9,23 @@
 <div id="main" class="fixed-width player container">
 
     <div class="image" style="width:30%;margin-left: -150px;
-margin-right: 100px;">        
+margin-right: 100px;">
         <img src="@Html.DisplayFor(model => model.ImageLink)" style="
                                                 max-width:400px;
                                                 max-height:800px;
                                                 width: auto;
-                                                height: auto;" />        
+                                                height: auto;" />
     </div>
     <div class="info text-center" style="width:60%">
-        <h4 style="font-size:20px">Player's info</h4>
+        <h4 style="font-size:20px">@Html.DisplayFor(model => model.Name)</h4>
         <div class="list text-left">
             <p><label>Name: </label> <span>@Html.DisplayFor(model => model.Name)</span></p>
-            <p><label>No. </label> <span>@Html.DisplayFor(model => model.Number)</span></p>
-            <p><label>Pos.</label> <span>@Html.DisplayFor(model => model.Position)</span></p>
-            <p><label>DoB. </label> <span>@Html.DisplayFor(model => model.DateOfBirth)</span></p>
+            <p><label>Number: </label> <span>@Html.DisplayFor(model => model.Number)</span></p>
+            <p><label>Position: </label> <span>@Html.DisplayFor(model => model.Position)</span></p>
+            <p><label>Date Of Birth: </label> <span>@Html.DisplayFor(model => model.DateOfBirth)</span></p>
             <p><label>Height: </label> <span>@Html.DisplayFor(model => model.Height)</span></p>
             <p><label>Weight: </label> <span>@Html.DisplayFor(model => model.Weight)</span></p>
-            <p><label>Place of birth: </label> <span>@Html.DisplayFor(model => model.PlaceOfBirth)</span></p>
+            <p><label>Place Of Birth: </label> <span>@Html.DisplayFor(model => model.PlaceOfBirth)</span></p>
             <p><label>Description: </label> <div style="overflow-y:scroll; height:100px">@Html.DisplayFor(model => model.Description)</div></p>
         </div>
 
@@ -44,36 +44,19 @@ margin-right: 100px;">
 
             @if (Request.IsAuthenticated)
             {
-            <div class="button primary">
-                @Html.ActionLink("Delete", "Delete", "Players",
+                <div class="button primary">
+                    @Html.ActionLink("Delete", "Delete", "Players",
                                  new { id = Model.ID }, new { @class = "action-link" })
-            </div>
-            }
-            else { }
-            <div class="button primary">
-                @Html.ActionLink("Edit", "Edit", "Players",
+                </div>
+                <div class="button primary">
+                    @Html.ActionLink("Edit", "Edit", "Players",
                                  new { id = Model.ID }, new { @class = "action-link" })
-            </div>
+                </div>
+            }           
+
 
         </div>
 
-        <!--
-        <div class="buttons text-center">
-            <a href="#">
-                <div class="button primary">Carrer</div>
-            </a>
-            <a href="#">
-                <div class="button primary">Archive</div>
-            </a>
-            <a href="#">
-                <div class="button primary">Edit</div>
-            </a> <a href="#">
-                <div class="button primary">Delete</div>
-            </a> <a href="#">
-                <div class="button primary">Matches</div>
-            </a>
-        </div>
-            -->
     </div>
 
 </div>

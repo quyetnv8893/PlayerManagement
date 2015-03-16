@@ -8,13 +8,14 @@
 @{
     String playerName = null;
     String playerImage = null;
-    try { 
-    playerName = Model.ToList().FirstOrDefault().Player.Name;
-playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
+    try
+    {
+        playerName = Model.ToList().FirstOrDefault().Player.Name;
+        playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
     }
     catch (NullReferenceException e)
     {
-        
+
     }
 }
 <div id="main" class="fixed-width">
@@ -42,18 +43,19 @@ playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
                                         <p>@Html.DisplayFor(modelItem => item.Number)</p>
                                     </div>
                                     <div class="col button text-center">
-
-                                        <div class="button primary">
-                                            @Html.ActionLink("Edit", "Edit", "PlayerAchievements",
+                                        @if (Request.IsAuthenticated)
+                                        {
+                                            <div class="button primary">
+                                                @Html.ActionLink("Edit", "Edit", "PlayerAchievements",
                                  new { playerID = item.PlayerID, achievementName = item.AchievementName }, new { @style = "color:white" })
-                                        </div>
+                                            </div>
 
-                                        <div class="button primary">
-                                            @Html.ActionLink("Delete", "Delete", "PlayerAchievements",
+                                            <div class="button primary">
+                                                @Html.ActionLink("Delete", "Delete", "PlayerAchievements",
                                  new { playerID = item.PlayerID, achievementName = item.AchievementName }, new { @style = "color:white" })
-                                        </div>
-
-                                    </div >
+                                            </div>
+                                        }
+                                    </div>
                                 </div>
                             </div>
 
@@ -61,12 +63,23 @@ playerImage = Model.ToList().FirstOrDefault().Player.ImageLink;
                     }
                 </ul>
             </div>
-            <div class="button text-center">
-                <div class="button primary">
-                    @Html.ActionLink("Add new Achievement", "Create", "PlayerAchievements",
+            @try
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <div class="button text-center">
+                        <div class="button primary">
+                            @Html.ActionLink("Add new Achievement", "Create", "PlayerAchievements",
                                  new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
-                </div>
-            </div>
+                        </div>
+                    </div>
+                }
+            }
+            catch (NullReferenceException e)
+            {
+
+            }
+
         </div>
 
     </div>

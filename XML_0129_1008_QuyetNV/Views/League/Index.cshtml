@@ -22,31 +22,36 @@
                             <div class="image"><img class="viewer" src="@Html.DisplayFor(modelItem=>item.LogoLink)" /></div>
                             <div class="detail">
                                 <div>
-                                    <p style="text-decoration-color:white">@Html.ActionLink(item.Name, "GoToMatches", new { id = item.Name, style = "color:white" }, new { @class = "action-link" })</p>                                    
+                                    <p style="text-decoration-color:white">@Html.ActionLink(item.Name, "GoToMatches", new { id = item.Name, style = "color:white" }, new { @class = "action-link" })</p>
                                 </div>
                             </div>
-                            <div class="button text-center">
-                                <div class="button primary">
-                                    @Html.ActionLink("Edit", "Edit", "League", new { id = item.Name}, new { @style = "color:white" })
+                            @if (Request.IsAuthenticated)
+                            {
+                                <div class="button text-center">
+                                    <div class="button primary">
+                                        @Html.ActionLink("Edit", "Edit", "League", new { id = item.Name }, new { @style = "color:white" })
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="button text-center">
-                                <div class="button primary">
-                                    @Html.ActionLink("Delete", "Delete", "League", new { id = item.Name }, new { @style = "color:white" })
+                                <div class="button text-center">
+                                    <div class="button primary">
+                                        @Html.ActionLink("Delete", "Delete", "League", new { id = item.Name }, new { @style = "color:white" })
+                                    </div>
                                 </div>
-                            </div>
+                            }
                         </li>
                     }
 
                 </ul>
             </div>
-            <div class="button text-center">
-                <div class="button primary">
-                    @Html.ActionLink("Add new League", "Create", "League", null, new { @style = "color:white" })
+            @if (Request.IsAuthenticated)
+            {
+                <div class="button text-center">
+                    <div class="button primary">
+                        @Html.ActionLink("Add new League", "Create", "League", null, new { @style = "color:white" })
+                    </div>
                 </div>
-            </div>
+            }
         </div>
-        
+
     </div>
 </div>
-
