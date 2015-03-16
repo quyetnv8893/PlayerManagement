@@ -12,20 +12,33 @@ namespace PlayerManagement.Models.PlayerMatch
         [Key][Column(Order = 0)]
         [Display(Name = "Player ID")]
         public String PlayerID { get; set; }
+
         [Key][Column(Order = 1)]
         [Display(Name = "Match ID")]
         public String MatchID { get; set; }
+
         [Required]
+        [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
+        [StringLength(2, ErrorMessage = "Max 2 digits")]
         [Display(Name = "Number of Goals")]
         public int NumberOfGoals { get; set; }
+
         [Required]
         [Display(Name = "Number of Yellow cards")]
+        [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
+        [StringLength(2, ErrorMessage = "Max 2 digits")]
         public int NumberOfYellows { get; set; }
+
         [Required]
+        [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
+        [StringLength(2, ErrorMessage = "Max 2 digits")]
         [Display(Name = "Number of Red cards")]
         public int NumberOfReds { get; set; }
+
         public virtual Player Player { get; set; }
+
         public virtual Match Match { get; set; }
+
         public PlayerMatch() { }
         public PlayerMatch(String PlayerId, String MatchId, int NumberOfGoals, int NumberOfYellows, int NumberOfReds)
         {
