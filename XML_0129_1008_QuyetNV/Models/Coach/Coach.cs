@@ -9,13 +9,16 @@ namespace PlayerManagement.Models
     public class Coach
     {
         [Key]
+        [DataType(DataType.Text)]
         public String Name { get; set; }
         [Required]
 
         [Display(Name = "Image")]
+        [DataType(DataType.ImageUrl)]
         public String ImageLink { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
         public String Position { get; set; }
 
         [Required]
@@ -23,6 +26,7 @@ namespace PlayerManagement.Models
         public DateTime DateOfBirth { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
         [Display(Name = "Club")]
         public String ClubName { get; set; }
 

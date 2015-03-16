@@ -8,11 +8,18 @@ namespace PlayerManagement.Models
 {
     public class League
     {     
-        [Key]        
+        [Key]
+        [DataType(DataType.Text)]
         public String Name { get; set; }
+
         [Required]
+        [DataType(DataType.ImageUrl)]
         [Display(Name = "Logo")]
+
+        [Required]
+        [DataType(DataType.ImageUrl)]
         public String LogoLink { get; set; }
+
         public League() {
             this.Name = null;
             this.LogoLink = null;
