@@ -37,36 +37,40 @@
                     <th></th>
                     </thead>
                     <tbody>
+
                         @foreach (var item in Model)
                         {
-                            <tr class="odd">
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ClubName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.From)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.To)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NumberOfGoals)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ClubName)
-                                </td>
-                                <td>
+                            if (item.ID != null)
+                            {
+                                <tr class="odd">
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClubName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.From)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.To)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NumberOfGoals)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClubName)
+                                    </td>
+                                    <td>
 
-                                    @if (Request.IsAuthenticated)
-                                    {
-                                        @Html.ActionLink("Edit ", "Edit", "Careers", new { id = item.ID }, new { @class = "action-link" })
-                                        @Html.ActionLink("Delete", "Delete", "Careers", new { id = item.ID }, new { @class = "action-link" })
-                                    }
+                                        @if (Request.IsAuthenticated)
+                                        {
+                                            @Html.ActionLink("Edit ", "Edit", "Careers", new { id = item.ID }, new { @class = "action-link" })
+                                            @Html.ActionLink("Delete", "Delete", "Careers", new { id = item.ID }, new { @class = "action-link" })
+                                        }
 
 
-                                </td>
+                                    </td>
 
-                            </tr>
+                                </tr>
+                            }
 
                         }
                     </tbody>
@@ -82,7 +86,7 @@
                     </div>
                 </div>
             }
-            
+
         </div>
     </div>
 </div>

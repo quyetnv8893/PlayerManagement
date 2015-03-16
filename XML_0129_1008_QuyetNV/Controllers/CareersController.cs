@@ -30,23 +30,27 @@ namespace PlayerManagement.Controllers
         // GET: Careers
         public ActionResult Index(String id)
         {
-            var careers = _repository.GetCareersByPlayerID(id);
+            var careers = _repository.GetCareersByPlayerID(id).ToList();
             Career career;
             if (careers.Count() == 0)
             {
                 career = new Career();
                 career.PlayerID = id;
-                List<Career> tmpCareers = careers.ToList();
-                tmpCareers.Add(career);
-                return View(tmpCareers);
-                
+                career.Player = _playerRepository.GetPlayerByID(career.PlayerID);
+                careers.Add(career);
+                return View(careers);
+
             }
-            foreach (var c in careers)
-            {                
-                c.Player = _playerRepository.GetPlayerByID(c.PlayerID);
-                
+            else
+            {
+                foreach (var c in careers)
+                {
+                    c.Player = _playerRepository.GetPlayerByID(c.PlayerID);
+
+                }
+                return View(careers);
             }
-            return View(careers.ToList());
+
         }
 
         // GET: Careers/Create
@@ -58,7 +62,7 @@ namespace PlayerManagement.Controllers
             //ViewBag.PlayerID = id;
             return View(career);
         }
-      
+
         // POST: Careers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -72,7 +76,7 @@ namespace PlayerManagement.Controllers
                 career.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
 
                 _repository.InsertCareer(career);
-                return RedirectToAction("Index", "Careers", new { id = career.PlayerID});
+                return RedirectToAction("Index", "Careers", new { id = career.PlayerID });
             }
 
             ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
