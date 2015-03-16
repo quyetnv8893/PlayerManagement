@@ -9,14 +9,17 @@ namespace PlayerManagement.Models
     public class Club
     {
         [Key]
+        [DataType(DataType.Text)]
         public String Name { get; set; }
 
         [Required]
         [Display(Name = "Logo")]
+        [DataType(DataType.ImageUrl)]
         public String LogoLink { get; set; }
 
         [Required]
         [Display(Name = "Founded Date")]
+
         public DateTime FoundedDate { get; set; }
         
         [Required]
