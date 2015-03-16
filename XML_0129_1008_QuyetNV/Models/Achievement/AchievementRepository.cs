@@ -42,7 +42,8 @@ namespace PlayerManagement.Models
 
         public Achievement GetAchievementByName(string name)
         {
-            return _allAchievements.Find(item => item.Name.Equals(name));
+            Achievement achievement = _allAchievements.Find(item => item.Name.Equals(name));
+            return achievement;
         }
 
         public void InsertAchievement(Achievement achievement)

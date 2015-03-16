@@ -2,14 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>@ViewBag.Title - Real Madrid</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/main.css","~/media/css/jquery.dataTables.css")
+    @Styles.Render("~/Content/main.css", "~/media/css/jquery.dataTables.css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/media/js/jquery.js", "~/media/js/jquery.dataTables.js")
+    @RenderSection("scripts", required: false)
     <script type="text/javascript" language="javascript" class="init">
 
 
@@ -31,10 +32,10 @@
         {
             @Html.ActionLink("Login", "Login", "Accounts", null, new { @style = "color:white" })
         }
-    
+
     </div>
 
-  
+
     <div id="header">
         <ul id="navbar" class="uppercase fixed-with">
             <a href="~/Clubs"><li>Club</li></a>

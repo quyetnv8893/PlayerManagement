@@ -20,7 +20,7 @@ namespace PlayerManagement.Models
             _playerAchievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
             var playerAchievements = from playerAchievement in _playerAchievementData.Descendants("player_achievement")
                                      select new PlayerAchievement(
-                                         (int)playerAchievement.Element("number"), 
+                                         (int)playerAchievement.Element("number"),
                                          playerAchievement.Element("playerId").Value,
                                          playerAchievement.Element("achievementName").Value);
 
@@ -35,22 +35,35 @@ namespace PlayerManagement.Models
 
         public PlayerAchievement GetPlayerAchievement(String playerId, String achievementName)
         {
-            var playerAchievement = _allPlayerAchievements.Find(item => (item.AchievementName.Equals(achievementName)) &&
+            PlayerAchievement playerAchievement = null;
+
+            playerAchievement = _allPlayerAchievements.Find(item => (item.AchievementName.Equals(achievementName)) &&
                                                         (item.PlayerID.Equals(playerId)));
-            _achievementRepository = new AchievementRepository();
-            playerAchievement.Achievement = _achievementRepository.GetAchievementByName(achievementName);
+             _achievementRepository = new AchievementRepository();
+                
+            if (playerAchievement != null)
+            {
+                Achievement achievement = _achievementRepository.GetAchievementByName(achievementName);
+               
+                playerAchievement.Achievement = achievement;
 
-            _playerRepository = new PlayerRepository();
-            playerAchievement.Player = _playerRepository.GetPlayerByID(playerId);
+                _playerRepository = new PlayerRepository();
+                playerAchievement.Player = _playerRepository.GetPlayerByID(playerId);
 
-            return playerAchievement;
+                return playerAchievement;
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         public void InsertPlayerAchievement(PlayerAchievement playerAchievement)
         {
 
             _playerAchievementData.Descendants("players_achievements").FirstOrDefault().Add(new XElement("player_achievement",
-                new XElement("number", playerAchievement.Number), 
+                new XElement("number", playerAchievement.Number),
                 new XElement("playerId", playerAchievement.PlayerID),
                 new XElement("achievementName", playerAchievement.AchievementName)));
 
