@@ -10,17 +10,23 @@ namespace PlayerManagement.Models
     {
         [Key]
         public String ID { get; set; }
+
         [Required]
         public DateTime Time { get; set; }
+
         [Required]
+        [DataType(DataType.Text)]
         public String Name { get; set; }
         
         [Required]
         [RegularExpression("^[0-9]+-[0-9]+$", ErrorMessage ="Invalid Score format")]
         public String Score { get; set; }
+
         [Required]
         [Display(Name = "League")]
+        [DataType(DataType.Text)]
         public String LeagueName { get; set; }
+
         public virtual IEnumerable<PlayerMatch.PlayerMatch> PlayerMatches { get; set; }
         public virtual League League { get; set; }
         public Match()
