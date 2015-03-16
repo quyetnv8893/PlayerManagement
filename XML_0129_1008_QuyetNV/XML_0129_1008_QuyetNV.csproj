@@ -348,6 +348,7 @@
     <Content Include="Views\PlayersMatches\Edit.cshtml" />
     <Content Include="Views\PlayersMatches\Index.cshtml" />
     <Content Include="Views\PlayersMatches\ViewPlayerMatches.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

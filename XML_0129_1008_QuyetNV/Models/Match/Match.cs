@@ -14,7 +14,9 @@ namespace PlayerManagement.Models
         public DateTime Time { get; set; }
         [Required]
         public String Name { get; set; }
+        
         [Required]
+        [RegularExpression("^[0-9]+-[0-9]+$", ErrorMessage ="Invalid Score format")]
         public String Score { get; set; }
         [Required]
         [Display(Name = "League")]

@@ -57,6 +57,7 @@ namespace PlayerManagement.Controllers
         public ActionResult Create()
         {
             ViewBag.LeagueName = new SelectList(_leagueRepository.GetLeagues(), "Name", "Name");
+
             return View();
         }
 

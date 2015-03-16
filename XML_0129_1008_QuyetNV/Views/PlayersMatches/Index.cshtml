@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table id ="datajquery" class="table">
+<table id="datajquery" class="table">
     <thead>
         <tr>
             <th>
@@ -26,26 +26,31 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumberOfGoals)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumberOfYellows)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumberOfReds)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfGoals)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfYellows)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfReds)
+                </td>
 
-            <td>
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @if (Request.IsAuthenticated) {
-                    @Html.ActionLink("Edit ", "Edit", new { /* id=item.PrimaryKey */ })
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <td>
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @if (Request.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Edit ", "Edit", new { /* id=item.PrimaryKey */ })
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+
+                    }
                 </td>
             </tr>
-    }
-            </tbody>
+
+        }
+    </tbody>
 
 </table>
