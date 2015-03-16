@@ -76,12 +76,20 @@ namespace PlayerManagement.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create(String PlayerID, String AchievementName, int Number)
+        public ActionResult Create(String playerID, String achievementName, int number)
         {
             PlayerAchievement playerAchievement = null;
             if (ModelState.IsValid)
             {
-                playerAchievement = new PlayerAchievement(Number, PlayerID, AchievementName);
+                playerAchievement = new PlayerAchievement(number, playerID, achievementName);
+
+                PlayerAchievement storedAchievement = _repository.GetPlayerAchievement(playerAchievement.PlayerID, playerAchievement.AchievementName);
+                if (storedAchievement != null)
+                {
+                    playerAchievement.Number = number + storedAchievement.Number;
+                    Edit(playerAchievement);
+                }
+                
                 _repository.InsertPlayerAchievement(playerAchievement);
                 return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
             }
