@@ -13,6 +13,7 @@ namespace PlayerManagement.Models
 
         [Required]
         [Display(Name = "Club")]
+        [DataType(DataType.Text)]
         public String ClubName { get; set; }        
         
         [Required]
@@ -21,9 +22,11 @@ namespace PlayerManagement.Models
         public int Number { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
         public String Name { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
         public String Position { get; set; }
 
         [Required]
@@ -34,6 +37,7 @@ namespace PlayerManagement.Models
 
         [Required]
         [Display(Name = "Place of Birth")]
+        [DataType(DataType.Text)]
         public string PlaceOfBirth { get; set; }
        
         [Required]
@@ -47,13 +51,15 @@ namespace PlayerManagement.Models
         public double Height { get; set; }
         
         [Required]
+        [DataType(DataType.Text)]
         public String Description { get; set; }
         
         [Required]
         [Display(Name = "Image")]
+        [DataType(DataType.ImageUrl)]
         public String ImageLink { get; set; }
         
-        [Required]
+        [Required]        
         [Display(Name = "Participating ?")]
         public Boolean Status { get; set; }
         
