@@ -1,11 +1,11 @@
 ﻿@model Nullable<System.DateTime>
 @if (Model.HasValue)
 {
-    @Html.TextBox("", String.Format("{0:yyyy-MM-dd HH:mm}", Model.Value), new { @class = "textbox", @style = "width:400px;" })
+    @Html.TextBox("", String.Format("{0:yyyy-MM-dd HH:mm}", Model.Value), new { @class = "form-control", @style = "width:400px;" })
 }
 else
 {
-    @Html.TextBox("", String.Format("{0:yyyy-MM-dd HH:mm}", DateTime.Now), new { @class = "textbox", @style = "width:400px;" })
+    @Html.TextBox("", String.Format("{0:yyyy-MM-dd HH:mm}", DateTime.Now), new { @class = "form-control", @style = "width:400px;" })
 }
 
 @{
