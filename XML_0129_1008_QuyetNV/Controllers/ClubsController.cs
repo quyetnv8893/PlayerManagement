@@ -29,6 +29,7 @@ namespace PlayerManagement.Controllers
         {
             return View(_repository.GetClubs());
         }
+        
 
         // GET: Clubs/Details/5
         public ActionResult Details(string id)

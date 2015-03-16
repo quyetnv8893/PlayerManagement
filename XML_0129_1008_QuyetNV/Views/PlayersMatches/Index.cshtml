@@ -10,20 +10,22 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NumberOfGoals)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumberOfYellows)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumberOfReds)
-        </th>
-        <th></th>
-    </tr>
-
+<table id ="datajquery" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfGoals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfYellows)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfReds)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
     @foreach (var item in Model) {
         <tr>
             <td>
@@ -40,9 +42,10 @@
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @if (Request.IsAuthenticated) {
                     @Html.ActionLink("Edit ", "Edit", new { /* id=item.PrimaryKey */ })
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })                
-            </td>
-        </tr>
-}
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+    }
+            </tbody>
 
 </table>

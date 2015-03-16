@@ -7,11 +7,21 @@
 
     <title>@ViewBag.Title - Real Madrid</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/main.css")
+    @Styles.Render("~/Content/main.css","~/media/css/jquery.dataTables.css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/media/js/jquery.js", "~/media/js/jquery.dataTables.js")
+    <script type="text/javascript" language="javascript" class="init">
+
+
+        $(document).ready(function () {
+            $('#datajquery').DataTable();
+        });
+
+
+    </script>
 </head>
 <body>
-    <div class="button primary" style="margin-left: 90%%;">
+    <div class="button primary" style="margin-left: 90%;">
         @if (Request.IsAuthenticated)
         {
             <strong>@Html.Encode(User.Identity.Name)</strong>
@@ -41,9 +51,5 @@
             <p>&copy; @DateTime.Now.Year - Real Madrid</p>
         </footer>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

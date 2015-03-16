@@ -10,33 +10,37 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageLink)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
+<table id="datajquery" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageLink)
+                </td>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageLink)
-        </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
 
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Name }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Name })
-        </td>
-    </tr>
-}
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Name }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Name }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Name })
+                </td>
+            </tr>
+        }
+    </tbody>
 
 </table>
