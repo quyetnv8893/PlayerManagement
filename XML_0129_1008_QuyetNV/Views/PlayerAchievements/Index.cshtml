@@ -32,52 +32,49 @@
                 <ul>
                     @foreach (var item in Model)
                     {
-                        <li>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="image" />
-                                    </div>
-                                    <div class="col detail">
-                                        <p>@Html.DisplayFor(modelItem => item.Achievement.Name)</p>
-                                        <p>@Html.DisplayFor(modelItem => item.Number)</p>
-                                    </div>
-                                    <div class="col button text-center">
-                                        @if (Request.IsAuthenticated)
-                                        {
-                                            <div class="button primary">
-                                                @Html.ActionLink("Edit", "Edit", "PlayerAchievements",
+                        if (item.AchievementName != null)
+                        {
+                            <li>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="@Html.DisplayFor(modelItem => item.Achievement.ImageLink)" class="image" />
+                                        </div>
+                                        <div class="col detail">
+                                            <p>@Html.DisplayFor(modelItem => item.Achievement.Name)</p>
+                                            <p>@Html.DisplayFor(modelItem => item.Number)</p>
+                                        </div>
+                                        <div class="col button text-center">
+                                            @if (Request.IsAuthenticated)
+                                            {
+                                                <div class="button primary">
+                                                    @Html.ActionLink("Edit", "Edit", "PlayerAchievements",
                                  new { playerID = item.PlayerID, achievementName = item.AchievementName }, new { @style = "color:white" })
-                                            </div>
+                                                </div>
 
-                                            <div class="button primary">
-                                                @Html.ActionLink("Delete", "Delete", "PlayerAchievements",
+                                                <div class="button primary">
+                                                    @Html.ActionLink("Delete", "Delete", "PlayerAchievements",
                                  new { playerID = item.PlayerID, achievementName = item.AchievementName }, new { @style = "color:white" })
-                                            </div>
-                                        }
+                                                </div>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </li>
+                            </li>
+                        }
                     }
                 </ul>
             </div>
-            @try
-            {
-                if (Request.IsAuthenticated)
-                {
-                    <div class="button text-center">
-                        <div class="button primary">
-                            @Html.ActionLink("Add new Achievement", "Create", "PlayerAchievements",
-                                 new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
-                        </div>
-                    </div>
-                }
-            }
-            catch (NullReferenceException e)
-            {
 
+            @if (Request.IsAuthenticated)
+            {
+                <div class="button text-center">
+                    <div class="button primary">
+                        @Html.ActionLink("Add new Achievement", "Create", "PlayerAchievements",
+                                 new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
+                    </div>
+                </div>
             }
 
         </div>

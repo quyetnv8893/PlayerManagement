@@ -22,8 +22,8 @@ namespace PlayerManagement.Controllers
         {
             _repository = repository;
         }
-        
-     
+
+
         public PlayerAchievementsController()
             : this(new PlayerAchievementRepository())
         {
@@ -33,22 +33,30 @@ namespace PlayerManagement.Controllers
         // View player's career by ID
         public ActionResult Index(String id)
         {
-            IEnumerable<PlayerAchievement> playerAchievements = null;
-            try
+            List<PlayerAchievement> playerAchievements = null;
+            PlayerAchievement playerAchievement;
+            playerAchievements = _repository.GetPlayerAchievementsByPlayerID(id)
+                .Where(achievement => achievement.PlayerID.Equals(id)).ToList();
+
+            if (playerAchievements.Count() == 0)
             {
-                playerAchievements = _repository.GetPlayerAchievementsByPlayerID(id)
-                    .Where(achievement => achievement.PlayerID.Equals(id));
+                playerAchievement = new PlayerAchievement();
+                playerAchievement.PlayerID = id;
+                playerAchievement.Player = _playerRepository.GetPlayerByID(id);
+                playerAchievements.Add(playerAchievement);
+                return View(playerAchievements);
+            }
+            else
+            {
                 foreach (var achievement in playerAchievements)
                 {
                     achievement.Achievement = _achievementRepository.GetAchievementByName(achievement.AchievementName);
                     achievement.Player = _playerRepository.GetPlayerByID(achievement.PlayerID);
                 }
+                return View(playerAchievements);
             }
-            catch (NullReferenceException e)
-            {
-                RedirectToAction("Index", "Players");
-            }
-            return View(playerAchievements.ToList());
+
+            
         }
 
         // GET: PlayerAchievements/Create
@@ -58,7 +66,7 @@ namespace PlayerManagement.Controllers
             PlayerAchievement playerArchivement = new PlayerAchievement();
             playerArchivement.PlayerID = id;
             ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "Name");
-          
+
             return View(playerArchivement);
         }
 
@@ -115,7 +123,7 @@ namespace PlayerManagement.Controllers
                 _repository.EditPlayerAchievement(playerAchievement);
                 return RedirectToAction("Index", "PlayerAchievements", new { id = playerAchievement.PlayerID });
             }
-            ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "ImageLink", playerAchievement.AchievementName);       
+            ViewBag.AchievementName = new SelectList(_achievementRepository.GetAchievements(), "Name", "ImageLink", playerAchievement.AchievementName);
             return View(playerAchievement);
         }
 
