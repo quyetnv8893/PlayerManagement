@@ -31,9 +31,20 @@ namespace PlayerManagement.Controllers
         public ActionResult Index(String id)
         {
             var careers = _repository.GetCareersByPlayerID(id);
-            foreach (var career in careers)
+            Career career;
+            if (careers.Count() == 0)
             {
-                career.Player = _playerRepository.GetPlayerByID(career.PlayerID);
+                career = new Career();
+                career.PlayerID = id;
+                List<Career> tmpCareers = careers.ToList();
+                tmpCareers.Add(career);
+                return View(tmpCareers);
+                
+            }
+            foreach (var c in careers)
+            {                
+                c.Player = _playerRepository.GetPlayerByID(c.PlayerID);
+                
             }
             return View(careers.ToList());
         }

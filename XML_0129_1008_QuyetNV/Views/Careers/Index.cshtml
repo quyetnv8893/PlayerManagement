@@ -74,20 +74,15 @@
             </div>
             @if (Request.IsAuthenticated)
             {
-                try
-                {
-                    <div class="button text-center">
-                        <div class="button primary">
-                            @Html.ActionLink("Add new Career", "Create", "Careers",
+
+                <div class="button text-center">
+                    <div class="button primary">
+                        @Html.ActionLink("Add new Career", "Create", "Careers",
                                  new { id = Model.ToList().FirstOrDefault().PlayerID }, new { @style = "color:white" })
-                        </div>
                     </div>
-                }
-                catch (NullReferenceException e)
-                {
-                    
-                }
+                </div>
             }
+            
         </div>
     </div>
 </div>

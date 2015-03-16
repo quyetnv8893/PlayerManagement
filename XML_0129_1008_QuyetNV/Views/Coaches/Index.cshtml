@@ -40,12 +40,13 @@
                     }
                 </ul>
             </div>
-            @if (Request.IsAuthenticated) { 
-            <div class="button text-center">
-                <div class="button primary">
-                    @Html.ActionLink("Add new Coach", "Create", "Coaches", null, new { @style = "color:white" })
+            @if (Request.IsAuthenticated)
+            {
+                <div class="button text-center">
+                    <div class="button primary">
+                        @Html.ActionLink("Add new Coach", "Create", "Coaches", null, new { @style = "color:white" })
+                    </div>
                 </div>
-            </div>
             }
         </div>
     </div>
