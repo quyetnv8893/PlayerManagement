@@ -15,7 +15,9 @@ namespace PlayerManagement.Models
         [Display(Name = "Club")]
         public String ClubName { get; set; }        
         
-        [Required]        
+        [Required]
+        [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
+        [StringLength(2, ErrorMessage = "Max 2 digits")]
         public int Number { get; set; }
 
         [Required]
@@ -33,11 +35,15 @@ namespace PlayerManagement.Models
         [Required]
         [Display(Name = "Place of Birth")]
         public string PlaceOfBirth { get; set; }
-
+       
         [Required]
+        [Range(0.01, 100.00,
+            ErrorMessage = "Weight must be between 0.01 and 100.00")]
         public double Weight { get; set; }
         
         [Required]
+        [Range(0.01, 100.00,
+            ErrorMessage = "Weight must be between 0.01 and 100.00")]
         public double Height { get; set; }
         
         [Required]
@@ -48,6 +54,7 @@ namespace PlayerManagement.Models
         public String ImageLink { get; set; }
         
         [Required]
+        [Display(Name = "Participating ?")]
         public Boolean Status { get; set; }
         
         public int Age
