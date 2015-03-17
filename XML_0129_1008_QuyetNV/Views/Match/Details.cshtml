@@ -15,6 +15,7 @@
                         {
                             if (item.NumberOfGoals > 0)
                             {
+
                                 <p>@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" })  -  @Html.DisplayFor(modelItem => item.NumberOfGoals)</p>
                             }
                         }
@@ -33,7 +34,15 @@
                 {
                     if (item.NumberOfYellows > 0)
                     {
-                        <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                        if (item.Player != null)
+                        {
+                        <!-- todo fix null reference exception here -->
+                            <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                        }
+                        else
+                        {
+                            <p><label style="margin-left:15px">- @Html.ActionLink(item.PlayerID, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
+                        }
                     }
 
                 }
@@ -43,7 +52,7 @@
                     if (item.NumberOfReds > 0)
                     {
                         <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
-                    }
+                    } 
 
                 }
             </div>

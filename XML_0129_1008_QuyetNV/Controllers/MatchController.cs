@@ -41,11 +41,14 @@ namespace PlayerManagement.Controllers
             Match match = _repository.GetMatchByID(id);
             if (match == null)
                 return RedirectToAction("Index");
+
             IEnumerable<PlayerMatch> temp = _playerMatchRepository.GetPlayerMatchesByMatchId(id);
+
             foreach (var item in temp)
             {
                 item.Player = _playerRepository.GetPlayerByID(item.PlayerID);
             }
+
             if (temp != null && match != null)
             {
                 match.PlayerMatches = temp;
