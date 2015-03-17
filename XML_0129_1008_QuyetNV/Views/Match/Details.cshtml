@@ -38,12 +38,7 @@
                         {
                         <!-- todo fix null reference exception here -->
                             <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
-                        }
-                        else
-                        {
-                            <p><label style="margin-left:15px">- @Html.ActionLink(item.PlayerID, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
-                        }
-                    }
+                        }                        
 
                 }
                 <p><label>Red Card: </label> <span></span></p>
