@@ -38,11 +38,13 @@ namespace PlayerManagement.Controllers
         }
 
         [Authorize]
-        public ActionResult Create()
+        public ActionResult Create(String id)
         {
             ViewBag.MatchID = new SelectList(_matchRepository.GetMatches(), "ID", "Name");
-            ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
-            return View();
+            //ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
+            PlayerMatch playerMatch = new PlayerMatch();
+            playerMatch.PlayerID = id;
+            return View(playerMatch);
         }
 
         [HttpPost]

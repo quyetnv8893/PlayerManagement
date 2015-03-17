@@ -66,7 +66,7 @@
                 </table>
             </div>
             <div class="button text-center">
-                @Html.ActionLink("Add new Player's match", "Create", "PlayersMatches", null, new { @class = "button primary action-link" })
+                @Html.ActionLink("Add new Player's match", "Create", "PlayersMatches", new { id = Model.FirstOrDefault().PlayerID }, new { @class = "button primary action-link" })
             </div>
 
         </div>
