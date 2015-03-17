@@ -15,9 +15,6 @@ namespace PlayerManagement.Models
         [Required]
         [DataType(DataType.ImageUrl)]
         [Display(Name = "Logo")]
-
-        [Required]
-        [DataType(DataType.ImageUrl)]
         public String LogoLink { get; set; }
 
         public League() {
