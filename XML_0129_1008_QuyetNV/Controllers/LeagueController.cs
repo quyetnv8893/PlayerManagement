@@ -1,4 +1,5 @@
 ﻿using PlayerManagement.Models;
+using PlayerManagement.Models.PlayerMatch;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,7 +12,8 @@ namespace PlayerManagement.Controllers
     public class LeagueController : Controller
     {
         private ILeagueRepository _repository;
-
+        private IMatchRepository _matchRepository;
+        private IPlayerMatchRepository _playerMatchRepository; 
         public LeagueController()
             : this(new LeagueRepository())
         {
@@ -54,6 +56,7 @@ namespace PlayerManagement.Controllers
             {
                 try
                 {
+                
                     _repository.InsertLeague(league);
                     return RedirectToAction("Index");
                 }
@@ -83,7 +86,7 @@ namespace PlayerManagement.Controllers
             if (ModelState.IsValid)
             {
                 try
-                {
+                {                                        
                     _repository.EditLeague(league);
                     return RedirectToAction("Index");
                 }
@@ -114,6 +117,22 @@ namespace PlayerManagement.Controllers
             {
                 try
                 {
+                    //todo delete all matches in league and all player matches related to match
+
+                    _matchRepository = new MatchRepository();
+                    List<Match> matches = _matchRepository.GetMatchesByLeagueName(league.Name).ToList();
+                    _playerMatchRepository = new PlayerMatchRepository();
+                    foreach (var match in matches)
+                    {
+                        List<PlayerMatch> playerMatches = _playerMatchRepository.GetPlayerMatchesByMatchId(match.ID).ToList();
+                        foreach (var playerMatch in playerMatches)
+                        {
+                            _playerMatchRepository.DeletePlayerMatch(playerMatch);
+                        }
+                        _matchRepository.DeleteMatch(match.ID);
+                    }
+                    
+
                     _repository.DeleteLeague(league.Name);
                     return RedirectToAction("Index");
                 }
