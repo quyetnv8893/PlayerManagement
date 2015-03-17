@@ -38,8 +38,8 @@
                         {
                         <!-- todo fix null reference exception here -->
                             <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfYellows)</label></p>
-                        }                        
-
+                        }
+                    }
                 }
                 <p><label>Red Card: </label> <span></span></p>
                 @foreach (var item in Model.PlayerMatches)
@@ -47,7 +47,7 @@
                     if (item.NumberOfReds > 0)
                     {
                         <p><label style="margin-left:15px">- @Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" }) : @Html.DisplayFor(modelItem => item.NumberOfReds)</label></p>
-                    } 
+                    }
 
                 }
             </div>
