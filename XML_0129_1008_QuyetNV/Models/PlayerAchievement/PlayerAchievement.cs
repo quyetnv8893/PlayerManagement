@@ -21,7 +21,6 @@ namespace PlayerManagement.Models
 
         [Required]
         [Range(0, 999, ErrorMessage = "Can only be between 0 .. 999")]
-        [StringLength(3, ErrorMessage = "Max 3 digits")]
         public int Number { get; set; }
 
         public virtual Player Player { get; set; }
