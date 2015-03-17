@@ -109,9 +109,9 @@ namespace PlayerManagement.Controllers
             return View(league);
         }
 
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [Authorize]
-        public ActionResult Delete(League league)
+        public ActionResult DeleteConfirmed(String id)
         {
             if (ModelState.IsValid)
             {
@@ -120,7 +120,7 @@ namespace PlayerManagement.Controllers
                     //todo delete all matches in league and all player matches related to match
 
                     _matchRepository = new MatchRepository();
-                    List<Match> matches = _matchRepository.GetMatchesByLeagueName(league.Name).ToList();
+                    List<Match> matches = _matchRepository.GetMatchesByLeagueName(id).ToList();
                     _playerMatchRepository = new PlayerMatchRepository();
                     foreach (var match in matches)
                     {
@@ -133,15 +133,16 @@ namespace PlayerManagement.Controllers
                     }
                     
 
-                    _repository.DeleteLeague(league.Name);
+                    _repository.DeleteLeague(id);
                     return RedirectToAction("Index");
                 }
                 catch (Exception e)
                 {
                     ViewBag.ErrorMsg = "Error deleting record. " + e.Message;
-                    return View(_repository.GetLeagueByName(league.Name));
+                    return View(_repository.GetLeagueByName(id));
                 }
             }
+            League league = _repository.GetLeagueByName(id);
             return View(league);
         }
 

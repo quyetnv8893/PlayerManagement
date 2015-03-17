@@ -331,7 +331,6 @@
     <Content Include="Views\Clubs\Edit.cshtml" />
     <Content Include="Views\Clubs\Index.cshtml" />
     <Content Include="Views\League\Create.cshtml" />
-    <Content Include="Views\League\Delete.cshtml" />
     <Content Include="Views\League\Details.cshtml" />
     <Content Include="Views\League\Edit.cshtml" />
     <Content Include="Views\League\Index.cshtml" />
@@ -349,6 +348,7 @@
     <Content Include="Views\PlayersMatches\Index.cshtml" />
     <Content Include="Views\PlayersMatches\ViewPlayerMatches.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\League\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
