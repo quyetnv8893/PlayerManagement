@@ -50,7 +50,9 @@ namespace PlayerManagement.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            return View();
+            Coach coach = new Coach();
+            coach.ClubName = "Real Madrid";
+            return View(coach);
         }
 
         // POST: Coaches/Create
