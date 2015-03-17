@@ -19,19 +19,16 @@ namespace PlayerManagement.Models.PlayerMatch
 
         [Required]
         [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
-        [StringLength(2, ErrorMessage = "Max 2 digits")]
         [Display(Name = "Number of Goals")]
         public int NumberOfGoals { get; set; }
 
         [Required]
         [Display(Name = "Number of Yellow cards")]
         [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
-        [StringLength(2, ErrorMessage = "Max 2 digits")]
         public int NumberOfYellows { get; set; }
 
         [Required]
         [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
-        [StringLength(2, ErrorMessage = "Max 2 digits")]
         [Display(Name = "Number of Red cards")]
         public int NumberOfReds { get; set; }
 

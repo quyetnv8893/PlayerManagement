@@ -19,7 +19,7 @@ namespace PlayerManagement.Models
         public String Name { get; set; }
         
         [Required]
-        [RegularExpression("^[0-9]+-[0-9]+$", ErrorMessage ="Invalid Score format")]
+        [RegularExpression("^[0-9]+-[0-9]+$", ErrorMessage ="Score format must be 0-0")]
         public String Score { get; set; }
 
         [Required]
