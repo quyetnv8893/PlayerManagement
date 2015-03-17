@@ -25,7 +25,7 @@
                             @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
                         </div>
                     </div>*@
-
+                    @Html.HiddenFor(model => model.ID)
                     @Html.HiddenFor(model => model.ClubName)
                     @*<div class="form-group">
                         @Html.LabelFor(model => model.ClubName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -55,6 +55,7 @@
                         @Html.LabelFor(model => model.Position, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                            @*@Html.DropDownList("Positions", null, htmlAttributes: new { @class = "form-control" })*@
                             @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
                         </div>
                     </div>

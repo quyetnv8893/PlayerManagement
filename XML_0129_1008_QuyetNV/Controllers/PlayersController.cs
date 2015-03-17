@@ -12,6 +12,9 @@ namespace PlayerManagement.Controllers
 {
     public class PlayersController : Controller
     {
+        private static List<String> positions = new List<string>(new String[] {
+            "GK", "SW", "RB", "CB", "LB", "LWB", "DM", "RWB", "CM", "AM", "LW", "RW", "WF", "CF"
+        });
         //private ApplicationDbContext db = new ApplicationDbContext();
         private IPlayerRepository _repository;
 
@@ -51,7 +54,11 @@ namespace PlayerManagement.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            return View();
+            Player player = new Player();
+            player.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
+            player.ClubName = "Real Madrid";            
+
+            return View(player);
         }
 
         // POST: Players/Create
@@ -64,9 +71,6 @@ namespace PlayerManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-
-                player.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
-                player.ClubName = "Real Madrid";
                 _repository.InsertPlayer(player);
                 return RedirectToAction("Index");
             }
@@ -100,7 +104,7 @@ namespace PlayerManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.EditPlayer(player);                
+                _repository.EditPlayer(player);
                 return RedirectToAction("Index");
             }
             return View(player);

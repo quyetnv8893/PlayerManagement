@@ -17,8 +17,7 @@ namespace PlayerManagement.Models
         public String ClubName { get; set; }        
         
         [Required]
-        [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]
-        [StringLength(2, ErrorMessage = "Max 2 digits")]
+        [Range(0, 99, ErrorMessage = "Can only be between 0 .. 99")]        
         public int Number { get; set; }
 
         [Required]
