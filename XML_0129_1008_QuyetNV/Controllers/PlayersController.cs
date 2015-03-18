@@ -118,12 +118,27 @@ namespace PlayerManagement.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Edit([Bind(Include = "id,clubName,number,name,position,dateOfBirth,placeOfBirth,weight,height,description,imageLink,status")] Player player)
+        public ActionResult Edit(String id, String clubName, int number, String name, String position, DateTime dateOfBirth,
+            String placeOfBirth, Double weight, Double height, String description, HttpPostedFileBase file, Boolean status)
         {
+            Player player = null;
             if (ModelState.IsValid)
             {
-                _repository.EditPlayer(player);
-                return RedirectToAction("Index");
+                if (file.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    String path = Path.Combine(Server.MapPath("~/images"), fileName);
+                    file.SaveAs(path);
+
+                    String pathInXML = "/images/" + file.FileName;
+
+                    player = new Player(clubName, id, number, name, position, dateOfBirth, placeOfBirth,
+ weight, height, description, pathInXML, status);
+
+                    _repository.EditPlayer(player);
+                    return RedirectToAction("Index");
+                }
+                
             }
             return View(player);
         }
