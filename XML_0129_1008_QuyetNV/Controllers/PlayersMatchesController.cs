@@ -13,7 +13,8 @@ namespace PlayerManagement.Controllers
         private IPlayerMatchRepository _repository;
         private IMatchRepository _matchRepository = new MatchRepository();
         private IPlayerRepository _playerRepository = new PlayerRepository();
-        public PlayersMatchesController(): this(new PlayerMatchRepository())
+        public PlayersMatchesController()
+            : this(new PlayerMatchRepository())
         {
         }
 
@@ -29,9 +30,9 @@ namespace PlayerManagement.Controllers
         }
 
 
-        public ActionResult Details(String playerID,String matchID)
+        public ActionResult Details(String playerID, String matchID)
         {
-            PlayerMatch playermatch = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID,matchID);
+            PlayerMatch playermatch = _repository.GetPlayerMatchByPlayerIdAndMatchId(playerID, matchID);
             if (playermatch == null)
                 return RedirectToAction("Index");
             return View(playermatch);
@@ -39,8 +40,18 @@ namespace PlayerManagement.Controllers
 
         [Authorize]
         public ActionResult Create(String id)
-        {
-            ViewBag.MatchID = new SelectList(_matchRepository.GetMatches(), "ID", "Name");
+        {           
+            ViewData["MatchID"] =
+                new SelectList((from l in _matchRepository.GetMatches().ToList()
+                                select new
+                                {
+                                    ID = l.ID,
+                                    DisplayName = l.Name + " ( " + l.Time + " ) "
+                                }),
+                    "ID",
+                    "DisplayName",
+                    null);
+
             //ViewBag.PlayerID = new SelectList(_playerRepository.GetPlayers(), "ID", "Name");
             PlayerMatch playerMatch = new PlayerMatch();
             playerMatch.PlayerID = id;
@@ -56,9 +67,9 @@ namespace PlayerManagement.Controllers
                 try
                 {
                     _repository.InsertPlayerMatch(playermatch);
-                    return RedirectToAction("ViewPlayerMatches", new { id = playermatch.PlayerID});
+                    return RedirectToAction("ViewPlayerMatches", new { id = playermatch.PlayerID });
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     //error msg for failed insert in XML file
                     ModelState.AddModelError("", "Error creating record. " + ex.Message);
@@ -75,7 +86,7 @@ namespace PlayerManagement.Controllers
                 return RedirectToAction("Index");
             return View(match);
         }
-       
+
         [HttpPost]
         [Authorize]
         public ActionResult Edit(PlayerMatch playermatch)
@@ -95,7 +106,7 @@ namespace PlayerManagement.Controllers
             }
 
             return View(playermatch);
-            }
+        }
         [Authorize]
         public ActionResult Delete(String playerID, String matchID)
         {
@@ -103,7 +114,7 @@ namespace PlayerManagement.Controllers
             if (match == null)
                 return RedirectToAction("Index");
             return View(match);
-        }       
+        }
 
         [HttpPost]
         [Authorize]
@@ -114,7 +125,7 @@ namespace PlayerManagement.Controllers
                 _repository.DeletePlayerMatch(playermatch);
                 return RedirectToAction("Index");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //error msg for failed delete in XML file
                 ViewBag.ErrorMsg = "Error deleting record. " + ex.Message;
