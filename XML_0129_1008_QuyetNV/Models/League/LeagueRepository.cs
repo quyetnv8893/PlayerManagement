@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayerManagement.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,9 +10,7 @@ namespace PlayerManagement.Models
 {
     public class LeagueRepository : ILeagueRepository
     {
-        private List<League> _allLeagues;
-        private XDocument _leagueData;
-        private String _xmlPath = "~/App_Data/player_management.xml";
+        private List<League> _allLeagues;                
         private String _nodeName = "league";
 
         /// <summary>
@@ -19,9 +18,8 @@ namespace PlayerManagement.Models
         /// </summary>
         public LeagueRepository()
         {
-            _allLeagues = new List<League>();
-            _leagueData = XDocument.Load(HttpContext.Current.Server.MapPath(_xmlPath));
-            var leagues = from League in _leagueData.Descendants(_nodeName)
+            _allLeagues = new List<League>();            
+            var leagues = from League in GlobalVaraiables.XmlData.Descendants(_nodeName)
                           select new League(League.Element("name").Value, League.Element("logoLink").Value);
             _allLeagues.AddRange(leagues.ToList<League>());
         }
@@ -50,8 +48,9 @@ namespace PlayerManagement.Models
         /// <param name="league"></param>
         public void InsertLeague(League league)
         {
-            _leagueData.Descendants("leagues").FirstOrDefault().Add(new XElement("league", new XElement("name", league.Name), new XElement("logoLink", league.LogoLink)));
-            _leagueData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
+            GlobalVaraiables.XmlData.Descendants("leagues").FirstOrDefault().Add(new XElement("league", new XElement("name", league.Name), new XElement("logoLink", league.LogoLink)));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
         /// <summary>
         /// Edit a league and save to xml file
@@ -59,10 +58,11 @@ namespace PlayerManagement.Models
         /// <param name="league"></param>
         public void EditLeague(League league)
         {
-            XElement node = _leagueData.Descendants("leagues").Elements(_nodeName).Where(item => item.Element("name").Value.Equals(league.Name)).FirstOrDefault();
+            XElement node = GlobalVaraiables.XmlData.Descendants("leagues").Elements(_nodeName).Where(item => item.Element("name").Value.Equals(league.Name)).FirstOrDefault();
             node.SetElementValue("name", league.Name);
             node.SetElementValue("logoLink", league.LogoLink);
-            _leagueData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         /// <summary>
@@ -71,8 +71,9 @@ namespace PlayerManagement.Models
         /// <param name="name"></param>
         public void DeleteLeague(String name)
         {
-            _leagueData.Descendants("leagues").Elements(_nodeName).Where(item => item.Element("name").Value.Equals(name)).Remove();
-            _leagueData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
+            GlobalVaraiables.XmlData.Descendants("leagues").Elements(_nodeName).Where(item => item.Element("name").Value.Equals(name)).Remove();
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
     }
 }

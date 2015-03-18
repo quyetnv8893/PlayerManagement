@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayerManagement.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,15 +10,12 @@ namespace PlayerManagement.Models
 {
     public class CareerRepository : ICareerRepository
     {
-        private List<Career> _allCareers;
-        private XDocument _careerData;
+        private List<Career> _allCareers;        
         private IPlayerRepository _playerRepository = new PlayerRepository();
         public CareerRepository()
         {
-            _allCareers = new List<Career>();
-
-            _careerData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            IEnumerable<Career> careers = from career in _careerData.Descendants("career")
+            _allCareers = new List<Career>();            
+            IEnumerable<Career> careers = from career in GlobalVaraiables.XmlData.Descendants("career")
                       select new Career(
                           career.Element("id").Value,
                           //XmlConvert.ToDateTime(career.Element("from").Value, XmlDateTimeSerializationMode.Local),
@@ -52,7 +50,7 @@ namespace PlayerManagement.Models
 
         public void InsertCareer(Career career)
         {
-            _careerData.Descendants("careers").FirstOrDefault().Add(new XElement("career",
+            GlobalVaraiables.XmlData.Descendants("careers").FirstOrDefault().Add(new XElement("career",
                 new XElement("id", career.ID),
                 new XElement("from", career.From),
                 new XElement("to", career.To),
@@ -61,21 +59,22 @@ namespace PlayerManagement.Models
                 new XElement("playerId", career.PlayerID)
                 ));
 
-            _careerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         public void DeleteCareer(string id)
         {
-            _careerData.Descendants("careers").Elements("career").Where(i => i.Element("id").Value.Equals(id)).Remove();
-            _careerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-
+            GlobalVaraiables.XmlData.Descendants("careers").Elements("career").Where(i => i.Element("id").Value.Equals(id)).Remove();
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         public void EditCareer(Career career)
         {
-            if (_careerData != null)
+            if (GlobalVaraiables.XmlData != null)
             {
-                XElement node = _careerData.Descendants("careers").Elements("career")
+                XElement node = GlobalVaraiables.XmlData.Descendants("careers").Elements("career")
                 .Where(i => i.Element("id").Value.Equals(career.ID)).FirstOrDefault();
 
                 node.SetElementValue("id", career.ID);
@@ -87,7 +86,8 @@ namespace PlayerManagement.Models
 
             }
             
-            _careerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
     }
 }

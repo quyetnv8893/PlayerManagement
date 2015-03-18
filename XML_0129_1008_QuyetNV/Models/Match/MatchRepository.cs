@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Xml.Linq;
 using PlayerManagement.Models;
+using PlayerManagement.App_Start;
 
 namespace PlayerManagement.Models
 {
@@ -11,9 +12,7 @@ namespace PlayerManagement.Models
     {
         private List<Match> _allMatches;
         //private List<Player> _allPlayers;
-        //private List<PlayerMatch.PlayerMatch> _allPlayerMatches;
-        private XDocument _xmlData;
-        private String _xmlPath = "~/App_Data/player_management.xml";
+        //private List<PlayerMatch.PlayerMatch> _allPlayerMatches;        
 
         /**
          * Contructor to get all matches from xml file and save them to allMatches List
@@ -22,17 +21,16 @@ namespace PlayerManagement.Models
         {
             _allMatches = new List<Match>();
           //  _allPlayers = new List<Player>();
-            //_allPlayerMatches = new List<PlayerMatch.PlayerMatch>();
-            _xmlData = XDocument.Load(HttpContext.Current.Server.MapPath(_xmlPath));
-            var Matches = from Match in _xmlData.Descendants("match")
+            //_allPlayerMatches = new List<PlayerMatch.PlayerMatch>();            
+            var Matches = from Match in GlobalVaraiables.XmlData.Descendants("match")
                           select new Match(Match.Element("id").Value, (DateTime)Match.Element("time"), Match.Element("name").Value,
                               Match.Element("score").Value, Match.Element("leagueName").Value);
             _allMatches.AddRange(Matches.ToList<Match>());
-            /*var PlayerMatches = from PlayerMatch in _xmlData.Descendants("player_match")
+            /*var PlayerMatches = from PlayerMatch in GlobalVaraiables.XmlData.Descendants("player_match")
                                 select new PlayerMatch.PlayerMatch(PlayerMatch.Element("playerId").Value, PlayerMatch.Element("matchId").Value, (int)PlayerMatch.Element("noOfGoals"),
                                     (int)PlayerMatch.Element("noOfYellows"), (int)PlayerMatch.Element("noOfReds"));
             _allPlayerMatches.AddRange(PlayerMatches.ToList<PlayerMatch.PlayerMatch>());
-            var players = from player in _xmlData.Descendants("player")
+            var players = from player in GlobalVaraiables.XmlData.Descendants("player")
                           select new Player(
                               player.Element("clubName").Value,
                               player.Element("id").Value,
@@ -95,10 +93,11 @@ namespace PlayerManagement.Models
             {
                 match.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
             }
-            _xmlData.Descendants("matches").FirstOrDefault().Add(new XElement("match", new XElement("id", match.ID),
+            GlobalVaraiables.XmlData.Descendants("matches").FirstOrDefault().Add(new XElement("match", new XElement("id", match.ID),
                 new XElement("time", match.Time), new XElement("name", match.Name), new XElement("score", match.Score),
                 new XElement("leagueName", match.LeagueName)));
-            _xmlData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         /**
@@ -106,8 +105,9 @@ namespace PlayerManagement.Models
          **/
         public void DeleteMatch(String id)
         {
-            _xmlData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(id)).Remove();
-            _xmlData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
+            GlobalVaraiables.XmlData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(id)).Remove();
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
 
@@ -117,13 +117,14 @@ namespace PlayerManagement.Models
         public void EditMatch(Match Match)
         {
 
-            XElement node = _xmlData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(Match.ID)).FirstOrDefault();
+            XElement node = GlobalVaraiables.XmlData.Descendants("matches").Elements("match").Where(item => item.Element("id").Value.Equals(Match.ID)).FirstOrDefault();
             node.SetElementValue("id", Match.ID);
             node.SetElementValue("time", Match.Time);
             node.SetElementValue("name", Match.Name);
             node.SetElementValue("score", Match.Score);
             node.SetElementValue("leagueName", Match.LeagueName);
-            _xmlData.Save(HttpContext.Current.Server.MapPath(_xmlPath));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
     }

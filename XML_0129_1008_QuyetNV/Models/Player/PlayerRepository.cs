@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayerManagement.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +9,13 @@ namespace PlayerManagement.Models
 {
     public class PlayerRepository :IPlayerRepository
     {
-        private List<Player> _allPlayers;
-        private XDocument _playerData;
+        private List<Player> _allPlayers;        
 
         public PlayerRepository()
         {
             _allPlayers = new List<Player>();
-
-            _playerData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var players = from player in _playerData.Descendants("player")
+            
+            var players = from player in GlobalVaraiables.XmlData.Descendants("player")
                           select new Player(
                               player.Element("clubName").Value, 
                               player.Element("id").Value, 
@@ -63,7 +62,7 @@ namespace PlayerManagement.Models
         public void InsertPlayer(Player player)
         {           
             //Change later
-            _playerData.Descendants("players").FirstOrDefault().Add(new XElement("player", 
+            GlobalVaraiables.XmlData.Descendants("players").FirstOrDefault().Add(new XElement("player", 
                 new XElement("clubName", player.ClubName), 
                 new XElement("id", player.ID),
                 new XElement("number", player.Number), 
@@ -78,23 +77,25 @@ namespace PlayerManagement.Models
                 new XElement("status", player.Status)
                 ));
 
-            _playerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         // Delete Record
         public void DeletePlayer(String id)
         {
-            _playerData.Descendants("players").Elements("player")
+            GlobalVaraiables.XmlData.Descendants("players").Elements("player")
                 .Where(i => i.Element("id").Value.Equals(id)).Remove();
 
-            _playerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         // Edit Record
         public void EditPlayer(Player player)
         {
 
-            XElement node = _playerData.Descendants("players").Elements("player")
+            XElement node = GlobalVaraiables.XmlData.Descendants("players").Elements("player")
                 .Where(i => i.Element("id").Value.Equals(player.ID)).FirstOrDefault();
 
             node.SetElementValue("clubName", player.ClubName);
@@ -110,7 +111,8 @@ namespace PlayerManagement.Models
             node.SetElementValue("imageLink", player.ImageLink);
             node.SetElementValue("status", player.Status);
 
-            _playerData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
     }
 }

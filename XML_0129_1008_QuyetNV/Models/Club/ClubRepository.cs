@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayerManagement.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +9,12 @@ namespace PlayerManagement.Models
 {
     public class ClubRepository : IClubRepository
     {
-        private List<Club> _allClubs;
-        private XDocument _clubData;
+        private List<Club> _allClubs;        
 
         public ClubRepository()
         {
-            _allClubs = new List<Club>();
-
-            _clubData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var clubs = from club in _clubData.Descendants("club")
+            _allClubs = new List<Club>();            
+            var clubs = from club in GlobalVaraiables.XmlData.Descendants("club")
                         select new Club(
                             club.Element("name").Value,
                             club.Element("logoLink").Value,
@@ -42,25 +40,27 @@ namespace PlayerManagement.Models
         public void InsertClub(Club club)
         {
 
-            _clubData.Descendants("playerManagement").FirstOrDefault().Add(new XElement("club",
+            GlobalVaraiables.XmlData.Descendants("playerManagement").FirstOrDefault().Add(new XElement("club",
                 new XElement("name", club.Name),
                 new XElement("logoLink", club.LogoLink),
                 new XElement("foundedDate", club.FoundedDate),
                 new XElement("stadium", club.Stadium)));
 
-            _clubData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         public void DeleteClub(string id)
         {
-            _clubData.Elements("club").Where(i => i.Element("name").Value.Equals(id)).Remove();
+            GlobalVaraiables.XmlData.Elements("club").Where(i => i.Element("name").Value.Equals(id)).Remove();
 
-            _clubData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         public void EditClub(Club club)
         {
-            XElement node = _clubData.Elements("club").
+            XElement node = GlobalVaraiables.XmlData.Elements("club").
                 Where(i => i.Element("name").Value.Equals(club.Name)).FirstOrDefault();
 
             node.SetElementValue("name", club.Name);
@@ -68,7 +68,8 @@ namespace PlayerManagement.Models
             node.SetElementValue("foundedDate", club.FoundedDate);
             node.SetElementValue("stadium", club.Stadium);
 
-            _clubData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
     }
 }

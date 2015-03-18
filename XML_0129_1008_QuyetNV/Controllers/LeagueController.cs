@@ -22,6 +22,8 @@ namespace PlayerManagement.Controllers
         public LeagueController(ILeagueRepository _repository)
         {
             this._repository = _repository;
+            this._matchRepository = new MatchRepository();
+            this._playerMatchRepository = new PlayerMatchRepository();
         }
 
 
@@ -117,11 +119,8 @@ namespace PlayerManagement.Controllers
             {
                 try
                 {
-                    //todo delete all matches in league and all player matches related to match
-
-                    _matchRepository = new MatchRepository();
+                    //todo delete all matches in league and all player matches related to match                    
                     List<Match> matches = _matchRepository.GetMatchesByLeagueName(id).ToList();
-                    _playerMatchRepository = new PlayerMatchRepository();
                     foreach (var match in matches)
                     {
                         List<PlayerMatch> playerMatches = _playerMatchRepository.GetPlayerMatchesByMatchId(match.ID).ToList();
@@ -130,9 +129,7 @@ namespace PlayerManagement.Controllers
                             _playerMatchRepository.DeletePlayerMatch(playerMatch);
                         }
                         _matchRepository.DeleteMatch(match.ID);
-                    }
-                    
-
+                    }                    
                     _repository.DeleteLeague(id);
                     return RedirectToAction("Index");
                 }
@@ -142,8 +139,7 @@ namespace PlayerManagement.Controllers
                     return View(_repository.GetLeagueByName(id));
                 }
             }
-            League league = _repository.GetLeagueByName(id);
-            return View(league);
+            return View(_repository.GetLeagues());
         }
 
         public ActionResult GoToMatches(String id)

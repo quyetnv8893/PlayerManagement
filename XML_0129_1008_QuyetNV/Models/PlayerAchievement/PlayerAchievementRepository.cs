@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayerManagement.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,17 +9,13 @@ namespace PlayerManagement.Models
 {
     public class PlayerAchievementRepository : IPlayerAchievementRepository
     {
-        public List<PlayerAchievement> _allPlayerAchievements;
-        private XDocument _playerAchievementData;
+        public List<PlayerAchievement> _allPlayerAchievements;        
         private IAchievementRepository _achievementRepository;
         private IPlayerRepository _playerRepository;
-
         public PlayerAchievementRepository()
         {
-            _allPlayerAchievements = new List<PlayerAchievement>();
-
-            _playerAchievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var playerAchievements = from playerAchievement in _playerAchievementData.Descendants("player_achievement")
+            _allPlayerAchievements = new List<PlayerAchievement>();            
+            var playerAchievements = from playerAchievement in GlobalVaraiables.XmlData.Descendants("player_achievement")
                                      select new PlayerAchievement(
                                          (int)playerAchievement.Element("number"),
                                          playerAchievement.Element("playerId").Value,
@@ -62,29 +59,29 @@ namespace PlayerManagement.Models
         public void InsertPlayerAchievement(PlayerAchievement playerAchievement)
         {
 
-            _playerAchievementData.Descendants("players_achievements").FirstOrDefault().Add(new XElement("player_achievement",
+            GlobalVaraiables.XmlData.Descendants("players_achievements").FirstOrDefault().Add(new XElement("player_achievement",
                 new XElement("number", playerAchievement.Number),
                 new XElement("playerId", playerAchievement.PlayerID),
                 new XElement("achievementName", playerAchievement.AchievementName)));
 
-            _playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
 
         public void DeletePlayerAchievement(String playerID, String achievementName)
         {
-            _playerAchievementData.Descendants("players_achievements").Elements("player_achievement").
+            GlobalVaraiables.XmlData.Descendants("players_achievements").Elements("player_achievement").
                 Where(i => i.Element("playerId").Value.Equals(playerID)).
                 Where(i => i.Element("achievementName").Value.Equals(achievementName)).
                 Remove();
-
-            _playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
 
         public void EditPlayerAchievement(PlayerAchievement playerAchievement)
         {
-            XElement node = _playerAchievementData.Descendants("players_achievements").Elements("player_achievement")
+            XElement node = GlobalVaraiables.XmlData.Descendants("players_achievements").Elements("player_achievement")
                 .Where(i => i.Element("playerId").Value.Equals(playerAchievement.PlayerID))
                 .Where(i => i.Element("achievementName").Value.Equals(playerAchievement.AchievementName))
                 .FirstOrDefault();
@@ -92,8 +89,8 @@ namespace PlayerManagement.Models
             node.SetElementValue("number", playerAchievement.Number);
             node.SetElementValue("playerId", playerAchievement.PlayerID);
             node.SetElementValue("achievementName", playerAchievement.AchievementName);
-
-            _playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
+            GlobalVaraiables.Update();
         }
     }
 }
