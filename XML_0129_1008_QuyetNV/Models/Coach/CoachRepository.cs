@@ -37,18 +37,14 @@ namespace PlayerManagement.Models
         }
 
         public void InsertCoach(Coach coach)
-        {
-            coach.Name = (from a in GlobalVariables.XmlData.Descendants("coach")
-                          orderby a.Element("name").Value
-                              descending
-                          select a.Element("name").Value).FirstOrDefault();
-
+       {
             GlobalVariables.XmlData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
                 new XElement("name", coach.Name), 
-                new XElement("imageLink"), coach.ImageLink),
+                new XElement("imageLink", coach.ImageLink),
                 new XElement("position", coach.Position),
                 new XElement("dateOfBirth", coach.DateOfBirth.ToString("yyyy-MM-dd")),
-                new XElement("clubName", coach.ClubName));
+                new XElement("clubName", coach.ClubName)
+            ));
 
             GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
             GlobalVariables.Update();

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PlayerManagement.Models;
+using System.IO;
 
 namespace PlayerManagement.Controllers
 {
@@ -61,12 +62,26 @@ namespace PlayerManagement.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create([Bind(Include = "name, imageLink, position, dateOfBirth, clubName")] Coach coach)
+        //public ActionResult Create([Bind(Include = "name, imageLink, position, dateOfBirth, clubName")] Coach coach)
+        public ActionResult Create(String name, HttpPostedFileBase file, String position, DateTime dateOfBirth, String clubName)
         {
+            Coach coach = null;
             if (ModelState.IsValid)
             {
-                _repository.InsertCoach(coach);
-                return RedirectToAction("Index");
+                if (file.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    String path = Path.Combine(Server.MapPath("~/images"), fileName);
+                    file.SaveAs(path);
+
+                    String pathInXML = "/images/" + file.FileName;
+
+                    coach = new Coach(name, pathInXML, position, dateOfBirth, clubName);
+
+                    _repository.InsertCoach(coach);
+                    return RedirectToAction("Index");
+                }
+                
             }
 
             return View(coach);
