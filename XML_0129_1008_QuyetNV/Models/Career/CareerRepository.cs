@@ -52,7 +52,7 @@ namespace PlayerManagement.Models
         {
             GlobalVariables.XmlData.Descendants("careers").FirstOrDefault().Add(new XElement("career",
                 new XElement("id", career.ID),
-                new XElement("from", career.From),
+                new XElement("from", career.From.ToString("yyyy-MM-dd")),
                 new XElement("to", career.To),
                 new XElement("clubName", career.ClubName),
                 new XElement("noOfGoals", career.NumberOfGoals),
@@ -73,12 +73,12 @@ namespace PlayerManagement.Models
         public void EditCareer(Career career)
         {
             if (GlobalVariables.XmlData != null)
-            {
+            {                
                 XElement node = GlobalVariables.XmlData.Descendants("careers").Elements("career")
                 .Where(i => i.Element("id").Value.Equals(career.ID)).FirstOrDefault();
 
                 node.SetElementValue("id", career.ID);
-                node.SetElementValue("from", career.From);
+                node.SetElementValue("from", career.From.ToString("yyyy-MM-dd"));
                 node.SetElementValue("to", career.To);
                 node.SetElementValue("clubName", career.ClubName);
                 node.SetElementValue("noOfGoals", career.NumberOfGoals);

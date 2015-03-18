@@ -1,6 +1,7 @@
 ﻿using PlayerManagement.App_Start;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Xml.Linq;
@@ -62,13 +63,15 @@ namespace PlayerManagement.Models
         public void InsertPlayer(Player player)
         {           
             //Change later
+
+            
             GlobalVariables.XmlData.Descendants("players").FirstOrDefault().Add(new XElement("player", 
                 new XElement("clubName", player.ClubName), 
                 new XElement("id", player.ID),
                 new XElement("number", player.Number), 
                 new XElement("name", player.Name), 
                 new XElement("position", player.Position),
-                new XElement("dateOfBirth", player.DateOfBirth.Date), 
+                new XElement("dateOfBirth", player.DateOfBirth.ToString("yyyy-MM-dd")), 
                 new XElement("placeOfBirth", player.PlaceOfBirth),
                 new XElement("weight", player.Weight), 
                 new XElement("height", player.Height), 
@@ -103,7 +106,7 @@ namespace PlayerManagement.Models
             node.SetElementValue("name", player.Name);
             node.SetElementValue("number", player.Number);
             node.SetElementValue("position", player.Position);
-            node.SetElementValue("dateOfBirth", player.DateOfBirth.Date);
+            node.SetElementValue("dateOfBirth", player.DateOfBirth.Date.ToString("yyyy-MM-dd"));
             node.SetElementValue("placeOfBirth", player.PlaceOfBirth);
             node.SetElementValue("weight", player.Weight);
             node.SetElementValue("height", player.Height);

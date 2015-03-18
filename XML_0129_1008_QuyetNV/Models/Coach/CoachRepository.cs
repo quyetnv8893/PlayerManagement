@@ -46,8 +46,8 @@ namespace PlayerManagement.Models
             GlobalVariables.XmlData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
                 new XElement("name", coach.Name), 
                 new XElement("imageLink"), coach.ImageLink),
-                new XElement("position", coach.Position), 
-                new XElement("dateOfBirth", coach.DateOfBirth),
+                new XElement("position", coach.Position),
+                new XElement("dateOfBirth", coach.DateOfBirth.ToString("yyyy-MM-dd")),
                 new XElement("clubName", coach.ClubName));
 
             GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
@@ -71,7 +71,7 @@ namespace PlayerManagement.Models
             node.SetElementValue("name", coach.Name);
             node.SetElementValue("imageLink", coach.ImageLink);
             node.SetElementValue("position", coach.Position);
-            node.SetElementValue("dateOfBirth", coach.DateOfBirth);
+            node.SetElementValue("dateOfBirth", coach.DateOfBirth.ToString("yyyy-MM-dd"));
             node.SetElementValue("clubName", coach.ClubName);
             GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
             GlobalVariables.Update();
