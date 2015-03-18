@@ -130,6 +130,13 @@ namespace PlayerManagement.Controllers
         {
             try
             {
+                //Delete all related player matches
+                List<PlayerMatch> playerMatches = _playerMatchRepository.GetPlayerMatchesByMatchId(match.ID).ToList();
+                foreach (var playerMatch in playerMatches)
+                {
+                    _playerMatchRepository.DeletePlayerMatch(playerMatch);
+                }                
+
                 _repository.DeleteMatch(match.ID);
                 return RedirectToAction("Index");
             }
