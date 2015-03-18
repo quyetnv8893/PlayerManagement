@@ -40,7 +40,7 @@ namespace PlayerManagement.Controllers
 
         [Authorize]
         public ActionResult Create(String id)
-        {           
+        {
             ViewData["MatchID"] =
                 new SelectList((from l in _matchRepository.GetMatches().ToList()
                                 select new
@@ -66,6 +66,17 @@ namespace PlayerManagement.Controllers
             {
                 try
                 {
+                    //check if that player match already exists
+                    PlayerMatch temp = _repository.GetPlayerMatchByPlayerIdAndMatchId(
+                        playermatch.PlayerID, playermatch.MatchID);
+                    if (temp != null)
+                    {
+                        playermatch.NumberOfYellows += temp.NumberOfGoals;
+                        playermatch.NumberOfReds += temp.NumberOfReds;
+                        playermatch.NumberOfGoals += temp.NumberOfGoals;
+                        Edit(playermatch);
+                        return RedirectToAction("ViewPlayerMatches", new { id = playermatch.PlayerID });
+                    }
                     _repository.InsertPlayerMatch(playermatch);
                     return RedirectToAction("ViewPlayerMatches", new { id = playermatch.PlayerID });
                 }
@@ -78,6 +89,8 @@ namespace PlayerManagement.Controllers
 
             return View(playermatch);
         }
+
+
         [Authorize]
         public ActionResult Edit(String playerID, String matchID)
         {
