@@ -15,7 +15,7 @@ namespace PlayerManagement.Models
         public AchievementRepository()
         {
             _allAchievements = new List<Achievement>();           
-            var Achievements = from achievement in GlobalVaraiables.XmlData.Descendants("achievement")
+            var Achievements = from achievement in GlobalVariables.XmlData.Descendants("achievement")
                                select new Achievement(
                                    achievement.Element("name").Value,
                                    achievement.Element("imageLink").Value);
@@ -48,34 +48,34 @@ namespace PlayerManagement.Models
         public void InsertAchievement(Achievement achievement)
         {
 
-            GlobalVaraiables.XmlData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
+            GlobalVariables.XmlData.Descendants("achievements").FirstOrDefault().Add(new XElement("achievement",
                 new XElement("name", achievement.Name),
                 new XElement("imageLink", achievement.ImageLink)
                 ));
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void DeleteAchievement(string name)
         {
-            GlobalVaraiables.XmlData.Descendants("achievements").Elements("achievement")
+            GlobalVariables.XmlData.Descendants("achievements").Elements("achievement")
                 .Where(i => i.Element("name").Value.Equals(name)).Remove();
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void EditAchievement(Achievement achievement)
         {
-            XElement node = GlobalVaraiables.XmlData.Descendants("achievements").Elements("achievement")
+            XElement node = GlobalVariables.XmlData.Descendants("achievements").Elements("achievement")
                 .Where(i => i.Element("name").Value.Equals(achievement.Name)).FirstOrDefault();
 
             node.SetElementValue("name", achievement.Name);
             node.SetElementValue("imageLink", achievement.ImageLink);
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
     }
 }

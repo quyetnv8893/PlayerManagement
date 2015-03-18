@@ -15,7 +15,7 @@ namespace PlayerManagement.Models
         public PlayerAchievementRepository()
         {
             _allPlayerAchievements = new List<PlayerAchievement>();            
-            var playerAchievements = from playerAchievement in GlobalVaraiables.XmlData.Descendants("player_achievement")
+            var playerAchievements = from playerAchievement in GlobalVariables.XmlData.Descendants("player_achievement")
                                      select new PlayerAchievement(
                                          (int)playerAchievement.Element("number"),
                                          playerAchievement.Element("playerId").Value,
@@ -59,29 +59,29 @@ namespace PlayerManagement.Models
         public void InsertPlayerAchievement(PlayerAchievement playerAchievement)
         {
 
-            GlobalVaraiables.XmlData.Descendants("players_achievements").FirstOrDefault().Add(new XElement("player_achievement",
+            GlobalVariables.XmlData.Descendants("players_achievements").FirstOrDefault().Add(new XElement("player_achievement",
                 new XElement("number", playerAchievement.Number),
                 new XElement("playerId", playerAchievement.PlayerID),
                 new XElement("achievementName", playerAchievement.AchievementName)));
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
 
         public void DeletePlayerAchievement(String playerID, String achievementName)
         {
-            GlobalVaraiables.XmlData.Descendants("players_achievements").Elements("player_achievement").
+            GlobalVariables.XmlData.Descendants("players_achievements").Elements("player_achievement").
                 Where(i => i.Element("playerId").Value.Equals(playerID)).
                 Where(i => i.Element("achievementName").Value.Equals(achievementName)).
                 Remove();
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void EditPlayerAchievement(PlayerAchievement playerAchievement)
         {
-            XElement node = GlobalVaraiables.XmlData.Descendants("players_achievements").Elements("player_achievement")
+            XElement node = GlobalVariables.XmlData.Descendants("players_achievements").Elements("player_achievement")
                 .Where(i => i.Element("playerId").Value.Equals(playerAchievement.PlayerID))
                 .Where(i => i.Element("achievementName").Value.Equals(playerAchievement.AchievementName))
                 .FirstOrDefault();
@@ -89,8 +89,8 @@ namespace PlayerManagement.Models
             node.SetElementValue("number", playerAchievement.Number);
             node.SetElementValue("playerId", playerAchievement.PlayerID);
             node.SetElementValue("achievementName", playerAchievement.AchievementName);
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
     }
 }

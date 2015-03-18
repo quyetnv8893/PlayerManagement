@@ -13,7 +13,7 @@ namespace PlayerManagement.Models
         public CoachRepository()
         {
             _allCoachs = new List<Coach>();            
-            var coaches = from coach in GlobalVaraiables.XmlData.Descendants("coach")
+            var coaches = from coach in GlobalVariables.XmlData.Descendants("coach")
                           select new Coach(
                               coach.Element("name").Value, 
                               coach.Element("imageLink").Value, 
@@ -38,34 +38,34 @@ namespace PlayerManagement.Models
 
         public void InsertCoach(Coach coach)
         {
-            coach.Name = (from a in GlobalVaraiables.XmlData.Descendants("coach")
+            coach.Name = (from a in GlobalVariables.XmlData.Descendants("coach")
                           orderby a.Element("name").Value
                               descending
                           select a.Element("name").Value).FirstOrDefault();
 
-            GlobalVaraiables.XmlData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
+            GlobalVariables.XmlData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
                 new XElement("name", coach.Name), 
                 new XElement("imageLink"), coach.ImageLink),
                 new XElement("position", coach.Position), 
                 new XElement("dateOfBirth", coach.DateOfBirth),
                 new XElement("clubName", coach.ClubName));
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void DeleteCoach(string name)
         {
-            GlobalVaraiables.XmlData.Descendants("coaches").Elements("coach")
+            GlobalVariables.XmlData.Descendants("coaches").Elements("coach")
                 .Where(i => i.Element("name").Value.Equals(name)).Remove();
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void EditCoach(Coach coach)
         {
-            XElement node = GlobalVaraiables.XmlData.Descendants("coaches").Elements("coach").
+            XElement node = GlobalVariables.XmlData.Descendants("coaches").Elements("coach").
                 Where(i => i.Element("name").Value.Equals(coach.Name)).FirstOrDefault();
 
             node.SetElementValue("name", coach.Name);
@@ -73,8 +73,8 @@ namespace PlayerManagement.Models
             node.SetElementValue("position", coach.Position);
             node.SetElementValue("dateOfBirth", coach.DateOfBirth);
             node.SetElementValue("clubName", coach.ClubName);
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
     }
 }

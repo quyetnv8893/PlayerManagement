@@ -14,7 +14,7 @@ namespace PlayerManagement.Models
         public ClubRepository()
         {
             _allClubs = new List<Club>();            
-            var clubs = from club in GlobalVaraiables.XmlData.Descendants("club")
+            var clubs = from club in GlobalVariables.XmlData.Descendants("club")
                         select new Club(
                             club.Element("name").Value,
                             club.Element("logoLink").Value,
@@ -40,27 +40,27 @@ namespace PlayerManagement.Models
         public void InsertClub(Club club)
         {
 
-            GlobalVaraiables.XmlData.Descendants("playerManagement").FirstOrDefault().Add(new XElement("club",
+            GlobalVariables.XmlData.Descendants("playerManagement").FirstOrDefault().Add(new XElement("club",
                 new XElement("name", club.Name),
                 new XElement("logoLink", club.LogoLink),
                 new XElement("foundedDate", club.FoundedDate),
                 new XElement("stadium", club.Stadium)));
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void DeleteClub(string id)
         {
-            GlobalVaraiables.XmlData.Elements("club").Where(i => i.Element("name").Value.Equals(id)).Remove();
+            GlobalVariables.XmlData.Elements("club").Where(i => i.Element("name").Value.Equals(id)).Remove();
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void EditClub(Club club)
         {
-            XElement node = GlobalVaraiables.XmlData.Elements("club").
+            XElement node = GlobalVariables.XmlData.Elements("club").
                 Where(i => i.Element("name").Value.Equals(club.Name)).FirstOrDefault();
 
             node.SetElementValue("name", club.Name);
@@ -68,8 +68,8 @@ namespace PlayerManagement.Models
             node.SetElementValue("foundedDate", club.FoundedDate);
             node.SetElementValue("stadium", club.Stadium);
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
     }
 }

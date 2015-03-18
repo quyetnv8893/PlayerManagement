@@ -15,7 +15,7 @@ namespace PlayerManagement.Models
         public CareerRepository()
         {
             _allCareers = new List<Career>();            
-            IEnumerable<Career> careers = from career in GlobalVaraiables.XmlData.Descendants("career")
+            IEnumerable<Career> careers = from career in GlobalVariables.XmlData.Descendants("career")
                       select new Career(
                           career.Element("id").Value,
                           //XmlConvert.ToDateTime(career.Element("from").Value, XmlDateTimeSerializationMode.Local),
@@ -50,7 +50,7 @@ namespace PlayerManagement.Models
 
         public void InsertCareer(Career career)
         {
-            GlobalVaraiables.XmlData.Descendants("careers").FirstOrDefault().Add(new XElement("career",
+            GlobalVariables.XmlData.Descendants("careers").FirstOrDefault().Add(new XElement("career",
                 new XElement("id", career.ID),
                 new XElement("from", career.From),
                 new XElement("to", career.To),
@@ -59,22 +59,22 @@ namespace PlayerManagement.Models
                 new XElement("playerId", career.PlayerID)
                 ));
 
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void DeleteCareer(string id)
         {
-            GlobalVaraiables.XmlData.Descendants("careers").Elements("career").Where(i => i.Element("id").Value.Equals(id)).Remove();
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Descendants("careers").Elements("career").Where(i => i.Element("id").Value.Equals(id)).Remove();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
 
         public void EditCareer(Career career)
         {
-            if (GlobalVaraiables.XmlData != null)
+            if (GlobalVariables.XmlData != null)
             {
-                XElement node = GlobalVaraiables.XmlData.Descendants("careers").Elements("career")
+                XElement node = GlobalVariables.XmlData.Descendants("careers").Elements("career")
                 .Where(i => i.Element("id").Value.Equals(career.ID)).FirstOrDefault();
 
                 node.SetElementValue("id", career.ID);
@@ -86,8 +86,8 @@ namespace PlayerManagement.Models
 
             }
             
-            GlobalVaraiables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVaraiables.XmlPath));
-            GlobalVaraiables.Update();
+            GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
+            GlobalVariables.Update();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace PlayerManagement.App_Start
 {
-    public class GlobalVaraiables
+    public class GlobalVariables
     {
         public static XDocument XmlData;
         public static  String XmlPath = "~/App_Data/player_management.xml";
