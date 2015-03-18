@@ -7297,7 +7297,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="658c6a30-7ce1-48a1-9fe7-d81a95c37f83" name="Logout" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="658c6a30-7ce1-48a1-9fe7-d81a95c37f83" name="c" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
               <reference Id="52de4e92-58dc-412f-9975-3610f8cd703b" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Controllers Type%3DAccountsController Member%3DLogout" tag="ViewCode">
                 <elementDefinition Id="76869fcc-85a0-4f55-a20b-a0ec95e48ddb" />
@@ -7347,16 +7347,6 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <elementDefinition Id="87a8c6d9-ddb8-4271-b47a-0e9d98742394" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="a39832c3-7f43-480c-8a53-0bd4b0a4a1de" direction="Return">
-                  <elementDefinition Id="8da81f2c-6a78-40aa-8653-cca1dd811dda" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="813560f6-94d3-4636-96e7-64aa7f2731fd" LastKnownName="ActionResult" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
           </operation>
           <operation Id="3d4a0c9d-f5c5-47f3-acec-e1b06c33b556" name="isValid" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>

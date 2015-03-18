@@ -326,7 +326,7 @@
           </operation>
           <operation
             Id="87a8c6d9-ddb8-4271-b47a-0e9d98742394"
-            name="Logout"
+            name="c"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -388,20 +388,6 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8da81f2c-6a78-40aa-8653-cca1dd811dda"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="e24d362f-f226-497e-9ff5-a4bf12f3dd56"
-                      LastKnownName="ActionResult"
-                      LastKnownLocation="Package13_1722.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
           </operation>
           <operation
             Id="95628dda-9b72-4cac-98a6-b4c7ca8da89f"
