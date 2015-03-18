@@ -1,0 +1,2553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9529f1e5-b75a-43f5-97a0-419d46bc0858"
+  name="PlayerMatch"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a562f1a8-0a56-4af7-b6fc-fbc8c853892e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlayerManagement.Models.PlayerMatch"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+        name="PlayerMatch"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b7e59e5d-9f3e-479c-b99c-0bae0ba980bf"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e8969acb-e86a-4fe1-b440-827cf0253a4d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="490fdafc-5549-4f69-aa50-df1804b1abe5">
+                <propertyInstance
+                  Id="73ec27bb-0343-4170-9da4-abb14b1b3fa2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5e95daf8-4825-4e4a-a2ef-013fc64f7781">
+                <propertyInstance
+                  Id="def06102-daff-412f-8184-8c511eebcd11"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6d084522-6571-47a4-ad4d-ccd6ef1e7c53">
+                <propertyInstance
+                  Id="ae11de77-9edf-486f-9fa5-05bf0d2fe544"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9134428c-7670-4a49-a790-78dcac4ce2d0">
+                <propertyInstance
+                  Id="8ae7ad7f-35ea-427c-816d-96d3de258514"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5cfa7603-8994-4710-b274-3a270c19a430">
+                <propertyInstance
+                  Id="b5dca57b-5b2a-4404-a00d-111d9ee01a45"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="2174b2f7-a6c5-4ab8-b69e-4cac15214c54"
+            isDerived="false"
+            sourceEndRoleName="PlayerMatch"
+            targetEndRoleName="Player"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bf14600b-744d-4ea3-8828-0a3193d0a47e"
+              LastKnownName="Player"
+              LastKnownLocation="Package1_1722.uml" />
+            <description>Property Player references type Player.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9413450-ee3a-428d-84ae-80532b178a3d"
+                  name="PlayerMatch"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3d9d6833-cad2-4019-90b5-d0c77537da4a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b8b7d8ac-a13d-4982-bb17-7217e479f8ca"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bda8aa3d-8691-475c-ae13-631e8c4164bf"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="23613aa8-977c-4e47-b1f5-a2f2717d371d"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="597eda48-355f-4b13-a517-de4f329ccee9"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c314f4d0-8af5-467d-b8d4-20e60f150af9"
+            isDerived="false"
+            sourceEndRoleName="PlayerMatch"
+            targetEndRoleName="Match"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bd10f5ca-b545-4151-be7d-e9226c8b7045"
+              LastKnownName="Match"
+              LastKnownLocation="Package1_1722.uml" />
+            <description>Property Match references type Match.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2cf2f93f-064e-4d3e-afac-1dd4e0361b9c"
+                  name="PlayerMatch"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ef3aa919-14f3-4ac0-9a07-16664a3f6450"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cb33c4d1-b641-4bcb-b0d9-320239d48d8f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bce8ddf2-9988-41f0-b61b-5660e9ba58ee"
+                  name="Match"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d68504ed-e23f-462a-93fa-bbd09599cd05"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7667c7de-80e1-4c82-ae88-70794beabd1c"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9b042a20-9732-425a-bc32-a0350b376b26"
+            name="PlayerID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="99a9a0f7-037c-45d4-a4d3-797dd06eac8e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DPlayerID"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0a938648-5fa0-41f3-957f-5f38f846f7ff"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c79b013-0cf3-46db-beb1-bf995e572def">
+                    <propertyInstance
+                      Id="d0176218-77cd-4c31-9c2b-9bbfa797911f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6af4c032-0150-44be-8f2e-2651c868523e">
+                    <propertyInstance
+                      Id="59cf40c2-ae42-4a83-8403-380e1342545c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb4945d7-6d34-4d96-abc4-53074881c548">
+                    <propertyInstance
+                      Id="accfeae5-1bf6-4902-8315-2d746bc2aab9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c32ba6c0-e10b-48ff-8cf6-033655777524">
+                    <propertyInstance
+                      Id="787dcb47-99b9-4bf1-a784-04489592fb40"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3e969c4-f961-4bfb-891c-e674afa49723">
+                    <propertyInstance
+                      Id="95c0b1b4-c13b-478e-9421-535b84f38b2f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd25e55f-1b74-49f2-a657-f63752181362">
+                    <propertyInstance
+                      Id="7884937a-0f23-4ee6-9ae7-e9a7a459833c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="341d836b-3de1-4f7b-9801-9ae08574dd18">
+                    <propertyInstance
+                      Id="c49d388d-cc5c-415f-a225-7757ea2a04bd"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="PlayerManagementModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0872396f-fa37-4571-b839-73b201caba6e"
+            name="MatchID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e37243fd-c160-4750-b7d4-424484444355"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DMatchID"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f3592825-40a5-48f7-82b9-6d14b15186ea"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cbca922-91f8-40de-8f99-6a5a59d8b7b9">
+                    <propertyInstance
+                      Id="3c8d0ffd-fefd-4b9f-8358-676c074c0cd7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="815006f9-0c54-4353-82be-47bd5baf041a">
+                    <propertyInstance
+                      Id="2f74dde9-a5ce-45f8-8cae-5097fdc6148e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a8ba55c-5fb9-4d1a-8081-c1cf76de777b">
+                    <propertyInstance
+                      Id="a9b0b3ce-5e0f-4b1f-895c-2eaf035f60db"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39f7c385-da96-4282-af8b-2c70517ef678">
+                    <propertyInstance
+                      Id="24bfdf52-3dc1-4f9e-b44b-7cbf220af32f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e56f8c4-3e76-45bf-ad66-f0badbaeed62">
+                    <propertyInstance
+                      Id="eca56fa6-4a5a-4ab9-9e11-8a3524bb6818"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c0b536f-4957-4524-91f6-c084987b593a">
+                    <propertyInstance
+                      Id="9b898e83-dd27-4a41-b47f-d90dc61053cd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="960b6878-4056-4433-b31f-f9b6167bb493">
+                    <propertyInstance
+                      Id="2268da0b-62ec-4714-ad94-1f622cab215b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="PlayerManagementModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4e7f65a6-a7a2-4e9b-a3f8-8b17fd6fd39b"
+            name="NumberOfGoals"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5944d620-e6ed-4497-8240-f78666a04120"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DNumberOfGoals"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4017fa9-0766-4feb-a4d5-038734f7418e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5829ef2-27b0-4375-9218-d265046f4a48">
+                    <propertyInstance
+                      Id="7714160f-4445-4e8e-b8e1-2b12796ecb81"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22f253f3-d92e-4b88-a36d-d519b52cae56">
+                    <propertyInstance
+                      Id="c209492b-f262-4be6-918c-637269d2b05e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e047e87-f4ed-4d22-a88d-8600ad70e2a5">
+                    <propertyInstance
+                      Id="5d08847d-2e8e-4f9d-ba8f-d65d9d848136"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7781c94-65a2-4ae2-821b-203c626dbc03">
+                    <propertyInstance
+                      Id="54087f80-1e19-4ae2-a04b-381c66cb100a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36a95c56-ec4e-4dbf-8a80-8ddd64012818">
+                    <propertyInstance
+                      Id="6a25b567-6fb7-4fb0-af87-a63d5d66c6a8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc83a6e6-6d44-4df2-b89a-68cb33609de3">
+                    <propertyInstance
+                      Id="a49ffe95-bb4e-4da3-9067-44fa33675542"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0f8271c-e69b-4909-9aee-018c8f84b086">
+                    <propertyInstance
+                      Id="5f6c6cc3-9c29-4487-a592-c0e4db3a55bc"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="PlayerManagementModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="96994f9c-82bd-4d72-8987-a6dc22667c27"
+            name="NumberOfYellows"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0ba89eb7-f6da-48a1-bbec-5f2151a8019b"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DNumberOfYellows"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fe7cd489-48c4-4c7d-84fd-b18237f96d02"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8da1b11-d904-47c4-bca3-6ebe2600cfca">
+                    <propertyInstance
+                      Id="2bbf8260-4e2a-41f8-9646-32272b31b6f7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5bb0445-cdf1-4cc4-ac9b-b2c961d9115a">
+                    <propertyInstance
+                      Id="a27d3c9e-54ab-4636-8819-8fe87e19b183"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="637438b2-bad3-4b1b-9d32-e68515bc6996">
+                    <propertyInstance
+                      Id="7220a74f-3553-480c-99c4-da719efa690f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd2a1b16-bcbd-465d-98d8-497daca9a8e9">
+                    <propertyInstance
+                      Id="1e6affa5-96ea-4bd6-ae09-4a6f6447ac61"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6659143-85fb-4c5d-8d54-d31e0bd6f593">
+                    <propertyInstance
+                      Id="66bf9e74-eebd-475a-9cc3-ed8d1f221c45"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6628c6a5-c497-4739-a156-d004c1a7f8b7">
+                    <propertyInstance
+                      Id="71a1b177-e3f9-4069-abf3-6d06d8171f8f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e0df0d1-9690-4f13-abea-4f31180bbe57">
+                    <propertyInstance
+                      Id="c9bfb41d-dc51-40db-9987-965bcdafbb31"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="PlayerManagementModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d7bed9b4-a19d-4e05-8768-76ebfaf41b3a"
+            name="NumberOfReds"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="74e051f5-2f4b-467f-9a31-3240328bce34"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DNumberOfReds"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="01b6ac25-0e16-4ab9-aa95-626150366f5b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b387b1a-cb42-4575-a014-e0a3aeeae1d8">
+                    <propertyInstance
+                      Id="818a01d8-2763-4090-986d-12c136d70f57"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="702c41f5-b79e-4667-b8db-6fba86bbabc0">
+                    <propertyInstance
+                      Id="6bc2c3ce-c72d-44cd-a35d-154583131436"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2924ca4-d9d5-47fb-a484-db8079df4732">
+                    <propertyInstance
+                      Id="236dbc7d-c6ce-4206-9322-cda4b77c66e3"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef9a0fbb-ca89-4413-89f5-fd7784a37481">
+                    <propertyInstance
+                      Id="30abf9e3-1b3a-4faa-a42f-36a32e7cd0ee"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="461d3693-5126-409b-b2a9-6be15930a729">
+                    <propertyInstance
+                      Id="98935e98-42e9-4e64-81ad-b34a528fde32"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="754c1e26-4898-4a3d-92b2-ea849f6db716">
+                    <propertyInstance
+                      Id="08c08250-c33a-487f-ba00-f1cdbf046e4a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36f8ea29-04e6-46e2-a581-7069aba0d521">
+                    <propertyInstance
+                      Id="d14e174b-1142-4581-b9fe-70317da7ca2d"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="PlayerManagementModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2ec3fa87-2402-4f22-a17e-f465781aa4a6"
+            name="Player"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="345fe881-e83b-471d-95e7-88fdf32bd45d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DPlayer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="005a4709-dec3-4ed1-afd3-2b88cb8a19df"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b30c0dec-afcc-448d-ae00-bc6554766426">
+                    <propertyInstance
+                      Id="8bf4beb2-77cb-4038-94ad-d2cfa74287c0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f91462d2-a8d0-468e-b7a1-b4c4259653fb">
+                    <propertyInstance
+                      Id="11be9793-4f90-4719-aef9-90562bd25c7f"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41890e1d-48a6-4550-bd23-5e4e8a196704">
+                    <propertyInstance
+                      Id="878e5ff5-cf53-421e-9154-94a563905585"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e54ea05-7822-4c0a-a92e-adf6f18f3be1">
+                    <propertyInstance
+                      Id="a91a89e4-a606-4653-9b33-d73c5c26350d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40861158-a108-4a07-9423-62263e478066">
+                    <propertyInstance
+                      Id="3d139f0a-f74a-4307-abdb-30a3bc0f0476"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcd8402e-60ba-4855-83a4-bd6b335dc92d">
+                    <propertyInstance
+                      Id="16b2a8a8-3599-48d4-ac91-acda6fdd4395"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbf54359-a7b0-46c2-8d14-20534b7e3873">
+                    <propertyInstance
+                      Id="206d9f1a-8cb7-424e-8a98-161962094904"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bf14600b-744d-4ea3-8828-0a3193d0a47e"
+                LastKnownName="Player"
+                LastKnownLocation="Package1_1722.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bf880492-27c0-4c82-8e35-a07b8f3dac26"
+            name="Match"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ac25729c-d024-4768-b632-0a0396e07267"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3DMatch"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dc0c7be7-a7dc-4aec-80af-2e48d376ea03"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2edbc79d-460d-4afa-93a7-7d165e3979cc">
+                    <propertyInstance
+                      Id="77ffa397-e938-4881-860c-505001ad243f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37c891b3-a7d3-4e63-a7ee-67a1ef0fcf76">
+                    <propertyInstance
+                      Id="2264a3eb-1f6d-449d-8119-32aff70051fc"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3237e83-1ed8-4728-b739-c624391369ee">
+                    <propertyInstance
+                      Id="41969ebe-51f2-4c67-9a21-b28cba209848"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c223fb1-7588-457d-b5e1-8155f1be3805">
+                    <propertyInstance
+                      Id="e0f3a090-50f3-4a29-873f-788759dac6cf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61ad3f81-c558-45fa-a8a6-7793ac809fa1">
+                    <propertyInstance
+                      Id="f405bc31-c9f1-4e26-a903-1e48327b872c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dafe6a7f-5df6-4182-94a6-cb1aca67bc06">
+                    <propertyInstance
+                      Id="aa65167b-76c1-484d-81de-9ee4b1679ca4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="351196ee-859c-46da-9a3d-ca8eb24f1178">
+                    <propertyInstance
+                      Id="b4a7f238-0b14-48cd-bd55-a40fb37d1881"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bd10f5ca-b545-4151-be7d-e9226c8b7045"
+                LastKnownName="Match"
+                LastKnownLocation="Package1_1722.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="47bafed8-e6eb-45d0-9f18-1cdfa1b5f082"
+            name="PlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6b841675-287f-4be9-960c-a3876f38eb90"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c3b7f9fe-c220-4fa8-99bd-9d5a91c2ed27"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81208d02-866b-4561-975e-51886f85051a">
+                    <propertyInstance
+                      Id="45630f4a-7844-4f8f-be74-42167e6daff3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36fddac5-a2cb-400e-8f94-db6f7879e1b1">
+                    <propertyInstance
+                      Id="cf68d7e4-eb5a-40ba-9e88-d68ea96c5817"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c0effac-76ef-458a-9823-2d590bc16d07">
+                    <propertyInstance
+                      Id="66d8aba3-42b4-4edf-bbd4-6b7848b7dbfe"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6a57dcb-8d88-4a9b-a31a-11bccc26793a">
+                    <propertyInstance
+                      Id="e27abfcc-3291-4a71-a661-1942fefa0ed2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3896c57d-fe3f-4104-9ae1-f9adbd904bd9">
+                    <propertyInstance
+                      Id="871a769e-414b-458e-9caf-a3c277d54eb9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="161fbdb0-d60e-4a4a-8781-6d0ac7a39775">
+                    <propertyInstance
+                      Id="276148a0-7fbe-49ab-bc66-f23382ffb531"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b67c4491-e9f4-4fab-9409-0619b3f362c9"
+                  name="PlayerId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cffc6cb6-a1c7-4df0-9c90-5c27d8614461"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DPlayerId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7518b2b3-aba2-46ce-85fa-91c357b1702a"
+                  name="MatchId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0f82f79e-600f-48f1-af8c-87005a7c38ce"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DMatchId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc49d2a2-2314-4bdc-89cc-67ec565f3f7d"
+                  name="NumberOfGoals"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2deabb65-d636-44c6-8d6c-1df08e74a098"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DNumberOfGoals"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="186e0a73-7cca-4d5a-beea-b9ea45bd1fcb"
+                  name="NumberOfYellows"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1b6e2aa0-c08f-413d-baf4-68496ed04bbc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DNumberOfYellows"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fbe3a601-00cd-4cb0-be08-55e00367de4e"
+                  name="NumberOfReds"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fb240973-eb48-4f51-88b6-4fbd1c1ef3a9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DNumberOfReds"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b9e2e442-c9e9-4667-b026-8d72da349d39"
+            name="PlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ad1744d3-e021-4c0f-ab1e-5b33c3e8d73e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="61708194-9430-47be-8859-35145e7d66f2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90102a2c-bd9c-4417-8adc-9ecd6778646a">
+                    <propertyInstance
+                      Id="9fe1aedb-994f-4a2b-9282-56a890ac9191"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c21b40e-fcb1-4dbb-9609-4a9934dcc5f3">
+                    <propertyInstance
+                      Id="f8bbc65c-1de2-4430-ae19-c810560951bd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e575e954-ae3e-44b3-ae38-390608c5dbcb">
+                    <propertyInstance
+                      Id="786cfa15-702d-4a43-ab39-7678dd71bc6a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3595c2c0-109c-47de-ab5e-de50d542e862">
+                    <propertyInstance
+                      Id="680c8305-d9d2-4e86-8880-b29d35cb6991"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ded556e6-c19a-4193-9610-e322beb1b62d">
+                    <propertyInstance
+                      Id="2c3e3cf0-8693-4cf9-8a01-c3082b060c44"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ca03c95-9a07-40c6-b8c3-51c5f3972ca7">
+                    <propertyInstance
+                      Id="db9e85a0-aaa4-492b-af92-c63679f880e7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="89d4cbe0-6b8c-493f-b16d-adb107780c19"
+        name="IPlayerMatchRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="466c7597-2b1b-4c51-9e03-52e46bf23ab9"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d6b28de1-06fe-4b3e-9736-d1f3e3ee17fc"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="30d2c664-2103-497e-840d-d37155a7de29">
+                <propertyInstance
+                  Id="14d9227b-1295-4f9d-810b-0937a94c532d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d0a3305-44d7-44ae-b42f-0acefc3df970">
+                <propertyInstance
+                  Id="80df0a96-7e2e-488c-bb92-4087320dca2c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c62357c4-a369-4c6a-bf9b-30905c90a318">
+                <propertyInstance
+                  Id="d0ce1225-879c-4668-a9ba-6f4449abf151"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f86dd920-b703-4d4b-b59a-5ef40cce0c6b">
+                <propertyInstance
+                  Id="45f12aee-8e1a-404c-8227-b11aef204a69"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="fe39c4ab-79a4-44c6-a28b-612c52be196c"
+            name="GetPlayerMatches"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1e70b90d-8ee9-4f5a-a74a-b0b360ce0ee9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3DGetPlayerMatches"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0699fec1-a7b7-4882-8e97-6bd453a8ed05"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="260e281d-2d6c-4962-b786-fbd02c434946">
+                    <propertyInstance
+                      Id="c2199f3e-615a-4db3-9994-c27a50f78727"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9592069b-d28f-40aa-ad6f-14b1e640d7a1">
+                    <propertyInstance
+                      Id="fd7148d6-daf9-41d8-9777-faa1737f926c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="394472b5-8954-413e-89df-cc29633b2021">
+                    <propertyInstance
+                      Id="1f1aa5ab-7367-43fe-a990-30f46c68d1dc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d977f132-1be6-41a0-bbd5-46e28a58badd">
+                    <propertyInstance
+                      Id="96e0f100-6e12-4eb8-8022-68ec8961d408"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f027bea-c533-4e3e-a191-86013ac40fcc">
+                    <propertyInstance
+                      Id="31c38edc-bcf8-4ae9-8e40-36f74c6c9003"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be695acd-3e40-4622-8a95-48cfcbaee64b">
+                    <propertyInstance
+                      Id="309ca34b-4bbe-4b4e-b12d-5087c581d578"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5b0112df-2318-4fdb-8fd0-cd76522718a2"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="15dd7853-5fd1-4e92-a3c3-eaca15df2d89"
+                      LastKnownName="IEnumerable&lt;PlayerMatch‎&gt;"
+                      LastKnownLocation="Package4_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8d216012-e447-4d7e-a576-b3f2169a1e6e"
+            name="GetPlayerMatchesByPlayerId"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4ea74dfc-ac1f-4666-ab18-8edb923b6df9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByPlayerId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cacbb7da-a79b-4db3-9e5d-601f73c9278d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b72353c0-75fd-4a35-b4ff-817c7b0c9ee4">
+                    <propertyInstance
+                      Id="9d638d3f-1958-41a0-a09d-61b18a24a10e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1acdab47-fddf-4494-b05f-e0b90273fc85">
+                    <propertyInstance
+                      Id="1c423d5a-1496-4ba5-8f8a-5143ff806865"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efceedfa-8221-47b9-b13a-aa4d0651017b">
+                    <propertyInstance
+                      Id="b264a909-9b67-47bb-ba5f-fe7a06d9c252"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b1b7d84-121b-465e-aa5e-99bcfa8c906b">
+                    <propertyInstance
+                      Id="fa031557-8065-4a61-bfa7-99e26ea1d93d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d20043ec-59d5-4765-b9c8-7b5e84fc95ac">
+                    <propertyInstance
+                      Id="f3fc3bdd-0244-4bd6-ab62-c0b3636335b1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7400163-f800-47b6-8970-d85683a8d109">
+                    <propertyInstance
+                      Id="cdf22482-a30b-4f7a-9a93-1e127cd46ff0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a846161-1f38-4da6-b647-38125bfb3090"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="15dd7853-5fd1-4e92-a3c3-eaca15df2d89"
+                      LastKnownName="IEnumerable&lt;PlayerMatch‎&gt;"
+                      LastKnownLocation="Package4_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0d5c47fa-c094-4493-b143-b2ebfba50b28"
+                  name="playerId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e56aef2e-5177-4f59-b3d2-08ef0e895de8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByPlayerId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DplayerId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="37921eaf-f988-422f-b0a8-debe5029026c"
+            name="GetPlayerMatchesByMatchId"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e02cc34b-d463-402f-8463-6d85513ba0a5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2d461646-b33b-4d66-82cc-26107533c00d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25cc43d8-25fd-469a-a2f6-5c02349bf6d1">
+                    <propertyInstance
+                      Id="42d41c90-cd35-4d0e-9df2-1d9b326636ae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0a15854-f965-48b3-8594-985b9e6c22e8">
+                    <propertyInstance
+                      Id="9b0ae59c-4b3c-4216-b11a-a46d705bce98"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a5b6e32-cd5e-4317-994d-9b34bdf3f7b1">
+                    <propertyInstance
+                      Id="fb48dda0-d83b-43d4-b910-3038f43cd431"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03492977-c6d0-48f5-8139-0220471e32b3">
+                    <propertyInstance
+                      Id="e7ce194e-57b8-40ec-9b95-f0036589100d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64a54ec2-b17b-4c96-849e-0321c988ac90">
+                    <propertyInstance
+                      Id="e160d960-82bc-4df3-994d-8b6dcfee7542"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e850b3ed-81ed-4833-9585-94943065652b">
+                    <propertyInstance
+                      Id="31dd87b2-52b2-49e1-8171-e91d41770ef5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aec3bbf6-37b6-44a0-a305-5ba641ccd9dc"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="15dd7853-5fd1-4e92-a3c3-eaca15df2d89"
+                      LastKnownName="IEnumerable&lt;PlayerMatch‎&gt;"
+                      LastKnownLocation="Package4_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a61f58fc-8c7f-427a-ab0d-d45883ee9632"
+                  name="matchId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="12d05bd5-51a8-4a35-a454-6b6f35143861"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmatchId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1f6a7aa4-796c-42f1-a81d-f4fa556cb20d"
+            name="GetPlayerMatchByPlayerIdAndMatchId"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d475ee3d-4fc1-4178-93c3-bfbae40c70b1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchByPlayerIdAndMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f7cfb469-782b-4dda-862b-f1e8e2cf1f32"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d199ed93-d824-47bc-ba88-fb525d3dd8e2">
+                    <propertyInstance
+                      Id="70cc38fe-15fd-4b9b-b96d-a0057e68c3e4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cadc4ef-62b8-46eb-bdc2-c10afbc1d278">
+                    <propertyInstance
+                      Id="1d30127d-93f4-4e0e-93e2-a71d77e76518"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e22f229c-2644-4021-9699-1dcf5370a5a2">
+                    <propertyInstance
+                      Id="6005b538-841a-4490-9b6b-ad69d8ff630c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f86677a-1b8a-4d24-a015-7c2f8b4586fa">
+                    <propertyInstance
+                      Id="5538c637-7d37-4a0d-9241-88e885be0189"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca4ea26d-d6a7-473a-91dc-4bd096e88f2f">
+                    <propertyInstance
+                      Id="799893e3-e1e5-4550-8a4b-d5e5eba0522c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7612a75-59cb-4210-a402-b345a7db29a7">
+                    <propertyInstance
+                      Id="d8b26127-facd-4a06-a551-e35fc0c00df0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="40d7f87d-9d77-4888-bc4e-b67c2fa30b8c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e2860588-a3c8-4315-bff9-e9e030c87305"
+                  name="playerId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="06032d5b-5c04-407a-8b9c-a7acb494392b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchByPlayerIdAndMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DplayerId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="616da48a-fa93-41ee-a828-2e4e7f1be2fd"
+                  name="matchId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="06d35757-1479-473d-be91-54d4c4b98de3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchByPlayerIdAndMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmatchId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7d228f24-4144-49d5-9b40-67862a89f6c4"
+            name="InsertPlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="75822a3e-0882-49a9-90ef-6b1594fe9b0b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DInsertPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="56ec9497-9d6e-498c-870b-ec36145d9067"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cad43111-ea85-4a18-94b4-50a8b6f371c8">
+                    <propertyInstance
+                      Id="1642baac-87ee-47d0-94c7-24f8d6b0ee0f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4763f10c-e8e6-4800-aab7-a760e9b53cae">
+                    <propertyInstance
+                      Id="3cb7626e-c6be-4f15-b353-05c2bae2801b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98960061-4bd6-4508-b38e-7195a08caa1f">
+                    <propertyInstance
+                      Id="5e3a88ab-d773-4c92-a2f4-32ba36db864f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f1ba973-3574-462c-9fb0-3b32ae46e923">
+                    <propertyInstance
+                      Id="81a2441d-dd37-40c3-9fdd-979764bf0cce"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58eae071-6630-4857-93d0-25106104c137">
+                    <propertyInstance
+                      Id="c6e99a43-005e-40c6-9b07-97bda693bfd4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a7b913c-0436-413b-ba02-30596d535986">
+                    <propertyInstance
+                      Id="06d24d59-fb0f-4c5d-83d6-6ab3a5454219"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70fc9fe0-ec0f-400b-aafa-7bdb50165b97"
+                  name="playerMatch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="919e8b93-deaf-4fb0-b1c5-3cee34758fe1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DInsertPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)]) ParameterIdentifier%3DplayerMatch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bfab6f7a-480b-41d2-a75f-e728d7c3898f"
+            name="EditPlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5df93459-003b-4c56-9cce-0a02a62acaa4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DEditPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ee3c52bd-eb39-4c3d-b5e9-8888b9c969d6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="916a8544-cf02-4165-8681-330551a9b86a">
+                    <propertyInstance
+                      Id="fbb58f06-6fb3-48b3-9cf7-3c124109754e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67a0bedb-36c3-4d61-954e-b417cb5719a5">
+                    <propertyInstance
+                      Id="940c4923-16ba-4a5a-af9e-78682f2c72f4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3a7faa5-96e2-46dd-b415-08fd543856f7">
+                    <propertyInstance
+                      Id="275ca178-a894-407e-afd7-61463e84e044"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb8b4a76-e85b-4692-9488-af9029d74b24">
+                    <propertyInstance
+                      Id="aa55b748-178c-4438-8858-b1118bc2491e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="618650ec-3cfb-4c51-9968-37f353cd277c">
+                    <propertyInstance
+                      Id="a6253895-5189-436b-953d-3ea71afd1e2b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56c69434-4dd5-48e1-afd4-d28efc42a84f">
+                    <propertyInstance
+                      Id="5eca0587-8b30-4c0d-8f9d-1960b90bef18"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e96fdb0-9dea-4c6e-a81d-1df0d14dbeae"
+                  name="playerMatch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="72324f8c-bac8-4bb0-a863-89e03dcde76e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DEditPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)]) ParameterIdentifier%3DplayerMatch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1685384f-47bc-4732-9800-9dce5cdd23f5"
+            name="DeletePlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ddf43766-b6b3-4978-a354-3c4d8fd95218"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DDeletePlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d296a076-b214-4be6-b9c4-855587803705"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edd486b3-2a22-4fad-b78a-254943ade478">
+                    <propertyInstance
+                      Id="48a19031-70e4-4024-adf2-b91fac167ab2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8e32f08-9a10-43a7-bbe9-cd0b271fe72a">
+                    <propertyInstance
+                      Id="f228ce2c-c692-4d1d-9bfa-aaa2f8343965"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82fc4cb3-5c35-40f6-9e4f-f968774f30ee">
+                    <propertyInstance
+                      Id="5c8df214-a226-4e54-93b1-62093e5fcc32"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b082597f-7d2f-49f0-9f9c-495cc32d35fe">
+                    <propertyInstance
+                      Id="e42a2ead-2264-40e5-9443-8d42d7daa59b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0d835a8-95d6-4c9d-a19e-9b2f60eea5ad">
+                    <propertyInstance
+                      Id="340dd380-2ef5-4b35-84d9-9cc49c215219"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dd1e461-b241-4099-9b1b-f2df0b82f9d1">
+                    <propertyInstance
+                      Id="fa2bfedb-2b0e-4f20-a49d-43bb49da19bb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="690449ba-7c53-4bfc-a2a1-287aaebc844c"
+                  name="playerMatch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3b59046d-5fc6-4516-917a-0ac6dc2f51df"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DIPlayerMatchRepository Member%3D(Name%3DDeletePlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)]) ParameterIdentifier%3DplayerMatch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d309b988-aa9f-490b-9bd1-242fa6ae3337"
+        name="PlayerMatchRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="727d1f19-409b-4cad-a01d-86957adc3e08"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3748a88b-4cb7-419e-99b8-48d23e8950ea"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b44831a-8eb8-417b-8467-7c78d3a2e93c">
+                <propertyInstance
+                  Id="dc55db88-312a-4cc6-b9b0-06b18a9f53cd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2c60a10-823a-4e71-b425-c926d394b240">
+                <propertyInstance
+                  Id="b9267f3e-9470-4723-a366-21e3c19aa54f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f86771c-4b70-4e8d-95ea-b1d5ca340b56">
+                <propertyInstance
+                  Id="b89fbb28-3b52-4240-8c6f-6e11bb386c71"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0debcca-97e9-4b4c-89dc-94c8f3c47024">
+                <propertyInstance
+                  Id="7ec796a7-e345-4487-8d68-d09bbf2969de"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a4dd9929-5bdf-4eea-92ba-257c3bf0c149">
+                <propertyInstance
+                  Id="bb63a294-b1a4-4dab-81c4-8110d762ccbc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="3181ed52-b636-4a15-84ea-0fb57f332b96">
+            <interfaceMoniker
+              Id="89d4cbe0-6b8c-493f-b16d-adb107780c19"
+              LastKnownName="IPlayerMatchRepository"
+              LastKnownLocation="Package7_1722.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="8a1140b1-8599-436d-a356-a72d7ded6c69"
+            name="allPlayerMatches"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c5709b1d-e6b9-46ed-9f4c-5152496ac531"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3DallPlayerMatches"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e7a4e50c-88e3-41ac-9b09-f542e00a7cc4"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49b49236-1865-45c1-890a-c8f337136832">
+                    <propertyInstance
+                      Id="2842b494-8fbd-4b5d-aa05-e44748bdd4f1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a27f59ba-0dbe-41a4-a3df-e88239b14cf7">
+                    <propertyInstance
+                      Id="8b70b6d3-d7a5-4f29-95c5-c5f509b737cb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0ab60f5-3da4-4e0a-a0fd-79ec391ce620">
+                    <propertyInstance
+                      Id="fef09cdf-c12f-4592-bab8-f45c97f6aa38"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f44938ba-4ca4-4dd5-ac44-5704c0defebd">
+                    <propertyInstance
+                      Id="234ddcfc-763a-432e-87e1-1700f493fbe0"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2bf570e4-dcbf-4812-8aab-49aa92a2bc2a">
+                    <propertyInstance
+                      Id="01fd1a66-11cb-4a50-ad5a-c2f9535c9994"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9f6b754b-235e-471c-87e6-715b5c052a21"
+                LastKnownName="List&lt;PlayerMatch‎&gt;"
+                LastKnownLocation="Package4_1722.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a7da105e-7048-469e-a5b4-bd0f2c780e26"
+            name="GetPlayerMatches"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d02a0cb9-3afc-4113-a18d-498670b2111b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3DGetPlayerMatches"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fbed3d7e-2aea-4ce3-a91e-20c10f328469"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0a8cfa2-5407-4f31-aa39-93a1430725ce">
+                    <propertyInstance
+                      Id="04c87989-5503-4d01-a961-e73d18412253"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41ef2759-d865-450c-aca4-ff370888a1e1">
+                    <propertyInstance
+                      Id="99762bac-28ae-4324-bb73-95793afcba58"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07865f4c-ef37-4b81-a9fd-8160f91f136f">
+                    <propertyInstance
+                      Id="88de9c9f-64a8-4923-a1fe-98acf488d0b7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1343cc8f-f1c9-44d6-b490-89a18d8f25a8">
+                    <propertyInstance
+                      Id="4e3b5f4d-e5b6-4b9c-8d44-536d8ce9fefb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47fff4c5-1f6a-4456-91a2-72c7acc3913f">
+                    <propertyInstance
+                      Id="20cbcbc3-885c-4c23-819d-48b62a6a183a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd542e9c-b821-47c9-af2a-6d509e97f678">
+                    <propertyInstance
+                      Id="a5afd381-f512-47e1-ba29-bc0734131b80"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b6e761a-4edb-4aef-816b-f7745d4945a3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="15dd7853-5fd1-4e92-a3c3-eaca15df2d89"
+                      LastKnownName="IEnumerable&lt;PlayerMatch‎&gt;"
+                      LastKnownLocation="Package4_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c583bbb7-7220-4688-9b10-b97eff93ff27"
+            name="GetPlayerMatchByPlayerIdAndMatchId"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="548e4a23-2378-403b-88f1-4986ebc82c18"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchByPlayerIdAndMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ddc36536-c0d5-468c-97b3-d21897891129"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7af10d8-7807-4e39-b7a2-75ea8cc74a0f">
+                    <propertyInstance
+                      Id="afa6ef85-1f0b-49e5-98eb-866531cfcbf3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="baa4bbd8-2ead-4c77-bb69-70da6f3a6e5b">
+                    <propertyInstance
+                      Id="2ec1f665-0138-4d97-919b-60c2096dd107"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd6aac15-8445-4cd2-bf64-53ec076f58b8">
+                    <propertyInstance
+                      Id="2a4d28f8-6c21-47f2-ad88-f0fd8bdbc535"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f772b54-6c50-4072-aa31-490dca5a4a22">
+                    <propertyInstance
+                      Id="94927924-00ae-4114-90ea-f9ef4db117d9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d17ebf1d-1509-4652-8623-ab7780b0d36f">
+                    <propertyInstance
+                      Id="e10c96c6-f812-4c2d-9792-c06af9b0bb7f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="193eb191-452c-417d-9a3c-8f0a5ad6e05c">
+                    <propertyInstance
+                      Id="c8faf1c6-1da2-47cf-af7c-04e3c89c07ba"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31793cdb-2155-4816-96c4-643ef9e92249"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b3fa368e-b3d6-4b2e-8af1-6243e07b3168"
+                  name="playerId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="22f45588-6537-410c-95e3-4038fab003f0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchByPlayerIdAndMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DplayerId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e1599c4d-529a-4071-b571-bd5371922593"
+                  name="matchId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b4cf8777-189b-49fc-852b-47167bbf02c0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchByPlayerIdAndMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmatchId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4b5e066d-af3c-4675-be05-8550c977e7c3"
+            name="GetPlayerMatchesByPlayerId"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bd2dbd1d-ee67-442b-b42f-98153852657a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByPlayerId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="84348907-f5fd-4a6b-8976-997abed4cac2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="361d7544-f163-4344-92d4-c71ad773d3ae">
+                    <propertyInstance
+                      Id="8d312c27-b2e7-4b8f-b22a-ce1ea2d4f121"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6683bf0e-c4ee-47cb-be8f-c33518486728">
+                    <propertyInstance
+                      Id="0ea272e7-c3fe-40a7-a52b-46baadd131fc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8cfcf87-f8a5-4da6-b3b9-a5a387210428">
+                    <propertyInstance
+                      Id="8e59e0aa-abcd-4962-82f3-d0227a72b62f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7852ff2f-388a-4fa0-b2d3-c6564a94e488">
+                    <propertyInstance
+                      Id="b088316e-33b9-4eac-b286-fcd87d63a671"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61bc34c7-9dda-4eba-83dd-1ab23b459e88">
+                    <propertyInstance
+                      Id="563a47ff-3f23-43f0-a131-5e4f64281bcd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7c379a2-3cce-4693-9d44-a696afc15be4">
+                    <propertyInstance
+                      Id="c5fdc13b-68c2-45a7-a299-9b1a1d8e2fd5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7c3ee65-b687-4a1f-88bb-b58710937ecd"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="15dd7853-5fd1-4e92-a3c3-eaca15df2d89"
+                      LastKnownName="IEnumerable&lt;PlayerMatch‎&gt;"
+                      LastKnownLocation="Package4_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e444df78-1239-4873-aeee-a2f212e81ecd"
+                  name="playerId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f24fac71-007d-4899-9720-3732f95e9424"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByPlayerId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DplayerId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d0449cff-d80f-4f5a-8385-38e87a743d6d"
+            name="GetPlayerMatchesByMatchId"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3efa0314-5e9e-4ae0-a58e-151684cf50eb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="550935b3-fc09-45db-a74e-b4bfd4abd511"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e2923e6-88d6-409c-91f7-6184ce392bc0">
+                    <propertyInstance
+                      Id="7ed3d853-1d01-439d-a18b-6105ca2c6ac1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9a59d35-153b-4b38-918a-57f964482898">
+                    <propertyInstance
+                      Id="cf863ace-7c8c-4e64-98b8-6717a87d497b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0afdd903-17ab-4bfb-a9cc-7d9aaa1c85d4">
+                    <propertyInstance
+                      Id="af891126-8795-4ceb-96c0-02754a97d903"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="294bc22e-e5eb-4421-8c62-986908c5393e">
+                    <propertyInstance
+                      Id="1f4f386d-4448-4f6f-8398-dadfab07dcf7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48521907-85ff-4bd8-ae18-327919c73805">
+                    <propertyInstance
+                      Id="5a6ebce0-b54c-4dff-9b62-aa29ecadc467"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c26de33-a159-41a1-a37a-08a7bd30a2c8">
+                    <propertyInstance
+                      Id="9796536f-ef7c-455a-9d1d-8101176f4e76"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cd349db8-b56f-4474-a7f6-ff1f6116b688"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="15dd7853-5fd1-4e92-a3c3-eaca15df2d89"
+                      LastKnownName="IEnumerable&lt;PlayerMatch‎&gt;"
+                      LastKnownLocation="Package4_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="878a64c9-c742-47ba-a7c3-6337fb99be7e"
+                  name="matchId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ab7956df-4c5e-4b7a-90b2-c507d42b6daf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DGetPlayerMatchesByMatchId OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DmatchId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="PlayerManagementModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1379e2e0-d566-4f01-8df1-9d007d311447"
+            name="InsertPlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="aa2cf143-9c3e-466d-b60d-fddb5cdbecba"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DInsertPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c40b832f-5e20-4d61-a1f1-856c03d63686"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2435d3c0-4614-4b37-923b-b125595448d7">
+                    <propertyInstance
+                      Id="e50dd80d-2d45-45af-8242-6e7f03a1d51e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9106afe6-f114-45c6-96dd-d0b856d388e5">
+                    <propertyInstance
+                      Id="2323f1bd-f689-4d41-9752-693431367bd2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fb53348-2e2b-4e5e-9d20-b02dd8b42a75">
+                    <propertyInstance
+                      Id="52baac28-ad77-4da7-a6fe-db06a9e52382"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61214a0c-97b7-479b-806c-ed58d21d6887">
+                    <propertyInstance
+                      Id="b356a484-5d4c-4e7c-b08a-fe4b137e608d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48decaf5-5e9a-4288-90a1-d89a4336a690">
+                    <propertyInstance
+                      Id="261e6be4-d6be-4d59-b1cb-e67864f1007e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04b9e1a4-43e2-43b5-9c61-496f286bcab7">
+                    <propertyInstance
+                      Id="c2f28f52-dd70-47f0-a5fe-bc71e7998810"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06916af2-f22b-4931-a044-46569aad022c"
+                  name="playermatch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7effcff4-88ac-47ab-957c-484c79b6c8a7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DInsertPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)]) ParameterIdentifier%3Dplayermatch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="af68acc3-c9cc-41fd-beb4-6a1cba08890c"
+            name="DeletePlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1b0aceb2-c732-4bf1-ac52-0c789e3fee21"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DDeletePlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="575256a4-0fa9-4160-8647-4c9874ff5a04"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0aca6943-ebb2-4964-8637-a935395059e2">
+                    <propertyInstance
+                      Id="48edbbf4-bfa7-4602-91e2-766968b85644"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cc03adc-9df2-40e3-8300-03b49835a186">
+                    <propertyInstance
+                      Id="0788f917-51be-4343-a148-49d870447e08"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1cd40dd-0701-45d4-a41b-9a59d2bb434e">
+                    <propertyInstance
+                      Id="27151ef3-647a-4548-8877-2eae43886909"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e41e79ae-13ec-464f-92f4-3951873a37d5">
+                    <propertyInstance
+                      Id="3a37dd62-6b8f-433f-8b90-021673f552b0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f59ec91-41e9-4a8d-947a-d3f746bba16c">
+                    <propertyInstance
+                      Id="f61e7631-3116-4468-93a4-89396ee1b2ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42ad55e2-66b4-48a9-ba94-c6b34f3a9a32">
+                    <propertyInstance
+                      Id="b4f7a84b-23e9-4477-a89a-852306db53a8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="91de5382-9ab8-42a2-9430-43c6ed888f74"
+                  name="playerMatch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ae892e1b-3e4a-491f-8375-740fee97d2ec"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DDeletePlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)]) ParameterIdentifier%3DplayerMatch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="34ab3a92-0ca6-4901-b08c-55c64422b8b2"
+            name="EditPlayerMatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9f550396-63ab-473d-a5a4-87e828b7ec9a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DEditPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a2749603-467b-4338-af62-7bc6e48d6a9f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="479329af-6607-4ec9-93c4-73866943c085">
+                    <propertyInstance
+                      Id="4c54eee5-de40-4a44-ac6c-10aca92914ed"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a1148f3-73df-4bec-ab8f-fcf5225df20f">
+                    <propertyInstance
+                      Id="63ca9622-3739-4567-95f4-77a5ad2d4e64"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd57d157-d749-4eab-81b7-c82f8d95f643">
+                    <propertyInstance
+                      Id="9e5264c1-477a-447c-be02-3c4277936b4d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a988d765-d12b-4c72-923e-31cea9a14766">
+                    <propertyInstance
+                      Id="82c2102b-feb4-494e-b656-852089b43de1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ace053e9-0c5e-4bd1-8017-596d147da1c8">
+                    <propertyInstance
+                      Id="b7613e3b-59a9-47d6-9e92-7086803896fa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac887bac-7ea1-457c-9498-51bf41d1ba12">
+                    <propertyInstance
+                      Id="01769890-e6f8-44a6-a92e-335ccb3d2060"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="044bde1b-4c28-48db-a699-6548581d0bac"
+                  name="playerMatch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c8a8e40a-ceb5-4526-9a6a-10d07a20bf29"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D(Name%3DEditPlayerMatch OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatch)]) ParameterIdentifier%3DplayerMatch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1fcf9c2-c793-4b8b-afc1-92874489ca2c"
+                      LastKnownName="PlayerMatch"
+                      LastKnownLocation="Package7_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="39c1b362-9ebb-4a7a-84fd-86274a3f9e70"
+            name="PlayerMatchRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="52fff3ea-586a-4be0-a200-1ef9f53235a9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FThangPQ%2FDocuments%2FVisual Studio 2013%2FProjects%2FPlayerManagement%2FXML_0129_1008_QuyetNV%2Fbin%2FPlayerManagement.dll&quot; Namespace%3DPlayerManagement.Models.PlayerMatch Type%3DPlayerMatchRepository Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e4730b3c-66c5-4da5-bf7c-e402311ef98a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f42431c7-94d3-4c83-a16b-046e6e983083">
+                    <propertyInstance
+                      Id="e39c8ade-3dd8-4e15-a9c0-e31395ec9301"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd0596ec-5eca-4fe1-a950-40f3f282e7f4">
+                    <propertyInstance
+                      Id="b6660cfa-830e-448d-a9e6-fa8b879451a7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37329101-6a68-42d5-afd8-e4707f93e1ca">
+                    <propertyInstance
+                      Id="64b38c02-d049-431c-8f7b-1c47e216f55a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c634c16-6051-422d-b7ad-2d00c3d7e5b4">
+                    <propertyInstance
+                      Id="fc42d190-9f4f-4eff-ac4e-8941ecf9965c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd3fb658-54e6-4f6a-ba64-4cb3902130bf">
+                    <propertyInstance
+                      Id="2f996afe-efc7-4bd5-a36e-e5f5717515e1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1a76907-5bf6-4516-9dca-2b79f75fd315">
+                    <propertyInstance
+                      Id="a6676f8f-c1a1-4942-bbc1-c1c94c544434"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
