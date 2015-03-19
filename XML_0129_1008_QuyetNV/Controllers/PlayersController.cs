@@ -57,7 +57,7 @@ namespace PlayerManagement.Controllers
         {
             Player player = new Player();
             player.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
-            player.ClubName = "Real Madrid";            
+            player.ClubName = "Real Madrid";
 
             return View(player);
         }
@@ -75,7 +75,7 @@ namespace PlayerManagement.Controllers
             Player player = null;
             if (ModelState.IsValid)
             {
-                                 
+
                 if (file.ContentLength > 0)
                 {
                     var fileName = Path.GetFileName(file.FileName);
@@ -83,14 +83,14 @@ namespace PlayerManagement.Controllers
                     file.SaveAs(path);
 
                     String pathInXML = "/images/" + file.FileName;
-                    
+
                     player = new Player(clubName, id, number, name, position, dateOfBirth, placeOfBirth,
  weight, height, description, pathInXML, status);
 
                     _repository.InsertPlayer(player);
                     return RedirectToAction("Index");
                 }
-                
+
             }
 
             return View(player);
@@ -124,7 +124,15 @@ namespace PlayerManagement.Controllers
             Player player = null;
             if (ModelState.IsValid)
             {
-                if (file.ContentLength > 0)
+                if (file == null)
+                {                    
+                    player = new Player(clubName, id, number, name, position, dateOfBirth, placeOfBirth,
+    weight, height, description, status);
+
+                    _repository.EditPlayer(player);
+                    return RedirectToAction("Index");
+                }
+                else
                 {
                     var fileName = Path.GetFileName(file.FileName);
                     String path = Path.Combine(Server.MapPath("~/images"), fileName);
@@ -133,12 +141,13 @@ namespace PlayerManagement.Controllers
                     String pathInXML = "/images/" + file.FileName;
 
                     player = new Player(clubName, id, number, name, position, dateOfBirth, placeOfBirth,
- weight, height, description, pathInXML, status);
+    weight, height, description,pathInXML, status);
 
                     _repository.EditPlayer(player);
                     return RedirectToAction("Index");
                 }
                 
+
             }
             return View(player);
         }

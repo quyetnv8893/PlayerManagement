@@ -96,6 +96,23 @@ namespace PlayerManagement.Models
             this.Status = status;
         }
 
+        public Player(String clubName, String id, int number, String name, String position,
+           DateTime dateOfBirth, String placeOfBirth, double weight, double height, String description,
+           Boolean status)
+        {
+            this.ClubName = clubName;
+            this.ID = id;
+            this.Number = number;
+            this.Name = name;
+            this.Position = position;
+            this.DateOfBirth = dateOfBirth;
+            this.PlaceOfBirth = placeOfBirth;
+            this.Weight = weight;
+            this.Height = height;
+            this.Description = description;            
+            this.Status = status;
+        }
+
         public Player()
         {
             this.ClubName = null;
