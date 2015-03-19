@@ -109,14 +109,27 @@ namespace PlayerManagement.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Edit([Bind(Include = "name, imageLink, position, dateOfBirth, clubName")] Coach coach)
+        public ActionResult Edit(String name, HttpPostedFileBase file, String position, DateTime dateOfBirth, String clubName)
         {
+            Coach coach = null;
             if (ModelState.IsValid)
             {
-                _repository.EditCoach(coach);
-                //db.Entry(coach).State = EntityState.Modified;
-                //db.SaveChanges();
-                return RedirectToAction("Index");
+                if (file.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    String path = Path.Combine(Server.MapPath("~/images"), fileName);
+                    file.SaveAs(path);
+
+                    String pathInXML = "/images/" + file.FileName;
+
+                    coach = new Coach(name, pathInXML, position, dateOfBirth, clubName);
+
+                    _repository.EditCoach(coach);
+                    //db.Entry(coach).State = EntityState.Modified;
+                    //db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                
             }
             return View(coach);
         }
