@@ -29,8 +29,7 @@
             <div class="list text-left">
                 <table id="datajquery" class="career">
                     <thead>
-                        <tr>
-                            <th>Name</th>
+                        <tr>                            
                             <th>From</th>
                             <th>To</th>
                             <th>Goal</th>
@@ -43,10 +42,7 @@
                         {
                             if (item.ID != null)
                             {
-                                <tr class="odd">
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.ClubName)
-                                    </td>
+                                <tr class="odd">                                    
                                     <td>
                                         @Html.DisplayFor(modelItem => item.From)
                                     </td>

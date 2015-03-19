@@ -10,22 +10,22 @@ namespace PlayerManagement.Models
 {
     public class CareerRepository : ICareerRepository
     {
-        private List<Career> _allCareers;        
+        private List<Career> _allCareers;
         private IPlayerRepository _playerRepository = new PlayerRepository();
         public CareerRepository()
         {
-            _allCareers = new List<Career>();            
-            IEnumerable<Career> careers = from career in GlobalVariables.XmlData.Descendants("career")
+            _allCareers = new List<Career>();
+            IEnumerable<Career> careers = null;
+
+            careers = from career in GlobalVariables.XmlData.Descendants("career")
                       select new Career(
-                          career.Element("id").Value,
-                          //XmlConvert.ToDateTime(career.Element("from").Value, XmlDateTimeSerializationMode.Local),
-                          //XmlConvert.ToDateTime(career.Element("to").Value, XmlDateTimeSerializationMode.Local),
+                          career.Element("id").Value,                          
                           (DateTime)career.Element("from"),
-                          (DateTime)career.Element("to"),
+                          (DateTime?)career.Element("to"),
                           career.Element("clubName").Value,
                           (int)career.Element("noOfGoals"),
                           career.Element("playerId").Value
-                          );           
+                          );
             _allCareers.AddRange(careers.ToList<Career>());
 
         }
@@ -36,9 +36,17 @@ namespace PlayerManagement.Models
         }
 
         public IEnumerable<Career> GetCareersByPlayerID(string playerID)
-        {            
-            return _allCareers.FindAll(career => career.PlayerID.Equals(playerID));
-            
+        {
+            IEnumerable<Career> careers = _allCareers.FindAll(career => career.PlayerID.Equals(playerID));
+            foreach (var career in careers)
+            {
+                DateTime d = new DateTime(2100, 1, 1, 0, 0, 0);
+                if(DateTime.Compare((DateTime)career.To, d) == 0){
+                    career.To = DateTime.Now;
+                }
+            }
+            return careers;
+
         }
 
         public Career GetCareerByID(String id)
@@ -73,7 +81,7 @@ namespace PlayerManagement.Models
         public void EditCareer(Career career)
         {
             if (GlobalVariables.XmlData != null)
-            {                
+            {
                 XElement node = GlobalVariables.XmlData.Descendants("careers").Elements("career")
                 .Where(i => i.Element("id").Value.Equals(career.ID)).FirstOrDefault();
 
@@ -85,7 +93,7 @@ namespace PlayerManagement.Models
                 node.SetElementValue("playerId", career.PlayerID);
 
             }
-            
+
             GlobalVariables.XmlData.Save(HttpContext.Current.Server.MapPath(GlobalVariables.XmlPath));
             GlobalVariables.Update();
         }
