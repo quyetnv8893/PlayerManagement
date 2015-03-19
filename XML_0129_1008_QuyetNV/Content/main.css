@@ -55,8 +55,7 @@ a.action-link {
     margin: 10px;
     padding: 10px;
     position: relative;
-    width: 40%%;
-    height: 400px;
+    width: 50%%;    
     display: inline-block;
 }
 
@@ -250,6 +249,8 @@ ul#navbar {
             list-style: none;
             padding: 0;
             height: 350px;
+            width : 80%;
+            margin-left : 20%;
             overflow-x: hidden;
             overflow-y: scroll;
         }
@@ -257,6 +258,8 @@ ul#navbar {
             .coach .info .achivement ul li {
                 margin: 10px 0;
                 overflow: hidden;
+                display : inline-block;
+                width : 40%;
             }
 
                 .coach .info .achivement ul li .image {
@@ -445,6 +448,7 @@ ul#navbar {
     .player-pages .info table {
         width: 100%;
         margin: 0 auto;
+        height : 20px;
         border-collapse: collapse;
         color: #fff;
         overflow-x: hidden;
@@ -570,9 +574,10 @@ ul#navbar {
     border-radius: 10px;
     margin: 10px auto;
     padding: 20px;
+
     color: #fff;
     position: relative;
-    width: 600px;
+    width: 100%;
 }
 
     .coach .content ul {
