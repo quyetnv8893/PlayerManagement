@@ -3,6 +3,7 @@ using PlayerManagement.Models.PlayerMatch;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,7 +14,7 @@ namespace PlayerManagement.Controllers
     {
         private ILeagueRepository _repository;
         private IMatchRepository _matchRepository;
-        private IPlayerMatchRepository _playerMatchRepository; 
+        private IPlayerMatchRepository _playerMatchRepository;
         public LeagueController()
             : this(new LeagueRepository())
         {
@@ -52,15 +53,32 @@ namespace PlayerManagement.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Create(League league)
+        public ActionResult Create(String name, HttpPostedFileBase file)
         {
+            League league = null;
             if (ModelState.IsValid)
             {
                 try
                 {
-                
-                    _repository.InsertLeague(league);
-                    return RedirectToAction("Index");
+                    if (ModelState.IsValid)
+                    {
+                        if (file.ContentLength > 0)
+                        {
+                            var fileName = Path.GetFileName(file.FileName);
+                            String path = Path.Combine(Server.MapPath("~/images"), fileName);
+                            file.SaveAs(path);
+
+                            String pathInXML = "/images/" + file.FileName;
+
+                            league = new League(name, pathInXML);
+
+                            _repository.InsertLeague(league);
+                            //db.Entry(coach).State = EntityState.Modified;
+                            //db.SaveChanges();
+                            return RedirectToAction("Index");
+                        }
+
+                    }                   
                 }
                 catch (Exception e)
                 {
@@ -83,14 +101,27 @@ namespace PlayerManagement.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Edit(League league)
+        public ActionResult Edit(String name, HttpPostedFileBase file)
         {
+            League league = null;
             if (ModelState.IsValid)
             {
                 try
-                {                                        
-                    _repository.EditLeague(league);
-                    return RedirectToAction("Index");
+                {
+                    if (file.ContentLength > 0)
+                    {
+                        var fileName = Path.GetFileName(file.FileName);
+                        String path = Path.Combine(Server.MapPath("~/images"), fileName);
+                        file.SaveAs(path);
+
+                        String pathInXML = "/images/" + file.FileName;
+
+                        league = new League(name, pathInXML);
+
+                        _repository.EditLeague(league);                        
+                        return RedirectToAction("Index");
+                    }
+                    
                 }
                 catch (Exception e)
                 {
@@ -129,7 +160,7 @@ namespace PlayerManagement.Controllers
                             _playerMatchRepository.DeletePlayerMatch(playerMatch);
                         }
                         _matchRepository.DeleteMatch(match.ID);
-                    }                    
+                    }
                     _repository.DeleteLeague(id);
                     return RedirectToAction("Index");
                 }
