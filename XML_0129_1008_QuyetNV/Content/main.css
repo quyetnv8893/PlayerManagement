@@ -95,7 +95,7 @@ body {
 }
 
 .fixed-width {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -141,14 +141,15 @@ a, a:hover, a:active, a:focus {
 }
 
 ul#navbar {
-    padding: 0;
+    padding: 0;    
     list-style: none;
+    
 }
 
-    ul#navbar li {
+    ul#navbar li {        
         display: inline-block;
-        padding: 7px 30px;
-        margin: 0 5px;
+        padding: 10px 20px;
+        margin: 0 15px;
         background: rgba(49, 100, 130, 0.92);
         vertical-align: middle;
         color: #FFF;
@@ -254,12 +255,14 @@ ul#navbar {
             overflow-x: hidden;
             overflow-y: scroll;
         }
-
+        
             .coach .info .achivement ul li {
                 margin: 10px 0;
                 overflow: hidden;
                 display : inline-block;
                 width : 40%;
+                                    border-radius: 10px;
+                    background-color: rgb(55, 115, 148);
             }
 
                 .coach .info .achivement ul li .image {
@@ -272,6 +275,7 @@ ul#navbar {
                     vertical-align: middle;
                     background: #265771;
                     border-radius: 10px;
+                    margin-right : 20px;
                 }
 
                 .coach .info .achivement ul li .detail {
@@ -282,6 +286,8 @@ ul#navbar {
                     padding: 5px 7px;
                     height: calc(100px - 10px);
                     overflow: hidden;
+                    margin-top  : 10px;
+
                 }
 
 /* Player */
