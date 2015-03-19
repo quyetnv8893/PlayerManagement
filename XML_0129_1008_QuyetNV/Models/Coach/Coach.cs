@@ -49,6 +49,15 @@ namespace PlayerManagement.Models
             this.DateOfBirth = dateOfBirth;
             this.ClubName = clubName;
         }
+
+        public Coach(string name, string position, DateTime dateOfBirth, string clubName)
+        {
+            // TODO: Complete member initialization
+            this.Name = name;
+            this.Position = position;
+            this.DateOfBirth = dateOfBirth;
+            this.ClubName = clubName;
+        }
     }
 
 

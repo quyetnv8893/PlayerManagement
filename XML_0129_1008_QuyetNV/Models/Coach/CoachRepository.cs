@@ -9,16 +9,16 @@ namespace PlayerManagement.Models
 {
     public class CoachRepository : ICoachRepository
     {
-        private List<Coach> _allCoachs;        
+        private List<Coach> _allCoachs;
         public CoachRepository()
         {
-            _allCoachs = new List<Coach>();            
+            _allCoachs = new List<Coach>();
             var coaches = from coach in GlobalVariables.XmlData.Descendants("coach")
                           select new Coach(
-                              coach.Element("name").Value, 
-                              coach.Element("imageLink").Value, 
+                              coach.Element("name").Value,
+                              coach.Element("imageLink").Value,
                               coach.Element("position").Value,
-                              (DateTime)coach.Element("dateOfBirth"), 
+                              (DateTime)coach.Element("dateOfBirth"),
                               coach.Element("clubName").Value);
 
             _allCoachs.AddRange(coaches.ToList<Coach>());
@@ -37,9 +37,9 @@ namespace PlayerManagement.Models
         }
 
         public void InsertCoach(Coach coach)
-       {
+        {
             GlobalVariables.XmlData.Descendants("coaches").FirstOrDefault().Add(new XElement("coach",
-                new XElement("name", coach.Name), 
+                new XElement("name", coach.Name),
                 new XElement("imageLink", coach.ImageLink),
                 new XElement("position", coach.Position),
                 new XElement("dateOfBirth", coach.DateOfBirth.ToString("yyyy-MM-dd")),
@@ -65,7 +65,10 @@ namespace PlayerManagement.Models
                 Where(i => i.Element("name").Value.Equals(coach.Name)).FirstOrDefault();
 
             node.SetElementValue("name", coach.Name);
-            node.SetElementValue("imageLink", coach.ImageLink);
+            if (coach.ImageLink != null)
+            {
+                node.SetElementValue("imageLink", coach.ImageLink);
+            }
             node.SetElementValue("position", coach.Position);
             node.SetElementValue("dateOfBirth", coach.DateOfBirth.ToString("yyyy-MM-dd"));
             node.SetElementValue("clubName", coach.ClubName);

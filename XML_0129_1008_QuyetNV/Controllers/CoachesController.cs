@@ -114,7 +114,7 @@ namespace PlayerManagement.Controllers
             Coach coach = null;
             if (ModelState.IsValid)
             {
-                if (file.ContentLength > 0)
+                if (file != null)
                 {
                     var fileName = Path.GetFileName(file.FileName);
                     String path = Path.Combine(Server.MapPath("~/images"), fileName);
@@ -124,11 +124,17 @@ namespace PlayerManagement.Controllers
 
                     coach = new Coach(name, pathInXML, position, dateOfBirth, clubName);
 
-                    _repository.EditCoach(coach);
-                    //db.Entry(coach).State = EntityState.Modified;
-                    //db.SaveChanges();
+                    _repository.EditCoach(coach);                    
                     return RedirectToAction("Index");
                 }
+                else
+                {                   
+                    coach = new Coach(name, position, dateOfBirth, clubName);
+
+                    _repository.EditCoach(coach);
+                    return RedirectToAction("Index");
+                }
+
                 
             }
             return View(coach);
