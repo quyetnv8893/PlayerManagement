@@ -11,7 +11,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <hr />
+    
     <div class="form-horizontal">
         <h4>@Html.DisplayFor(model => model.Player.Name)</h4>        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
