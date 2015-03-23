@@ -25,19 +25,15 @@
                             <th>
                                 Age
                             </th>
-
-
-
-
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>
-                                    @Html.ActionLink("" + @Html.DisplayFor(modelItem => item.Name) + "", "Details", new { id = item.ID }, new { @class = "action-link" })
-
+                                <td>                                    
+                                    @Html.ActionLink(item.Name, "Details", new { id = item.ID }, new { @class = "action-link" })
+                                    
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Number)

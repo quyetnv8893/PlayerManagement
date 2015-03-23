@@ -317,8 +317,7 @@ ul#navbar {
             background-size: cover;
             height: calc(100% - 20px);
             width: 100%;
-            box-sizing: border-box;
-            border: 5px solid #FFF;
+            box-sizing: border-box;            
             margin: 5px;
         }
 
@@ -434,7 +433,7 @@ ul#navbar {
 
             .player-pages .top-bar > #player-search input[type="text"] {
                 width: calc(100% - 100px);
-                height: 30px;
+                height: 20px;
                 background: #244e67;
                 border: none;
                 color: #fff;
@@ -445,7 +444,7 @@ ul#navbar {
             }
 
     .player-pages .info .list {
-        height: 370px;
+        height: 400px;
         margin-top: 35px;
         padding: 10px;
         overflow-y: scroll;
