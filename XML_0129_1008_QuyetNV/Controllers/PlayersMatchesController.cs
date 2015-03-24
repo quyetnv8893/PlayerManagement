@@ -109,7 +109,7 @@ namespace PlayerManagement.Controllers
                 try
                 {
                     _repository.EditPlayerMatch(playermatch);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("ViewPlayerMatches", new { id = playermatch.PlayerID  });
                 }
                 catch (Exception ex)
                 {

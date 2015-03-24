@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using PlayerManagement.Models;
 using System.IO;
+using PlayerManagement.Models.PlayerMatch;
 
 namespace PlayerManagement.Controllers
 {
@@ -161,11 +162,34 @@ namespace PlayerManagement.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Player player = _repository.GetPlayerByID(id);
+
+            PlayerMatchRepository _playerMatchRepository = new PlayerMatchRepository();
+            List<PlayerMatch> playerMatches = _playerMatchRepository.GetPlayerMatchesByPlayerId(player.ID).ToList();
+
             if (player == null)
             {
                 return HttpNotFound();
             }
+
+            if (playerMatches == null)
+            {
+                return View(player);
+            }          
+            foreach (var playerMatch in playerMatches)
+            {
+                if (playerMatch.NumberOfGoals == 0 && playerMatch.NumberOfReds == 0 && playerMatch.NumberOfYellows == 0)
+                {
+                    continue;
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Deleting this player affected the result of some matches. You cannot delete this player";
+                    return View("Error");
+                }
+            }
+
             return View(player);
+                                   
         }
 
         // POST: Players/Delete/5
