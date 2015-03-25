@@ -60,6 +60,32 @@ namespace PlayerManagement.Controllers
             player.ID = ((int)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds).ToString();
             player.ClubName = "Real Madrid";
 
+            List<SelectListItem> items = new List<SelectListItem>();
+            items.Add(new SelectListItem
+            {
+                Text = "Goalkeeper",
+                Value = "Goalkeeper"
+            });
+            items.Add(new SelectListItem
+            {
+                Text = "Defender",
+                Value = "Defender",
+                Selected = true
+            });
+            items.Add(new SelectListItem
+            {
+                Text = "Midfielder",
+                Value = "Midfielder"
+            });
+
+            items.Add(new SelectListItem
+            {
+                Text = "Forward",
+                Value = "Forward"
+            });
+
+            ViewBag.AllPositions = items;
+
             return View(player);
         }
 
@@ -106,6 +132,33 @@ namespace PlayerManagement.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Player player = _repository.GetPlayerByID(id);
+
+            List<SelectListItem> items = new List<SelectListItem>();
+            items.Add(new SelectListItem
+            {
+                Text = "Goalkeeper",
+                Value = "Goalkeeper"
+            });
+            items.Add(new SelectListItem
+            {
+                Text = "Defender",
+                Value = "Defender",
+                Selected = true
+            });
+            items.Add(new SelectListItem
+            {
+                Text = "Midfielder",
+                Value = "Midfielder"
+            });
+
+            items.Add(new SelectListItem
+            {
+                Text = "Forward",
+                Value = "Forward"
+            });
+
+            ViewBag.AllPositions = items;
+
             if (player == null)
             {
                 return HttpNotFound();

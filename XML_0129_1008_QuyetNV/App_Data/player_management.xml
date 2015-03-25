@@ -118,14 +118,14 @@
       <id>07</id>
       <number>17</number>
       <name>ARBELOA</name>
-      <position>Defender</position>
+      <position>Midfielder</position>
       <dateOfBirth>1983-01-17</dateOfBirth>
       <placeOfBirth>Salamanca</placeOfBirth>
       <weight>79</weight>
       <height>1.84</height>
       <description>Álvaro Arbeloa is a versatile player who is a born leader inside and outside the dressing-room. These are the qualities that made him stand out in the Real Madrid youth team. In 2005 he captained Real Madrid Castilla and was one of the key players in their promotion to the Spanish Second Division, a promotion which had taken 14 years to achieve. A few years later he signed for Deportivo La Coruña, but really matured as a full-back at Liverpool. Thanks to his excellent performances for the English side, Álvaro Arbeloa proved his worth to Real Madrid and was able to come back to what had always been his home. He was also called up to the Spanish national team and made his international debut in the summer of 2008. He was one of the 23 players in the squad that won the European Championship in Austria and Switzerland and was also a member of the squad that won the World Cup in 2010 and the European Championship in 2012.</description>
       <imageLink>/images/player07.png</imageLink>
-      <status>TRUE</status>
+      <status>true</status>
     </player>
     <!-- 8 -->
     <player>
@@ -366,6 +366,20 @@
       <description>Quality and defensive assuredness in the centre of the pitch for Real Madrid. Lucas Silva has triumphed from a young age with Cruzeiro and before joining the Whites won the Brazilian League twice, was named in the division's dream team and was chosen as the best defensive midfielder in the League by the magazine Placar.He always provides cover on the pitch, to which he also adds his great technique for distributing the ball. Although he is not a goalscorer, he has a powerful shot, making him a threat from outside the box. He is also a good long-range passer of the ball.During his presentation he admitted to being a Madrid fan since he was a young boy and recounted a story from his childhood: “The first time I went to watch a football game was with my dad and brother. My dad had the Real Madrid jersey on. We have a photo of that day together”. Lucas Silva will be looking to follow in the footsteps of other Real Madrid Brazilian legends like Roberto Carlos and Ronaldo.</description>
       <imageLink>/images/player23.png</imageLink>
       <status>TRUE</status>
+    </player>
+    <player>
+      <clubName>Real Madrid</clubName>
+      <id>1427314764</id>
+      <number>1</number>
+      <name>ThangPQ</name>
+      <position>GK</position>
+      <dateOfBirth>2015-03-25</dateOfBirth>
+      <placeOfBirth>Vietnam</placeOfBirth>
+      <weight>67</weight>
+      <height>12</height>
+      <description>aa</description>
+      <imageLink>/images/24220151114777.png</imageLink>
+      <status>true</status>
     </player>
   </players>
   <coaches>
@@ -707,7 +721,7 @@
     <match>
       <id>20140831</id>
       <time>2014-08-31T19:00:00</time>
-      <name>Sociedad -  Real Madrid</name>
+      <name>Sociedad -  Real Madrid</name>
       <leagueName>LIGA BBVA</leagueName>
     </match>
     <match>

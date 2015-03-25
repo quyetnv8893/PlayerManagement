@@ -60,8 +60,10 @@ namespace PlayerManagement.Controllers
         public ActionResult Create()
         {
             ViewBag.LeagueName = new SelectList(_leagueRepository.GetLeagues(), "Name", "Name");
+            Match match = new Match();
+            match.Score = "0-0";
 
-            return View();
+            return View(match);
         }
 
         [HttpPost]
