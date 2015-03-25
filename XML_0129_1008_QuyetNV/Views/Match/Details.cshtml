@@ -15,8 +15,9 @@
                         {
                             if (item.NumberOfGoals > 0)
                             {
-
-                                <p>@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" })  -  @Html.DisplayFor(modelItem => item.NumberOfGoals)</p>
+                                if (item.PlayerID != "-1") { 
+                                    <p>@Html.ActionLink(item.Player.Name, "GotoPlayerDetails", new { id = item.PlayerID }, new { @class = "action-link" })  -  @Html.DisplayFor(modelItem => item.NumberOfGoals)</p>
+                                }
                             }
                         }
                     </div>

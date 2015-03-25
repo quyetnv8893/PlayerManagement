@@ -11,18 +11,46 @@ namespace PlayerManagement.Models
 {
     public class MatchRepository : IMatchRepository
     {       
-        private List<Match> _allMatches;        
+        private List<Match> _allMatches;
+        private PlayerMatchRepository _playerMatchRes;
         /**
          * Contructor to get all matches from xml file and save them to allMatches List
          **/
         public MatchRepository()
         {
+            _playerMatchRes = new PlayerMatchRepository();            
             _allMatches = new List<Match>();
           
             var Matches = from Match in GlobalVariables.XmlData.Descendants("match")
                           select new Match(Match.Element("id").Value, (DateTime)Match.Element("time"), Match.Element("name").Value,
-                              Match.Element("score").Value, Match.Element("leagueName").Value);
-            _allMatches.AddRange(Matches.ToList<Match>());   
+                              "0-0", Match.Element("leagueName").Value);
+            _allMatches.AddRange(Matches.ToList<Match>());
+            foreach (var match in _allMatches)
+            {
+                int real=0;
+                int guest=0;
+                IEnumerable<PlayerMatch.PlayerMatch> listPlayerMatch = _playerMatchRes.GetPlayerMatchesByMatchId(match.ID);
+                foreach (var playerMatch in listPlayerMatch)
+                {
+                    if (playerMatch.NumberOfGoals > 0)
+                    {
+                        if (playerMatch.PlayerID != "-1")
+                        {
+                            real = real + playerMatch.NumberOfGoals;
+                        }
+                        else
+                        {
+                            guest = guest + 1;
+                        }
+                    }
+                }
+                string[] words = match.Name.Split('-');
+                if (words[0].Contains("Real Madrid")) {
+                    match.Score = real + " - " + guest;
+                } else{
+                    match.Score = guest + " - " + real;
+                }
+            }
         }
 
 
