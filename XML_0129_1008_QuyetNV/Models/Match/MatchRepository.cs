@@ -40,7 +40,7 @@ namespace PlayerManagement.Models
                         }
                         else
                         {
-                            guest = guest + 1;
+                            guest = guest + playerMatch.NumberOfGoals;
                         }
                     }
                 }

@@ -30,6 +30,30 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
+                            if (item.ID.Equals("-1"))
+                            {
+                                if (Request.IsAuthenticated)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.ActionLink(item.Name, "Details", new { id = item.ID }, new { @class = "action-link" })
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Number)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Position)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Age)
+                                        </td>
+
+                                    </tr>
+                                }
+                                else { continue; }
+                            }
+
                             <tr>
                                 <td>                                    
                                     @Html.ActionLink(item.Name, "Details", new { id = item.ID }, new { @class = "action-link" })
